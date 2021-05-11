@@ -17,6 +17,7 @@
 - [Jiten Aylani](https://github.com/aylanij)<br>
 - [Jagveer Sangha](https://github.com/Jagveer-Sangha)<br>
 - [Kelvin Kellner](https://github.com/kelvinkellner)<br>
+- [Muhammad Ali](https://github.com/zancrash)<br>
 
 ## Technologies
 
