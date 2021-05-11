@@ -1,5 +1,5 @@
 <h1 align="center">
-  CP-317
+  Project Name 
   <br>
   <a href=""><img src="public/logo512.png" width="250"/></a>
 </h1>
@@ -11,9 +11,6 @@
 <div align="center">
 <p><a href="https://github.com/SherRao/CP-317/actions/workflows/eslint.yml"><img src="https://github.com/SherRao/CP-317/actions/workflows/eslint.yml/badge.svg" alt="Run ESLint"></a></p>
 </div>
-
-
-
 
 ## Contributors
 
@@ -28,9 +25,17 @@
 - [Mathumithan Manimaran](https://www.github.com/MattDank)<br>
 
 ## Technologies
-
-- Node.js
+This project was made in JavaScript and TypeScript
+- Node.js (duh)
 - Google Firestore
 - StyledComponents
 - discord.js
 - js-logger
+
+## How To Use
+Simply clone this repo, and run
+```js npm install``` in the created directory.
+
+Once that's done, run either
+```js npm run``` OR ```js npm start```
+
