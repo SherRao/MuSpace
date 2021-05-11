@@ -9,7 +9,9 @@
 </blockquote>
 
 ## Contributors
-- [Nausher Rao](https://www.github.com/sherrao)<br>
+- [Nausher Rao](https://www.github.com/sherrao)
+- [Kelvin Kellner](https://www.github.com/kelvinkellner)
+<br>
 
 ## Technologies
 - Node.js
