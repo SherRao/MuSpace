@@ -12,6 +12,7 @@
 - [Nausher Rao](https://www.github.com/sherrao)<br>
 - [Daner Yasin](https://github.com/danerkestey)<br>
 - [Declan Hollingworth](https://github.com/wowitsdeclan)<br>
+- [Robert Mazza]((https://github.com/Robert336)<br>
 
 ## Technologies
 - Node.js
