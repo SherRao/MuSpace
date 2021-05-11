@@ -9,17 +9,19 @@
 </blockquote>
 
 ## Contributors
+
 - [Nausher Rao](https://www.github.com/sherrao)<br>
 - [Daner Yasin](https://github.com/danerkestey)<br>
 - [Declan Hollingworth](https://github.com/wowitsdeclan)<br>
 - [Robert Mazza](https://github.com/Robert336)<br>
 - [Jiten Aylani](https://github.com/aylanij)<br>
 - [Jagveer Sangha](https://github.com/Jagveer-Sangha)<br>
+- [Kelvin Kellner](https://github.com/kelvinkellner)<br>
 
 ## Technologies
+
 - Node.js
 - Google Firestore
 - StyledComponents
 - discord.js
 - js-logger
-
