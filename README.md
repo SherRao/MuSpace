@@ -13,7 +13,8 @@
 
 ## Technologies
 - Node.js
-- Discord.js
 - Google Firestore
+- StyledComponents
+- discord.js
 - js-logger
 
