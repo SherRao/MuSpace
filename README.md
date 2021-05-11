@@ -1,11 +1,11 @@
 <h1 align="center">
   CP-317
   <br>
-  <a href=""><img src="public/icon.png" width="250"/></a>
+  <a href=""><img src="public/logo512.png" width="250"/></a>
 </h1>
 
 <blockquote align="center">
-  <em>something</em> something.
+  <em>Name of the project</em> is something we've made that is amazing.
 </blockquote>
 
 <div align="center">
