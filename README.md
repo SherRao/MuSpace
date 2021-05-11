@@ -14,6 +14,7 @@
 - [Declan Hollingworth](https://github.com/wowitsdeclan)<br>
 - [Robert Mazza](https://github.com/Robert336)<br>
 - [Jiten Aylani](https://github.com/aylanij)<br>
+- [Jagveer Sangha](https://github.com/Jagveer-Sangha)<br>
 
 ## Technologies
 - Node.js
