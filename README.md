@@ -15,6 +15,7 @@
 - [Robert Mazza](https://github.com/Robert336)<br>
 - [Jiten Aylani](https://github.com/aylanij)<br>
 - [Jagveer Sangha](https://github.com/Jagveer-Sangha)<br>
+- [Muhammad Ali](https://github.com/zancrash)<br>
 
 ## Technologies
 - Node.js
