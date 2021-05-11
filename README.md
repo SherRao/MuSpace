@@ -37,8 +37,8 @@ This project was made in JavaScript and TypeScript
 
 ## How To Use
 Simply clone this repo, and run
-```js npm install``` in the created directory.
+```npm install``` in the created directory.
 
 Once that's done, run either
-```js npm run``` OR ```js npm start```
+```npm run``` OR ```npm start```
 
