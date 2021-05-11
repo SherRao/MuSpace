@@ -11,6 +11,7 @@
 ## Contributors
 - [Nausher Rao](https://www.github.com/sherrao)<br>
 - [Daner Yasin](https://github.com/danerkestey)<br>
+- [Declan Hollingworth](https://github.com/wowitsdeclan)<br>
 
 ## Technologies
 - Node.js
