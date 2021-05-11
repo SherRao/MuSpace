@@ -18,6 +18,7 @@
 - [Jagveer Sangha](https://github.com/Jagveer-Sangha)<br>
 - [Kelvin Kellner](https://github.com/kelvinkellner)<br>
 - [Muhammad Ali](https://github.com/zancrash)<br>
+- [Mathumithan Manimaran](https://www.github.com/MattDank)<br>
 
 ## Technologies
 
