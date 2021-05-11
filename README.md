@@ -8,6 +8,13 @@
   <em>something</em> something.
 </blockquote>
 
+<div align="center">
+<p><a href="https://github.com/SherRao/CP-317/actions/workflows/eslint.yml"><img src="https://github.com/SherRao/CP-317/actions/workflows/eslint.yml/badge.svg" alt="Run ESLint"></a></p>
+</div>
+
+
+
+
 ## Contributors
 
 - [Nausher Rao](https://www.github.com/sherrao)<br>
