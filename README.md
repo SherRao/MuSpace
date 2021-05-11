@@ -10,6 +10,7 @@
 
 ## Contributors
 - [Nausher Rao](https://www.github.com/sherrao)<br>
+- [Declan Hollingworth](https://github.com/wowitsdeclan)<br>
 
 ## Technologies
 - Node.js
