@@ -13,6 +13,7 @@
 - [Daner Yasin](https://github.com/danerkestey)<br>
 - [Declan Hollingworth](https://github.com/wowitsdeclan)<br>
 - [Robert Mazza](https://github.com/Robert336)<br>
+- [Jiten Aylani](https://github.com/aylanij)<br>
 
 ## Technologies
 - Node.js
