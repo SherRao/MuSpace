@@ -11,6 +11,7 @@
 ## Contributors
 - [Nausher Rao](https://www.github.com/sherrao)
 - [Kelvin Kellner](https://www.github.com/kelvinkellner)
+- [Jiten Aylani](https://www.github.com/aylanij)
 <br>
 
 ## Technologies
