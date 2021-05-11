@@ -1,5 +1,5 @@
 node_modules
-keys# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+keys
 
 # dependencies
 /node_modules
@@ -8,7 +8,6 @@ keys# See https://help.github.com/articles/ignoring-files/ for more about ignori
 
 # testing
 /coverage
-/keys
 
 # production
 /build
