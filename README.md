@@ -9,7 +9,10 @@
 </blockquote>
 
 <div align="center">
-<p><a href="https://github.com/SherRao/CP-317/actions/workflows/eslint.yml"><img src="https://github.com/SherRao/CP-317/actions/workflows/eslint.yml/badge.svg" alt="Run ESLint"></a></p>
+  <p><a href="https://github.com/SherRao/CP-317/actions/workflows/eslint.yml"><img src="https://github.com/SherRao/CP-317/actions/workflows/eslint.yml/badge.svg" alt="Run ESLint"></a></p>
+  
+  <p><a href="https://github.com/SherRao/CP-317/actions/workflows/node.js.yml"><img src="https://github.com/SherRao/CP-317/actions/workflows/node.js.yml/badge.svg" alt="Node.js CI"></a></p>
+
 </div>
 
 ## Contributors
