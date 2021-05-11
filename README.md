@@ -10,6 +10,7 @@
 
 ## Contributors
 - [Nausher Rao](https://www.github.com/sherrao)<br>
+- [Daner Yasin](https://github.com/danerkestey)<br>
 
 ## Technologies
 - Node.js
