@@ -28,6 +28,7 @@
 - [Mathumithan Manimaran](https://www.github.com/MattDank)<br>
 - [Adepeju Olowonefa](https://www.github.com/Adepeju-nefa)<br>
 - [Nishant Tewari](https://github.com/XSilviaX)<br>
+- [Adrian Alting-Mees](https://github.com/AdrianAltingMees)<br>
 
 ## Technologies
 This project was made in JavaScript and TypeScript
