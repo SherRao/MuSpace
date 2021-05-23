@@ -1,10 +1,14 @@
 <h1 align="center"> 
-  <a href=""><img src="public/logo.svg" width="250"/></a>
+  <a href=""><img src="public/logo.svg" width="512"/></a>
 </h1>
 
 <blockquote align="center">
   <em>MuSpace</em> is a social media platform with an emphasis on music.
 </blockquote>
+
+<br/>
+<br/>
+<br/>
 
 [![ESLint](https://github.com/SherRao/CP-317/actions/workflows/eslint.yml/badge.svg)](https://github.com/SherRao/CP-317/actions/workflows/eslint.yml)
 [![Node.js](https://github.com/SherRao/CP-317/actions/workflows/node.js.yml/badge.svg)](https://github.com/SherRao/CP-317/actions/workflows/node.js.yml)
