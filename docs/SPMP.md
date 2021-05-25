@@ -2,7 +2,7 @@
   <a href=""><img src="../public/logo.svg" width="250"/></a>
 </h1>
 
-<h2 align="center"> >Software Project Management Plan (SPMP)</h1>
+<h2 align="center"> >Software Project Management Plan (SPMP)</h2>
 <p align="center"> >
 The basic template to be used is derived from IEEE Std 1058-1998, IEEE Standard for Software
 Project Management Plans. The following is a template for the SPMP. It begins with a cover page
