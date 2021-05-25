@@ -1,12 +1,14 @@
-<h1 align="center">
-  Project Name 
-  <br>
-  <a href=""><img src="public/logo512.png" width="250"/></a>
+<h1 align="center"> 
+  <a href=""><img src="public/logo.svg" width="512"/></a>
 </h1>
 
 <blockquote align="center">
-  <em>Name of the project</em> is something we've made that is amazing.
+  <em>MuSpace</em> is a social media platform with an emphasis on music.
 </blockquote>
+
+<br/>
+<br/>
+<br/>
 
 [![ESLint](https://github.com/SherRao/CP-317/actions/workflows/eslint.yml/badge.svg)](https://github.com/SherRao/CP-317/actions/workflows/eslint.yml)
 [![Node.js](https://github.com/SherRao/CP-317/actions/workflows/node.js.yml/badge.svg)](https://github.com/SherRao/CP-317/actions/workflows/node.js.yml)
@@ -39,6 +41,9 @@ This project was made in JavaScript and TypeScript
 - StyledComponents
 - discord.js
 - js-logger
+
+## Design
+This project used Figma, the document of which can be found [here](https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=0%3A1)!
 
 ## How To Use
 
