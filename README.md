@@ -3,7 +3,7 @@
 </h1>
 
 <blockquote align="center">
-  <em>MuSpace</em> is a social media platform with an emphasis on sharing music your music tastes and connecting with other listeners.
+  <em>MuSpace</em> is a social media platform with an emphasis on sharing music and connecting with other listeners.
 </blockquote>
 
 <br/>
@@ -36,7 +36,7 @@
 
 This project was made in JavaScript and TypeScript
 
-- Node.js (duh)
+- Node.js
 - Google Firestore
 - StyledComponents
 - discord.js
