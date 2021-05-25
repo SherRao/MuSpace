@@ -27,7 +27,7 @@
 - [Mathumithan Manimaran](https://www.github.com/MattDank)<br>
 - [Muhammad Ali](https://github.com/zancrash)<br>
 - [Nausher Rao](https://www.github.com/sherrao)<br>
-- [Nishant Tewari](https://github.com/XSilviaX)<br>
+- [Nish Tewari](https://github.com/XSilviaX)<br>
 - [Robert Mazza](https://github.com/Robert336)<br>
 - [Jacob Goldman](https://github.com/Caboji)<br>
 
