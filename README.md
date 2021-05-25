@@ -21,6 +21,7 @@
 - [Adrian Alting-Mees](https://github.com/AdrianAltingMees)<br>
 - [Daner Yasin](https://github.com/danerkestey)<br>
 - [Declan Hollingworth](https://github.com/wowitsdeclan)<br>
+- [Jacob Goldman](https://github.com/Caboji)<br>
 - [Jagveer Sangha](https://github.com/Jagveer-Sangha)<br>
 - [Jiten Aylani](https://github.com/aylanij)<br>
 - [Kelvin Kellner](https://github.com/kelvinkellner)<br>
@@ -29,7 +30,6 @@
 - [Nausher Rao](https://www.github.com/sherrao)<br>
 - [Nish Tewari](https://github.com/XSilviaX)<br>
 - [Robert Mazza](https://github.com/Robert336)<br>
-- [Jacob Goldman](https://github.com/Caboji)<br>
 
 ## Technologies
 
