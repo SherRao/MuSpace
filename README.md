@@ -3,7 +3,7 @@
 </h1>
 
 <blockquote align="center">
-  <em>MuSpace</em> is a social media platform with an emphasis on music.
+  <em>MuSpace</em> is a social media platform with an emphasis on sharing music and connecting with other listeners.
 </blockquote>
 
 <br/>
@@ -19,22 +19,24 @@
 
 ## Contributors
 
-- [Nausher Rao](https://www.github.com/sherrao)<br>
+- [Adepeju Olowonefa](https://www.github.com/Adepeju-nefa)<br>
+- [Adrian Alting-Mees](https://github.com/AdrianAltingMees)<br>
 - [Daner Yasin](https://github.com/danerkestey)<br>
 - [Declan Hollingworth](https://github.com/wowitsdeclan)<br>
-- [Robert Mazza](https://github.com/Robert336)<br>
-- [Jiten Aylani](https://github.com/aylanij)<br>
 - [Jagveer Sangha](https://github.com/Jagveer-Sangha)<br>
+- [Jiten Aylani](https://github.com/aylanij)<br>
 - [Kelvin Kellner](https://github.com/kelvinkellner)<br>
-- [Muhammad Ali](https://github.com/zancrash)<br>
 - [Mathumithan Manimaran](https://www.github.com/MattDank)<br>
-- [Adepeju Olowonefa](https://www.github.com/Adepeju-nefa)<br>
+- [Muhammad Ali](https://github.com/zancrash)<br>
+- [Nausher Rao](https://www.github.com/sherrao)<br>
 - [Nishant Tewari](https://github.com/XSilviaX)<br>
-- [Adrian Alting-Mees](https://github.com/AdrianAltingMees)<br>
+- [Robert Mazza](https://github.com/Robert336)<br>
 
 ## Technologies
+
 This project was made in JavaScript and TypeScript
-- Node.js (duh)
+
+- Node.js
 - Google Firestore
 - StyledComponents
 - discord.js
@@ -44,9 +46,9 @@ This project was made in JavaScript and TypeScript
 This project used Figma, the document of which can be found [here](https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=0%3A1)!
 
 ## How To Use
+
 Simply clone this repo, and run
-```npm install``` in the created directory.
+`npm install` in the created directory.
 
 Once that's done, run either
-```npm run``` OR ```npm start```
-
+`npm run` OR `npm start`
