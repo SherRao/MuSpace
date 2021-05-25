@@ -7,7 +7,6 @@
 </blockquote>
 
 <br/>
-<br/>
 
 [![ESLint](https://github.com/SherRao/CP-317/actions/workflows/eslint.yml/badge.svg)](https://github.com/SherRao/CP-317/actions/workflows/eslint.yml)
 [![Node.js](https://github.com/SherRao/CP-317/actions/workflows/node.js.yml/badge.svg)](https://github.com/SherRao/CP-317/actions/workflows/node.js.yml)
