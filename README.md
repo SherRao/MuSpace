@@ -3,7 +3,7 @@
 </h1>
 
 <blockquote align="center">
-  <em>MuSpace</em> is a social media platform with an emphasis on sharing music and connecting with other listeners.
+  <em>MuSpace</em> is a social media platform with an emphasis on sharing music and connecting with similar listeners.
 </blockquote>
 
 <br/>
