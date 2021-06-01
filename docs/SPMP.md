@@ -214,4 +214,4 @@
 
 <img src="https://en.meming.world/images/en/0/0d/In_Terms_Of_Money%2C_We_Have_No_Money.jpg" width="256" />
     
-<p>This project is solely dependent on the time and cost of the developers. No monetary funding is given or needed, All resources (frameworks, APIs) are free and open source.</p>
+<p>This project is solely dependent on the time and cost of the developement team. No monetary funding is given or needed for this project. All resources (frameworks, APIs) are free and open source.</p>
