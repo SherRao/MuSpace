@@ -8,12 +8,12 @@
 
 <br/>
 
-[![ESLint](https://github.com/SherRao/CP-317/actions/workflows/eslint.yml/badge.svg)](https://github.com/SherRao/CP-317/actions/workflows/eslint.yml)
-[![Node.js](https://github.com/SherRao/CP-317/actions/workflows/node.js.yml/badge.svg)](https://github.com/SherRao/CP-317/actions/workflows/node.js.yml)
+[![ESLint](https://github.com/SherRao/CP-317/actions/workflows/eslint.yml/badge.svg)](https://github.com/SherRao/MuSpace/actions/workflows/eslint.yml)
+[![Node.js](https://github.com/SherRao/CP-317/actions/workflows/node.js.yml/badge.svg)](https://github.com/SherRao/MuSpace/actions/workflows/node.js.yml)
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/SherRao/CP-317/blob/main/LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/SherRao/CP-317.svg?style=flat)]()
-[![GitHub last commit](https://img.shields.io/github/last-commit/SherRao/CP-317.svg?style=flat)]()
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/SherRao/MuSpace/blob/main/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/SherRao/CP-317.svg?style=flat)](https://github.com/SherRao/MuSpace/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/SherRao/CP-317.svg?style=flat)](https://github.com/SherRao/MuSpace/commits/main)
 
 ## Contributors
 
