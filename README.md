@@ -17,19 +17,20 @@
 
 ## Contributors
 
-- [Adepeju Olowonefa](https://www.github.com/Adepeju-nefa)<br>
-- [Adrian Alting-Mees](https://github.com/AdrianAltingMees)<br>
-- [Daner Yasin](https://github.com/danerkestey)<br>
-- [Declan Hollingworth](https://github.com/wowitsdeclan)<br>
-- [Jacob Goldman](https://github.com/Caboji)<br>
-- [Jagveer Sangha](https://github.com/Jagveer-Sangha)<br>
-- [Jiten Aylani](https://github.com/aylanij)<br>
-- [Kelvin Kellner](https://github.com/kelvinkellner)<br>
-- [Mathumithan Manimaran](https://www.github.com/MattDank)<br>
-- [Muhammad Ali](https://github.com/zancrash)<br>
-- [Nausher Rao](https://www.github.com/sherrao)<br>
-- [Nish Tewari](https://github.com/XSilviaX)<br>
-- [Robert Mazza](https://github.com/Robert336)<br>
+- [Adepeju Olowonefa](https://www.github.com/Adepeju-nefa)<br/>
+- [Adrian Alting-Mees](https://github.com/AdrianAltingMees)<br/>
+- [Daner Yasin](https://github.com/danerkestey)<br/>
+- [Declan Hollingworth](https://github.com/wowitsdeclan)<br/>
+- [Gur Armaan Maan](https://github.com/MAHAULMUSIC)<br/>
+- [Jacob Goldman](https://github.com/Caboji)<br/>
+- [Jagveer Sangha](https://github.com/Jagveer-Sangha)<br/>
+- [Jiten Aylani](https://github.com/aylanij)<br/>
+- [Kelvin Kellner](https://github.com/kelvinkellner)<br/>
+- [Mathumithan Manimaran](https://www.github.com/MattDank)<br/>
+- [Muhammad Ali](https://github.com/zancrash)<br/>
+- [Nausher Rao](https://www.github.com/sherrao)<br/>
+- [Nish Tewari](https://github.com/XSilviaX)<br/>
+- [Robert Mazza](https://github.com/Robert336)<br/>
 
 ## Technologies
 
