@@ -1,9 +1,5 @@
-<h1 align="center"> 
-  <a href=""><img src="./logo.svg" width="250"/></a>
-</h1>
-
-<h2 align="center"> >Testing</h2>
-<p align="center"> >
+<h2 align="center">Testing</h2>
+<p align="center">
 This document outlines how all components of the project will be tested.
 </p>
 
