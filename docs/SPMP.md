@@ -7,7 +7,7 @@
 <h2>1. Introduction</h2>
 
 <h3>1.1 Project Overview</h3>
-<p>MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. When users share similar listening habits with others, they are recommended as connections via a point-based rating system using the <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk">Spotify SDK</a> data. MuSpace will also offer listening rooms that allow users to listen along with their friends and chat with each other in real-time. Additionally, users can recommend which songs will be played in the listening room.</p>
+</p>
 
 <h3>1.2 Project Deliverables</h3>
 
@@ -365,18 +365,18 @@
 <h4>Technologies:</h4>
 <ul>
   <li><b>JavaScript</b> - <a href="https://www.javascript.com/">JavaScript.com</a></li>
-  <li><b>TypeScript</b> - <a href="https://www.typescriptlang.org/">TypeScript: Typed JavaScript at Any Scale. (typescriptlang.org</a></li>
+  <li><b>TypeScript</b> - <a href="https://www.typescriptlang.org/">TypeScript: Typed JavaScript at Any Scale. (typescriptlang.org)</a></li>
   <li><b>ReactJS framework</b><a href="https://reactjs.org/">React</a></li>
   <li><b>Node.js</b> - <a href="https://nodejs.org/en/">Node.js (nodejs.org)</a></li>
   <li><b>Js-logger</b> - <a href="https://www.npmjs.com/package/js-logger">js-logger - npm (npmjs.com)</a></li>
-  <li><b>StyledComponents</b> - <a href="https://styled-components.com/">styled-components</a></li>
-  <li><b>Google Firestore</b> - <a href="https://cloud.google.com/firestore">Firestore: NoSQL document database  |  Google Cloud</a></li>
+  <li><b>Google Firestore</b> - <a href="https://cloud.google.com/firestore">Firestore: NoSQL document database | Google Cloud</a></li>
   <li><b>Google Authentication</b> - <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA&gl=US">Google Authenticator – Apps on Google Play</a></li>
   <li><b>LyricsGenius API</b> - <a href="https://docs.genius.com/">Genius API</a></li>
   <li><b>Google reCaptcha v2</b> - <a href="https://developers.google.com/recaptcha/docs/display">reCaptcha v2</a></li>
   <li><b>Spotify API</b> - <a href="https://developer.spotify.com/documentation/web-api/">Web API | Spotify for Developers</a></li>
   <li><b>Spotify SDK</b> - <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk">Web Playback SDK | Spotify for Developers</a></li>
   <li><b>Semantic UI</b> - <a href="https://semantic-ui.com/">Semantic UI</a></li>
+  <li><b>StyledComponents</b> - <a href="https://styled-components.com/">styled-components</a></li>
 
 </ul>
 
@@ -533,23 +533,16 @@ The following documentations are required as a minimum: </p>
     <td style="text-align:center">All Developers</td>
   </tr>
 
-
-
 </table>
 <!-- UPDATED TO HERE -->
 
 <h3>4.2.1 Software Requirements Specification (SRS)</h3>
-<p>Up to date <a href="https://sherrao.github.io/MuSpace/SRS.html">SRS Documentation</a></p>
-
-
+<p>Up to date <a href="https://sherrao.github.io/MuSpace/SRS.html">SRS Documentation.</a></p>
 
 <h3>4.2.2 Software Design Description (SDD)</h3>
 <p>We will be using <i>JavaScript</i>, <i>TypeScript</i>, <i>CSS</i>, and <i>HTML</i> as the languages for the project. These languages are the easiest to implement for a web application of this magnitude which requires the front-end and back-end to work with each other seamlessly. Without the hassle of separate code bases for both. <i>JavaScript</i> and <i>TypeScript</i> are also ideal languages that have a great capability of handling asynchronous server-side requests.</p>
-<br>
 <p>We will be using <i>ReactJS</i>, <i>StyledComponents</i>, and <i>Semantic UI</i> to create the front-end of the application - this is the code that will be executed and displayed client-side using a built-in browser <i>JavaScript</i> engine, such as <i>Google’s V8 JavaScript Engine</i>.</p>
-<br>
 <p>For the back-end of the application, we are using <i>Node.js</i> to run a headless <i>Chromium</i> instance to execute server-side code. The backend will integrate the <i>Spotify SDK Spotify API, and LyricGenius API</i> to draw all user data - artists, albums, genres, and songs that the artist listens to. The API can also extract music listening and other statistics. This data will be used to connect with other users using a scoring system and to discover new music. The <i>Spotify Web SDK</i> will be used to play music using the user's <i>Spotify</i> account in the web app. The <i>SDK</i> requires the users to have a <i>Spotify</i> Premium account. The <i>LyricGenius API</i> will be used to display lyrics of the songs that the user listens to as well as related lyrical trivia. </p>
-<br>
 <p>The other portion of the backend uses <i>Google’s</i> suite of APIs included in <i>Google Firebase</i>. These are but are not limited to Firestore and Authentication. Firestore will be used to store a lot of data:</p>
 
 <ul>
@@ -584,7 +577,7 @@ The following documentations are required as a minimum: </p>
 <ul>
   <li>Unit Testing</li>
   <ul>
-    <li>All major functions and components of the project will be tested using Jest. This testing framework allows the ease of writing unit tests.</li>
+    <li>All major functions and components of the project will be tested using <a href="https://jestjs.io/" target="_blank"><i>Jest</i></a>. This testing framework allows the ease of writing unit tests.</li>
   </ul>
   <li>Functional Testing</li>
   <ul>
@@ -646,5 +639,3 @@ The following documentations are required as a minimum: </p>
     <li>All Members </li>
   </ul>
 </ul>
-
-
