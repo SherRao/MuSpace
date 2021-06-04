@@ -43,5 +43,5 @@
 <h2>Code Style</h2>
 <p>
     All code pushed to the main branch will be linted via ESLint - ESLint follows the JavaScript Standard Style which
-    can be found <a href="https://standardjs.com/" , target="_blank">here</a>.
+    can be found <a href="https://standardjs.com/" target="_blank">here</a>.
 </p>

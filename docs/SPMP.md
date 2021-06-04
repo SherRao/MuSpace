@@ -573,7 +573,7 @@ The following documentations are required as a minimum: </p>
     <li>Counter of likes and dislikes</li>
   </ul>
 </ul>
-<p>The code styling and conventions have been outlined in this <a href="https://sherrao.github.io/MuSpace/Conventions.html">Github document</a></p>
+<p>The code styling and conventions have been outlined in this <a href="https://sherrao.github.io/MuSpace/Conventions.html">Github document</a>.</p>
 
 <h3>4.2.3 Software Test Plan</h3>
 <ul>
