@@ -1,4 +1,3 @@
-
 <h1 align="center">
   <a href="./"><img id="header-logo" src="./logo.svg" width="250" alt="MuSpace logo"/></a>
 </h1>
@@ -291,7 +290,6 @@
 
 </table>
 
-
 <!-- 3. Managerial Process -->
 <h2>3. Managerial Process</h2>
 
@@ -358,7 +356,6 @@
   <br>
 
 </ol>
-
 
 <!-- 4. Technical Process -->
 <h2>4. Technical Process</h2>
