@@ -473,7 +473,7 @@
   </ul>
   <li><b>Suggested Connections:</b></li>
   <ul>
-    <li>Matches Individuals Based on: </li>
+    <li>Matches individuals based on:</li>
     <ul>
       <li>Location</li>
       <li>Artists Shared</li>
@@ -481,7 +481,8 @@
       <li>Albums Shared</li>
       <li>Genres Shared</li>
     </ul>
-    <li>The Spotify API is used in order to obtain the items users have in common (including items from current and all-time 5-10)</li>
+    <li>The Spotify API is used in order to obtain the items users have in common (including top items from recent/current listening and all-time)</li>
+    <li>A point-based rating system will be used to determine likelihood of a particular user being displayed as a suggested connection, the algorithm used for this calculation is yet to be defined.</li>
   </ul>
 </ul>
 <h3>4.2 Software Documentation</h3>
