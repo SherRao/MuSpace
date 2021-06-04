@@ -7,7 +7,7 @@
 <h2>1. Introduction</h2>
 
 <h3>1.1 Project Overview</h3>
-<p>MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. When users share similar listening habits with others, they are recommended as connections via a point-based rating system using the <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk">Spotify SDK</a> data. MuSpace will also offer listening rooms that allow users to listen along with their friends and chat with each other in real-time. Additionally, users can recommend which songs will be played in the listening room.
+<p>MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. When users share similar listening habits with others, they are recommended as connections via a point-based rating system using the <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Spotify SDK</a> data. MuSpace will also offer listening rooms that allow users to listen along with their friends and chat with each other in real-time. Additionally, users can recommend which songs will be played in the listening room.
 </p>
 
 <h3>1.2 Project Deliverables</h3>
@@ -295,7 +295,7 @@
 <h2>3. Managerial Process</h2>
 
 <h3>3.1 Management Objectives and Priorities</h3>
-<p>The main objective of this project is to develop a web-based music application that will eventually branch out to Android and iOS. This uses the <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk">Spotify SDK</a> to connect people listening to similar styles of music. By the end of the term (August, 5th 2021), our goal is to have all project deliverables (the SRS, the SPMP, analysis, document, design documentation, back-end implementation, front-end implementation, mobile implementation, and user documentation) complete. By then our goal is to also have a complete well-implemented version of our application, which would be heavily Quality Tested. This project's major priority is to have an easy-to-understand, easy-to-read, consistent, and informative set of documentation as well as a seamless project flow. Since the project has no monetary funding, the completion of deliverables is solely dependent on our time and resources. </p>
+<p>The main objective of this project is to develop a web-based music application that will eventually branch out to Android and iOS. This uses the <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Spotify SDK</a> to connect people listening to similar styles of music. By the end of the term (August, 5th 2021), our goal is to have all project deliverables (the SRS, the SPMP, analysis, document, design documentation, back-end implementation, front-end implementation, mobile implementation, and user documentation) complete. By then our goal is to also have a complete well-implemented version of our application, which would be heavily Quality Tested. This project's major priority is to have an easy-to-understand, easy-to-read, consistent, and informative set of documentation as well as a seamless project flow. Since the project has no monetary funding, the completion of deliverables is solely dependent on our time and resources. </p>
 
 <h3>3.2 Monitoring and Controlling Mechanisms</h3>
 <p>Our group meetings take place every Tuesday and Thursday during lectures, where we send one person to listen to the lecture, in this case, Jagveer. During this time, we split into groups for sprints, where work ethic is peer-checked.</p>
@@ -347,12 +347,12 @@
   <br>
   <li>
     <b>Risk:</b> Data not being securely sent over the internet to the MuSpace server.<br>
-    <b>Solution:</b> All data will be securely transferred from a client to the server with Google Firebase’s implementation of data privacy and security. All endpoints used on Firebase are secured through Google’s servers. See <a href="https://firebase.google.com/docs/firestore/security/overview">here</a> for more information on how Google Firebase uses security.
+    <b>Solution:</b> All data will be securely transferred from a client to the server with Google Firebase’s implementation of data privacy and security. All endpoints used on Firebase are secured through Google’s servers. See <a href="https://firebase.google.com/docs/firestore/security/overview" target="_blank">here</a> for more information on how Google Firebase uses security.
   </li>
   <br>
   <li>
     <b>Risk:</b> Another person hacks into your account.<br>
-    <b>Solution:</b> We will use OAuth2 to make sure that the person is who they say they are. See <a href="https://oauth.net/2/">here</a> for more information on how OAuth2 uses security.
+    <b>Solution:</b> We will use OAuth2 to make sure that the person is who they say they are. See <a href="https://oauth.net/2/" target="_blank">here</a> for more information on how OAuth2 uses security.
   </li>
   <br>
 
@@ -365,36 +365,36 @@
 
 <h4>Technologies:</h4>
 <ul>
-  <li><b>JavaScript</b> - <a href="https://www.javascript.com/">JavaScript.com</a></li>
-  <li><b>TypeScript</b> - <a href="https://www.typescriptlang.org/">TypeScript: Typed JavaScript at Any Scale. (typescriptlang.org)</a></li>
-  <li><b>ReactJS framework</b><a href="https://reactjs.org/">React</a></li>
-  <li><b>Node.js</b> - <a href="https://nodejs.org/en/">Node.js (nodejs.org)</a></li>
-  <li><b>Js-logger</b> - <a href="https://www.npmjs.com/package/js-logger">js-logger - npm (npmjs.com)</a></li>
-  <li><b>Google Firestore</b> - <a href="https://cloud.google.com/firestore">Firestore: NoSQL document database | Google Cloud</a></li>
-  <li><b>Google Authentication</b> - <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA&gl=US">Google Authenticator – Apps on Google Play</a></li>
-  <li><b>LyricsGenius API</b> - <a href="https://docs.genius.com/">Genius API</a></li>
-  <li><b>Google reCaptcha v2</b> - <a href="https://developers.google.com/recaptcha/docs/display">reCaptcha v2</a></li>
-  <li><b>Spotify API</b> - <a href="https://developer.spotify.com/documentation/web-api/">Web API | Spotify for Developers</a></li>
-  <li><b>Spotify SDK</b> - <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk">Web Playback SDK | Spotify for Developers</a></li>
-  <li><b>Semantic UI</b> - <a href="https://semantic-ui.com/">Semantic UI</a></li>
-  <li><b>StyledComponents</b> - <a href="https://styled-components.com/">styled-components</a></li>
+  <li><b>JavaScript</b> - <a href="https://www.javascript.com/" target="_blank">JavaScript.com</a></li>
+  <li><b>TypeScript</b> - <a href="https://www.typescriptlang.org/" target="_blank">TypeScript: Typed JavaScript at Any Scale. (typescriptlang.org)</a></li>
+  <li><b>ReactJS framework</b><a href="https://reactjs.org/" target="_blank">React</a></li>
+  <li><b>Node.js</b> - <a href="https://nodejs.org/en/" target="_blank">Node.js (nodejs.org)</a></li>
+  <li><b>Js-logger</b> - <a href="https://www.npmjs.com/package/js-logger" target="_blank">js-logger - npm (npmjs.com)</a></li>
+  <li><b>Google Firestore</b> - <a href="https://cloud.google.com/firestore" target="_blank">Firestore: NoSQL document database | Google Cloud</a></li>
+  <li><b>Google Authentication</b> - <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA&gl=US" target="_blank">Google Authenticator – Apps on Google Play</a></li>
+  <li><b>LyricsGenius API</b> - <a href="https://docs.genius.com/" target="_blank">Genius API</a></li>
+  <li><b>Google reCaptcha v2</b> - <a href="https://developers.google.com/recaptcha/docs/display" target="_blank">reCaptcha v2</a></li>
+  <li><b>Spotify API</b> - <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Web API | Spotify for Developers</a></li>
+  <li><b>Spotify SDK</b> - <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Web Playback SDK | Spotify for Developers</a></li>
+  <li><b>Semantic UI</b> - <a href="https://semantic-ui.com/" target="_blank">Semantic UI</a></li>
+  <li><b>StyledComponents</b> - <a href="https://styled-components.com/" target="_blank">styled-components</a></li>
 
 </ul>
 
 <h4>Project Management Tools:</h4>
 <ul>
-  <li><b>GitHub</b> - <a href="https://semantic-ui.com/">Repository</a></li>
-  <li><b>Figma</b> - <a href="https://www.figma.com/team_invite/redeem/bENflg8BpmlHQtsnZpDSoz">Project</a></li>
+  <li><b>GitHub</b> - <a href="https://github.com/SherRao/MuSpace" target="_blank">Repository</a></li>
+  <li><b>Figma</b> - <a href="https://www.figma.com/team_invite/redeem/bENflg8BpmlHQtsnZpDSoz" target="_blank">Project</a></li>
   <li><b>Google Drive (Docs, Sheets)</b></li>
-  <li><b>Discord</b> - <a href="https://discord.com/brand-new">Discord</a></li>
+  <li><b>Discord</b> - <a href="https://discord.com/brand-new" target="_blank">Discord</a></li>
 </ul>
 
 <h4>Project Support Functions:</h4>
 <ul>
-  <li><b>JavaScript unit testing</b> - <a href="https://jestjs.io/">JestJS</a></li>
-  <li><b>Functional testing via Selenium WebDriver</b> - <a href="https://www.selenium.dev/documentation/en/webdriver/">Selenium</a></li>
-  <li><b>Functional testing via Selenium WebDriver</b> - <a href="https://testing-library.com/docs/react-testing-library/intro/">React Testing Library</a></li>
-  <li><b>Configuration Management: Firestore</b> - <a href="https://firebase.google.com/docs/firestore">Firestore</a></li>
+  <li><b>JavaScript unit testing</b> - <a href="https://jestjs.io/" target="_blank">JestJS</a></li>
+  <li><b>Functional testing via Selenium WebDriver</b> - <a href="https://www.selenium.dev/documentation/en/webdriver/" target="_blank">Selenium</a></li>
+  <li><b>Functional testing via Selenium WebDriver</b> - <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library</a></li>
+  <li><b>Configuration Management: Firestore</b> - <a href="https://firebase.google.com/docs/firestore" target="_blank">Firestore</a></li>
 </ul>
 
 <h3>4.1.1 Feature Specific Requirements</h3>
@@ -582,26 +582,18 @@ The following documentations are required as a minimum: </p>
   </ul>
   <li>Functional Testing</li>
   <ul>
-    <li>We will be using the <a href="https://testing-library.com/docs/react-testing-library/intro/"><i>React Testing Library</i></a> and <a href="https://www.selenium.dev/documentation/en/webdriver/"><i>Selenium WebDriver</i></a>. This allows a lot of automation with testing visual components and ensuring the application works as intended. These technologies act as the end-user.</li>
+    <li>We will be using the <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank"><i>React Testing Library</i></a> and <a href="https://www.selenium.dev/documentation/en/webdriver/" target="_blank"><i>Selenium WebDriver</i></a>. This allows a lot of automation with testing visual components and ensuring the application works as intended. These technologies act as the end-user.</li>
   </ul>
 </ul>
 
 <h3>4.3 User Documentation</h3>
-<p>All pieces of code will be properly documented in order to ensure clarity of the purpose and function of the program. Up to date user documentation will be posted on our projects wiki page, which can be found here: https://wiki.muspace.me. All other documents can be found on our project webpage here: https://muspace.me</p>
-
-<h3>4.4 Project Support Functions</h3>
-<ul>
-  <li>JavaScript unit testing: <a href="https://jestjs.io/" target="_blank">JestJS</a></li>
-  <li>Functional testing via webdriver: <a href="https://www.selenium.dev/documentation/en/webdriver/" target="_blank">Selenium</a></li>
-  <li><a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library</a></li>
-  <li>Configuration Management: <a href="https://firebase.google.com/docs/firestore" target="_blank">Firestore</a></li>
-</ul>
+<p>All pieces of code will be properly documented in order to ensure clarity of the purpose and function of the program. Up to date user documentation will be posted on our projects wiki page, which can be found here: <a href="https://wiki.muspace.me">MuSpace Wiki</a>. All other documents can be found on our project webpage here: <a href="https://muspace.me">MuSpace Documentation</a>.</p>
 
 <h2>5. Money/Cost</h2>
 
-<img src="https://en.meming.world/images/en/0/0d/In_Terms_Of_Money%2C_We_Have_No_Money.jpg" width="256" />
+<img src="https://en.meming.world/images/en/0/0d/In_Terms_Of_Money%2C_We_Have_No_Money.jpg" width="256" alt="Meme from Despicable Me movie: In terms of money, we have no money" />
     
-<p>This project is solely dependent on the time and effort of the developers. No monetary funding is given or needed. All resources (frameworks, APIs, etc.) are free and open-source with the exception of purchasing a one-year domain subscription that was divided equally between all team members. A <i>Spotify Premium Account</i> is required for developing and testing <i>Spotify SDK</i> features.</p>
+<p>This project is solely dependent on the time and effort of the developers. No monetary funding is collected or needed. All resources (frameworks, APIs, etc.) are free and open-source with the exception of purchasing a one-year domain subscription that was divided equally between all team members. A <i>Spotify Premium Account</i> is required for developing and testing <i>Spotify SDK</i> features.</p>
 
 <h2>6. Extra Details</h2>
 <p><b>Authored by: </b></p>
