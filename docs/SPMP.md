@@ -383,8 +383,8 @@
 
 <h4>Project Management Tools:</h4>
 <ul>
-  <li><b>GitHub</b> - <a href="https://github.com/SherRao/MuSpace" target="_blank">Repository</a></li>
-  <li><b>Figma</b> - <a href="https://www.figma.com/team_invite/redeem/bENflg8BpmlHQtsnZpDSoz" target="_blank">Project</a></li>
+  <li><b>GitHub</b> - <a href="https://github.com/SherRao/MuSpace" target="_blank">GitHub Repository</a></li>
+  <li><b>Figma</b> - <a href="https://www.figma.com/team_invite/redeem/bENflg8BpmlHQtsnZpDSoz" target="_blank">Figma Project</a></li>
   <li><b>Google Drive (Docs, Sheets)</b></li>
   <li><b>Discord</b> - <a href="https://discord.com/brand-new" target="_blank">Discord</a></li>
 </ul>
