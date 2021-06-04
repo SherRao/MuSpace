@@ -122,8 +122,8 @@
 <h3>1.5 Definitions and Acronyms</h3>
 <h4>1.5.1 Definitions</h4>
 <ul>
-  <li><b>Spotify</b> - Spotify is an audio streaming and media services provider</li>
-  <li><b>Spotify Premium Account</b> - The paid music service offered by Spotify that gives users advanced features. For this project, it is required by the Spotify API and SDK for connected Spotify accounts to be a Spotify Premium member to use their web music player features. See <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">here</a> for more information</li>
+  <li><b>Spotify</b> - Spotify is an audio streaming and media services provider.</li>
+  <li><b>Spotify Premium Account</b> - The paid music service offered by Spotify that gives users advanced features. For this project, it is required by the Spotify API and SDK for connected Spotify accounts to be a Spotify Premium member to use their web music player features. See <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">here</a> for more information.</li>
   <li><b>Listening Room/Music Room</b> - A chat room hosted by users where they can listen along to the host and chat with other users in the room.</li>
   <li><b>Agile Approach</b> - A method to manage a project by breaking it up into several phases.</li>
   <li><b>Web-based</b> - A piece of software that is solely hosted on a web server over the internet.</li>
@@ -145,7 +145,7 @@
   <li><b>Repository</b> - A software repository is a storage location for the application packages.</li>
   <li><b>Codebase</b> - The entirety of the source code used for the application.</li>
   <li><b>V8 JavaScript Engine</b> - An open-source JavaScript engine developed by The Chromium Project for Google Chrome and Chromium web browsers.</li>
-  <li><b>Endpoint</b> - A remote computing device that communicates back and forth with a network to which it is connected</li>
+  <li><b>Endpoint</b> - A remote computing device that communicates back and forth with a network to which it is connected.</li>
   <li><b>Headless</b> - The application is running without a graphical user interface (GUI) and sometimes without a user interface at all.</li>
   <li><b>Chromium</b> - An open-source browser project that aims to build a safer, faster, and more stable way for all users to experience the web.</li>
   <li><b>Plaintexts</b> - Text that is not computationally tagged, specially formatted, or written in code.</li>
@@ -179,7 +179,7 @@
 <p><b>Stage 7:</b> Operations & Maintenance (Post Submission)</p>
 
 <h3>2.2 Organizational Structure</h3>
-<p>Using the agile approach, we will be starting on the backend of the project and the UI design as a group. As soon as the UI design is finished and laid out, the front-end developers will begin development. Concurrently, the back-end developers will also begin development. Everything worked on will be done through sprints. After both the frontend and backend of the project are finished, we will port the web-based application onto Android and iOS.</p>
+<p>Using the agile approach, we will be starting on the back-end of the project and the UI design as a group. As soon as the UI design is finished and laid out, the front-end developers will begin development. Concurrently, the back-end developers will also begin development. Everything worked on will be done through sprints. After both the front-end and back-end of the project are finished, we will port the web-based application onto Android and iOS.</p>
 
 <h3>2.2 Project Responsibilities</h3>
 <table>
@@ -305,17 +305,17 @@
 <h3>3.3 Risk Management / User Privacy / User Safety</h3>
 <ol>
   <li>
-    <b>Risk:</b> Too many users attempting to connect to the website/application. This can overload any of our backend components by creating too many concurrent requests and crashing.<br>
+    <b>Risk:</b> Too many users attempting to connect to the website/application. This can overload any of our back-end components by creating too many concurrent requests and crashing.<br>
     <b>Solution:</b>Access to the site will be throttled by Cloudflare - Cloudflare is a DNS service that also provides DDOS mitigation. Cloudflare limits the number of people that can concurrently access the website.
   </li>
   <br>
   <li>
-    <b>Risk:</b> Too many users attempting to join the same listening room. This can crash a listening room and may even crash the backend used to store the listening room data.<br>
+    <b>Risk:</b> Too many users attempting to join the same listening room. This can crash a listening room and may even crash the back-end used to store the listening room data.<br>
     <b>Solution:</b> If a certain number of users (128) try to connect to a listening room concurrently, they will be put into a queue where the application will limit the number of people who get through to the listening room per second (20 users/second).
   </li>
   <br>
   <li>
-    <b>Risk:</b> Too many users attempting to connect to the website/application. This can overload any of our backend components by creating too many concurrent requests and crashing.<br>
+    <b>Risk:</b> Too many users attempting to connect to the website/application. This can overload any of our back-end components by creating too many concurrent requests and crashing.<br>
     <b>Solution:</b> All account creation, user sign-in and important actions will be verified using Google reCaptcha v2 to assure that the user is indeed human and not a bot. See Risk 4 for the answer for spam messages.
   </li>
   <br>
@@ -460,7 +460,7 @@
     </ul>
     <li>Finding new music:</li>
     <ul>
-      <li>The backend will generate a set of new songs/albums/artists that the user can listen to depending on their collated data.</li>
+      <li>The back-end will generate a set of new songs/albums/artists that the user can listen to depending on their collated data.</li>
       <li>This will be displayed on the discover page.</li>
     </ul>
   </ul>
@@ -544,8 +544,8 @@ The following documentations are required as a minimum: </p>
 <h3>4.2.2 Software Design Description (SDD)</h3>
 <p>We will be using <i>JavaScript</i>, <i>TypeScript</i>, <i>CSS</i>, and <i>HTML</i> as the languages for the project. These languages are the easiest to implement for a web application of this magnitude which requires the front-end and back-end to work with each other seamlessly. Without the hassle of separate code bases for both. <i>JavaScript</i> and <i>TypeScript</i> are also ideal languages that have a great capability of handling asynchronous server-side requests.</p>
 <p>We will be using <i>ReactJS</i>, <i>StyledComponents</i>, and <i>Semantic UI</i> to create the front-end of the application - this is the code that will be executed and displayed client-side using a built-in browser <i>JavaScript</i> engine, such as <i>Google’s V8 JavaScript Engine</i>.</p>
-<p>For the back-end of the application, we are using <i>Node.js</i> to run a headless <i>Chromium</i> instance to execute server-side code. The backend will integrate the <i>Spotify SDK Spotify API, and LyricGenius API</i> to draw all user data - artists, albums, genres, and songs that the artist listens to. The API can also extract music listening and other statistics. This data will be used to connect with other users using a scoring system and to discover new music. The <i>Spotify Web SDK</i> will be used to play music using the user's <i>Spotify</i> account in the web app. The <i>SDK</i> requires the users to have a <i>Spotify</i> Premium account. The <i>LyricGenius API</i> will be used to display lyrics of the songs that the user listens to as well as related lyrical trivia. </p>
-<p>The other portion of the backend uses <i>Google’s</i> suite of APIs included in <i>Google Firebase</i>. These are but are not limited to Firestore and Authentication. Firestore will be used to store a lot of data:</p>
+<p>For the back-end of the application, we are using <i>Node.js</i> to run a headless <i>Chromium</i> instance to execute server-side code. The back-end will integrate the <i>Spotify SDK Spotify API, and LyricGenius API</i> to draw all user data - artists, albums, genres, and songs that the artist listens to. The API can also extract music listening and other statistics. This data will be used to connect with other users using a scoring system and to discover new music. The <i>Spotify Web SDK</i> will be used to play music using the user's <i>Spotify</i> account in the web app. The <i>SDK</i> requires the users to have a <i>Spotify</i> Premium account. The <i>LyricGenius API</i> will be used to display lyrics of the songs that the user listens to as well as related lyrical trivia. </p>
+<p>The other portion of the back-end uses <i>Google’s</i> suite of APIs included in <i>Google Firebase</i>. These are but are not limited to Firestore and Authentication. Firestore will be used to store a lot of data:</p>
 
 <ul>
   <li>User data</li>
