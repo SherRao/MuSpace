@@ -539,7 +539,7 @@ The following documentations are required as a minimum: </p>
 <!-- UPDATED TO HERE -->
 
 <h3>4.2.1 Software Requirements Specification (SRS)</h3>
-<p>Up to date <a href="https://sherrao.github.io/MuSpace/SRS.html">SRS Documentation.</a></p>
+<p>Up to date <a href="https://sherrao.github.io/MuSpace/SRS.html">SRS Documentation</a>.</p>
 
 <h3>4.2.2 Software Design Description (SDD)</h3>
 <p>We will be using <i>JavaScript</i>, <i>TypeScript</i>, <i>CSS</i>, and <i>HTML</i> as the languages for the project. These languages are the easiest to implement for a web application of this magnitude which requires the front-end and back-end to work with each other seamlessly. Without the hassle of separate code bases for both. <i>JavaScript</i> and <i>TypeScript</i> are also ideal languages that have a great capability of handling asynchronous server-side requests.</p>
