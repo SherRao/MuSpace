@@ -588,7 +588,7 @@ The following documentations are required as a minimum: </p>
 </ul>
 
 <h3>4.3 User Documentation</h3>
-<p>All pieces of code will be properly documented in order to ensure clarity of the purpose and function of the program. Up to date user documentation will be posted on our projects wiki page, which can be found here: <a href="https://wiki.muspace.me">MuSpace Wiki</a>. All other documents can be found on our project webpage here: <a href="https://muspace.me">MuSpace Documentation</a>.</p>
+<p>All pieces of code will be properly documented in order to ensure clarity of the purpose and function of the program. Up to date user documentation will be posted on our projects wiki page, which can be found here: <a href="https://wiki.muspace.me" target="_blank">MuSpace Wiki</a>. All other documents can be found on our project webpage here: <a href="https://muspace.me">MuSpace Documentation</a>.</p>
 
 <h2>5. Money/Cost</h2>
 
