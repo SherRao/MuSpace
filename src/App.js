@@ -1,23 +1,14 @@
-import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import { Theme, Router } from "@misc";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Theme>
+                <Router />
+            </Theme>
+        </BrowserRouter>
+    );
 }
 
 export default App;
