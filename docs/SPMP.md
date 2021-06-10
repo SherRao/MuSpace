@@ -7,7 +7,8 @@
 <h2>1. Introduction</h2>
 
 <h3>1.1 Project Overview</h3>
-<p>MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. When users share similar listening habits with others, they are recommended as connections via a point-based rating system using the <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk">Spotify SDK</a> data. MuSpace will also offer listening rooms that allow users to listen along with their friends and chat with each other in real-time. Additionally, users can recommend which songs will be played in the listening room.</p>
+<p>MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. When users share similar listening habits with others, they are recommended as connections via a point-based rating system using the <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Spotify SDK</a> data. MuSpace will also offer listening rooms that allow users to listen along with their friends and chat with each other in real-time. Additionally, users can recommend which songs will be played in the listening room.
+</p>
 
 <h3>1.2 Project Deliverables</h3>
 
@@ -121,8 +122,8 @@
 <h3>1.5 Definitions and Acronyms</h3>
 <h4>1.5.1 Definitions</h4>
 <ul>
-  <li><b>Spotify</b> - Spotify is an audio streaming and media services provider</li>
-  <li><b>Spotify Premium Account</b> - The paid music service offered by Spotify that gives users advanced features. For this project, it is required by the Spotify API and SDK for connected Spotify accounts to be a Spotify Premium member to use their web music player features. See <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">here</a> for more information</li>
+  <li><b>Spotify</b> - Spotify is an audio streaming and media services provider.</li>
+  <li><b>Spotify Premium Account</b> - The paid music service offered by Spotify that gives users advanced features. For this project, it is required by the Spotify API and SDK for connected Spotify accounts to be a Spotify Premium member to use their web music player features. See <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">here</a> for more information.</li>
   <li><b>Listening Room/Music Room</b> - A chat room hosted by users where they can listen along to the host and chat with other users in the room.</li>
   <li><b>Agile Approach</b> - A method to manage a project by breaking it up into several phases.</li>
   <li><b>Web-based</b> - A piece of software that is solely hosted on a web server over the internet.</li>
@@ -144,7 +145,7 @@
   <li><b>Repository</b> - A software repository is a storage location for the application packages.</li>
   <li><b>Codebase</b> - The entirety of the source code used for the application.</li>
   <li><b>V8 JavaScript Engine</b> - An open-source JavaScript engine developed by The Chromium Project for Google Chrome and Chromium web browsers.</li>
-  <li><b>Endpoint</b> - A remote computing device that communicates back and forth with a network to which it is connected</li>
+  <li><b>Endpoint</b> - A remote computing device that communicates back and forth with a network to which it is connected.</li>
   <li><b>Headless</b> - The application is running without a graphical user interface (GUI) and sometimes without a user interface at all.</li>
   <li><b>Chromium</b> - An open-source browser project that aims to build a safer, faster, and more stable way for all users to experience the web.</li>
   <li><b>Plaintexts</b> - Text that is not computationally tagged, specially formatted, or written in code.</li>
@@ -178,7 +179,7 @@
 <p><b>Stage 7:</b> Operations & Maintenance (Post Submission)</p>
 
 <h3>2.2 Organizational Structure</h3>
-<p>Using the agile approach, we will be starting on the backend of the project and the UI design as a group. As soon as the UI design is finished and laid out, the front-end developers will begin development. Concurrently, the back-end developers will also begin development. Everything worked on will be done through sprints. After both the frontend and backend of the project are finished, we will port the web-based application onto Android and iOS.</p>
+<p>Using the agile approach, we will be starting on the back-end of the project and the UI design as a group. As soon as the UI design is finished and laid out, the front-end developers will begin development. Concurrently, the back-end developers will also begin development. Everything worked on will be done through sprints. After both the front-end and back-end of the project are finished, we will port the web-based application onto Android and iOS.</p>
 
 <h3>2.2 Project Responsibilities</h3>
 <table>
@@ -294,7 +295,7 @@
 <h2>3. Managerial Process</h2>
 
 <h3>3.1 Management Objectives and Priorities</h3>
-<p>The main objective of this project is to develop a web-based music application that will eventually branch out to Android and iOS. This uses the <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk">Spotify SDK</a> to connect people listening to similar styles of music. By the end of the term (August, 5th 2021), our goal is to have all project deliverables (the SRS, the SPMP, analysis, document, design documentation, back-end implementation, front-end implementation, mobile implementation, and user documentation) complete. By then our goal is to also have a complete well-implemented version of our application, which would be heavily Quality Tested. This project's major priority is to have an easy-to-understand, easy-to-read, consistent, and informative set of documentation as well as a seamless project flow. Since the project has no monetary funding, the completion of deliverables is solely dependent on our time and resources. </p>
+<p>The main objective of this project is to develop a web-based music application that will eventually branch out to Android and iOS. This uses the <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Spotify SDK</a> to connect people listening to similar styles of music. By the end of the term (August, 5th 2021), our goal is to have all project deliverables (the SRS, the SPMP, analysis, document, design documentation, back-end implementation, front-end implementation, mobile implementation, and user documentation) complete. By then our goal is to also have a complete well-implemented version of our application, which would be heavily Quality Tested. This project's major priority is to have an easy-to-understand, easy-to-read, consistent, and informative set of documentation as well as a seamless project flow. Since the project has no monetary funding, the completion of deliverables is solely dependent on our time and resources. </p>
 
 <h3>3.2 Monitoring and Controlling Mechanisms</h3>
 <p>Our group meetings take place every Tuesday and Thursday during lectures, where we send one person to listen to the lecture, in this case, Jagveer. During this time, we split into groups for sprints, where work ethic is peer-checked.</p>
@@ -304,17 +305,17 @@
 <h3>3.3 Risk Management / User Privacy / User Safety</h3>
 <ol>
   <li>
-    <b>Risk:</b> Too many users attempting to connect to the website/application. This can overload any of our backend components by creating too many concurrent requests and crashing.<br>
+    <b>Risk:</b> Too many users attempting to connect to the website/application. This can overload any of our back-end components by creating too many concurrent requests and crashing.<br>
     <b>Solution:</b>Access to the site will be throttled by Cloudflare - Cloudflare is a DNS service that also provides DDOS mitigation. Cloudflare limits the number of people that can concurrently access the website.
   </li>
   <br>
   <li>
-    <b>Risk:</b> Too many users attempting to join the same listening room. This can crash a listening room and may even crash the backend used to store the listening room data.<br>
+    <b>Risk:</b> Too many users attempting to join the same listening room. This can crash a listening room and may even crash the back-end used to store the listening room data.<br>
     <b>Solution:</b> If a certain number of users (128) try to connect to a listening room concurrently, they will be put into a queue where the application will limit the number of people who get through to the listening room per second (20 users/second).
   </li>
   <br>
   <li>
-    <b>Risk:</b> Too many users attempting to connect to the website/application. This can overload any of our backend components by creating too many concurrent requests and crashing.<br>
+    <b>Risk:</b> Too many users attempting to connect to the website/application. This can overload any of our back-end components by creating too many concurrent requests and crashing.<br>
     <b>Solution:</b> All account creation, user sign-in and important actions will be verified using Google reCaptcha v2 to assure that the user is indeed human and not a bot. See Risk 4 for the answer for spam messages.
   </li>
   <br>
@@ -346,12 +347,12 @@
   <br>
   <li>
     <b>Risk:</b> Data not being securely sent over the internet to the MuSpace server.<br>
-    <b>Solution:</b> All data will be securely transferred from a client to the server with Google Firebase’s implementation of data privacy and security. All endpoints used on Firebase are secured through Google’s servers. See <a href="https://firebase.google.com/docs/firestore/security/overview">here</a> for more information on how Google Firebase uses security.
+    <b>Solution:</b> All data will be securely transferred from a client to the server with Google Firebase’s implementation of data privacy and security. All endpoints used on Firebase are secured through Google’s servers. See <a href="https://firebase.google.com/docs/firestore/security/overview" target="_blank">here</a> for more information on how Google Firebase uses security.
   </li>
   <br>
   <li>
     <b>Risk:</b> Another person hacks into your account.<br>
-    <b>Solution:</b> We will use OAuth2 to make sure that the person is who they say they are. See <a href="https://oauth.net/2/">here</a> for more information on how OAuth2 uses security.
+    <b>Solution:</b> We will use OAuth2 to make sure that the person is who they say they are. See <a href="https://oauth.net/2/" target="_blank">here</a> for more information on how OAuth2 uses security.
   </li>
   <br>
 
@@ -364,73 +365,271 @@
 
 <h4>Technologies:</h4>
 <ul>
-  <li><b>JavaScript</b> - <a href="https://www.javascript.com/">JavaScript.com</a></li>
-  <li><b>TypeScript</b> - <a href="https://www.typescriptlang.org/">TypeScript: Typed JavaScript at Any Scale. (typescriptlang.org</a></li>
-  <li><b>ReactJS framework</b><a href="https://reactjs.org/">React</a></li>
-  <li><b>Node.js</b> - <a href="https://nodejs.org/en/">Node.js (nodejs.org)</a></li>
-  <li><b>Js-logger</b> - <a href="https://www.npmjs.com/package/js-logger">js-logger - npm (npmjs.com)</a></li>
-  <li><b>StyledComponents</b> - <a href="https://styled-components.com/">styled-components</a></li>
-  <li><b>Google Firestore</b> - <a href="https://cloud.google.com/firestore">Firestore: NoSQL document database  |  Google Cloud</a></li>
-  <li><b>Google Authentication</b> - <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA&gl=US">Google Authenticator – Apps on Google Play</a></li>
-  <li><b>LyricsGenius API</b> - <a href="https://docs.genius.com/">Genius API</a></li>
-  <li><b>Google reCaptcha v2</b> - <a href="https://developers.google.com/recaptcha/docs/display">reCaptcha v2</a></li>
-  <li><b>Spotify API</b> - <a href="https://developer.spotify.com/documentation/web-api/">Web API | Spotify for Developers</a></li>
-  <li><b>Spotify SDK</b> - <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk">Web Playback SDK | Spotify for Developers</a></li>
-  <li><b>Semantic UI</b> - <a href="https://semantic-ui.com/">Semantic UI</a></li>
+  <li><b>JavaScript</b> - <a href="https://www.javascript.com/" target="_blank">JavaScript.com</a></li>
+  <li><b>TypeScript</b> - <a href="https://www.typescriptlang.org/" target="_blank">TypeScript: Typed JavaScript at Any Scale. (typescriptlang.org)</a></li>
+  <li><b>ReactJS framework</b><a href="https://reactjs.org/" target="_blank">React</a></li>
+  <li><b>Node.js</b> - <a href="https://nodejs.org/en/" target="_blank">Node.js (nodejs.org)</a></li>
+  <li><b>Js-logger</b> - <a href="https://www.npmjs.com/package/js-logger" target="_blank">js-logger - npm (npmjs.com)</a></li>
+  <li><b>Google Firestore</b> - <a href="https://cloud.google.com/firestore" target="_blank">Firestore: NoSQL document database | Google Cloud</a></li>
+  <li><b>Google Authentication</b> - <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA&gl=US" target="_blank">Google Authenticator – Apps on Google Play</a></li>
+  <li><b>LyricsGenius API</b> - <a href="https://docs.genius.com/" target="_blank">Genius API</a></li>
+  <li><b>Google reCaptcha v2</b> - <a href="https://developers.google.com/recaptcha/docs/display" target="_blank">reCaptcha v2</a></li>
+  <li><b>Spotify API</b> - <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Web API | Spotify for Developers</a></li>
+  <li><b>Spotify SDK</b> - <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Web Playback SDK | Spotify for Developers</a></li>
+  <li><b>Semantic UI</b> - <a href="https://semantic-ui.com/" target="_blank">Semantic UI</a></li>
+  <li><b>StyledComponents</b> - <a href="https://styled-components.com/" target="_blank">styled-components</a></li>
 
 </ul>
 
 <h4>Project Management Tools:</h4>
 <ul>
-  <li><b>GitHub</b> - <a href="https://semantic-ui.com/">Repository</a></li>
-  <li><b>Figma</b> - <a href="https://www.figma.com/team_invite/redeem/bENflg8BpmlHQtsnZpDSoz">Project</a></li>
+  <li><b>GitHub</b> - <a href="https://github.com/SherRao/MuSpace" target="_blank">GitHub Repository</a></li>
+  <li><b>Figma</b> - <a href="https://www.figma.com/team_invite/redeem/bENflg8BpmlHQtsnZpDSoz" target="_blank">Figma Project</a></li>
   <li><b>Google Drive (Docs, Sheets)</b></li>
-  <li><b>Discord</b> - <a href="https://discord.com/brand-new">Discord</a></li>
+  <li><b>Discord</b> - <a href="https://discord.com/brand-new" target="_blank">Discord</a></li>
 </ul>
 
 <h4>Project Support Functions:</h4>
 <ul>
-  <li><b>JavaScript unit testing</b> - <a href="https://jestjs.io/">JestJS</a></li>
-  <li><b>Functional testing via Selenium WebDriver</b> - <a href="https://www.selenium.dev/documentation/en/webdriver/">Selenium</a></li>
-  <li><b>Functional testing via Selenium WebDriver</b> - <a href="https://testing-library.com/docs/react-testing-library/intro/">React Testing Library</a></li>
-  <li><b>Configuration Management: Firestore</b> - <a href="https://firebase.google.com/docs/firestore">Firestore</a></li>
+  <li><b>JavaScript unit testing</b> - <a href="https://jestjs.io/" target="_blank">JestJS</a></li>
+  <li><b>Functional testing via Selenium WebDriver</b> - <a href="https://www.selenium.dev/documentation/en/webdriver/" target="_blank">Selenium</a></li>
+  <li><b>Functional testing via Selenium WebDriver</b> - <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library</a></li>
+  <li><b>Configuration Management: Firestore</b> - <a href="https://firebase.google.com/docs/firestore" target="_blank">Firestore</a></li>
 </ul>
 
+<h3>4.1.1 Feature Specific Requirements</h3>
+<ul>
+  <li><b>Login Page:</b></li>
+  <ul>
+    <li>A page that displays a form where a user can type their username and password.</li>
+    <li>Will contain a <i>reCaptcha</i> that a user has to pass.</li>
+    <li>The user will then press the submit button to login.</li>
+    <li>The data from the form will be sent to <i>Firebase Authentication</i> - this will return a success or failure message that will then be displayed to the user.</li>
+    <li>If the user is successful in logging in, they will be redirected to their home page.</li>
+    <li>If the user fails to login, they stay on the login page where they can try again.</li>
+    <ul>
+      <li>They have 3 tries to get the right and then they are locked out.</li>
+    </ul>
+  </ul>
+
+  <li><b>Account Creation:</b></li>
+  <ul>
+    <li>The first page of the account creation process requires the user to input their email address, username, full name, and password. These will be a part of a form, where the username and full name field are plaintexts, the password field is a password field, and the email address field is an email address field.</li>
+    <li>The password will need to be entered twice for verification.</li>
+    <li>This data will then be verified to make sure it meets certain criteria. These criteria are as follows: </li>
+    <ul>
+      <li>The username must be a minimum of 5 characters and a maximum of 32 characters.</li>
+      <li>The email address must be in a regular email address format.</li>
+      <li>The password must be a minimum of six characters. </li>
+      <li>The full name has no restrictions as there are too many variations.</li>
+    </ul>
+    <li>After all these factors have been verified, they will be sent to <i>Google Authentication</i> to be stored.</li>
+    <li>The second part of the process in creating an account will be clicking on a link in your email address that verifies that you are registering with your email address. This link will then take you to the next page.</li>
+    <li>The next page of the account creation involves linking your <i>MuSpace</i> account to your <i>Spotify</i> account. This page consists of a single button that uses <i>Spotify’s OAuth2</i> implementation of account permissions to allow you to give permission to <i>Spotify</i> to give the user’s account information to <i>MuSpace</i>. This process will open in a new webpage that is managed by <i>Spotify</i>.</li>
+    <li>Once the user has linked their <i>Spotify</i> account, they will be redirected to the user’s home page.</li>
+  </ul>
+  <li><b>Home Page:</b></li>
+  <ul>
+    <li>All pages of the application will have a sidebar on the left side of the page that allows you to navigate through all the main component pages of <i>MuSpace</i>.</li>
+    <li>The home page is the central component of the user experience.</li>
+    <li>The home page includes basic user information such as the most-streamed music that day and recently listened to songs.</li>
+    <li>It also displays the user’s friend’s top albums and listening activity. There’s a section that also displays popular public listening rooms that the user may be interested in joining.</li>
+    <li>The home page includes an “I’m feeling lucky button” which once clicked will play a random song that the user may enjoy listening to. A song will be chosen based on the user’s current listening preferences.</li>
+  </ul>
+  <li><b>User Profile:</b></li>
+  <ul>
+    <li>The user profile will use user data compiled by <i>MuSpace</i>. These stats will constantly be updated by retrieving and recompiling data on a user from the Spotify API and processing it to tailor it towards the features of <i>MuSpace</i>.</li>
+    <li>Shows recent listening history from <i>Spotify</i>. </li>
+    <li>Will display basic user information, such as username, which will be retrieved from the Firestore database.</li>
+    <li>The user profile page will display other generated statistics that are dependent on the specific user’s listening habits.</li>
+    <li>A request is sent to the Firestore database, which will then return a list of data to be displayed.</li>
+  </ul>
+  <li><b>Friends Page:</b></li>
+  <ul>
+    <li>The Friends page will list all the user’s friends and their status (Online, Offline).</li>
+    <li>On the Friends page, there will be a button to add a new friend by username.</li>
+    <li>On the Friends page, clicking/tapping on a friend's name will present the user with options to send a private message, or unfriend the selected user.</li>
+    <li>A request is sent to the Firestore database, which will then return a list of chat room IDs that the user is a part of. The client can then request each chat room specifically, which the database will return.</li>
+  </ul>
+  <li><b>Discover Page:</b></li>
+  <ul>
+    <li>Finding new friends:</li>
+    <ul>
+      <li>Adding a friend by searching a username in the search bar. Where a dropdown will appear with accounts that match the search and by selecting the profile it navigates you to their profile page. On this page, there will be a button next to the person’s name to add them as a friend.</li>
+      <li>Users are given recommended connections/matches (See 4.1.1 Suggested Connections). This allows the users to share listening activities, chat with each other, and have listening rooms.</li>
+    </ul>
+    <li>Finding new music:</li>
+    <ul>
+      <li>The back-end will generate a set of new songs/albums/artists that the user can listen to depending on their collated data.</li>
+      <li>This will be displayed on the discover page.</li>
+    </ul>
+  </ul>
+  <li><b>Messaging Page:</b></li>
+  <ul>
+    <li>The Messaging page shows a list of all ongoing chat rooms with friends</li>
+    <li>These rooms are React components, which can individually be clicked on.</li>
+    <li>Users will be able to select a conversation that will open it in a bigger component which will display the chats between all users, alongside their names and profile pictures. Any messages sent will be sent to the <i>Firestore</i> database, which will then be sent to all other users’ clients.</li>
+    <li>Users will also be able to delete conversations. Deleting the conversation will remove it from the Messaging page and also remove the user from the list of users participating in the said chat room.</li>
+  </ul>
+  <li><b>Suggested Connections:</b></li>
+  <ul>
+    <li>Matches individuals based on:</li>
+    <ul>
+      <li>Location</li>
+      <li>Artists Shared</li>
+      <li>Songs Shared</li>
+      <li>Albums Shared</li>
+      <li>Genres Shared</li>
+    </ul>
+    <li>The Spotify API is used in order to obtain the items users have in common (including top items from recent/current listening and all-time)</li>
+    <li>A point-based rating system will be used to determine likelihood of a particular user being displayed as a suggested connection, the algorithm used for this calculation is yet to be defined.</li>
+  </ul>
+</ul>
+<h3>4.2 Software Documentation</h3>
+<p>Software documentation will be taken in all phases of development and planning, to ensure that the implementation of the software satisfies the requirements.<br> 
+The following documentations are required as a minimum: </p>
+<ul>
+  <li>Software Requirements Specification</li>
+  <li>Software Project Management Plan</li>
+  <li>Analysis documentation</li>
+  <li>Design documentation</li>
+</ul>
+<table>
+  <!-- Headers -->
+  <tr>
+    <th style="text-align:center">Name</th>
+    <th style="text-align:center">Standard/Template</th>
+    <th style="text-align:center">Reviewed By</th>
+  </tr>
+
+  <tr>
+    <td style="text-align:center">Requirements Document</td>
+    <td style="text-align:center">Modified IEEE</td>
+    <td rowspan="5" style="text-align:center">Entire Team</td>
+  </tr>
+
+  <tr>
+    <td style="text-align:center">Project Management Document</td>
+    <td style="text-align:center">Modified IEEE</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">Analysis Document</td>
+    <td style="text-align:center">TBD</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">Design Document</td>
+    <td style="text-align:center">TBD</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">User Document</td>
+    <td style="text-align:center">TBD</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">Participation Record (Hours)</td>
+    <td style="text-align:center">Self-documentation using internal Excel sheet</td>
+    <td style="text-align:center">Adrian</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">Source Code</td>
+    <td style="text-align:center">TBD</td>
+    <td style="text-align:center">All Developers</td>
+  </tr>
+
+</table>
 <!-- UPDATED TO HERE -->
 
-<h3>4.2 Software Documentation</h3>
-
 <h3>4.2.1 Software Requirements Specification (SRS)</h3>
-<ul>
-  <li>This document can be found <a href="https://github.com/SherRao/MuSpace/blob/main/docs/SRS.md" target="_blank">here</a>.</li>
-</ul>
+<p>Up to date <a href="https://sherrao.github.io/MuSpace/SRS.html">SRS Documentation</a>.</p>
 
 <h3>4.2.2 Software Design Description (SDD)</h3>
-<p>We will be using the ReactJS framework and Typescript to develop the front-end, and integrate the Spotify, Discord, and LyricGenius APIs to draw user data, songs, lyrics, and artist bios.</p>
+<p>We will be using <i>JavaScript</i>, <i>TypeScript</i>, <i>CSS</i>, and <i>HTML</i> as the languages for the project. These languages are the easiest to implement for a web application of this magnitude which requires the front-end and back-end to work with each other seamlessly. Without the hassle of separate code bases for both. <i>JavaScript</i> and <i>TypeScript</i> are also ideal languages that have a great capability of handling asynchronous server-side requests.</p>
+<p>We will be using <i>ReactJS</i>, <i>StyledComponents</i>, and <i>Semantic UI</i> to create the front-end of the application - this is the code that will be executed and displayed client-side using a built-in browser <i>JavaScript</i> engine, such as <i>Google’s V8 JavaScript Engine</i>.</p>
+<p>For the back-end of the application, we are using <i>Node.js</i> to run a headless <i>Chromium</i> instance to execute server-side code. The back-end will integrate the <i>Spotify SDK Spotify API, and LyricGenius API</i> to draw all user data - artists, albums, genres, and songs that the artist listens to. The API can also extract music listening and other statistics. This data will be used to connect with other users using a scoring system and to discover new music. The <i>Spotify Web SDK</i> will be used to play music using the user's <i>Spotify</i> account in the web app. The <i>SDK</i> requires the users to have a <i>Spotify</i> Premium account. The <i>LyricGenius API</i> will be used to display lyrics of the songs that the user listens to as well as related lyrical trivia. </p>
+<p>The other portion of the back-end uses <i>Google’s</i> suite of APIs included in <i>Google Firebase</i>. These are but are not limited to Firestore and Authentication. Firestore will be used to store a lot of data:</p>
+
 <ul>
-  <li>This document can be found <a href="https://github.com/SherRao/MuSpace/blob/main/docs/Conventions.md" target="_blank">here</a>.</li>
+  <li>User data</li>
+  <ul>
+    <li>Login Information</li>
+    <li>Selected <i>Spotify</i> Information</li>
+    <li>Personal Data (Name, Age, Country, etc.)</li>
+  </ul>
+  <li>Connections between users</li>
+  <ul>
+    <li>Date of connection</li>
+    <li>Users involved</li>
+  </ul>
+  <li>Chat/Messages Rooms</li>
+  <ul>
+    <li>Chat room ID</li>
+    <li>Chat messages</li>
+    <li>Room participants</li>
+  </ul>
+  <li>Listening Rooms:</li>
+  <ul>
+    <li>Host user ID</li>
+    <li>A queue of URLs for songs to be played</li>
+    <li>List of user IDs for users who are currently listening</li>
+    <li>Counter of likes and dislikes</li>
+  </ul>
 </ul>
+<p>The code styling and conventions have been outlined in this <a href="https://sherrao.github.io/MuSpace/Conventions.html">Github document</a>.</p>
 
 <h3>4.2.3 Software Test Plan</h3>
 <ul>
-  <li>This document can be found <a href="https://github.com/SherRao/MuSpace/blob/main/docs/Testing.md" target="_blank">here</a>.</li>
+  <li>Unit Testing</li>
+  <ul>
+    <li>All major functions and components of the project will be tested using <a href="https://jestjs.io/" target="_blank"><i>Jest</i></a>. This testing framework allows the ease of writing unit tests.</li>
+  </ul>
+  <li>Functional Testing</li>
+  <ul>
+    <li>We will be using the <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank"><i>React Testing Library</i></a> and <a href="https://www.selenium.dev/documentation/en/webdriver/" target="_blank"><i>Selenium WebDriver</i></a>. This allows a lot of automation with testing visual components and ensuring the application works as intended. These technologies act as the end-user.</li>
+  </ul>
 </ul>
 
 <h3>4.3 User Documentation</h3>
-<ul>
-  <li>GitHub Wiki:<br><a href="https://github.com/SherRao/MuSpace/wiki" target="_blank">https://github.com/SherRao/MuSpace/wiki</a></li>
-</ul>
-
-<h3>4.4 Project Support Functions</h3>
-<ul>
-  <li>JavaScript unit testing: <a href="https://jestjs.io/" target="_blank">JestJS</a></li>
-  <li>Functional testing via webdriver: <a href="https://www.selenium.dev/documentation/en/webdriver/" target="_blank">Selenium</a></li>
-  <li><a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library<a></li>
-  <li>Configuration Management: <a href="https://firebase.google.com/docs/firestore" target="_blank">Firestore<a></li>
-</ul>
+<p>All pieces of code will be properly documented in order to ensure clarity of the purpose and function of the program. Up to date user documentation will be posted on our projects wiki page, which can be found here: <a href="https://wiki.muspace.me" target="_blank">MuSpace Wiki</a>. All other documents can be found on our project webpage here: <a href="https://muspace.me">MuSpace Documentation</a>.</p>
 
 <h2>5. Money/Cost</h2>
 
-<img src="https://en.meming.world/images/en/0/0d/In_Terms_Of_Money%2C_We_Have_No_Money.jpg" width="256" />
+<img src="https://en.meming.world/images/en/0/0d/In_Terms_Of_Money%2C_We_Have_No_Money.jpg" width="256" alt="Meme from Despicable Me movie: In terms of money, we have no money" />
     
-<p>This project is solely dependent on the time and cost of the developement team. No monetary funding is collected or needed for this project. All resources (frameworks, APIs) are free and open source.</p>
+<p>This project is solely dependent on the time and effort of the developers. No monetary funding is collected or needed. All resources (frameworks, APIs, etc.) are free and open-source with the exception of purchasing a one-year domain subscription that was divided equally between all team members. A <i>Spotify Premium Account</i> is required for developing and testing <i>Spotify SDK</i> features.</p>
+
+<h2>6. Extra Details</h2>
+<p><b>Authored by: </b></p>
+<ul>
+  <li>Ali, Farzan</li>
+  <li>Alting-Mees, Adrian</li>
+  <li>Aylani, Jiten</li>
+  <li>Goldman, Jacob</li>
+  <li>Hollingworth, Declan</li>
+  <li>Kellner, Kelvin</li>
+  <li>Maan, Gur Armaan</li>
+  <li>Manimaran, Mathu</li>
+  <li>Mazza, Robert</li>
+  <li>Olowonefa, Peju</li>
+  <li>Rao, Nausher</li>
+  <li>Sangha, Jagveer</li>
+  <li>Tewari, Nish</li>
+  <li>Yasin, Daner</li>
+</ul>
+
+<p><b>Version History: </b></p>
+<ul>
+  <li>Version 0.1.0 [Sections 1-5] Preliminary Document</li>
+  <ul>
+    <li>May 27th</li>
+    <li>Members - Adrian, Peju, Jacob, Manimaran, Daner</li>
+  </ul>
+  <li>Version 0.1.1 [Sections 6/ Completion of Previous]</li>
+  <ul>
+    <li>June 1st </li>
+    <li>All Members</li>
+  </ul>
+  <li>Version 1.0.0 [Sections 1-6, Finalize Document]</li>
+  <ul>
+    <li>June 3rd</li>
+    <li>All Members </li>
+  </ul>
+</ul>
