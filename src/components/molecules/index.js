@@ -1,3 +1,4 @@
 import TestMoleculeComponent from "./TestMoleculeComponent";
+import LoginForm from "./LoginForm";
 
-export { TestMoleculeComponent };
+export { TestMoleculeComponent, LoginForm };

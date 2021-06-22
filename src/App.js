@@ -1,11 +1,12 @@
+import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { Theme, Router } from "@misc";
+import { Theme, PageRouter } from "@misc";
 
 function App() {
     return (
         <BrowserRouter>
             <Theme>
-                <Router />
+                <PageRouter />
             </Theme>
         </BrowserRouter>
     );

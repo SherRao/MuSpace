@@ -1,7 +1,8 @@
-import Router from "./Router";
+import PageRouter from "./PageRouter";
 import Theme from "./Theme";
+import ProtectedRoute from "./ProtectedRoute";
 
 export {
-    Router, Theme
+    PageRouter, Theme, ProtectedRoute,
 
 };

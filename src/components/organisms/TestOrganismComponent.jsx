@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import React from "react";
 import { TestMoleculeComponent } from "@molecules";
 
-function TestOrganismComponent({ text }) {
+function TestOrganismComponent() {
     return (
         <>
             <TestMoleculeComponent />

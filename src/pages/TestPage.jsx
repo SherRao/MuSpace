@@ -1,9 +1,11 @@
-import styled from 'styled-components';
-import { TestOrganismComponent } from '@organisms';
+import React from "react";
+import { TestOrganismComponent } from "@organisms";
 
 function TestPage() {
     return (
-        <TestOrganismComponent />
+        <>
+            <TestOrganismComponent />
+        </>
     );
 }
 

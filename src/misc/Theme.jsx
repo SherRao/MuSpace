@@ -1,8 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 
-const theme =
-{
+const theme = {
     colors: {
         black: "#000000",
         white: "#FFFFFF",
@@ -10,34 +9,31 @@ const theme =
         pink: "#B10DFF",
         darkBlue: "#536EFF",
         purple: "#6D48FF",
+        grey: "#404040",
+        lightGrey: "#D4D4D4",
     },
 
     fonts: {
         text: "Roboto",
         title: "Roboto",
-        header: "Comic Sans MS",
+        subTitle: "Roboto",
+        header: "Roboto",
     },
 
-    fontSizes:
-    {
+    fontSizes: {
         small: "1em",
         medium: "2em",
         large: "3em",
     },
 };
 
-const Theme =
-    ({
-        children,
-    }) => (
-        <ThemeProvider
-            theme={
-                theme
-            }>
-            {
-                children
-            }
+function Theme({children}) {
+    return (
+        <ThemeProvider theme={theme}>
+            {children}
         </ThemeProvider>
     );
+
+}
 
 export default Theme;

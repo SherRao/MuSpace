@@ -33,6 +33,18 @@ module.exports =
                     __dirname,
                     "src/misc/"
                 ),
+
+            "@assets":
+                path.resolve(
+                    __dirname,
+                    "src/assets/"
+                ),
+
+            "@functions":
+                path.resolve(
+                    __dirname,
+                    "src/functions/"
+                ),
         },
     },
 };

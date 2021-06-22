@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { TestOrganismComponent } from '@organisms';
+import React from "react";
+import Styled from "styled-components";
 
 function HomePage() {
     return (
-        <TestOrganismComponent />
+        <>hey</>
     );
 }
 

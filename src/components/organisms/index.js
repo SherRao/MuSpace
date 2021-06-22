@@ -1,3 +1,4 @@
-import TestOrganismComponent from "./TestOrganismComponent";
+import TestOrganismComponent from "./TestOrganismComponent.jsx";
+import Sidebar from "./Sidebar.jsx";
 
-export { TestOrganismComponent };
+export { TestOrganismComponent, Sidebar };
