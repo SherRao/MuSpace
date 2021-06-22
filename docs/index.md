@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link href="./style.css" rel="stylesheet" />
+
   </head>
 
   <body>
@@ -26,6 +27,11 @@
       <li>
         <a href="./SPMP.html">Software Project Management Plan (SPMP)</a>
       </li>
+      <li>
+        <a href="./Analysis.html">Analysis Document</a>
+      </li>
+
     </ul>
+
   </body>
 </html>
