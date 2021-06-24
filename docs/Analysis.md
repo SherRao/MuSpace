@@ -23,6 +23,8 @@
   <h2>2. Object Classification</h2>
   <h3>2.1 Object Diagram</h3>
 
+  <!-- #################################################### -->
+  <!-- Entity Objects -->
   <h3>2.2 Entity Objects</h3>
   <ul>
     <!-- User -->
@@ -55,8 +57,9 @@
           <li>Feed ID (Long, private) - A unique ID is given to every single feed.</li>
           <li>Posts (Object, public)</li>
           <ul>
+            <li>Post ID (unique Long, private) - A unique ID is given to every single post.</li>
             <li>Text (String) - The contents of the post of the feed.</li>
-            <li>Song Link (String)- a link to the song about the post.</li>
+            <li>Spotify URL (String)- a link to the song, album, or artist attached to the post.</li>
           </ul>
         </ul>
     </li>
@@ -124,64 +127,109 @@
     <br>
   </ul>
 
-  <!-- Control Objects -->
-  <h3>2.4 Control Objects</h3>
+<!-- #################################################### -->
+<!-- Boundary Objects -->
+<h3>2.3 Boundary Objects</h3>
+<ul>
+  <!-- Login View -->
+    <li><b>LoginView</b> - Where a User goes to log in to their account.</li>
+    <br>
+  <!-- Register View -->
+    <li><b>RegisterView</b> - Where a User goes to sign up.
+      <ul>
+        <li><b>LinkSpotifyView</b> - Where a User goes to link Spotify with their account.</li>
+      </ul>
+    <br>
+  <!-- Home View -->
+    <li><b>HomeView</b> - Where a user goes to see highlights of recent Feed posts, their most active Friend’s Statistics, and the current most popular Song
+      <ul>
+            <li><b>StatsView</b> - Where a User’s Statistics of their Listening history on Spotify are displayed such as favourite Artist and Song, as well as, Statistics for their most active Friend.</li>
+        </ul>
+    <br>
+  <!-- ChatView -->
+    <li><b>ChatView</b> - Where a User can send/receive messages to their Friends on the platform.</li>
+    <br>
+  <!-- Friends View -->
+    <li><b>FriendsView</b> - Where a User goes to sign up.
+      <ul>
+        <li><b>FriendsListView</b> - Where a User views a list of all their Friends</li>
+        <li><b>AddFriendsView</b> - Where a User can see to search for Friends.</li>
+      </ul>
+    <br>
+  <!-- Profile View -->
+    <li><b>ProfileView</b> - Where a User can view another User’s music preferences and Feed. If a User is looking at their own Profile they can add a new Post to their Feed.
+      <ul>
+        <li><b>FeedView</b> - Where a User can look at the Statistics of their Music history</li>
+        <li><b>AddPostView</b> - Where a User can add a new post to their FeedPage consisting of a message and exactly one Spotify song, album, or artist.</li>
+      </ul>
+    <br>
+  <!-- Search Bar View -->
+    <li><b>SearchBarView</b> - Where a User can send/receive messages to their Friends on the platform.</li>
+    <br>
+  <!-- Serrings Page View -->
+    <li><b>SettingsPageView</b> - Where a User can view and edit their user profile information such as display picture, email, password, and full name.</li>
+    <br>
+</ul>
+
+<!-- #################################################### -->
+<!-- Control Objects -->
+<h3>2.4 Control Objects</h3>
+<ul>
+  <!-- Login Controllers -->
+  <li><b>Login Controllers</b></li>
   <ul>
-    <!-- Login Controllers -->
-    <li><b>Login Controllers</b></li>
-    <ul>
-        <li><b>AuthenticateUserController</b> - Coordinates the flag to view protected pages that require a logged-in User.</li>
-    </ul>
-    <br>
-    <!-- Registration Controllers -->
-    <li><b>Registration Controllers</b></li>
-    <ul>
-        <li><b>RegisterUserController</b> – Coordinates the registration of a new User to the site.</li>
-        <li><b>SpotifyConnectionController</b> - Coordinates the connection of a new User account to a Spotify account. </li>
-    </ul>
-    <br>
-    <!-- Home Page Controllers -->
-    <li><b>Home Page Controllers</b></li>
-    <ul>
-        <li><b>DisplayProfileStatsController</b> - Coordinates the User-specific data that is shown on the home page.</li>
-        <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently Listening to.</li>
-        <li><b>DisplayFriendMusicDataController</b> - Coordinates music data related to the User’s friends.</li>
-    </ul>
-    <br>
-    <!-- Friends Controllers -->
-    <li><b>Friends Controllers</b></li>
-    <ul>
-        <li><b>DisplayFriendListController</b> - Coordinates the List of friends that is displayed to the User.</li>
-        <li><b>DisplayFriendMusicDataController</b> - Coordinates music data related to the User’s friends.</li>
-        <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently Listening to.</li>
-    </ul>
-    <br>
-    <!-- Chat Page Controllers -->
-    <li><b>Chat Page Controllers</b></li>
-    <ul>
-        <li><b>DisplayRecentMessagesController</b> - Coordinates the List of recently messaged friends from the User to be displayed.</li>
-        <li><b>DisplayMessageRetreivalController</b> - Coordinates the retrieval of the List of all messages sent and received from a specific User.</li>
-        <li><b>SendMessageController</b> - Coordinates the sending of a message to another User.</li>
-        <li><b>ReceiveMessageController</b> - Coordinates the receiving of a message from another User.</li>
-        <li><b>NewMessageController</b> - Coordinates starting a new DM with another User.</li>
-    </ul>
-    <br>
-    <!-- Settings Page Controllers -->
-    <li><b>Settings Page Controllers</b></li>
-    <ul>
-        <li><b>EditUserDataController</b> - Coordinates changing and deletion of User data, like the Username, email, password, and date of birth.</li>
-        <li><b>DisplayUserDataController</b> - Coordinates the display of User data.</li>
-    </ul>
-    <br>
-    <!-- Profile Page Controllers -->
-    <li><b>Profile Page Controllers</b></li>
-    <ul>
-        <li><b>FeedPageController</b> - Coordinates the User’s FeedPage and what posts are displayed on the page.</li>
-        <li><b>AddNewPostController</b> - Coordinates the addition of a new post to the User’s FeedPage.</li>
-    </ul>
-    <br>
-    <li><b>SearchController</b> - Coordinates all the search tasks.</li>
-    </ul>
+      <li><b>AuthenticateUserController</b> - Coordinates the flag to view protected pages that require a logged-in User.</li>
+  </ul>
+  <br>
+  <!-- Registration Controllers -->
+  <li><b>Registration Controllers</b></li>
+  <ul>
+      <li><b>RegisterUserController</b> – Coordinates the registration of a new User to the site.</li>
+      <li><b>SpotifyConnectionController</b> - Coordinates the connection of a new User account to a Spotify account. </li>
+  </ul>
+  <br>
+  <!-- Home Page Controllers -->
+  <li><b>Home Page Controllers</b></li>
+  <ul>
+      <li><b>DisplayProfileStatsController</b> - Coordinates the User-specific data that is shown on the home page.</li>
+      <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently Listening to.</li>
+      <li><b>DisplayFriendMusicDataController</b> - Coordinates music data related to the User’s friends.</li>
+  </ul>
+  <br>
+  <!-- Friends Controllers -->
+  <li><b>Friends Controllers</b></li>
+  <ul>
+      <li><b>DisplayFriendListController</b> - Coordinates the List of friends that is displayed to the User.</li>
+      <li><b>DisplayFriendMusicDataController</b> - Coordinates music data related to the User’s friends.</li>
+      <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently Listening to.</li>
+  </ul>
+  <br>
+  <!-- Chat Page Controllers -->
+  <li><b>Chat Page Controllers</b></li>
+  <ul>
+      <li><b>DisplayRecentMessagesController</b> - Coordinates the List of recently messaged friends from the User to be displayed.</li>
+      <li><b>DisplayMessageRetreivalController</b> - Coordinates the retrieval of the List of all messages sent and received from a specific User.</li>
+      <li><b>SendMessageController</b> - Coordinates the sending of a message to another User.</li>
+      <li><b>ReceiveMessageController</b> - Coordinates the receiving of a message from another User.</li>
+      <li><b>NewMessageController</b> - Coordinates starting a new DM with another User.</li>
+  </ul>
+  <br>
+  <!-- Settings Page Controllers -->
+  <li><b>Settings Page Controllers</b></li>
+  <ul>
+      <li><b>EditUserDataController</b> - Coordinates changing and deletion of User data, like the Username, email, password, and date of birth.</li>
+      <li><b>DisplayUserDataController</b> - Coordinates the display of User data.</li>
+  </ul>
+  <br>
+  <!-- Profile Page Controllers -->
+  <li><b>Profile Page Controllers</b></li>
+  <ul>
+      <li><b>FeedPageController</b> - Coordinates the User’s FeedPage and what posts are displayed on the page.</li>
+      <li><b>AddNewPostController</b> - Coordinates the addition of a new post to the User’s FeedPage.</li>
+  </ul>
+  <br>
+  <li><b>SearchController</b> - Coordinates all the search tasks.</li>
+  </ul>
 
 <!-- Further Steps -->
 <h2>3. Further Steps</h2>
