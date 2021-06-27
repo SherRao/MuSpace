@@ -58,7 +58,7 @@
           <li>Posts (Object, public)</li>
           <ul>
             <li>Post ID (unique Long, private) - A unique ID is given to every single post.</li>
-            <li>Text (String) - The contents of the post of the feed.</li>
+            <li>Text (String) - The contents of the post</li>
             <li>Spotify URL (String)- a link to the song, album, or artist attached to the post.</li>
           </ul>
         </ul>
@@ -83,40 +83,40 @@
     </li>
     <br>
     <!-- Message -->
-    <li><b>Message (Object)</b> - A message sent from one user to another 
+    <li><b>Message (Object)</b> - A message sent from one user to another. 
         <ul>
           <li>Message-ID (unique Long, private) - A unique ID is given to every single Message object.</li>
-          <li>Author ID (unique Long, private) - A unique ID is given to every single Author object.</li>
+          <li>Author ID (unique Long, private) - User ID of User who authored the message.</li>
           <li>Timestamp</li>
-          <li>Content - String of characters</li>
+          <li>Text (String) - The contents of the message.</li>
         </ul>
     </li>
     <br>
     <!-- Friend -->
-    <li><b>Friend (Object)</b> - A friend that the user has added / accepted
+    <li><b>Friend (Object)</b> - A friend that the user has been added / accepted
         <ul>
-          <li>Friend ID (unique Long, private)</li>
+          <li>Friend ID (unique Long, private) - User ID of Friend.</li>
           <li>Message - Written communication sent to or left for a recipient who cannot be contacted directly.</li>
             <ul>
-                <li>Content (String) -  String of characters</li>
+                <li>Content (String) - String of characters</li>
             </ul>
         </ul>
     </li>
     <br>
     <!-- Notification -->
-    <li><b>Notification (Object)</b> - a message sent by the application to a user when the application is not open
+    <li><b>Notification (Object)</b> - a message sent by the application to a user when the application is not open.
         <ul>
           <li>Notification ID (unique Long, private)</li>
           <ul>
             Message - Written communication sent to or left for a recipient who cannot be contacted directly.
             <ul>
-                <li>Content (String) -  String of characters</li>
+                <li>Content (String) - String of characters</li>
             </ul>
           </ul>
         </ul>
     </li>
     <br>
-    <!-- Music -->
+    <!-- Music 
     <li><b>Music (Object)</b>
         <ul>
           <li>Song (Object, Public) - a short poem or other sets of words set to music or meant to be sung.</li>
@@ -124,6 +124,7 @@
           <li>Artist (Object, Public) - a performer, such as a singer, actor, or dancer.</li>
         </ul>
     </li>
+    -->
     <br>
   </ul>
 
@@ -132,7 +133,7 @@
 <h3>2.3 Boundary Objects</h3>
 <ul>
   <!-- Login View -->
-    <li><b>LoginView</b> - Where a User goes to log in to their account.</li>
+    <li><b>LoginView</b> - Where a User goes to log in.</li>
     <br>
   <!-- Register View -->
     <li><b>RegisterView</b> - Where a User goes to sign up.
@@ -150,7 +151,7 @@
     <li><b>ChatView</b> - Where a User can send/receive messages to their Friends on the platform.</li>
     <br>
   <!-- Friends View -->
-    <li><b>FriendsView</b> - Where a User goes to sign up.
+    <li><b>FriendsView</b> - Where a User goes to see their friends.
       <ul>
         <li><b>FriendsListView</b> - Where a User views a list of all their Friends</li>
         <li><b>AddFriendsView</b> - Where a User can see to search for Friends.</li>
@@ -164,7 +165,7 @@
       </ul>
     <br>
   <!-- Search Bar View -->
-    <li><b>SearchBarView</b> - Where a User can send/receive messages to their Friends on the platform.</li>
+    <li><b>SearchBarView</b> - Where a User searches for other User by username.</li>
     <br>
   <!-- Serrings Page View -->
     <li><b>SettingsPageView</b> - Where a User can view and edit their user profile information such as display picture, email, password, and full name.</li>
@@ -239,6 +240,26 @@ Embeded State Diagrams
 Embeded User Controls
 <!-- Non Functional Attributes -->
 <h2>4. Non Functional Attributes</h2>
+
+<p><b>Performance and scalability.</b> How fast does the system return results? How much will this performance change with higher workloads?</p>
+<p><b>Performance and compatibility.</b> Which hardware, operating systems, browsers, and their versions does the software run on? Does it conflict with other applications and processes within these environments?</p>
+
+<p>MuSpace will be accessible on any device with a modern web browser such as google chrome or firefox as long as the user has a Spotify account and an internet connection to utilize the app. It will also be available on iOS and Android mobile devices.</p>
+
+<p><b>Reliabilty, availability, maintainability.</b> How often does the system experience critical failures? and how much time is available to users against downtimes?</p>
+<p><b>Security.</b> How are the system and its data protected against attacks?</p>
+<p>
+All data will be securely transferred from a client to the server with Google Firebase’s implementation of data privacy and security. All endpoints used on Firebase are secured through Google’s servers. See 
+  <a href="https://firebase.google.com/docs/firestore/security/overview">here</a> 
+for more information on how Google Firebase uses security.
+</p>
+
+
+<p><b>Localization.</b> Does the system match local specifics?</p>
+<p><b>This attribute defines how well a system or its element falls in line with the context of the local market-to-be. The context includes local languages, laws, currencies, cultures, spellings, and other aspects. The more a product sticks with it, the more success it should have with a particular target audience.</b></p>
+<p><b>The date format must be as follows: day.month.year</b></p>
+<p><b>Usability.</b> How easy is it for a customer to use the system?</p>
+
 
 <!-- Classes -->
 <h2>5. Classes</h2>
