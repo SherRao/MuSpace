@@ -1,14 +1,11 @@
 <h1 align="center">
     <a href="./"><img id="header-logo" src="./logo.svg" width="250" alt="MuSpace logo" /></a>
 </h1>
-
 <h1 align="center">Project Conventions</h1>
 <p align="center">
     This document outlines basic code styling conventions to be followed by all developers of this project.
 </p>
-
 <h2>Naming</h2>
-
 <ul>
     <li>We will use the standard naming conventions for React projects</li>
     <ul>
@@ -39,7 +36,6 @@
     </li>
     <br />
 </ul>
-
 <h2>Code Style</h2>
 <p>
     All code pushed to the main branch will be linted via ESLint - ESLint follows the JavaScript Standard Style which

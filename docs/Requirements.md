@@ -1,17 +1,13 @@
 <h1 align="center">
     <a href="./"><img id="header-logo" src="./logo.svg" width="250" alt="MuSpace logo" /></a>
 </h1>
-
 <h1 align="center">Software Requirement Specification (SRS)</h1>
-
 <h2>1. Introduction</h2>
-
 <h3>1.1 Project Summary</h3>
 <p>
     MuSpace is a social media application that utilizes the Spotify API (and others in the future) to match and
     connect users that listen to similar artists, genres, songs, etc.
 </p>
-
 <h3>1.2 Project Summary</h3>
 <p>
     This is the requirement document, which contains everything necessary for MuSpace. Additionally, the document
@@ -19,9 +15,7 @@
     potential clients and their corresponding development teams. This is a reference guide for the development teams
     to ensure that everything runs smoothly, and some potential questions are answered.
 </p>
-
 <h2>1.3 Scope and Business Model</h2>
-
 <h3>1.3.1 Scope</h3>
 <p>
     This document outlines the overall functionality, constraints and specifications of MuSpace, an application
@@ -32,7 +26,6 @@
     creation of the room - the room name has to be a minimum of 5 characters long, and the password should be a
     minimum of 8 characters long.
 </p>
-
 <h3>1.3.2 Business Model</h3>
 <p>
     The platform will be free to use. It will cost users nothing to download and there will be no advertisements in
@@ -40,9 +33,7 @@
     publicity as well as develop monetizable content. Once enough exposure and publicity have been reached, R&D will
     be completed to introduce some form of monetization, like monetized concerts and DJ sessions.
 </p>
-
 <h2>1.4 Definitions, Acryonyms and Abbreviations</h2>
-
 <h3>1.4.1 Acronyms and Abbreviations</h3>
 <ul>
     <li>API - Application Program Interface - External software</li>
@@ -53,50 +44,44 @@
     <li>Mobile-based - for Android / iOS platforms</li>
     <li>R&D - Research and Development</li>
 </ul>
-
 <h3>1.4.2 Definitions</h3>
 <ul>
     <li>Chat - String of messages sent back and forth between users of an application</li>
 </ul>
-
 <h2>1.5 References</h2>
 <ul>
     <li>
-    <a href="https://bohr.wlu.ca/cp317/notes/IEEE_830.pdf" target="_blank">
+        <a href="https://bohr.wlu.ca/cp317/notes/IEEE_830.pdf" target="_blank">
         [IEEE 830] IEEE Recommended Practice for Software Requirements Specifications ANSI/IEEE Std. 830-1998
-    </a>
+        </a>
     </li>
     <li>
-    <a href="http://bluehawk.monmouth.edu/~lvallone/ieee_828-1998_sw_config_mgmt.pdf" target="_blank">
+        <a href="http://bluehawk.monmouth.edu/~lvallone/ieee_828-1998_sw_config_mgmt.pdf" target="_blank">
         [IEEE 828] IEEE Standard for Software Configuration Management Plans, ANSI/IEEE Std. 828-199
-    </a>
+        </a>
     </li>
     <li>
-    <a
-        href="https://cours.etsmtl.ca/log792/private/restreint/IEEE_1058_Project_Management_Plan.pdf"
-        target="_blank"
-    >
+        <a
+            href="https://cours.etsmtl.ca/log792/private/restreint/IEEE_1058_Project_Management_Plan.pdf"
+            target="_blank"
+            >
         [IEEE 1058] IEEE Standard for Software Project Management ANSI/IEEEStd.1058.1-1987
-    </a>
+        </a>
     </li>
     <li>
-    <a href="https://bohr.wlu.ca/cp317/shout/Requirements-master/#141-acronyms-and-abbreviations" target="_blank">
+        <a href="https://bohr.wlu.ca/cp317/shout/Requirements-master/#141-acronyms-and-abbreviations" target="_blank">
         Shout! Software Requirement Specification (wlu.ca)
-    </a>
+        </a>
     </li>
 </ul>
-
 <h2>2. Overall description</h2>
-
 <h3>2.1 Product Perspective</h3>
 <p>
     MuSpace will take a web-based development approach using React and eventually be transferred to IOS and Android
     using React Native. Major components include user connection to Spotify using Spotify’s Web API, and web-based
     chat functionality and listening rooms using Google Firebase’s Realtime No-SQL Database.
 </p>
-
 <h4>2.1.1 <a href="" target="_blank">Sample GUI</a></h4>
-
 <h3>2.2 Product Functions</h3>
 <p>
     MuSpace is a music-matchmaking application that takes the user’s musical interest (i.e. Songs, artists, albums,
@@ -104,7 +89,6 @@
     users with similar interests. Matched users can chat with each other using the in-app chat feature and can make
     new friends. The app currently supports Spotify for music preference data.
 </p>
-
 <h3>2.3 User Characteristics</h3>
 <p>
     MuSpace’s primary users are those trying to connect with others who have a similar taste in music. MuSpace is
@@ -113,7 +97,6 @@
     music. A help section, as well as an FAQ, will be included in all versions of MuSpace so that users can quickly
     get up to speed.
 </p>
-
 <h3>2.4 Constraints</h3>
 <p>
     MuSpace users must have an active Spotify account and will benefit from being subscribed to premium. MuSpace will
@@ -122,7 +105,6 @@
     before August 15th, 2021, and will be developed for free with no funding from the school or the students.
     Publication to the Apple App store requires a fee, so this will be a constraint.
 </p>
-
 <h3>2.5 Assumptions and Dependencies</h3>
 <p>
     It is assumed that users of MuSpace all have Spotify accounts, with some level of activity on the platform in
@@ -130,48 +112,42 @@
     followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile will be and better
     the experience they will get from MuSpace.
 </p>
-
 <h2>3. Technical Requirements</h2>
-
 <h3>3.1 External Interfaces</h3>
 <ul>
     <li>Authentication</li>
     <ul>
-    <li>Username/ Password (Google Authentication)</li>
+        <li>Username/ Password (Google Authentication)</li>
     </ul>
     <li>Messaging</li>
     <ul>
-    <li>Timestamps</li>
-    <li>Message ID</li>
+        <li>Timestamps</li>
+        <li>Message ID</li>
     </ul>
 </ul>
-
 <h3>3.2 Performance Requirements</h3>
-
 <h3>3.2.1 Client Requirements</h3>
 <ul>
     <li>OS: Windows, MacOS, GNU/Linux, Android, iOS</li>
     <li>Stable network connection</li>
     <li>A device that has access to a modern web browser with JavaScript ES6 capabilities</li>
 </ul>
-
 <h3>3.2.2 Server/Development Requirements</h3>
 <ul>
     <li>Cloudflare</li>
     <li>Amazon Web Services</li>
     <ul>
-    <li>EC2</li>
-    <li>CodeDeploy</li>
-    <li>S3</li>
+        <li>EC2</li>
+        <li>CodeDeploy</li>
+        <li>S3</li>
     </ul>
     <li>Google Firebase</li>
     <ul>
-    <li>Authentication</li>
-    <li>Realtime Database</li>
-    <li>Firestore</li>
+        <li>Authentication</li>
+        <li>Realtime Database</li>
+        <li>Firestore</li>
     </ul>
 </ul>
-
 <h3>3.3 Security</h3>
 <ul>
     <li>Cloudflare</li>
@@ -180,19 +156,16 @@
     <li>2FA (User Safety)</li>
     <li>Report Feature</li>
 </ul>
-
 <h3>3.4 Portability</h3>
 <p>
     Since this is a web-based application. It will be accessible on any device with a modern web browser as long as
     the user has a Spotify account and an internet connection to utilize the app. It will also be available on iOS and
     Android mobile devices.
 </p>
-
 <h2>4. Versions</h2>
 <ul>
     <li>Version 0.1 20/05/2021 Base Document</li>
 </ul>
-
 <h2>5. Developers</h2>
 <ul>
     <li><a target="_blank" href="https://www.github.com/Adepeju-nefa">Adepeju Olowonefa</a></li>
