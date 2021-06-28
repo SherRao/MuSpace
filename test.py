@@ -1,3 +1,4 @@
+input = """
 <h1 align="center">
     <a href="./"><img id="header-logo" src="./logo.svg" width="250" alt="MuSpace logo"/></a>
 </h1>
@@ -104,7 +105,7 @@
         <ul>
             <li>Notification ID (unique Long, private)</li>
             <ul>
-                <li>Message - Written communication sent to or left for a recipient who cannot be contacted directly.</li>
+                Message - Written communication sent to or left for a recipient who cannot be contacted directly.
                 <ul>
                     <li>Content (String) - String of characters</li>
                 </ul>
@@ -295,4 +296,4 @@
     <li>Sangha, Jagveer</li>
     <li>Tewari, Nish</li>
     <li>Yasin, Daner</li>
-</ul>
+</ul>"""
