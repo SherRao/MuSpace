@@ -103,11 +103,9 @@
         <b>Notification (Object)</b> - a message sent by the application to a user when the application is not open.
         <ul>
             <li>Notification ID (unique Long, private)</li>
+            <li>Message - Written communication sent to or left for a recipient who cannot be contacted directly.</li>
             <ul>
-                <li>Message - Written communication sent to or left for a recipient who cannot be contacted directly.</li>
-                <ul>
-                    <li>Content (String) - String of characters</li>
-                </ul>
+                <li>Content (String) - String of characters</li>
             </ul>
         </ul>
     </li>
@@ -173,7 +171,7 @@
     <li><b>SettingsPageView</b> - Where a User can view and edit their user profile information such as display picture, email, password, and full name.</li>
     <br/>
 </ul>
-</ul>
+<p>Testing 1</p>
 <!-- #################################################### -->
 <!-- Control Objects -->
 <h3>2.4 Control Objects</h3>
