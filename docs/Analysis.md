@@ -145,6 +145,7 @@
         <br/>
         <!-- ChatView -->
     <li><b>ChatView</b> - Where a User can send/receive messages to their Friends on the platform.</li>
+    </li>
     <br/>
     <!-- Friends View -->
     <li>
@@ -171,7 +172,7 @@
     <li><b>SettingsPageView</b> - Where a User can view and edit their user profile information such as display picture, email, password, and full name.</li>
     <br/>
 
-<p>Testing 1</p>
+
 <!-- #################################################### -->
 <!-- Control Objects -->
 <h3>2.4 Control Objects</h3>
