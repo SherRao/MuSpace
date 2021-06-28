@@ -171,7 +171,7 @@
     <!-- Settings Page View -->
     <li><b>SettingsPageView</b> - Where a User can view and edit their user profile information such as display picture, email, password, and full name.</li>
     <br/>
-
+</ul>
 
 <!-- #################################################### -->
 <!-- Control Objects -->
