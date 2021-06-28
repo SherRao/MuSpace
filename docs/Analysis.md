@@ -253,6 +253,7 @@
 <p><b>Usability.</b> How easy is it for a customer to use the system?</p>
 <!-- Classes -->
 <h2>5. Classes</h2>
+<p><b>This is an ongoing diagram that is being continuously updated.</b></p>
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/dd3c7144-fde2-4d4e-96a5-1df4cb1198b3" id="QuUPrM8LWEpi"></iframe></div>
 
 <!-- Versions -->
