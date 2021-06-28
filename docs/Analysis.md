@@ -169,9 +169,10 @@
         <!-- Search Bar View -->
     <li><b>SearchBarView</b> - Where a User searches for other User by username.</li>
     <br/>
-    <!-- Serrings Page View -->
+    <!-- Settings Page View -->
     <li><b>SettingsPageView</b> - Where a User can view and edit their user profile information such as display picture, email, password, and full name.</li>
     <br/>
+</ul>
 </ul>
 <!-- #################################################### -->
 <!-- Control Objects -->
