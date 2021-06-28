@@ -22,13 +22,21 @@
 
     <ul>
       <li>
-        <a href="./SRS.html">Software Requirements Specifications (SRS)</a>
+        <a href="./Requirements.html">Software Requirements Specifications (SRS)</a>
       </li>
       <li>
-        <a href="./SPMP.html">Software Project Management Plan (SPMP)</a>
+        <a href="./ManagementPlan.html">Software Project Management Plan (SPMP)</a>
       </li>
       <li>
         <a href="./Analysis.html">Analysis Document</a>
+      </li>
+
+      <li>
+        <a href="./Testing.html">Testing Guidelines Document</a>
+      </li>
+
+      <li>
+        <a href="./Conventions.html">Convention Guidelines Document</a>
       </li>
 
     </ul>

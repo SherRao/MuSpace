@@ -2,15 +2,6 @@
   <a href="./"><img id="header-logo" src="./logo.svg" width="250" alt="MuSpace logo"/></a>
 </h1>
 <h1 align="center">Analysis Document</h1>
-
-<div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/f369b257-772d-4250-b476-e0a7f3c92e25" id="UtiOslhxY_iS"></iframe></div>
-
-<h1 align="center">
-    <a href="./"><img id="header-logo" src="./logo.svg" width="250" alt="MuSpace logo"/></a>
-  </h1>
-  <h1 align="center">Analysis Document</h1>
-  
-  <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/f369b257-772d-4250-b476-e0a7f3c92e25" id="UtiOslhxY_iS"></iframe></div>
   
   <!-- Introduction -->
   <h2>Table of Contents</h2>
@@ -22,6 +13,7 @@
   <!-- Object Classification -->
   <h2>2. Object Classification</h2>
   <h3>2.1 Object Diagram</h3>
+<div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/f369b257-772d-4250-b476-e0a7f3c92e25" id="UtiOslhxY_iS"></iframe></div>
 
   <!-- #################################################### -->
   <!-- Entity Objects -->
@@ -235,9 +227,13 @@
 <!-- Further Steps -->
 <h2>3. Further Steps</h2>
 <h3>3.1 State Diagram</h3>
-Embeded State Diagrams
+<div><iframe width="768" height="432" src="https://miro.com/app/live-embed/o9J_l-_TB-k=/?moveToViewport=-5218,-417,1845,1101" frameBorder="0" scrolling="no" allowFullScreen></iframe></div>
+<br/><br/>
+
 <h3>3.2 User Controls</h3>
 Embeded User Controls
+<br/><br/>
+
 <!-- Non Functional Attributes -->
 <h2>4. Non Functional Attributes</h2>
 
@@ -254,12 +250,10 @@ All data will be securely transferred from a client to the server with Google Fi
 for more information on how Google Firebase uses security.
 </p>
 
-
 <p><b>Localization.</b> Does the system match local specifics?</p>
 <p><b>This attribute defines how well a system or its element falls in line with the context of the local market-to-be. The context includes local languages, laws, currencies, cultures, spellings, and other aspects. The more a product sticks with it, the more success it should have with a particular target audience.</b></p>
 <p><b>The date format must be as follows: day.month.year</b></p>
 <p><b>Usability.</b> How easy is it for a customer to use the system?</p>
-
 
 <!-- Classes -->
 <h2>5. Classes</h2>
