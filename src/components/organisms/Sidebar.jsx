@@ -6,8 +6,7 @@ import { FaHome, FaUserFriends, FaEnvelope, FaSpotify } from "react-icons/fa";
 const StyledDiv = Styled.div`
     max-width: 20vw;
     height: 100vh;
-    background-color: ${props => props.theme.colors.lightGrey};
-    background-color: #fff;
+    background-color: ${props => props.theme.colors.white};
     display: inline-flex;
     flex-direction: column;
     align-items: center;
