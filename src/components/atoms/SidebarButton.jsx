@@ -33,6 +33,7 @@ const StyledLink = Styled.a`
     size: 0;
     display: block;
     margin: 0 auto;
+    text-decoration: none;
 
 `;
 

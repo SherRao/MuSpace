@@ -7,11 +7,14 @@ const StyledDiv = Styled.div`
     max-width: 20vw;
     height: 100vh;
     background-color: ${props => props.theme.colors.lightGrey};
-    
+    background-color: #fff;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     transition: all 0.25s ease;
+    min-width: 20vw;
+    border-right: 1px solid ${props => props.theme.colors.lightGrey};
+    padding: 20px 0;
 
 `;
 
