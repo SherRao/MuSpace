@@ -31,6 +31,8 @@ const StyledLink = Styled.a`
     border: none;
     padding: 0;
     size: 0;
+    display: block;
+    margin: 0 auto;
 
 `;
 
