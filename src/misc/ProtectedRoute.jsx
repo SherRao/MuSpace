@@ -12,10 +12,10 @@ const loggedIn = Firebase.isLoggedIn();
 function ProtectedRoute({ exact = false, path, component }) {
     if (loggedIn)
         return (
-            <>
+            <div>
                 <Sidebar />
                 <Route path={path} component={component} />
-            </>
+            </div>
         );
 
     else

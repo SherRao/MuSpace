@@ -3,9 +3,9 @@ import { TestOrganismComponent } from "@organisms";
 
 function TestPage() {
     return (
-        <>
+        <div>
             <TestOrganismComponent />
-        </>
+        </div>
     );
 }
 

@@ -3,11 +3,11 @@ import { TestMoleculeComponent } from "@molecules";
 
 function TestOrganismComponent() {
     return (
-        <>
+        <div>
             <TestMoleculeComponent />
             <TestMoleculeComponent />
 
-        </>
+        </div>
     );
 }
 
