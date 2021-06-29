@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 function isLoggedIn() {
-    return false;
+    return true;
 
 }
 
