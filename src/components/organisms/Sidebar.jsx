@@ -2,6 +2,7 @@ import React from "react";
 import Styled from "styled-components";
 import { SidebarButton, MuspaceLogo } from "@atoms";
 import { FaHome, FaUserFriends, FaEnvelope, FaSpotify } from "react-icons/fa";
+import TestAtomComponent from "../atoms/TestAtomComponent";
 
 const StyledDiv = Styled.div`
     width: 20%;
@@ -21,12 +22,16 @@ const StyledDiv = Styled.div`
 function Sidebar() {
     return (
         <StyledDiv>
+            <br></br>
             <MuspaceLogo />
+            <br></br>
             <SidebarButton text="Home" location="/" />
             <SidebarButton text="Friends"  location="/friends" />
             <SidebarButton text="Messages" location="/messages" />
-            <SidebarButton text="Spotify" location="/" />
-
+            <br></br>
+            <TestAtomComponent text="Total Listening Time"></TestAtomComponent>
+            <TestAtomComponent text="Artists Liked"></TestAtomComponent>
+            <TestAtomComponent text="Albums Liked"></TestAtomComponent>
         </StyledDiv>
     );
 }

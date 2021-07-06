@@ -4,9 +4,10 @@ import Styled from "styled-components";
 
 const StyledDiv = Styled.div`
     color: ${props => props.theme.colors.grey};
-    width: 100%;
+    width: 75%;
     height: 10vh;
     align-self: center;
+    border-radius: 15px;
 
     display: inline-flex;
     flex-direction: row;
@@ -14,14 +15,13 @@ const StyledDiv = Styled.div`
     transition: all 0.25s ease;
 
     :hover *{
-        color: ${props => props.theme.colors.pink};
         transition: all 0.25s ease;
         filter: brightness(75%);
-
     }
 
     :hover {
         cursor: pointer;
+        background-color: ${props => props.theme.colors.lightGrey};
 
     }
 
@@ -40,8 +40,8 @@ const StyledLink = Styled.a`
 const StyledText = Styled.p`
     font-family: "Roboto";
     font-size: ${props => props.theme.fontSizes.medium};
-    color: ${props => props.theme.colors.grey};
-    
+    color: ${props => props.theme.colors.muSpacePurple};
+    font-weight: bold;
     align: right;
     flex: 1;
     margin: 0px;
