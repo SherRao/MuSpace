@@ -26,8 +26,6 @@ function Sidebar() {
             <SidebarButton text="Home" location="/" />
             <SidebarButton text="Friends"  location="/friends" />
             <SidebarButton text="Messages" location="/messages" />
-            <SidebarButton text="Spotify" location="/" />
-
         </StyledDiv>
     );
 }
