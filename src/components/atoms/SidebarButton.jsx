@@ -33,7 +33,6 @@ const StyledLink = Styled.a`
     padding: 0;
     size: 0;
     display: block;
-    margin: 0 auto;
     text-decoration: none;
 
 `;
@@ -41,28 +40,38 @@ const StyledLink = Styled.a`
 const StyledText = Styled.p`
     font-family: "Roboto";
     font-size: ${props => props.theme.fontSizes.medium};
+    font-weight: bold;
     color: ${props => props.theme.colors.grey};
     
-    align: right;
+    align: left;
     flex: 1;
-    margin: 0px;
+    margin: 0;
 `;
 
-// const StyledIcon = Styled.img`
-//     align: left;
-//     max-width: 40%;
-//     height: auto;
-//     flex: 1;
-//     margin: 0px;
-//     padding: 3px;
-// `;
+ const StyledIcon = Styled.div`
+     align: left;
+     max-width: 40%;
+     height: auto;
+     flex: 1;
+     margin: 0px;
+     padding: 3px;
 
-function SidebarButton({ text, icon, location }) {
+     *{
+        display: block;
+        margin: 0 auto;
+        width: 2em;
+        height: 2em;
+     }
+`;
+
+function SidebarButton({ text, icon, children, location }) {
     return (
         <StyledDiv>
+            <StyledIcon>{children}</StyledIcon>
             <StyledLink href={location}>
                 <StyledText>{text}</StyledText>
             </StyledLink>
+            
         </StyledDiv>
     );
 }
