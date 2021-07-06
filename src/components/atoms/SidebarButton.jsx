@@ -15,7 +15,6 @@ const StyledDiv = Styled.div`
     transition: all 0.25s ease;
 
     :hover *{
-        color: ${props => props.theme.colors.pink};
         transition: all 0.25s ease;
         filter: brightness(75%);
     }
