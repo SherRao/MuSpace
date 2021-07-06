@@ -4,16 +4,17 @@ import { SidebarButton, MuspaceLogo } from "@atoms";
 import { FaHome, FaUserFriends, FaEnvelope, FaSpotify } from "react-icons/fa";
 
 const StyledDiv = Styled.div`
-    max-width: 20vw;
+    width: 20%;
     height: 100vh;
+    padding: 0;
+
     background-color: ${props => props.theme.colors.white};
+    border-right: 1px solid ${props => props.theme.colors.black};
+
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     transition: all 0.25s ease;
-    min-width: 20vw;
-    border-right: 1px solid ${props => props.theme.colors.lightGrey};
-    padding: 20px 0;
 
 `;
 
