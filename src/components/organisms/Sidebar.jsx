@@ -20,7 +20,9 @@ const StyledDiv = Styled.div`
 function Sidebar() {
     return (
         <StyledDiv>
+            <br></br>
             <MuspaceLogo />
+            <br></br>
             <SidebarButton text="Home" location="/" />
             <SidebarButton text="Friends"  location="/friends" />
             <SidebarButton text="Messages" location="/messages" />

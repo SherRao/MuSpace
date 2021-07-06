@@ -7,6 +7,7 @@ const StyledDiv = Styled.div`
     width: 75%;
     height: 10vh;
     align-self: center;
+    border-radius: 15px;
 
     display: inline-flex;
     flex-direction: row;
