@@ -4,7 +4,7 @@ import Styled from "styled-components";
 
 const StyledDiv = Styled.div`
     color: ${props => props.theme.colors.grey};
-    width: 100%;
+    width: 75%;
     height: 10vh;
     align-self: center;
 
@@ -17,11 +17,11 @@ const StyledDiv = Styled.div`
         color: ${props => props.theme.colors.pink};
         transition: all 0.25s ease;
         filter: brightness(75%);
-
     }
 
     :hover {
         cursor: pointer;
+        background-color: ${props => props.theme.colors.lightGrey};
 
     }
 
