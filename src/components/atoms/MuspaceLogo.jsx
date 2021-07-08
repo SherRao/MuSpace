@@ -2,9 +2,9 @@ import React from "react";
 import Styled from "styled-components";
 import { Logo } from "@assets";
 
+//margin: T R B L
 const StyledImage = Styled.img`
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto 20px auto;
     transition: all 0.25s ease;
     width: ${(props) => props.width};
 

@@ -7,9 +7,10 @@ const StyledText = Styled.h1`
     color: ${props => props.theme.colors.muSpacePurple};
     font-weight: bold;
     align: right;
-    
     margin: 15px;
+
 `;
+
 
 function TestAtomComponent({ text }) {
     return (
