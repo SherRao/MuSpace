@@ -4,6 +4,13 @@ import { SidebarButton, MuspaceLogo } from "@atoms";
 import { FaHome, FaUserFriends, FaEnvelope, FaSpotify } from "react-icons/fa";
 import TestAtomComponent from "../atoms/TestAtomComponent";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBell } from "@fortawesome/free-solid-svg-icons";
+
+import { AiFillHome, AiOutlineHome } from "react-icons/ai";     /* home button icon outline and fill*/
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";     /* friend button icon outline and fill*/
+import { RiChat4Fill, RiChat4Line } from "react-icons/ri";     /* message button icon outline and fill*/
+
 const StyledDiv = Styled.div`
     width: 20%;
     height: 100vh;
@@ -25,9 +32,11 @@ function Sidebar() {
             <br></br>
             <MuspaceLogo />
             <br></br>
-            <SidebarButton text="Home" location="/" />
-            <SidebarButton text="Friends"  location="/friends" />
-            <SidebarButton text="Messages" location="/messages" />
+
+            <SidebarButton text="Home" location="/"><AiFillHome/></SidebarButton>
+            <SidebarButton text="Friends"  location="/friends"><AiFillHeart/></SidebarButton>
+            <SidebarButton text="Messages" location="/messages"><RiChat4Fill/></SidebarButton>
+
             <br></br>
             <TestAtomComponent text="Total Listening Time"></TestAtomComponent>
             <TestAtomComponent text="Artists Liked"></TestAtomComponent>
