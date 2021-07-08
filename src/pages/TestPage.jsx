@@ -1,22 +1,15 @@
-import React from "react";
-import Styled from "styled-components";
-import { TestOrganismComponent } from "@organisms";
-import { ListeningActivityCard } from "@molecules";
-
-const StyledDiv = Styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-`;
+import React, {useState, useEffect} from "react";
+import SpotifyWebApi from "spotify-web-api-node";
 
 function TestPage() {
     return (
-        <StyledDiv>
-            <ListeningActivityCard />
-            <ListeningActivityCard />
-            <ListeningActivityCard />
-        </StyledDiv>
+        <div>
+           
+        </div>
     );
 }
 
+
 export default TestPage;
+
+    
