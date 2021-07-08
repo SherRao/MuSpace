@@ -3,7 +3,7 @@ import Styled from "styled-components";
 
 function HomePage() {
     return (
-        <div>hey</div>
+        <div><p>heywhatsup</p></div>
     );
 }
 
