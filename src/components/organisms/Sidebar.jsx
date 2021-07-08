@@ -1,25 +1,13 @@
 import React from "react";
 import Styled from "styled-components";
 import { SidebarButton, MuspaceLogo } from "@atoms";
-import { FaHome, FaUserFriends, FaEnvelope, FaSpotify } from "react-icons/fa";
+//import { FaHome, FaUserFriends, FaEnvelope, FaSpotify } from "react-icons/fa";
 import TestAtomComponent from "../atoms/TestAtomComponent";
 import UserButton from "../atoms/UserButton";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBell } from "@fortawesome/free-solid-svg-icons";
-
-import {
-  AiFillHome,
-  AiOutlineHome,
-} from "react-icons/ai"; /* home button icon outline and fill*/
-import {
-  AiFillHeart,
-  AiOutlineHeart,
-} from "react-icons/ai"; /* friend button icon outline and fill*/
-import {
-  RiChat4Fill,
-  RiChat4Line,
-} from "react-icons/ri"; /* message button icon outline and fill*/
+import { AiFillHome } from "react-icons/ai"; /* home button icon outline and fill*/
+import { AiFillHeart } from "react-icons/ai"; /* friend button icon outline and fill*/
+import { RiChat4Fill } from "react-icons/ri"; /* message button icon outline and fill*/
 
 import { testProfPic } from "@assets";
 

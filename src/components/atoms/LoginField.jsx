@@ -31,14 +31,14 @@ function LoginField({text, type, placeholder}) {
 
 export default LoginField;
 
-`
-width: 380px;
-height: 52px;
-left: 531px;
-top: 265px;
+// `
+// width: 380px;
+// height: 52px;
+// left: 531px;
+// top: 265px;
 
-background: #000000;
-border: 1px solid #00C2FF;
-box-sizing: border-box;
-border-radius: 7px;
-`;
+// background: #000000;
+// border: 1px solid #00C2FF;
+// box-sizing: border-box;
+// border-radius: 7px;
+// `;

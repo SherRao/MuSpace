@@ -1,7 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
 import { DefaultCover } from "@assets";
-import { Card } from "@atoms";
 
 const StyledImage = Styled.img`
     margin-left: auto;
