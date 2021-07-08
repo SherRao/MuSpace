@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 function isLoggedIn() {
-    return true;
+    return false;
 
 }
 
@@ -24,5 +24,6 @@ function registerWithGoogle() {
     return true;
 
 }
+
 
 export default { isLoggedIn, loginWithEmail, loginWithGoogle, registerWithEmail, registerWithGoogle };
