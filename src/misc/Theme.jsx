@@ -10,9 +10,8 @@ const theme = {
         darkBlue: "#536EFF",
         purple: "#6D48FF",
         grey: "#404040",
-        lightGrey: "#D4D4D4"
-        muSpacePurple: "#8162FF",
         lightGrey: "#D4D4D4",
+        muSpacePurple: "#8162FF",
     },
 
     fonts: {
