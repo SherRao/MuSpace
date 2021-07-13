@@ -23,13 +23,13 @@ const StyledTextInput = Styled.input`
     }
 `;
 
-function LoginField({text, type, placeholder}) {
+function RegisterField({text, type, placeholder}) {
     return (
         <StyledTextInput text={text} type={type} placeholder={placeholder}/>
     );
 }
 
-export default LoginField;
+export default RegisterField;
 
 // `
 // width: 380px;

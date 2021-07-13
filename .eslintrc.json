@@ -23,7 +23,7 @@
             4
         ],
         "linebreak-style": [
-            1,
+            "off",
             "unix"
         ],
         "quotes": [
