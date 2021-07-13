@@ -7,6 +7,7 @@ const StyledImage = Styled.img`
     margin: 20px auto 20px auto;
     transition: all 0.25s ease;
     width: ${(props) => props.width};
+    padding: 5px 5px 5px 5px;
 
     :hover {
         filter: brightness(75%);

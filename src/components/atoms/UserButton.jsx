@@ -14,14 +14,17 @@ import { FaCog } from "react-icons/fa"; /* cog button fill icon*/
 // flex-direction: row;
 // align-items: center;
 const StyledDiv = Styled.div`
-    color: ${(props) => props.theme.colors.grey};
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transition: all 0.25s ease;
-    margin-top: 18em;
-    
+  color: ${(props) => props.theme.colors.grey};
+  align-items: center;
+  transition: all 0.25s ease;
+  margin-top: 18em;  
+  display: flex;
+  flex-direction: row;
 
+
+  @media (max-width: 900){
+    flex-direction: column;
+  }
 `;
 
 const StyledLink = Styled.a`
@@ -34,13 +37,18 @@ const StyledLink = Styled.a`
 
 const StyledText = Styled.p`
     font-family: "Roboto";
-    font-size: ${(props) => props.theme.fontSizes.kindaMed};
+    font-size: ${(props) => props.theme.fontSizes.small};
     font-weight: normal;
     color: ${(props) => props.theme.colors.mediumGrey};
     
     text-align: center;
     flex: 1;
     margin: 0;
+
+    :hover{
+      color: ${(props) => props.theme.colors.muSpacePurple};
+      transition: all 0.1s ease-in-out;
+    }
 `;
 
 // only for cog icon
@@ -73,6 +81,7 @@ const UserProfPic = Styled.img`
     flex: 1;
     padding: 0.2em;
     margin-left: 0.8em;
+
 `;
 
 // align: left;

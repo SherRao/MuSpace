@@ -23,14 +23,14 @@ const StyledDiv = Styled.div`
     flex-direction: column;
     align-items: center;
     transition: all 0.25s ease;
-
+    
 `;
 
 function Sidebar() {
   return (
     <StyledDiv>
       <br></br>
-      <MuspaceLogo />
+      <MuspaceLogo width="90%"/>
 
       <SidebarButton text="Home" location="/">
         <AiFillHome />
