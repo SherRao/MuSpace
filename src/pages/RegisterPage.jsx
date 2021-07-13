@@ -1,12 +1,14 @@
 import React from "react";
 import Styled from "styled-components";
-import { MuspaceLogo, TextButton } from "@atoms";
-import { RegisterForm } from "@molecules";
 import { Redirect } from "react-router-dom";
 
-import Firebase from "@functions";
+import { Firebase } from "@functions";
+import { useAuthState } from "react-firebase-hooks/auth";
 
-const loggedIn = Firebase.isLoggedIn();
+import { MuspaceLogo, TextButton } from "@atoms";
+import { RegisterForm } from "@molecules";
+
+import {AuthenticationProvider} from "@functions";
 
 const StyledDiv = Styled.div`
     width: 100vw;
@@ -37,6 +39,7 @@ const StyledHeader = Styled.h3`
     padding-bottom: 0.5em;
 
 `;
+
 const stylobitch = Styled.h3`
     color: ${props => props.theme.colors.lightBlue};
     font-size: ${props => props.theme.fontSizes.medium};
@@ -44,6 +47,7 @@ const stylobitch = Styled.h3`
     padding-bottom: 0.5em;
 
 `;
+
 const StyledLinkText = Styled.a`
     color: ${props => props.theme.colors.lightBlue};
     text-decoration: none;
@@ -79,21 +83,22 @@ const Dot = Styled.span`
 `;
 
 function RegisterPage() {
-    if (!loggedIn)
-        return (
-            <StyledDiv>
-                <MuspaceLogo width="25em"/>
-                <StyledHeader>Create Your Account</StyledHeader>
-                
-                <RegisterForm />
-                <StyledLinkDiv>
-                    <StyledLinkText href="/checkemail">Register</StyledLinkText>
-                </StyledLinkDiv>
-            </StyledDiv >
-        );
+    const [user] = useAuthState(Firebase.auth);
+    if(user)
+        return (<Redirect to="/home"/>);
 
-    else
-        return <Redirect to="/" />;
+    return (
+        <StyledDiv>
+            <MuspaceLogo width="25em"/>
+            <StyledHeader>Create Your Account</StyledHeader>
+                
+            <RegisterForm />
+            <StyledLinkDiv>
+                <StyledLinkText href="/checkemail">Register</StyledLinkText>
+            </StyledLinkDiv>
+        </StyledDiv >
+    );
+
 }
 
 export default RegisterPage;

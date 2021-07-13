@@ -1,10 +1,11 @@
 import React from "react";
 import Styled from "styled-components";
 import { Route, Redirect } from "react-router-dom";
-import { Sidebar } from "@organisms";
 
-import Firebase from "@functions";
-const loggedIn = Firebase.isLoggedIn();
+import { Firebase } from "@functions";
+import { useAuthState } from "react-firebase-hooks/auth";
+
+import { Sidebar } from "@organisms";
 
 const StyledDiv = Styled.div`
     width: 100vw;
@@ -38,20 +39,19 @@ const PageContainer = Styled.div`
     box-sizing: border-box;         /* Opera/IE 8+ */
 `;
 
-// eslint-disable-next-line no-unused-vars
 function ProtectedRoute({ exact = false, path, component }) {
-    if (loggedIn)
-        return (
-            <StyledDiv>
-                <Sidebar />
-                <PageContainer>
-                    <Route path={path} component={component} />
-                </PageContainer>
-            </StyledDiv>
-        );
-
-    else
+    const [user] = useAuthState(Firebase.auth);
+    if (!user)
         return <Redirect to="/login" />;
+
+    return (
+        <StyledDiv>
+            <Sidebar />
+            <PageContainer>
+                <Route path={path} component={component} />
+            </PageContainer>
+        </StyledDiv>
+    );
 
 }
 

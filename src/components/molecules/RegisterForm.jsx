@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import Styled from "styled-components";
 import { RegisterField } from "@atoms";
+import {Firebase} from "@functions";
 
 const StyledForm = Styled.form`
     display: inline-flex;
@@ -10,18 +11,6 @@ const StyledForm = Styled.form`
     width: 27%
 
 `;
-
-// const StyledForum = Styled.form`
-//     display: inline-flex;
-//     flex-direction: row;
-//     align-items: left;
-//     transition: all 0.25s ease;
-//     width: 200%;
-//     margin: 0;
-
-
-
-// `;
 
 const StyledHeader = Styled.h3`
     color: ${props => props.theme.colors.lightBlue};
@@ -33,9 +22,21 @@ const StyledHeader = Styled.h3`
 `;
 
 function RegisterForm() {
+    const [currentUser, setCurrentUser] = useState(null);
+
+    function register(event) {
+        event.preventDefault();
+        const {email, pass} = event.target.elements;
+        try {
+            Firebase.auth.createUserWithEmailAndPassword(email.value, pass.value);
+            setCurrentUser(true);
+
+        } catch(err) { alert(err); } 
+
+    }
+
     return (
-        <StyledForm>
-            
+        <StyledForm onSubmit={register}>
             <RegisterField type="text" text="Enter Email" placeholder="Email" autofocus/>
             <RegisterField type="text" text="Confirm Email" placeholder="Confirm Email" autofocus/>
             <RegisterField type="text" text="First Name" placeholder="First Name"autofocus/>

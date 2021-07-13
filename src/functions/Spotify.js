@@ -1,4 +1,5 @@
 import SpotifyWebApi from "spotify-web-api-node";
+import axios from "axios";
 
 const api = new SpotifyWebApi(
     {
@@ -8,12 +9,36 @@ const api = new SpotifyWebApi(
     }
 );
 
-async function test() {
-    console.log("Testing test()");
-    const response = await api.getArtistAlbums("43ZHCT0cAZBISjO8DG9PnE");
-    console.log(response.body);
-    return response.body;
+/**
+ * 
+ * Sets up the auth headers to send and receive shit from the Spotify Web SDK.
+ * 
+ */
+function setAuthHeader() {
+    try {
+        const params = JSON.parse(localStorage.getItem("params"));
+        if (params)
+            axios.defaults.headers.common["Authorization"] = `Bearer ${params.access_token}`;
 
+    } catch (error) {
+        console.log("Error setting auth", error);
+    }
 }
 
-export default { test };
+/**
+ * 
+ * Returns something something chops up a url idk
+ * 
+ */
+function getParamValues(url) {
+    return url.slice(1)
+        .split("&")
+        .reduce((prev, curr) => {
+            const [title, value] = curr.split("=");
+            prev[title] = value;
+            return prev;
+
+        }, {});
+}
+
+export default { setAuthHeader, getParamValues };

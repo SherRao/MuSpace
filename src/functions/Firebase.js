@@ -1,29 +1,12 @@
-/* eslint-disable no-unused-vars */
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 
-function isLoggedIn() {
-    return false;
+import config from "@src/config.json";
 
-}
+firebase.initializeApp(config.firebaseConfig);
 
-function loginWithEmail(email, password) {
-    return true;
+const auth = firebase.auth();
+const firestore = firebase.firestore();
 
-}
-
-function loginWithGoogle() {
-    return true;
-
-}
-
-function registerWithEmail(email, password) {
-    return true;
-
-}
-
-function registerWithGoogle() {
-    return true;
-
-}
-
-
-export default { isLoggedIn, loginWithEmail, loginWithGoogle, registerWithEmail, registerWithGoogle };
+export default { firebase, auth, firestore };

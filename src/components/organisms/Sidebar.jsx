@@ -27,34 +27,34 @@ const StyledDiv = Styled.div`
 `;
 
 function Sidebar() {
-  return (
-    <StyledDiv>
-      <br></br>
-      <MuspaceLogo width="90%"/>
+    return (
+        <StyledDiv>
+            <br></br>
+            <MuspaceLogo width="90%"/>
 
-      <SidebarButton text="Home" location="/">
-        <AiFillHome />
-      </SidebarButton>
-      <SidebarButton text="Friends" location="/friends">
-        <AiFillHeart />
-      </SidebarButton>
-      <SidebarButton text="Messages" location="/messages">
-        <RiChat4Fill />
-      </SidebarButton>
+            <SidebarButton text="Home" location="/">
+                <AiFillHome />
+            </SidebarButton>
+            <SidebarButton text="Friends" location="/friends">
+                <AiFillHeart />
+            </SidebarButton>
+            <SidebarButton text="Messages" location="/messages">
+                <RiChat4Fill />
+            </SidebarButton>
 
-      <br></br>
-      <TestAtomComponent text="Total Listening Time"></TestAtomComponent>
-      <TestAtomComponent text="Artists Liked"></TestAtomComponent>
-      <TestAtomComponent text="Albums Liked"></TestAtomComponent>
+            <br></br>
+            <TestAtomComponent text="Total Listening Time"></TestAtomComponent>
+            <TestAtomComponent text="Artists Liked"></TestAtomComponent>
+            <TestAtomComponent text="Albums Liked"></TestAtomComponent>
 
-      <UserButton
-        text="@Username"
-        location="/settings"
-        profileImage={testProfPic}
-      >
-      </UserButton>
-    </StyledDiv>
-  );
+            <UserButton
+                text="@Username"
+                location="/settings"
+                profileImage={testProfPic}
+            >
+            </UserButton>
+        </StyledDiv>
+    );
 }
 
 export default Sidebar;

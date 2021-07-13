@@ -30,9 +30,9 @@ const StyledButton = Styled.button`
     }
 `;
 
-function TextButton({text, onClick}) {
+function TextButton({text, type, onClick}) {
     return (
-        <StyledButton onClick={onClick}>{text}</StyledButton>
+        <StyledButton type={type} onClick={onClick}>{text}</StyledButton>
     );
 }
 

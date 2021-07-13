@@ -1,12 +1,12 @@
 import React from "react";
 import Styled from "styled-components";
-import { MuspaceLogo, TextButton } from "@atoms";
-import { LoginForm } from "@molecules";
 import { Redirect } from "react-router-dom";
 
-import Firebase from "@functions";
+import { Firebase } from "@functions";
+import { useAuthState } from "react-firebase-hooks/auth";
 
-const loggedIn = Firebase.isLoggedIn();
+import { MuspaceLogo } from "@atoms";
+import { LoginField, TextButton } from "@atoms";
 
 const StyledDiv = Styled.div`
     width: 100vw;
@@ -49,7 +49,6 @@ const StyledLinkText = Styled.a`
         color: ${props => props.theme.colors.darkBlue};
         transition: all 0.25s ease;
     }
-
 `;
 
 const StyledLinkDiv = Styled.div`
@@ -60,35 +59,74 @@ const StyledLinkDiv = Styled.div`
     justify-content: center;
     padding: 1em;
     width: 100%;
-
 `;
 
 const Dot = Styled.span`
-  height: 0.5em;
-  width: 0.5em;
-  background-color: ${props => props.theme.colors.grey};
-  border-radius: 50%;
-  display: inline-block;
+    height: 0.5em;
+    width: 0.5em;
+    background-color: ${props => props.theme.colors.grey};
+    border-radius: 50%;
+    display: inline-block;
+`;
+
+const StyledForm = Styled.form`
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.25s ease;
+
 `;
 
 function LoginPage() {
-    if (!loggedIn)
+    const [user] = useAuthState(Firebase.firebase.auth());
+    if(user)
+        return (<Redirect to="/home"/>);
+
         return (
-            <StyledDiv>
-                <MuspaceLogo width="25em"/>
-                <StyledHeader>Log in</StyledHeader>
-                <LoginForm />
-                <TextButton text="Log in"onClick={() => {Firebase.loginWithEmail();}}/>
-                <StyledLinkDiv>
-                    <StyledLinkText href="#">Forgot Password</StyledLinkText>
-                    <Dot />
-                    <StyledLinkText href="/register">Sign Up</StyledLinkText>
-                </StyledLinkDiv>
-            </StyledDiv >
+        <StyledDiv>
+            <MuspaceLogo width="25em"/>
+            <StyledHeader>Log in</StyledHeader>
+            
+            <StyledForm onSubmit={submit}>
+                <LoginField name="email" type="text" text="Username" placeholder="Email, or username" autofocus/>
+                <LoginField name="password" type="password" text="Password" placeholder="Password" />
+                <TextButton text="Log in" type="submit"/>
+            </StyledForm>
+            
+            <TextButton text="Login with Google" type="text" onClick={loginWithGoogle}/>
+
+            <StyledLinkDiv>
+                <StyledLinkText href="/reset">Forgot Password</StyledLinkText>
+                <Dot />
+                <StyledLinkText href="/register">Sign Up</StyledLinkText>
+            </StyledLinkDiv>
+        </StyledDiv >
+    );
+}
+
+function submit(event) {
+    const email = event.target.elements[0].value;
+    const pass = event.target.elements[1].value;
+    Firebase.auth.signInWithEmailAndPassword("robert@test.com", "123456")
+        .then((userCredential) => 
+            {
+                var user = userCredential.user;
+                alert("USER");
+            }
+    
+        ).catch((error) =>
+            {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                alert("ERR");
+            }
         );
 
-    else
-        return <Redirect to="/" />;
+}
+
+function loginWithGoogle() {
+    const provider = new Firebase.firebase.auth.GoogleAuthProvider();
+    Firebase.auth.signInWithPopup(provider);
 }
 
 export default LoginPage;

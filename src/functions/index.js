@@ -1,4 +1,5 @@
 import Firebase from "./Firebase";
 import Spotify from "./Spotify";
+import AuthenticationProvider from "./AuthenticationProvider";
 
-export default Firebase;
+export { Firebase, Spotify, AuthenticationProvider };
