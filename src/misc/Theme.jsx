@@ -22,7 +22,12 @@ const theme = {
 
     fontSizes: {
         small: "1em",
+        smallMedium: "1.33em",
+        mediumSmall: "1.66em",
         medium: "2em",
+        mediumMedium: "2em",
+        mediumLarge: "2.33em",
+        largeMedium: "2.66em",
         large: "3em",
     },
 };
