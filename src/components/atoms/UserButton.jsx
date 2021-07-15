@@ -99,17 +99,17 @@ const UserProfPic = Styled.img`
 // }
 
 function UserButton({ text, icon, location, profileImage }) {
-  return (
-    <StyledDiv>
-      <UserProfPic src={profileImage} alt="Default Profile image" />
-      <StyledLink href="/profile">
-        <StyledText>{text}</StyledText>
-      </StyledLink>
-      <StyledLink href="/settings">
-        <StyledIcon><FaCog/></StyledIcon>
-      </StyledLink>
-    </StyledDiv>
-  );
+    return (
+        <StyledDiv>
+            <UserProfPic src={profileImage} alt="Default Profile image" />
+            <StyledLink href="/profile">
+                <StyledText>{text}</StyledText>
+            </StyledLink>
+            <StyledLink href="/settings">
+                <StyledIcon><FaCog/></StyledIcon>
+            </StyledLink>
+        </StyledDiv>
+    );
 }
 
 export default UserButton;

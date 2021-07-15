@@ -5,9 +5,9 @@ import { SidebarButton, MuspaceLogo } from "@atoms";
 import TestAtomComponent from "../atoms/TestAtomComponent";
 import UserButton from "../atoms/UserButton";
 
-import { AiFillHome } from "react-icons/ai"; /* home button icon outline and fill*/
-import { AiFillHeart } from "react-icons/ai"; /* friend button icon outline and fill*/
-import { RiChat4Fill } from "react-icons/ri"; /* message button icon outline and fill*/
+import { AiFillHome, AiFillHeart } from "react-icons/ai"; // home and friend button icon outline and fill
+import { RiChat4Fill } from "react-icons/ri"; // message button icon outline and fill
+import { FaRobot } from "react-icons/fa"; // Report a bug button icon
 
 import { testProfPic } from "@assets";
 
@@ -40,6 +40,10 @@ function Sidebar() {
             </SidebarButton>
             <SidebarButton text="Messages" location="/messages">
                 <RiChat4Fill />
+            </SidebarButton>
+
+            <SidebarButton text="Report a Bug" location="https://github.com/SherRao/MuSpace/issues/new">
+                <FaRobot/>
             </SidebarButton>
 
             <br></br>

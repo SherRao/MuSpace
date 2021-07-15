@@ -1,16 +1,14 @@
 import React from "react";
 import Styled from "styled-components";
 import { Redirect } from "react-router-dom";
-
-import { Firebase } from "@functions";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-import { MuspaceLogo, TextButton } from "@atoms";
+import { MuspaceLogo } from "@atoms";
 import { RegisterForm } from "@molecules";
 
-import {AuthenticationProvider} from "@functions";
+import { Firebase } from "@functions";
 
-const StyledDiv = Styled.div`
+const Container = Styled.div`
     width: 100vw;
     height: 100vh;
     padding: 5em;
@@ -32,73 +30,61 @@ const StyledDiv = Styled.div`
     box-sizing: border-box;         /* Opera/IE 8+ */
 `;
 
-const StyledHeader = Styled.h3`
+const Header = Styled.h3`
     color: ${props => props.theme.colors.lightBlue};
     font-size: ${props => props.theme.fontSizes.medium};
     margin-bottom: -0.5em;
     padding-bottom: 0.5em;
 
-`;
-
-const stylobitch = Styled.h3`
-    color: ${props => props.theme.colors.lightBlue};
-    font-size: ${props => props.theme.fontSizes.medium};
-    margin-bottom: -0.5em;
-    padding-bottom: 0.5em;
-
-`;
-
-const StyledLinkText = Styled.a`
-    color: ${props => props.theme.colors.lightBlue};
-    text-decoration: none;
-    transition: all 0.25s ease;
-
-    padding-left: 1em;
-    padding-right: 1em;
-
-    :hover {
-        color: ${props => props.theme.colors.darkBlue};
-        transition: all 0.25s ease;
-    }
-
-`;
-
-const StyledLinkDiv = Styled.div`
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
-    width: 100%;
-
-`;
-
-const Dot = Styled.span`
-  height: 0.5em;
-  width: 0.5em;
-  background-color: ${props => props.theme.colors.grey};
-  border-radius: 50%;
-  display: inline-block;
 `;
 
 function RegisterPage() {
-    const [user] = useAuthState(Firebase.auth);
+    const [user] = useAuthState(Firebase.firebase.auth());
     if(user)
         return (<Redirect to="/home"/>);
 
     return (
-        <StyledDiv>
+        <Container>
             <MuspaceLogo width="25em"/>
-            <StyledHeader>Create Your Account</StyledHeader>
-                
-            <RegisterForm />
-            <StyledLinkDiv>
-                <StyledLinkText href="/checkemail">Register</StyledLinkText>
-            </StyledLinkDiv>
-        </StyledDiv >
+            <Header>Create Your Account</Header>
+            <RegisterForm onSubmit={registerWithEmail}/>
+        </Container >
     );
 
+}
+
+function registerWithEmail(event) {
+    event.preventDefault();
+
+    const email = event.target.elements[0].value;
+    const confirmEmail = event.target.elements[1].value;
+    const firstName = event.target.elements[2].value;
+    const lastName = event.target.elements[3].value;
+    const username = event.target.elements[4].value;
+    const pass = event.target.elements[5].value;
+    const dob = event.target.elements[6].value;
+
+    Firebase.auth.createUser({
+        email: email,
+        emailVertified: true,
+        password: pass,
+        displayName: username,
+        disabled: false
+
+    }).then((userCredential) => {
+        console.log(userCredential);
+        alert(userCredential);
+
+    }).catch((error) => {
+        var errorMessage = error.message;
+        alert(errorMessage);
+        
+    } );
+
+}
+
+function storeNewUserData(id, email, firstName, lastName, dob) {
+    
 }
 
 export default RegisterPage;

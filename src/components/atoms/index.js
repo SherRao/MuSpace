@@ -8,16 +8,18 @@ import LeaderBoardLabel from "./LeaderBoardLabel";
 import LeaderBoardStat from "./LeaderBoardStat";
 import Card from "./Card";
 import RegisterField from "./RegisterField";
+import GoogleSigninButton from "./GoogleSigninButton";
 
 export {
-  AlbumCover,
-  TestAtomComponent,
-  SidebarButton,
-  MuspaceLogo,
-  LoginField,
-  TextButton,
-  Card,
-  RegisterField,
-  LeaderBoardLabel,
-  LeaderBoardStat
+    AlbumCover,
+    TestAtomComponent,
+    SidebarButton,
+    MuspaceLogo,
+    LoginField,
+    TextButton,
+    Card,
+    RegisterField,
+    LeaderBoardLabel,
+    LeaderBoardStat,
+    GoogleSigninButton
 };

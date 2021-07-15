@@ -1,5 +1,4 @@
 import React from "react";
-import {Component} from "react";
 import Styled from "styled-components";
 
 const StyledDiv = Styled.div`
@@ -24,7 +23,6 @@ const StyledDiv = Styled.div`
         background-color: ${props => props.theme.colors.lightGrey};
 
     }
-
 `;
 
 const StyledLink = Styled.a`
@@ -54,7 +52,7 @@ const StyledText = Styled.p`
     margin: 1px;
 `;
 
- const StyledIcon = Styled.div`
+const StyledIcon = Styled.div`
      align: left;
      max-width: 20%;
      height: auto;

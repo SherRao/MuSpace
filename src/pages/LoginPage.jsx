@@ -1,14 +1,15 @@
 import React from "react";
 import Styled from "styled-components";
 import { Redirect } from "react-router-dom";
-
-import { Firebase } from "@functions";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { MuspaceLogo } from "@atoms";
-import { LoginField, TextButton } from "@atoms";
+import { GoogleSigninButton } from "@atoms";
+import { LoginForm } from "@molecules"; 
 
-const StyledDiv = Styled.div`
+import { Firebase } from "@functions";
+
+const Container = Styled.div`
     width: 100vw;
     height: 100vh;
     padding: 5em;
@@ -30,14 +31,14 @@ const StyledDiv = Styled.div`
     box-sizing: border-box;         /* Opera/IE 8+ */
 `;
 
-const StyledHeader = Styled.h3`
+const Header = Styled.h3`
     color: ${props => props.theme.colors.purple};
     font-size: ${props => props.theme.fontSizes.medium};
     margin-bottom: -0.5em;
     padding-bottom: 0.5em;
 `;
 
-const StyledLinkText = Styled.a`
+const LinkText = Styled.a`
     color: ${props => props.theme.colors.lightBlue};
     text-decoration: none;
     transition: all 0.25s ease;
@@ -51,7 +52,7 @@ const StyledLinkText = Styled.a`
     }
 `;
 
-const StyledLinkDiv = Styled.div`
+const LinkedTextDiv = Styled.div`
     display: inline-flex;
     flex-direction: row;
     margin: 1em;
@@ -69,64 +70,44 @@ const Dot = Styled.span`
     display: inline-block;
 `;
 
-const StyledForm = Styled.form`
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.25s ease;
-
-`;
-
 function LoginPage() {
     const [user] = useAuthState(Firebase.firebase.auth());
     if(user)
         return (<Redirect to="/home"/>);
 
-        return (
-        <StyledDiv>
+    return (
+        <Container>
             <MuspaceLogo width="25em"/>
-            <StyledHeader>Log in</StyledHeader>
+            <Header>Log in</Header>
             
-            <StyledForm onSubmit={submit}>
-                <LoginField name="email" type="text" text="Username" placeholder="Email, or username" autofocus/>
-                <LoginField name="password" type="password" text="Password" placeholder="Password" />
-                <TextButton text="Log in" type="submit"/>
-            </StyledForm>
-            
-            <TextButton text="Login with Google" type="text" onClick={loginWithGoogle}/>
+            <LoginForm onSubmit={loginWithEmail}/>
+            <GoogleSigninButton text="Login with Google" type="text" onClick={loginWithGoogle}/>
 
-            <StyledLinkDiv>
-                <StyledLinkText href="/reset">Forgot Password</StyledLinkText>
+            <LinkedTextDiv>
+                <LinkText href="/reset">Forgot Password</LinkText>
                 <Dot />
-                <StyledLinkText href="/register">Sign Up</StyledLinkText>
-            </StyledLinkDiv>
-        </StyledDiv >
+                <LinkText href="/register">Sign Up</LinkText>
+            </LinkedTextDiv>
+        </Container >
     );
 }
 
-function submit(event) {
+function loginWithEmail(event) {
+    event.preventDefault();
+
     const email = event.target.elements[0].value;
     const pass = event.target.elements[1].value;
-    Firebase.auth.signInWithEmailAndPassword("robert@test.com", "123456")
-        .then((userCredential) => 
-            {
-                var user = userCredential.user;
-                alert("USER");
-            }
-    
-        ).catch((error) =>
-            {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                alert("ERR");
-            }
-        );
-
+    Firebase.auth.signInWithEmailAndPassword(email, pass)
+        .catch((error) => {
+            alert(error.message);
+        
+        } );
 }
 
 function loginWithGoogle() {
     const provider = new Firebase.firebase.auth.GoogleAuthProvider();
     Firebase.auth.signInWithPopup(provider);
+
 }
 
 export default LoginPage;
