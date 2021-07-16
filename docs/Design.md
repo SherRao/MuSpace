@@ -81,11 +81,14 @@ Database: Firestore, FirebaseOn every view, the sidebar,
 <h2>3. Decomposition Description</h2>
 
 <h3>3.1.1 Framework Package Interactions</h3>
-<a href="https://lucid.app/lucidchart/3688a3f8-c8ae-43ee-8e08-371b9df8894c/edit?invitationId=inv_2f4e8e00-4804-4a9b-8c09-e55a2a0ef4ec">https://lucid.app/lucidchart/3688a3f8-c8ae-43ee-8e08-371b9df8894c/edit?invitationId=inv_2f4e8e00-4804-4a9b-8c09-e55a2a0ef4ec</a>
+<div style="width: 960px; height: 720px; margin: 10px; position: relative;">
+    <iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/3688a3f8-c8ae-43ee-8e08-371b9df8894c" id="t2iVjiOIkkqx"></iframe>
+</div>
 
 <h3>3.1.2 Model Class Diagram</h3>
-<p>Android</p><!-- MISSING DIAGRAMS!!! -->
-<p>IOS</p><!-- MISSING DIAGRAMS!!! -->
+<div style="width: 960px; height: 720px; margin: 10px; position: relative;">
+    <iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/dd3c7144-fde2-4d4e-96a5-1df4cb1198b3" id="FQiV5yViSvix"></iframe>
+</div>
 
 <!-- #################################################### -->
 <!-- 4. Interface Descriptions -->
@@ -93,7 +96,8 @@ Database: Firestore, FirebaseOn every view, the sidebar,
 
 <h3>4.1 Colour Guidelines</h3>
 <ul>
-    <li>Colour Palette:</li><!-- MISSING IMAGE!!! -->
+    <li>Colour Palette:</li>
+    <img src="./design/colours.svg" width=300> <!-- #################################################### -->
 </ul>
 
 <h3>4.2 Font Guidelines</h3>
@@ -103,8 +107,10 @@ Database: Firestore, FirebaseOn every view, the sidebar,
 
 <h3>4.3 App Icons</h3>
 <ul>
-    <li>MuSpace Logo (Full):</li><!-- MISSING IMAGE!!! -->
-    <li>MuSpace Logo (Reduced):</li><!-- MISSING IMAGE!!! -->
+    <li>MuSpace Logo (Full):</li>
+    <img src="./design/logo.svg" width=400> <!-- #################################################### -->
+    <li>MuSpace Logo (Reduced):</li>
+    <img src="./design/icon.svg" width=100> <!-- #################################################### -->
 </ul>
 
 <h3>4.4 Module Interface</h3>
@@ -659,7 +665,7 @@ Database: Firestore, FirebaseOn every view, the sidebar,
 <h3>6.4 Adaptive</h3>
 <ol>
     <li>As the Spotify API is updated, we will adapt to the changes and update accordingly</li>
-</ol<>
+</ol>
 
 <!-- 6. Maintenance -->
 <h2>7. Extra Details</h2>
