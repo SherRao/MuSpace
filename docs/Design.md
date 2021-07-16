@@ -130,7 +130,7 @@ Database: Firestore, FirebaseOn every view, the sidebar,
         <td style="text-align:center">Links to HomePage</td>
     </tr>
     <tr>
-        <td style="text-align:center">FriendsView</td>
+        <td style="text-align:center">FriendsPageView</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links to FriendsPage</td>
     </tr>
