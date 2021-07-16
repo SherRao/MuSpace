@@ -119,32 +119,32 @@ Database: Firestore, FirebaseOn every view, the sidebar,
         <th style="text-align:center">Description</th>
     </tr>
     <tr>
-        <td style="text-align:center">homeView</td>
+        <td style="text-align:center">HomeView</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links to HomePage</td>
     </tr>
     <tr>
-        <td style="text-align:center">friendsView</td>
+        <td style="text-align:center">FriendsView</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links to FriendsPage</td>
     </tr>
     <tr>
-        <td style="text-align:center">messagesView</td>
+        <td style="text-align:center">MessagesView</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links to MessagesPage</td>
     </tr>
     <tr>
-        <td style="text-align:center">profileID</td>
+        <td style="text-align:center">ProfileID</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links to Profile View (Clicking the Profile Picture/ Username)</td>
     </tr>
     <tr>
-        <td style="text-align:center">settingsView</td>
+        <td style="text-align:center">SettingsView</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links to SettingsPage</td>
     </tr>
     <tr>
-        <td style="text-align:center">stats</td>
+        <td style="text-align:center">Stats</td>
         <td style="text-align:center">Label</td>
         <td style="text-align:center">Shows some basic stats about the user’s listening activity</td>
     </tr>
@@ -160,17 +160,17 @@ Database: Firestore, FirebaseOn every view, the sidebar,
         <th style="text-align:center">Description</th>
     </tr>
     <tr>
-        <td style="text-align:center">notificationBell</td>
+        <td style="text-align:center">NotificationBell</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Displays NotificationView</td>
     </tr>
     <tr>
-        <td style="text-align:center">searchField</td>
+        <td style="text-align:center">SearchField</td>
         <td style="text-align:center">Text Field</td>
         <td style="text-align:center">Search Input</td>
     </tr>
     <tr>
-        <td style="text-align:center">searchButton</td>
+        <td style="text-align:center">SearchButton</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Searches what was typed into the search field</td>
     </tr>
@@ -348,17 +348,17 @@ Database: Firestore, FirebaseOn every view, the sidebar,
         <td style="text-align:center">Displays the most played song of the week</td>
     </tr>
     <tr>
-        <td style="text-align:center">settingsButton</td>
+        <td style="text-align:center">SettingsButton</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links user to the settings page</td>
     </tr>
     <tr>
-        <td style="text-align:center">profileButton</td>
+        <td style="text-align:center">ProfileButton</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links user to their profile</td>
     </tr>
     <tr>
-        <td style="text-align:center">seeMoreButton</td>
+        <td style="text-align:center">SeeMoreButton</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Lets the user view more friends' listening activity.</td>
     </tr>
@@ -374,27 +374,27 @@ Database: Firestore, FirebaseOn every view, the sidebar,
         <th style="text-align:center">Description</th>
     </tr>
     <tr>
-        <td style="text-align:center">pickFriend</td>
+        <td style="text-align:center">PickFriend</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Changes which friend user is talking to</td>
     </tr>
     <tr>
-        <td style="text-align:center">typeMessage</td>
+        <td style="text-align:center">TypeMessage</td>
         <td style="text-align:center">Text Field</td>
         <td style="text-align:center">User inputs the message they want to send to the user</td>
     </tr>
     <tr>
-        <td style="text-align:center">sendButton</td>
+        <td style="text-align:center">SendButton</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Sends selected message to the database (then the user)</td>
     </tr>
     <tr>
-        <td style="text-align:center">friendScroll</td>
+        <td style="text-align:center">FriendScroll</td>
         <td style="text-align:center">Scroll Bar</td>
         <td style="text-align:center">Allows the user to scroll through a friends list</td>
     </tr>
     <tr>
-        <td style="text-align:center">userID</td>
+        <td style="text-align:center">UserID</td>
         <td style="text-align:center">Label</td>
         <td style="text-align:center">Displays friend’s Username & Picture</td>
     </tr>
@@ -410,22 +410,22 @@ Database: Firestore, FirebaseOn every view, the sidebar,
         <th style="text-align:center">Description</th>
     </tr>
     <tr>
-        <td style="text-align:center">userID</td>
+        <td style="text-align:center">UserID</td>
         <td style="text-align:center">Label</td>
         <td style="text-align:center">Label displays user profile name</td>
     </tr>
     <tr>
-        <td style="text-align:center">upload</td>
+        <td style="text-align:center">Upload</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">User uploads new profile picture</td>
     </tr>
     <tr>
-        <td style="text-align:center">languageChange</td>
+        <td style="text-align:center">LanguageChange</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Changes the language of the site</td>
     </tr>
     <tr>
-        <td style="text-align:center">deleteProfile</td>
+        <td style="text-align:center">DeleteProfile</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Deletes the user’s profile</td>
     </tr>
@@ -441,7 +441,7 @@ Database: Firestore, FirebaseOn every view, the sidebar,
         <th style="text-align:center">Description</th>
     </tr>
     <tr>
-        <td style="text-align:center">notificationMessage</td>
+        <td style="text-align:center">NotificationMessage</td>
         <td style="text-align:center">Label/Button</td>
         <td style="text-align:center">links to user’s profile or to notification content</td>
     </tr>
@@ -457,37 +457,37 @@ Database: Firestore, FirebaseOn every view, the sidebar,
         <th style="text-align:center">Description</th>
     </tr>
     <tr>
-        <td style="text-align:center">feed</td>
+        <td style="text-align:center">Feed</td>
         <td style="text-align:center">Label</td>
         <td style="text-align:center">Feed section title, section dynamically displays latest feed items</td>
     </tr>
     <tr>
-        <td style="text-align:center">feedItem</td>
+        <td style="text-align:center">FeedItem</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Individual feed item displays post information</td>
     </tr>
     <tr>
-        <td style="text-align:center">topArtists</td>
+        <td style="text-align:center">TopArtists</td>
         <td style="text-align:center">Label</td>
         <td style="text-align:center">Section displays user’s top artists</td>
     </tr>
     <tr>
-        <td style="text-align:center">artistID</td>
+        <td style="text-align:center">ArtistID</td>
         <td style="text-align:center">Label</td>
         <td style="text-align:center">Displays individual artists’</td>
     </tr>
     <tr>
-        <td style="text-align:center">friendsAlbums</td>
+        <td style="text-align:center">FriendsAlbums</td>
         <td style="text-align:center">Label</td>
         <td style="text-align:center">Section displays user’s friends’ top rated albums</td>
     </tr>
     <tr>
-        <td style="text-align:center">albumID</td>
+        <td style="text-align:center">AlbumID</td>
         <td style="text-align:center">Label</td>
         <td style="text-align:center">Displays individual album name</td>
     </tr>
     <tr>
-        <td style="text-align:center">topSongs</td>
+        <td style="text-align:center">TopSongs</td>
         <td style="text-align:center">Label</td>
         <td style="text-align:center">Section displays user’s top rated songs</td>
     </tr>
