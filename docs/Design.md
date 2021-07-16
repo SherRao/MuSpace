@@ -82,12 +82,12 @@ Database: Firestore, FirebaseOn every view, the sidebar,
 
 <h3>3.1.1 Framework Package Interactions</h3>
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;">
-    <iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/3688a3f8-c8ae-43ee-8e08-371b9df8894c" id="t2iVjiOIkkqx"/>
+    <iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/3688a3f8-c8ae-43ee-8e08-371b9df8894c" id="t2iVjiOIkkqx"></iframe>
 </div>
 
 <h3>3.1.2 Model Class Diagram</h3>
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;">
-    <iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/dd3c7144-fde2-4d4e-96a5-1df4cb1198b3" id="FQiV5yViSvix"/>
+    <iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/dd3c7144-fde2-4d4e-96a5-1df4cb1198b3" id="FQiV5yViSvix"></iframe>
 </div>
 
 <!-- #################################################### -->
