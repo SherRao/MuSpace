@@ -88,6 +88,12 @@ Database: Firestore, FirebaseOn every view, the sidebar,
 
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/dd3c7144-fde2-4d4e-96a5-1df4cb1198b3" id="FQiV5yViSvix"></iframe></div>
 
+<h3>2.1 Object Diagram</h3>
+<div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/f369b257-772d-4250-b476-e0a7f3c92e25" id="UtiOslhxY_iS"></iframe></div>
+
+<h3>2.1 Object Diagram</h3>
+<div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/f369b257-772d-4250-b476-e0a7f3c92e25" id="UtiOslhxY_iS"></iframe></div>
+
 
 <!-- #################################################### -->
 <!-- 4. Interface Descriptions -->
