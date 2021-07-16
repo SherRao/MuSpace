@@ -1,670 +1,285 @@
 <h1 align="center">
     <a href="./"><img id="header-logo" src="./logo.svg" width="250" alt="MuSpace logo"/></a>
 </h1>
-<h1 align="center">Design Document</h1>
-
-<!-- #################################################### -->
-<!-- 1. Introduction -->
+<h1 align="center">Analysis Document</h1>
+<!-- Introduction -->
+<h2>Table of Contents</h2>
 <h2>1. Introduction</h2>
-
 <h3>1.1 Project Overview</h3>
 <p>MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. When users share similar listening habits with others, they are recommended as connections via a point-based rating system using the <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Spotify SDK</a> data. MuSpace will also offer listening rooms that allow users to listen along with their friends and chat with each other in real-time. Additionally, users can recommend which songs will be played in the listening room.</p>
-
-<h3>1.2 References</h3>
+<!-- Object Classification -->
+<h2>2. Object Classification</h2>
+<h3>2.1 Object Diagram</h3>
+<div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/f369b257-772d-4250-b476-e0a7f3c92e25" id="UtiOslhxY_iS"></iframe></div>
+<!-- #################################################### -->
+<!-- Entity Objects -->
+<h3>2.2 Entity Objects</h3>
 <ul>
-    <li>IEEE. IEEE Std 1016-1998 IEEE Recommended Practice for Software Design Descriptions. IEEE Computer Society, 1998</li>
+    <!-- User -->
+    <li>
+        <b>User (Object)</b> - A person using/interacting with MuSpace
+        <ul>
+            <li>User ID (unique Long, private) - A unique ID is given to every single User object.</li>
+            <li>First Name - (String, private) - The User’s First Name.</li>
+            <li>Last Name - (String, private) - The User’s last name.</li>
+            <li>Username (String, private) - The User’s account name.</li>
+            <li>Password (Hash) - The password to a User’s account.</li>
+            <li>Date of Birth (Long, private) - The User’s date of birth.</li>
+            <li>Email (String, private) - The User’s email address.</li>
+            <li>List of Statistic ID (List of unique Longs, private) - a reference to the User’s Statistic object - every User has one statistic object.</li>
+            <li>List of Feed ID (List of unique Longs, private) - a reference to the User’s Feed object - every User has one statistic object.</li>
+            <li>List of Chat ID (List of unique Longs, private) - a reference to the Chat ID’s for the User Object.</li>
+            <li>List of Friend ID (List of unique Longs, private) - a reference to the Friend ID’s for the User object.</li>
+        </ul>
+    </li>
+    <br/>
+    <!-- Profile -->
+    <li>
+        <b>Profile (Object)</b> - A user’s profile page displaying recent listening history, friends, and account information
+        <ul>
+            <li>User (Object) - a reference to the user object for showing the users details like username and fullname, and to be used for editing the users account details.</li>
+        </ul>
+    </li>
+    <br/>
+    <!-- Feed -->
+    <li>
+        <b>Feed (Object)</b> - Collection of posts created by a User
+        <ul>
+            <li>Feed ID (Long, private) - A unique ID is given to every single feed.</li>
+            <li>Posts (Object, public)</li>
+            <ul>
+                <li>Post ID (unique Long, private) - A unique ID is given to every single post.</li>
+                <li>Text (String) - The contents of the post</li>
+                <li>Spotify URL (String)- a link to the song, album, or artist attached to the post.</li>
+            </ul>
+        </ul>
+    </li>
+    <br/>
+    <!-- Statistic -->
+    <li>
+        <b>Statistic (Object)</b> - Collection of specific user statistics (e.g listening time, top album/artist)
+        <ul>
+            <li>Statistic ID (unique Long, private) - A unique ID is given to every single statistics object.</li>
+            <li>Listening Time (float [seconds], public) - total listening time for songs, artists, albums, stored in seconds (float) and converted into minutes and hours.</li>
+            <li>Top Artist (String, Public) - top artist the user listens to (artist with most listening time).</li>
+            <li>Friend (Object(s)) - A User connecting with other Users.</li>
+        </ul>
+    </li>
+    <br/>
+    <!-- Chat -->
+    <li>
+        <b>Chat (Object)</b> - Chat information and history between two users
+        <ul>
+            <li>Chat ID - A unique ID is given to every single chat object.</li>
+            <li>Messages (List of Message-IDs, private) - Written communication sent to or left for a recipient who cannot be contacted directly.</li>
+        </ul>
+    </li>
+    <br/>
+    <!-- Message -->
+    <li>
+        <b>Message (Object)</b> - A message sent from one user to another. 
+        <ul>
+            <li>Message-ID (unique Long, private) - A unique ID is given to every single Message object.</li>
+            <li>Author ID (unique Long, private) - User ID of User who authored the message.</li>
+            <li>Timestamp</li>
+            <li>Text (String) - The contents of the message.</li>
+        </ul>
+    </li>
+    <br/>
+    <!-- Friend -->
+    <li>
+        <b>Friend (Object)</b> - A friend that the user has been added / accepted
+        <ul>
+            <li>Friend ID (unique Long, private) - User ID of Friend.</li>
+            <li>Message - Written communication sent to or left for a recipient who cannot be contacted directly.</li>
+            <ul>
+                <li>Content (String) - String of characters</li>
+            </ul>
+        </ul>
+    </li>
+    <br/>
+    <!-- Notification -->
+    <li>
+        <b>Notification (Object)</b> - a message sent by the application to a user when the application is not open.
+        <ul>
+            <li>Notification ID (unique Long, private)</li>
+            <li>Message - Written communication sent to or left for a recipient who cannot be contacted directly.</li>
+            <ul>
+                <li>Content (String) - String of characters</li>
+            </ul>
+        </ul>
+    </li>
+    <br/>
+    <!-- Music 
+        <li><b>Music (Object)</b>
+            <ul>
+              <li>Song (Object, Public) - a short poem or other sets of words set to music or meant to be sung.</li>
+              <li>Album (Object, Public) - a collection of recordings issued as a single item on Spotify.</li>
+              <li>Artist (Object, Public) - a performer, such as a singer, actor, or dancer.</li>
+            </ul>
+        </li>
+        -->
+    <br/>
+</ul>
+<!-- #################################################### -->
+<!-- Boundary Objects -->
+<h3>2.3 Boundary Objects</h3>
+<ul>
+    <!-- Login View -->
+    <li><b>LoginView</b> - Where a User goes to log in.</li>
+    <br/>
+    <!-- Register View -->
+    <li>
+        <b>RegisterView</b> - Where a User goes to sign up.
+        <ul>
+            <li><b>LinkSpotifyView</b> - Where a User goes to link Spotify with their account.</li>
+        </ul>
+        <br/>
+        <!-- Home View -->
+    </li>
+    <li>
+        <b>HomeView</b> - Where a user goes to see highlights of recent Feed posts, their most active Friend’s Statistics, and the current most popular Song
+        <ul>
+            <li><b>StatsView</b> - Where a User’s Statistics of their Listening history on Spotify are displayed such as favourite Artist and Song, as well as, Statistics for their most active Friend.</li>
+        </ul>
+        <br/>
+        <!-- ChatView -->
+    <li><b>ChatView</b> - Where a User can send/receive messages to their Friends on the platform.</li>
+    </li>
+    <br/>
+    <!-- Friends View -->
+    <li>
+        <b>FriendsView</b> - Where a User goes to see their friends.
+        <ul>
+            <li><b>FriendsListView</b> - Where a User views a list of all their Friends</li>
+            <li><b>AddFriendsView</b> - Where a User can see to search for Friends.</li>
+        </ul>
+        <br/>
+    </li>
+        <!-- Profile View -->
+    <li>
+        <b>ProfileView</b> - Where a User can view another User’s music preferences and Feed. If a User is looking at their own Profile they can add a new Post to their Feed.
+        <ul>
+            <li><b>FeedView</b> - Where a User can look at the Statistics of their Music history</li>
+            <li><b>AddPostView</b> - Where a User can add a new post to their FeedPage consisting of a message and exactly one Spotify song, album, or artist.</li>
+        </ul>
+        <br/>
+    </li>
+        <!-- Search Bar View -->
+    <li><b>SearchBarView</b> - Where a User searches for other User by username.</li>
+    <br/>
+    <!-- Settings Page View -->
+    <li><b>SettingsPageView</b> - Where a User can view and edit their user profile information such as display picture, email, password, and full name.</li>
+    <br/>
 </ul>
 
 <!-- #################################################### -->
-<!-- 2. Planned Implementation -->
-<h2>2. Planned Implementation</h2>
+<!-- Control Objects -->
+<h3>2.4 Control Objects</h3>
+<ul>
+    <!-- Login Controllers -->
+    <li><b>Login Controllers</b></li>
+    <ul>
+        <li><b>AuthenticateUserController</b> - Coordinates the flag to view protected pages that require a logged-in User.</li>
+    </ul>
+    <br/>
+    <!-- Registration Controllers -->
+    <li><b>Registration Controllers</b></li>
+    <ul>
+        <li><b>RegisterUserController</b> – Coordinates the registration of a new User to the site.</li>
+        <li><b>SpotifyConnectionController</b> - Coordinates the connection of a new User account to a Spotify account. </li>
+    </ul>
+    <br/>
+    <!-- Home Page Controllers -->
+    <li><b>Home Page Controllers</b></li>
+    <ul>
+        <li><b>DisplayProfileStatsController</b> - Coordinates the User-specific data that is shown on the home page.</li>
+        <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently Listening to.</li>
+        <li><b>DisplayFriendMusicDataController</b> - Coordinates music data related to the User’s friends.</li>
+    </ul>
+    <br/>
+    <!-- Friends Controllers -->
+    <li><b>Friends Controllers</b></li>
+    <ul>
+        <li><b>DisplayFriendListController</b> - Coordinates the List of friends that is displayed to the User.</li>
+        <li><b>DisplayFriendMusicDataController</b> - Coordinates music data related to the User’s friends.</li>
+        <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently Listening to.</li>
+    </ul>
+    <br/>
+    <!-- Chat Page Controllers -->
+    <li><b>Chat Page Controllers</b></li>
+    <ul>
+        <li><b>DisplayRecentMessagesController</b> - Coordinates the List of recently messaged friends from the User to be displayed.</li>
+        <li><b>DisplayMessageRetreivalController</b> - Coordinates the retrieval of the List of all messages sent and received from a specific User.</li>
+        <li><b>SendMessageController</b> - Coordinates the sending of a message to another User.</li>
+        <li><b>ReceiveMessageController</b> - Coordinates the receiving of a message from another User.</li>
+        <li><b>NewMessageController</b> - Coordinates starting a new DM with another User.</li>
+    </ul>
+    <br/>
+    <!-- Settings Page Controllers -->
+    <li><b>Settings Page Controllers</b></li>
+    <ul>
+        <li><b>EditUserDataController</b> - Coordinates changing and deletion of User data, like the Username, email, password, and date of birth.</li>
+        <li><b>DisplayUserDataController</b> - Coordinates the display of User data.</li>
+    </ul>
+    <br/>
+    <!-- Profile Page Controllers -->
+    <li><b>Profile Page Controllers</b></li>
+    <ul>
+        <li><b>FeedPageController</b> - Coordinates the User’s FeedPage and what posts are displayed on the page.</li>
+        <li><b>AddNewPostController</b> - Coordinates the addition of a new post to the User’s FeedPage.</li>
+    </ul>
+    <br/>
+    <li><b>SearchController</b> - Coordinates all the search tasks.</li>
+</ul>
+<!-- Further Steps -->
+<h2>3. Further Steps</h2>
+<h3>3.1 State Diagram</h3>
+<div><iframe width="768" height="432" src="https://miro.com/app/live-embed/o9J_l-_TB-k=/?moveToViewport=-3168,751,1845,1101" frameBorder="0" scrolling="no" allowFullScreen></iframe></div>
+<br/><br/>
 
-<h3>2.1 Choice of Language</h3>
+<!-- Non Functional Attributes -->
+<h2>4. Non Functional Attributes</h2>
+<p><b>Performance and scalability.</b> How fast does the system return results? How much will this performance change with higher workloads?</p>
+<p><b>Performance and compatibility.</b> Which hardware, operating systems, browsers, and their versions does the software run on? Does it conflict with other applications and processes within these environments?</p>
+<p>MuSpace will be accessible on any device with a modern web browser such as google chrome or firefox as long as the user has a Spotify account and an internet connection to utilize the app. It will also be available on iOS and Android mobile devices.</p>
+<p><b>Reliabilty, availability, maintainability.</b> How often does the system experience critical failures? and how much time is available to users against downtimes?</p>
+<p><b>Security.</b> How are the system and its data protected against attacks?</p>
 <p>
-Front-end: HTML, Javascript, CSS, ReactJS <br>
-Back-end: Javascript <br>
-Database: Firestore, FirebaseOn every view, the sidebar,
+    All data will be securely transferred from a client to the server with Google Firebase’s implementation of data privacy and security. All endpoints used on Firebase are secured through Google’s servers. See 
+    <a href="https://firebase.google.com/docs/firestore/security/overview">here</a> 
+    for more information on how Google Firebase uses security.
 </p>
+<p><b>Localization.</b> Does the system match local specifics?</p>
+<p><b>This attribute defines how well a system or its element falls in line with the context of the local market-to-be. The context includes local languages, laws, currencies, cultures, spellings, and other aspects. The more a product sticks with it, the more success it should have with a particular target audience.</b></p>
+<p><b>The date format must be as follows: day.month.year</b></p>
+<p><b>Usability.</b> How easy is it for a customer to use the system?</p>
+<!-- Classes -->
+<h2>5. Classes</h2>
+<p><b>This is an ongoing diagram that is being continuously updated.</b></p>
+<div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/dd3c7144-fde2-4d4e-96a5-1df4cb1198b3" id="QuUPrM8LWEpi"></iframe></div>
 
-<h3>2.2 Resources Referenced</h3>
+<!-- Versions -->
+<h2>6. Versions</h2>
 <ul>
-    <li>Icons Sourced from React Icons (<a href="https://react-icons.github.io/react-icons">https://react-icons.github.io/react-icons</a>)</li>
-    <li>Figma Design Standards (<a href="https://blog.figma.com/material-design-figma-styles-98a7f0e2735e">https://blog.figma.com/material-design-figma-styles-98a7f0e2735e</a>)</li>
-    <li>Spotify Web API for Music Data (<a href="https://developer.spotify.com/documentation/web-api/">https://developer.spotify.com/documentation/web-api/</a>)</li>
+    <li>Version 0.1.0 [Sections 1-3] Preliminary Document</li>
+    <ul>
+        <li>June 8th</li>
+        <li>Members - All members</li>
+    </ul>
+    <li>Version 0.1.1 [Polishing Sections 1-3]</li>
+    <ul>
+        <li>June 10th</li>
+        <li>Members - All members</li>
+    </ul>
+    <li>Version 1.0.0 [Adding 4-7, Finalizing and Publishing]</li>
+    <ul>
+        <li>June 24th</li>
+        <li>Members - All members</li>
+    </ul>
 </ul>
-
-<h3>2.3 Development Team</h3>
-<table>
-    <tr>
-        <th style="text-align:center">Name</th>
-        <th style="text-align:center">Standard/Template</th>
-        <th style="text-align:center">Reviewed By</th>
-    </tr>
-    <tr>
-        <td style="text-align:center">Requirements Document</td>
-        <td style="text-align:center">Modified IEEE</td>
-        <td rowspan="5" style="text-align:center">Entire Team</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Project Management Document</td>
-        <td style="text-align:center">Modified IEEE</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Analysis Document</td>
-        <td style="text-align:center">Modified IEEE</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Design Document</td>
-        <td style="text-align:center">Modified IEEE</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">User Document</td>
-        <td style="text-align:center">Modified IEEE</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Participation Record (Hours)</td>
-        <td style="text-align:center">Self-documentation using internal Google Sheets file</td>
-        <td style="text-align:center">Adrian</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Source Code</td>
-        <td style="text-align:center">Modified IEEE</td>
-        <td style="text-align:center">All Developers</td>
-    </tr>
-</table>
-
-<h3>2.4 Integration</h3>
-<p>The Spotify API/ Firebase login authenticity is being done by Nausher Rao. The verification and validation of his work will be completed by the remaining members.</p>
-
-<!-- #################################################### -->
-<!-- 3. Decomposition Description -->
-<h2>3. Decomposition Description</h2>
-
-<h3>3.1.1 Framework Package Interactions</h3>
-<a href="https://lucid.app/lucidchart/3688a3f8-c8ae-43ee-8e08-371b9df8894c/edit?invitationId=inv_2f4e8e00-4804-4a9b-8c09-e55a2a0ef4ec">https://lucid.app/lucidchart/3688a3f8-c8ae-43ee-8e08-371b9df8894c/edit?invitationId=inv_2f4e8e00-4804-4a9b-8c09-e55a2a0ef4ec</a>
-
-<h3>3.1.2 Model Class Diagram</h3>
-<p>Android</p><!-- MISSING DIAGRAMS!!! -->
-<p>IOS</p><!-- MISSING DIAGRAMS!!! -->
-
-<!-- #################################################### -->
-<!-- 4. Interface Descriptions -->
-<h2>4. Interface Descriptions</h2>
-
-<h3>4.1 Colour Guidelines</h3>
-<ul>
-    <li>Colour Palette:</li><!-- MISSING IMAGE!!! -->
-</ul>
-
-<h3>4.2 Font Guidelines</h3>
-<ul>
-    <li>Roboto</li>
-</ul>
-
-<h3>4.3 App Icons</h3>
-<ul>
-    <li>MuSpace Logo (Full):</li><!-- MISSING IMAGE!!! -->
-    <li>MuSpace Logo (Reduced):</li><!-- MISSING IMAGE!!! -->
-</ul>
-
-<h3>4.4 Module Interface</h3>
-
-<h4>4.4.1 Sidebar (Constant in all Views aside from 4.4.1 and 4.4.2)</h4>
-<img src="./design/sidebar.svg" width=200/>
-<p>On every view, the sidebar allows for quick and easy navigation to any of the other views. Along with this, it has some quick stats.</p>
-<table>
-    <tr>
-        <th style="text-align:center">Field</th>
-        <th style="text-align:center">Type</th>
-        <th style="text-align:center">Description</th>
-    </tr>
-    <tr>
-        <td style="text-align:center">homeView</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Links to HomePage</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">friendsView</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Links to FriendsPage</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">messagesView</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Links to MessagesPage</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">profileID</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Links to Profile View (Clicking the Profile Picture/ Username)</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">settingsView</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Links to SettingsPage</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">stats</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Shows some basic stats about the user’s listening activity</td>
-    </tr>
-</table>
-
-<h4>4.4.2 Searchbar (Constant in all Views aside from 4.4.1 and 4.4.2)</h4>
-<img src="./design/search_bar.svg" width=500/>
-<p>Search bar allows the user to find songs / albums / playlists etc, along with friends.</p>
-<table>
-    <tr>
-        <th style="text-align:center">Field</th>
-        <th style="text-align:center">Type</th>
-        <th style="text-align:center">Description</th>
-    </tr>
-    <tr>
-        <td style="text-align:center">notificationBell</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Displays NotificationView</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">searchField</td>
-        <td style="text-align:center">Text Field</td>
-        <td style="text-align:center">Search Input</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">searchButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Searches what was typed into the search field</td>
-    </tr>
-</table>
-
-<h4>4.4.3 Login View</h4>
-<img src="./design/login.svg" width=500/>
-<p>Login View allows users to enter their account credentials and login to their account.</p>
-<table>
-    <tr>
-        <th style="text-align:center">Field</th>
-        <th style="text-align:center">Type</th>
-        <th style="text-align:center">Description</th>
-    </tr>
-    <tr>
-        <td style="text-align:center">MuSpaceLogo</td>
-        <td style="text-align:center">Image</td>
-        <td style="text-align:center">Application Logo</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Log in</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Describes what page the user is on i.e Log in</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Email or Username</td>
-        <td style="text-align:center">Text Field</td>
-        <td style="text-align:center">Asks for the email or name of the user.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Password</td>
-        <td style="text-align:center">Text Field</td>
-        <td style="text-align:center">Asks for the password to a user account associated with email/username.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Login-Button</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Signs into the account.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Forgot password-button</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Links to password recovery page.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Sign up-button</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Links to the RegisterView page in case the user does not have an account created.</td>
-    </tr>
-</table>
-
-<h4>4.4.4 RegisterView</h4>
-<img src="./design/register1.svg" width=500/>
-<img src="./design/register2.svg" width=500/>
-<p>Register Page allows new users to register with MuSpace asking them for their credentials like Name, Email, Date of Birth, etc. creating an account for them with their desired available username and unique password.</p>
-<table>
-    <tr>
-        <th style="text-align:center">Field</th>
-        <th style="text-align:center">Type</th>
-        <th style="text-align:center">Description</th>
-    </tr>
-    <tr>
-        <td style="text-align:center">MuSpaceLogo</td>
-        <td style="text-align:center">Image</td>
-        <td style="text-align:center">Application Logo</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">lblacc</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Tells the user about what the page is about i.e. creating your account.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Email</td>
-        <td style="text-align:center">Text Field</td>
-        <td style="text-align:center">Asks the user to input the desired email through which they would like to be associated with MuSpace.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Confirm email</td>
-        <td style="text-align:center">Text Field</td>
-        <td style="text-align:center">Asks the user to re-input their email to confirm the correct email.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">First name</td>
-        <td style="text-align:center">Text Field</td>
-        <td style="text-align:center">Asks users to input their first name for application use.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Last name</td>
-        <td style="text-align:center">Text Field</td>
-        <td style="text-align:center">Asks users to input their Last name for application use.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Username</td>
-        <td style="text-align:center">Text Field</td>
-        <td style="text-align:center">The user is required to create a unique username, which is what he’ll use to login with MuSpace.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Password</td>
-        <td style="text-align:center">Text Field</td>
-        <td style="text-align:center">Password is a unique identification key that user will use with username to log into MuSpace and keep his account protected.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Date of birth</td>
-        <td style="text-align:center">Text field / Drop-down Button</td>
-        <td style="text-align:center">The user can either enter his date of birth or choose the date in the dropdown calendar.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Register</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">This button takes the user to the next page,i.e. The check-email page from where the user can authorize spotify and start using Muspace.</td>
-    </tr>
-</table>
-
-<h4>4.4.5 Home View</h4>
-<img src="./design/home.svg" width=500/>
-<table>
-    <tr>
-        <th style="text-align:center">Field</th>
-        <th style="text-align:center">Type</th>
-        <th style="text-align:center">Description</th>
-    </tr>
-    <tr>
-        <td style="text-align:center">HomeButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">This button takes you to home page</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">GreetingLBL</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">This is just a greeting that shows up when the user logs in and goes to the home page.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">FriendsButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">This button takes you to the friend’s page where you can view friends’ profiles and music statistics.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">FmessagesButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">This button takes you to the messaging page where you can message and talk to other users of the app.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Total Listening Time</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Displays total time spent listening to music since account creation</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Artists Liked</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Displays the number of artists liked by a user</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Album Cover</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">This is located in your friend’s section, every time you click on it it takes you to the album cover your friend was listening to.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">FriendsListeningActivity</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">The Labels says Friends listening activity</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Username</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">This is located in your friend’s section, every time you click on it it takes you to the friend’s profile with that username.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Favartistlbl</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Displays the most played artist of the week by the user</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Favsonglbl</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Displays the most played song of the week</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">settingsButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Links user to the settings page</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">profileButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Links user to their profile</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">seeMoreButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Lets the user view more friends' listening activity.</td>
-    </tr>
-</table>
-
-<h4>4.4.6 Message View</h4>
-<img src="./design/messages.svg" width=500/>
-<p>The Messages page is to allows users to communicate with their friends on the app.</p>
-<table>
-    <tr>
-        <th style="text-align:center">Field</th>
-        <th style="text-align:center">Type</th>
-        <th style="text-align:center">Description</th>
-    </tr>
-    <tr>
-        <td style="text-align:center">pickFriend</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Changes which friend user is talking to</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">typeMessage</td>
-        <td style="text-align:center">Text Field</td>
-        <td style="text-align:center">User inputs the message they want to send to the user</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">sendButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Sends selected message to the database (then the user)</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">friendScroll</td>
-        <td style="text-align:center">Scroll Bar</td>
-        <td style="text-align:center">Allows the user to scroll through a friends list</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">userID</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Displays friend’s Username & Picture</td>
-    </tr>
-</table>
-
-<h4>4.4.7 Settings View</h4>
-<img src="./design/settings.svg" width=500/>
-<p>The View where a user can toggle between different settings options.</p>
-<table>
-    <tr>
-        <th style="text-align:center">Field</th>
-        <th style="text-align:center">Type</th>
-        <th style="text-align:center">Description</th>
-    </tr>
-    <tr>
-        <td style="text-align:center">userID</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Label displays user profile name</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">upload</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">User uploads new profile picture</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">languageChange</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Changes the language of the site</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">deleteProfile</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Deletes the user’s profile</td>
-    </tr>
-</table>
-
-<h4>4.4.8 Notification View</h4>
-<img src="./design/notifications.svg" width=500/>
-<p>A View where the user can view all of their account notifications.</p>
-<table>
-    <tr>
-        <th style="text-align:center">Field</th>
-        <th style="text-align:center">Type</th>
-        <th style="text-align:center">Description</th>
-    </tr>
-    <tr>
-        <td style="text-align:center">notificationMessage</td>
-        <td style="text-align:center">Label/Button</td>
-        <td style="text-align:center">links to user’s profile or to notification content</td>
-    </tr>
-</table>
-
-<h4>4.4.9 Profile View</h4>
-<img src="./design/profile.svg" width=500/>
-<p></p>
-<table>
-    <tr>
-        <th style="text-align:center">Field</th>
-        <th style="text-align:center">Type</th>
-        <th style="text-align:center">Description</th>
-    </tr>
-    <tr>
-        <td style="text-align:center">feed</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Feed section title, section dynamically displays latest feed items</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">feedItem</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Individual feed item displays post information</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">topArtists</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Section displays user’s top artists</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">artistID</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Displays individual artists’</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">friendsAlbums</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Section displays user’s friends’ top rated albums</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">albumID</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Displays individual album name</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">topSongs</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Section displays user’s top rated songs</td>
-    </tr>
-</table>
-
-<h4>4.4.10 FriendsView</h4>
-<img src="./design/friends.svg" width=500/>
-<p></p>
-<table>
-    <tr>
-        <th style="text-align:center">Field</th>
-        <th style="text-align:center">Type</th>
-        <th style="text-align:center">Description</th>
-    </tr>
-    <tr>
-        <td style="text-align:center">Your Friends Top Albums</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Displays your friend’s top album they are listening to</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Your Friends Top Artists</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Displays your friends top artists they are listening to</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Leaderboards</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">A ranked chart that shows who out of your friends has the most listening hours and the number of unique artists they listen to</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Friends Listening Activity</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">A live feed that shows the song that your friend is listening to</td>
-    </tr>
-</table>
-
-<h2>5. Detailed Design</h2>
-<h3>5.1 Module Detailed Design</h3>
-
-<p>RegisterPage()</p>
-<ol> 
-    <li>Check if user is not logged in</li>
-    <li>Display the register page, giving the option to create an account</li>
-    <li>When a user tries to register, communicate with the Firebase backend for authentication. Also stores basic user information into the Firestore database.</li>
-    <li>Else, redirect to the main page</li>
-</ol>
-
-<p>RegisterForm()</p>
-<ol> 
-    <li>Call RegisterField function to create fields</li>
-    <li>Display fields:</li>
-    <ol type="a">
-        <li>Email</li>
-        <li>Confirm Email</li>
-        <li>First Name</li>
-        <li>Last Name</li>
-        <li>Username</li>
-        <li>Password</li>
-        <li>Date of Birth</li>
-    </ol>
-</ol>
-
-<p>RegisterField(text,type,placeholder)</p>
-<ol> 
-    <li>Create Register field with attributes passed to the function</li>
-</ol>
-
-<p>LoginPage()</p>
-<ol> 
-    <li>Check if the user is not logged in</li>
-    <li>Display login page, giving user option to log in, recover password, or sign up</li>
-    <li>When the user tries to login, communicate with the Firebase backend for authentication</li>
-    <li>Else, redirect to the main page.</li>
-</ol>
-
-<p>LoginForm()</p>
-<ol> 
-    <li>Call LoginField function to create fields</li>
-    <li>Display fields for username/email and password input</li>
-</ol>
-
-<p>LoginField(text,type,placeholder)</p>
-<ol> 
-    <li>Create Login field with attributes passed to the function</li>
-</ol>
-
-<p>Sidebar()</p>
-<ol> 
-    <li>Lists all views; Home, Friends, and Messages</li>
-    <li>Dynamically lists user stats; Total Listening Time, Artists Liked, Albums Liked</li>
-    <li>Dynamically displays username and profile picture</li>
-</ol>
-
-<p>SidebarButton()</p>
-<ol> 
-    <li>Display field for texts on the sidebar</li>
-</ol>
-
-<p>ListeningActivityCard()</p>
-<ol> 
-    <li>Display username and what song and artist the user is listening to</li>
-    <li>Option to bookmark the song being listened to</li>
-</ol>
-
-<p>ProtectedRoute()</p>
-<ol> 
-    <li>If the user is logged in</li>
-    <li>Display sidebar and main page</li>
-    <li>Else, if not logged in, redirect to the login page</li>
-</ol>
-
-<p>PageRouter()</p>
-<ol> 
-    <li>Display page paths:</li>
-    <ol type="a">
-        <li>Login</li>
-        <li>Register</li>
-        <li>Home</li>
-    </ol>
-    <li>Home is a protected path, so the user must be logged in to access it</li>
-</ol>
-
-<p>AlbumCover(width)</p>
-<ol> 
-    <li>Display album cover sized to parameter</li>
-</ol>
-
-<p>UserButton()</p>
-<ol> 
-    <li>Displays:</li>
-    <ol type="a">
-        <li>Username</li>
-        <li>Profile Picture</li>
-    </ol>
-    <li>Links to the settings page</li>
-</ol>
-
-<!-- 6. Maintenance -->
-<h2>6. Maintenance</h2>
-
-<h3>6.1 Corrective</h3>
-<p>GitHub Issues Tracking tool is going to be used to organize issues that need to be resolved</p>
-<ol> 
-    <li>Review: GitHub issues will be periodically monitored by the team to track new issues and their status</li>
-    <li>Replication: Once a developer chooses to work on a specific issue they will attempt to recreate the issue inorder to diagnose the root cause of the issue.</li>
-    <li>Correction: Once the issue’s root cause is identified, the developer will fix the issue in the code and update the Github repository with the fix and documented changes.</li>
-</ol>
-
-<h3>6.2 Preventative</h3>
-<ol> 
-    <li>Github actions</li>
-</ol>
-
-<h3>6.3 Perfective</h3>
-<ol> 
-    <li>Time is a major factor in what we as a group can accomplish, however after the completion of this project, some ideas on a shortlist to implement are</li>
-    <ol> 
-        <li><b>Matching Algorithm: </b>(To match with other users, you may not know)</li>
-        <li><b>Listening Rooms:</b> where you can listen with your friends</li>
-        <li><b>Chat Bot:</b> allowing you to ask questions about songs</li>
-        <li><b>I’m Feeling Lucky:</b> pick a random song from Spotify and maybe you will like it</li>
-        <li><b>Memories:</b> songs/ albums/ artists you haven't listened to in a while</li>
-        <li><b>Global Leaderboards:</b> Leaderboards, but you know global</li>
-        <li><b>Themes:</b> Allows the user to choose a theme for the app (light/ dark mode)</li>
-        <li><b>Language:</b> Allows the user to change the language of the app</li>
-    </ol>
-</ol>
-
-<h3>6.4 Adaptive</h3>
-<ol>
-    <li>As the Spotify API is updated, we will adapt to the changes and update accordingly</li>
-</ol<>
-
-<!-- 6. Maintenance -->
-<h2>7. Extra Details</h2>
 <!-- Authored By: -->
-<h3>Authored By</h3>
+<h2>7. Authored By</h2>
 <ul>
     <li>Ali, Farzan</li>
     <li>Alting-Mees, Adrian</li>
@@ -680,23 +295,4 @@ Database: Firestore, FirebaseOn every view, the sidebar,
     <li>Sangha, Jagveer</li>
     <li>Tewari, Nish</li>
     <li>Yasin, Daner</li>
-</ul>
-
-<h3>Versions</h3>
-<ul>
-    <li>Version 0.1.0 [Sections 1-7 Created] Preliminary Document</li>
-    <ul>
-        <li>July 6th</li>
-        <li>Members - Adrian</li>
-    </ul>
-    <li>Version 0.1.1 [Sections 1-7 Continued] </li>
-    <ul>
-        <li>July 6th </li>
-        <li>Members - Adrian, Peju, Farzan, Armaan, Nish</li>
-    </ul>
-    <li>Version 1.0.0 [Sections 1-7, Finalizing and Publishing]</li>
-    <ul>
-        <li>July 15th</li>
-        <li>Members - All members</li>
-    </ul>
 </ul>
