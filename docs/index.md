@@ -27,6 +27,9 @@
                 <a href="./Analysis.html">Analysis Document</a>
             </li>
             <li>
+                <a href="./Design.html">Design Document</a>
+            </li>
+            <li>
                 <a href="./Testing.html">Testing Guidelines Document</a>
             </li>
             <li>
