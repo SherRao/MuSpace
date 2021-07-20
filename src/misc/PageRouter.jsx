@@ -14,7 +14,7 @@ function PageRouter() {
 
             <ProtectedRoute exact={true} path="/" component={HomePage} />
             <ProtectedRoute path="/test" component={TestPage} /> 
-            <ProtectedRoute path="/profile" component={ProfilePage} />
+            <Route path="/profile" component={ProfilePage} />
         </Switch>
     );
 }
