@@ -5,7 +5,7 @@ import { Theme, PageRouter } from "@misc";
 import { Firebase } from "@functions";
 
 function App() {
-    logoutOnClose();
+    //logoutOnClose();
 
     return (
         <BrowserRouter>

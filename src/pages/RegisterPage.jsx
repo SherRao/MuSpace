@@ -7,6 +7,8 @@ import { MuspaceLogo } from "@atoms";
 import { RegisterForm } from "@molecules";
 
 import { Firebase } from "@functions";
+// eslint-disable-next-line no-undef
+require("firebase/auth");
 
 const Container = Styled.div`
     width: 100vw;
@@ -50,10 +52,9 @@ function RegisterPage() {
             <RegisterForm onSubmit={registerWithEmail}/>
         </Container >
     );
-
 }
 
-function registerWithEmail(event) {
+async function registerWithEmail(event) {
     event.preventDefault();
 
     const email = event.target.elements[0].value;
@@ -66,25 +67,35 @@ function registerWithEmail(event) {
 
     Firebase.auth.createUser({
         email: email,
-        emailVertified: true,
+        emailVerified: true,
+        phoneNumber: "+11234567890",
         password: pass,
         displayName: username,
-        disabled: false
+        photoURL: "http://www.example.com/12345678/photo.png",
+        disabled: false,
 
     }).then((userCredential) => {
         console.log(userCredential);
-        alert(userCredential);
+        storeNewUserData(userCredential.uid, email, firstName, lastName, dob);
 
     }).catch((error) => {
         var errorMessage = error.message;
         alert(errorMessage);
         
     } );
-
 }
 
-function storeNewUserData(id, email, firstName, lastName, dob) {
-    
+async function storeNewUserData(id, email, firstName, lastName, dob) {
+    const userData = {
+        "email": email,
+        "firstName": firstName,
+        "lastName": lastName,
+        "dob": dob
+    };
+
+    await Firebase.firestore.collections("user")
+        .doc(id).set(userData);
+
 }
 
 export default RegisterPage;

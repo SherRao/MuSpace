@@ -1,15 +1,13 @@
 import React from "react";
 import Styled from "styled-components";
 import { SidebarButton, MuspaceLogo } from "@atoms";
-//import { FaHome, FaUserFriends, FaEnvelope, FaSpotify } from "react-icons/fa";
 import TestAtomComponent from "../atoms/TestAtomComponent";
 import UserButton from "../atoms/UserButton";
+import { Firebase } from "@functions";
 
 import { AiFillHome, AiFillHeart } from "react-icons/ai"; // home and friend button icon outline and fill
 import { RiChat4Fill } from "react-icons/ri"; // message button icon outline and fill
 import { FaRobot } from "react-icons/fa"; // Report a bug button icon
-
-import { testProfPic } from "@assets";
 
 const StyledDiv = Styled.div`
     width: 20%;
@@ -23,10 +21,12 @@ const StyledDiv = Styled.div`
     flex-direction: column;
     align-items: center;
     transition: all 0.25s ease;
-    
 `;
 
 function Sidebar() {
+    const username = Firebase.auth.currentUser.displayName;
+    const profilePicture = Firebase.auth.currentUser.photoURL;
+
     return (
         <StyledDiv>
             <br></br>
@@ -52,9 +52,9 @@ function Sidebar() {
             <TestAtomComponent text="Albums Liked"></TestAtomComponent>
 
             <UserButton
-                text="@Username"
+                text={username}
                 location="/settings"
-                profileImage={testProfPic}
+                profileImage={profilePicture}
             >
             </UserButton>
         </StyledDiv>
