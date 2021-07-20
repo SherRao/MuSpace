@@ -1,50 +1,24 @@
 const path = require("path");
-module.exports =
-{
+
+module.exports = {
     webpack:
     {
         alias: {
-            "@atoms":
-                path.resolve(
-                    __dirname,
-                    "src/components/atoms/"
-                ),
+            "@src": path.resolve(__dirname, "src/"),
 
-            "@organisms":
-                path.resolve(
-                    __dirname,
-                    "src/components/organisms/"
-                ),
+            "@atoms": path.resolve(__dirname, "src/components/atoms/"),
 
-            "@molecules":
-                path.resolve(
-                    __dirname,
-                    "src/components/molecules/"
-                ),
+            "@organisms": path.resolve(__dirname, "src/components/organisms/"),
 
-            "@pages":
-                path.resolve(
-                    __dirname,
-                    "src/pages/"
-                ),
+            "@molecules": path.resolve(__dirname, "src/components/molecules/"),
 
-            "@misc":
-                path.resolve(
-                    __dirname,
-                    "src/misc/"
-                ),
+            "@pages": path.resolve(__dirname, "src/pages/"),
 
-            "@assets":
-                path.resolve(
-                    __dirname,
-                    "src/assets/"
-                ),
+            "@misc": path.resolve(__dirname, "src/misc/"),
 
-            "@functions":
-                path.resolve(
-                    __dirname,
-                    "src/functions/"
-                ),
+            "@assets": path.resolve(__dirname, "src/assets/"),
+
+            "@functions": path.resolve(__dirname, "src/functions/"),
         },
     },
 };

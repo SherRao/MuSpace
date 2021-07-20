@@ -10,6 +10,8 @@ const theme = {
         darkBlue: "#536EFF",
         purple: "#6D48FF",
         grey: "#404040",
+        muSpacePurple: "#8162FF",
+        mediumGrey: "#838383",
         lightGrey: "#D4D4D4",
     },
 
@@ -22,18 +24,19 @@ const theme = {
 
     fontSizes: {
         small: "1em",
+        smallMedium: "1.33em",
+        kindaMed: "1.5em", // Change this please bro wtf is this
+        mediumSmall: "1.66em",
         medium: "2em",
+        mediumMedium: "2em",
+        mediumLarge: "2.33em",
+        largeMedium: "2.66em",
         large: "3em",
     },
 };
 
-function Theme({children}) {
-    return (
-        <ThemeProvider theme={theme}>
-            {children}
-        </ThemeProvider>
-    );
-
+function Theme({ children }) {
+    return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }
 
 export default Theme;

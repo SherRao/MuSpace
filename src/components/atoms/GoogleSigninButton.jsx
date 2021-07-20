@@ -2,15 +2,16 @@ import React from "react";
 import Styled from "styled-components";
 
 const StyledButton = Styled.button`
-    color: ${props => props.theme.colors.white};
-    background-color: ${props => props.theme.colors.purple};
+    color: ${props => props.theme.colors.purple};
+    background-color: ${props => props.theme.colors.white};
     border-radius: 33px;
-    margin-top: 2.5em;
+    margin-top: 1em;
 
     font-size: ${props => props.theme.fontSizes.small};
     width: 22em;
     padding: 1em 0 1em 0;
     border: 0px; 
+    transition: all 0.25s ease;
 
     :focus {
         border: 0px solid ${props => props.theme.colors.lightBlue};
@@ -23,17 +24,19 @@ const StyledButton = Styled.button`
     :hover {
         border: 0px solid ${props => props.theme.colors.lightBlue};
         outline: none;
-
-        filter: brightness(75%);
+        color: ${props => props.theme.colors.white};
+        background-color: ${props => props.theme.colors.purple};
+        filter: brightness(100%);
+        
         transition: all 0.25s ease;
         cursor: pointer;
     }
 `;
 
-function TextButton({text, type, onClick}) {
+function GoogleSigninButton({text, type, onClick}) {
     return (
         <StyledButton type={type} onClick={onClick}>{text}</StyledButton>
     );
 }
 
-export default TextButton;
+export default GoogleSigninButton;

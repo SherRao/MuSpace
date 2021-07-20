@@ -1,25 +1,57 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import Styled from "styled-components";
+import { Route, Redirect } from "react-router-dom";
 
-import { Redirect } from "react-router-dom";
+import { Firebase } from "@functions";
+import { useAuthState } from "react-firebase-hooks/auth";
+
 import { Sidebar } from "@organisms";
 
-import Firebase from "@functions";
+const StyledDiv = Styled.div`
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
 
-const loggedIn = Firebase.isLoggedIn();
+    background-color: ${props => props.theme.colors.white};
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 0.25s ease;
 
-// eslint-disable-next-line no-unused-vars
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+`;
+
+const PageContainer = Styled.div`
+    width: 80vw;
+    height: 100vh;
+    padding: 0;
+
+    background-color: ${props => props.theme.colors.white};
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 0.25s ease;
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+`;
+
 function ProtectedRoute({ exact = false, path, component }) {
-    if (loggedIn)
-        return (
-            <>
-                <Sidebar />
-                <Route path={path} component={component} />
-            </>
-        );
-
-    else
+    const [user] = useAuthState(Firebase.auth);
+    if (!user)
         return <Redirect to="/login" />;
+
+    return (
+        <StyledDiv>
+            <Sidebar />
+            <PageContainer>
+                <Route path={path} component={component} />
+            </PageContainer>
+        </StyledDiv>
+    );
 
 }
 

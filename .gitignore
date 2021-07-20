@@ -22,3 +22,6 @@ keys
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+config.json
+src/.index.js.swp
+test.js

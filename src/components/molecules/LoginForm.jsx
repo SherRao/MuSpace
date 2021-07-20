@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
-import { LoginField } from "@atoms";
+
+import { LoginField, TextButton } from "@atoms";
 
 const StyledForm = Styled.form`
     display: inline-flex;
@@ -10,12 +11,12 @@ const StyledForm = Styled.form`
 
 `;
 
-
-function LoginForm() {
+function LoginForm({onSubmit}) {
     return (
-        <StyledForm>
-            <LoginField type="text" text="Username" placeholder="Email, or username" autofocus/>
-            <LoginField type="password" text="Password" placeholder="Password" />
+        <StyledForm onSubmit={onSubmit}>
+            <LoginField name="email" type="text" text="Username" placeholder="Email, or username" autofocus/>
+            <LoginField name="password" type="password" text="Password" placeholder="Password" />
+            <TextButton text="Log in" type="submit"/>
         </StyledForm>
     );
 }

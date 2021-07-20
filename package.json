@@ -5,22 +5,29 @@
     "license": "MIT",
     "dependencies": {
         "@craco/craco": "^5.9.0",
+        "@fortawesome/fontawesome-svg-core": "^1.2.35",
+        "@fortawesome/free-solid-svg-icons": "^5.15.3",
+        "@fortawesome/react-fontawesome": "^0.1.14",
         "@testing-library/jest-dom": "^5.12.0",
         "@testing-library/react": "^11.2.6",
         "@testing-library/user-event": "^12.8.3",
+        "axios": "^0.21.1",
         "craco": "^0.0.3",
         "discord.js": "^12.5.3",
-        "firebase": "^8.5.0",
+        "firebase": "^8.7.1",
         "firebase-admin": "^9.8.0",
         "js-logger": "^1.6.1",
         "node-sass": "^6.0.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
+        "react-firebase-hooks": "^3.0.4",
         "react-icons": "^4.2.0",
+        "react-rounded-image": "^2.0.13",
         "react-router-dom": "^5.2.0",
-        "react-scripts": "4.0.3",
+        "react-scripts": "^1.1.5",
         "semantic-ui-css": "^2.4.1",
         "semantic-ui-react": "^2.0.3",
+        "spotify-web-api-node": "^5.0.2",
         "styled-components": "^5.3.0",
         "web-vitals": "^1.1.2"
     },
@@ -51,6 +58,7 @@
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^4.26.1",
         "@typescript-eslint/parser": "^4.26.1",
+        "eslint": "^7.30.0",
         "eslint-plugin-react": "^7.24.0"
     }
 }

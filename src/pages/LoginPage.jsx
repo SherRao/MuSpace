@@ -1,14 +1,15 @@
 import React from "react";
 import Styled from "styled-components";
-import { MuspaceLogo, TextButton } from "@atoms";
-import { LoginForm } from "@molecules";
 import { Redirect } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
 
-import Firebase from "@functions";
+import { MuspaceLogo } from "@atoms";
+import { GoogleSigninButton } from "@atoms";
+import { LoginForm } from "@molecules"; 
 
-const loggedIn = Firebase.isLoggedIn();
+import { Firebase } from "@functions";
 
-const StyledDiv = Styled.div`
+const Container = Styled.div`
     width: 100vw;
     height: 100vh;
     padding: 5em;
@@ -30,14 +31,14 @@ const StyledDiv = Styled.div`
     box-sizing: border-box;         /* Opera/IE 8+ */
 `;
 
-const StyledHeader = Styled.h3`
+const Header = Styled.h3`
     color: ${props => props.theme.colors.purple};
     font-size: ${props => props.theme.fontSizes.medium};
     margin-bottom: -0.5em;
     padding-bottom: 0.5em;
 `;
 
-const StyledLinkText = Styled.a`
+const LinkText = Styled.a`
     color: ${props => props.theme.colors.lightBlue};
     text-decoration: none;
     transition: all 0.25s ease;
@@ -49,10 +50,9 @@ const StyledLinkText = Styled.a`
         color: ${props => props.theme.colors.darkBlue};
         transition: all 0.25s ease;
     }
-
 `;
 
-const StyledLinkDiv = Styled.div`
+const LinkedTextDiv = Styled.div`
     display: inline-flex;
     flex-direction: row;
     margin: 1em;
@@ -60,35 +60,54 @@ const StyledLinkDiv = Styled.div`
     justify-content: center;
     padding: 1em;
     width: 100%;
-
 `;
 
 const Dot = Styled.span`
-  height: 0.5em;
-  width: 0.5em;
-  background-color: ${props => props.theme.colors.grey};
-  border-radius: 50%;
-  display: inline-block;
+    height: 0.5em;
+    width: 0.5em;
+    background-color: ${props => props.theme.colors.grey};
+    border-radius: 50%;
+    display: inline-block;
 `;
 
 function LoginPage() {
-    if (!loggedIn)
-        return (
-            <StyledDiv>
-                <MuspaceLogo width="25em"/>
-                <StyledHeader>Log in</StyledHeader>
-                <LoginForm />
-                <TextButton text="Log in"onClick={() => {Firebase.loginWithEmail();}}/>
-                <StyledLinkDiv>
-                    <StyledLinkText href="#">Forgot Password</StyledLinkText>
-                    <Dot />
-                    <StyledLinkText href="/register">Sign Up</StyledLinkText>
-                </StyledLinkDiv>
-            </StyledDiv >
-        );
+    const [user] = useAuthState(Firebase.firebase.auth());
+    if(user)
+        return (<Redirect to="/home"/>);
 
-    else
-        return <Redirect to="/" />;
+    return (
+        <Container>
+            <MuspaceLogo width="25em"/>
+            <Header>Log in</Header>
+            
+            <LoginForm onSubmit={loginWithEmail}/>
+            <GoogleSigninButton text="Login with Google" type="text" onClick={loginWithGoogle}/>
+
+            <LinkedTextDiv>
+                <LinkText href="/reset">Forgot Password</LinkText>
+                <Dot />
+                <LinkText href="/register">Sign Up</LinkText>
+            </LinkedTextDiv>
+        </Container >
+    );
+}
+
+function loginWithEmail(event) {
+    event.preventDefault();
+
+    const email = event.target.elements[0].value;
+    const pass = event.target.elements[1].value;
+    Firebase.auth.signInWithEmailAndPassword(email, pass)
+        .catch((error) => {
+            alert(error.message);
+        
+        } );
+}
+
+function loginWithGoogle() {
+    const provider = new Firebase.firebase.auth.GoogleAuthProvider();
+    Firebase.auth.signInWithPopup(provider);
+
 }
 
 export default LoginPage;

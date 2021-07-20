@@ -1,13 +1,12 @@
 import React from "react";
 import Styled from "styled-components";
-import { Logo } from "@assets";
+import { DefaultCover } from "@assets";
 
-//margin: T R B L
 const StyledImage = Styled.img`
-    margin: 20px auto 20px auto;
+    margin-left: auto;
+    margin-right: auto;
     transition: all 0.25s ease;
     width: ${(props) => props.width};
-    padding: 5px 5px 5px 5px;
 
     :hover {
         filter: brightness(75%);
@@ -18,12 +17,12 @@ const StyledImage = Styled.img`
 const StyledLink = Styled.a`
 `;
 
-function MuspaceLogo({width}) {
+function AlbumCover({ width }) {
     return (
         <StyledLink href="/">
-            <StyledImage src={Logo} width={width}></StyledImage>
+            <StyledImage src={DefaultCover} width={width} height="auto"></StyledImage>
         </StyledLink>
     );
 }
 
-export default MuspaceLogo;
+export default AlbumCover;
