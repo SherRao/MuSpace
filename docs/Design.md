@@ -115,7 +115,7 @@ Database: Firestore, FirebaseOn every view, the sidebar,
 
 <h3>4.4 Module Interface</h3>
 
-<h4>4.4.1 Sidebar (Constant in all Views aside from 4.4.1 and 4.4.2)</h4>
+<h4>4.4.1 Sidebar (Constant in all Views aside from 4.4.3 and 4.4.4)</h4>
 <img src="./design/sidebar.svg" width=200/>
 <p>On every view, the sidebar allows for quick and easy navigation to any of the other views. Along with this, it has some quick stats.</p>
 <table>
@@ -156,7 +156,7 @@ Database: Firestore, FirebaseOn every view, the sidebar,
     </tr>
 </table>
 
-<h4>4.4.2 Searchbar (Constant in all Views aside from 4.4.1 and 4.4.2)</h4>
+<h4>4.4.2 Searchbar (Constant in all Views aside from 4.4.3 and 4.4.4)</h4>
 <img src="./design/search_bar.svg" width=500/>
 <p>Search bar allows the user to find songs / albums / playlists etc, along with friends.</p>
 <table>
