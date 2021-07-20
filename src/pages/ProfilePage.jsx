@@ -1,10 +1,10 @@
 import React from "react";
 import Styled from "styled-components";
 
-function checkemail() {
+function ProfilePage() {
     return (
-        <div><p>heywhatsup</p></div>
+        <></>
     );
 }
 
-export default checkemail;
+export default ProfilePage;
