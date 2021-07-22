@@ -56,6 +56,7 @@ async function registerWithEmail(event) {
     try {
         const userCredentials = await auth.createUserWithEmailAndPassword(email, pass);
         await storeNewUserData(userCredentials.user.uid, email, firstName, lastName, username, dob);
+        auth.currentUser.sendEmailVerification();
 
     } catch (err) {
         alert(err.message);

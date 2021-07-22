@@ -5,9 +5,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { Firebase } from "@functions";
 
-import { SearchBar } from "@molecules";
-import { Sidebar } from "@organisms";
-
 const StyledDiv = Styled.div`
     width: 100vw;
     height: 100vh;
@@ -25,15 +22,21 @@ const StyledDiv = Styled.div`
 `;
 
 const PageContainer = Styled.div`
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
-    padding: 0;
+    padding: 5em;
 
-    background-color: ${props => props.theme.colors.white};
+    margin: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
     display: inline-flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     transition: all 0.25s ease;
+    background-color: ${props => props.theme.colors.black};
 
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -42,17 +45,15 @@ const PageContainer = Styled.div`
 
 function ProtectedRoute({ exact = false, path, component }) {
     const [user] = useAuthState(Firebase.firebase.auth());
-    if (!user)
-        return <Redirect to="/login" />;
-
-    else if(user && !user.emailVerified) 
+    if (user && !user.emailVerified)
         return <Redirect to="/verify" />;
+
+    else if(user) 
+        return <Redirect to="/home" />;
 
     else 
         return (
             <StyledDiv>
-                <Sidebar />
-                <SearchBar />
                 <PageContainer>
                     <Route exact={exact} path={path} component={component} />
                 </PageContainer>

@@ -4,7 +4,8 @@ import { Redirect } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { MuspaceLogo } from "@atoms";
-import { RegisterForm } from "@molecules";
+import { GoogleSigninButton } from "@atoms";
+import { LoginForm } from "@molecules"; 
 
 import { Firebase } from "@functions";
 
@@ -30,27 +31,11 @@ const Container = Styled.div`
     box-sizing: border-box;         /* Opera/IE 8+ */
 `;
 
-const Header = Styled.h3`
-    color: ${props => props.theme.colors.lightBlue};
-    font-size: ${props => props.theme.fontSizes.medium};
-    margin-bottom: -0.5em;
-    padding-bottom: 0.5em;
-
-`;
-
-function RegisterPage() {
-    const [user] = useAuthState(Firebase.auth);
-    console.log(user);
-    if(user) {
-        return (<Redirect to="/home"/>);
-
-    } return (
+function VerifyEmailPage() {
+    return (
         <Container>
-            <MuspaceLogo width="25em"/>
-            <Header>Create Your Account</Header>
-            <RegisterForm onSubmit={Firebase.registerWithEmail}/>
         </Container>
     );
 }
 
-export default RegisterPage;
+export default VerifyEmailPage;
