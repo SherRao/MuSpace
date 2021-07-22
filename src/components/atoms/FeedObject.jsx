@@ -1,18 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
-
-import AlbumCover from "./AlbumCover";
-
-// const StyledText = Styled.h2`
-//     font-family: "Roboto";
-//     font-size: ${props => props.theme.fontSizes.small};
-//     color: ${props => props.theme.colors.black};
-//     font-weight: normal;
-//     align: right;
-//     margin: 15px;
-//     text-align: center;
-
-// `;
+import AlbumCover from "@atoms/AlbumCover";
 
 const StyledDiv = Styled.div`
     color: ${props => props.theme.colors.white};
@@ -35,15 +23,10 @@ const StyledLink = Styled.a`
     size: 0;
     display: block;
     text-decoration: none;
-
 `;
 
 const StyledText = Styled.p`
-    
-    
-
     font-family: "Roboto";
-        
     font-size: ${props => props.theme.fontSizes.small};
     font-weight: medium;
         
@@ -53,18 +36,6 @@ const StyledText = Styled.p`
     flex: 1;
     margin: 1px;
 `;
-
-// function SidebarButton({ text, icon, children, location }) {
-//     return (
-//         <StyledDiv>
-//             <StyledIcon>{children}</StyledIcon>
-//             <StyledLink href={location}>
-//                 <StyledText>{text}</StyledText>
-//             </StyledLink>
-            
-//         </StyledDiv>
-//     );
-// }
 
 function FeedObject({title, content, details, link}){
     return(
@@ -77,11 +48,7 @@ function FeedObject({title, content, details, link}){
             <StyledText>{details}</StyledText>
         </StyledDiv>
         
-        
-        // <StyledText>#Post Title</StyledText>
-        // <StyledText>#Post Content</StyledText>
-        // <StyledText>#Song Details</StyledText>
-    )
+    );
 }
 
-export default FeedObject
+export default FeedObject;

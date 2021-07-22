@@ -1,5 +1,5 @@
-import React from 'react'
-import Styled from 'styled-components'
+import React from "react";
+import Styled from "styled-components";
 
 const StyledDiv = Styled.div`
   display: flex;
@@ -11,8 +11,9 @@ const StyledDiv = Styled.div`
 `;
 
 const Card = (props) => (
-  <StyledDiv style={props.style}>
-    {props.children}
-  </StyledDiv>
-)
+    <StyledDiv style={props.style}>
+        {props.children}
+    </StyledDiv>
+);
+
 export default Card;

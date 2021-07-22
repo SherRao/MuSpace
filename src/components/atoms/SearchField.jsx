@@ -23,7 +23,6 @@ const StyledTextInput = Styled.input`
     }
 `;
 
-
 function SearchField({ text, type, placeholder, icon }) {
     return (
         <StyledTextInput text={text} type={type} placeholder={placeholder} />

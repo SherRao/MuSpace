@@ -1,18 +1,8 @@
 import React from "react";
-import { Component } from "react";
 import Styled from "styled-components";
-import ReactRoundedImage from "react-rounded-image";
+
 import { FaCog } from "react-icons/fa"; /* cog button fill icon*/
 
-
-// width: 75%;
-// height: 10vh;
-// align-self: center;
-// border-radius: 15px;
-
-// display: inline-flex;
-// flex-direction: row;
-// align-items: center;
 const StyledDiv = Styled.div`
   color: ${(props) => props.theme.colors.grey};
   align-items: center;
@@ -51,7 +41,6 @@ const StyledText = Styled.p`
     }
 `;
 
-// only for cog icon
 const StyledIcon = Styled.div`
      color: ${(props) => props.theme.colors.grey};
      align: right;
@@ -66,7 +55,7 @@ const StyledIcon = Styled.div`
        transition: all 0.25s ease-in-out;
      }
 
-     *{
+     * {
         display: block;
         margin: 0 auto;
         width: 2em;
@@ -83,20 +72,6 @@ const UserProfPic = Styled.img`
     margin-left: 0.8em;
 
 `;
-
-// align: left;
-// max-width: 40%;
-// height: auto;
-// flex: 1;
-// margin: 0px;
-// padding: 3px;
-
-// *{
-// display: block;
-// margin: 0 auto;
-// width: 2em;
-// height: 2em;
-// }
 
 function UserButton({ text, icon, location, profileImage }) {
     return (

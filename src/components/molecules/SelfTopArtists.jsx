@@ -1,9 +1,8 @@
 import React from "react";
-import { Component } from "react";
 import Styled from "styled-components";
 
-import {AlbumCover, Card} from  "@atoms";
 import { FaBookmark } from "react-icons/fa";
+import { AlbumCover, Card } from  "@atoms";
 
 const StyledDiv = Styled.div`
     display: flex;
@@ -34,4 +33,4 @@ function SelfTopArtists() {
     );
 }
 
-export default SelfTopArtists
+export default SelfTopArtists;

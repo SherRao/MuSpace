@@ -1,5 +1,4 @@
 import React from "react";
-import { Component } from "react";
 import Styled from "styled-components";
 
 const StyledDiv = Styled.div`
