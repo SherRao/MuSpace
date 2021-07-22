@@ -70,7 +70,8 @@ async function storeNewUserData(id, email, firstName, lastName, username, dob) {
         "firstName": firstName,
         "lastName": lastName,
         "username": username,
-        "dob": dob
+        "dob": dob,
+        "profile_picture": "https://firebasestorage.googleapis.com/v0/b/cp-317.appspot.com/o/default_profile.jpg?alt=media&token=4ed26d80-388b-4814-95b3-01740138285a"
     };
 
     await db.collection("users")

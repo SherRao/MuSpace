@@ -1,8 +1,8 @@
 import React from "react";
-import { Component } from "react";
 import Styled from "styled-components";
+
 import { LeaderBoardLabel, LeaderBoardStat } from "@atoms"; 
-import { testProfPic } from "@assets";
+import { Firebase } from "@functions";
 
 const StyledDiv = Styled.div`
     color:${props => props.theme.colors.black};
@@ -48,21 +48,36 @@ const StyledText = Styled.p`
 `;
 
 function LeaderBoard({ text }){
+    const [profilePic, setProfilePic ] = React.useState(null);
+    const user = Firebase.auth.currentUser;
+    
+    React.useEffect(() => {
+        if(!profilePic)
+            getProfilePic();
+
+    }, []);
+
+    async function getProfilePic() {
+        const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
+        setProfilePic(x);
+
+    }
+
     return (
         <StyledDiv>
             <StyledText>Leaderboard</StyledText>
             <StyledInnerDiv>
                 <LeaderBoardLabel text="Top Listening Hours:"/>
                 <StyledInnerDiv>
-                    <LeaderBoardStat number={1} username="username" hours={1337} href="/" src={testProfPic}></LeaderBoardStat>
-                    <LeaderBoardStat number={2} username="username" hours={420} href="/" src={testProfPic}></LeaderBoardStat>
-                    <LeaderBoardStat number={3} username="username" hours={69} href="/" src={testProfPic}></LeaderBoardStat>
+                    <LeaderBoardStat number={1} username="username" hours={1337} href="/" src={profilePic}></LeaderBoardStat>
+                    <LeaderBoardStat number={2} username="username" hours={420} href="/" src={profilePic}></LeaderBoardStat>
+                    <LeaderBoardStat number={3} username="username" hours={69} href="/" src={profilePic}></LeaderBoardStat>
                 </StyledInnerDiv>
                 <LeaderBoardLabel text="Number of Unique Artists:"/>
                 <StyledInnerDiv>
-                    <LeaderBoardStat number={1} username="username" hours={96} href="/" src={testProfPic}></LeaderBoardStat>
-                    <LeaderBoardStat number={2} username="username" hours={69} href="/" src={testProfPic}></LeaderBoardStat>
-                    <LeaderBoardStat number={3} username="username" hours={69} href="/" src={testProfPic}></LeaderBoardStat>
+                    <LeaderBoardStat number={1} username="username" hours={96} href="/" src={profilePic}></LeaderBoardStat>
+                    <LeaderBoardStat number={2} username="username" hours={69} href="/" src={profilePic}></LeaderBoardStat>
+                    <LeaderBoardStat number={3} username="username" hours={69} href="/" src={profilePic}></LeaderBoardStat>
                 </StyledInnerDiv>
             </StyledInnerDiv>
         </StyledDiv>
