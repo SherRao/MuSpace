@@ -4,6 +4,9 @@ import Styled from "styled-components";
 import Sidebar from "../components/organisms/Sidebar";
 import AlbumCover from "../components/atoms/AlbumCover";
 import FeedObject from "../components/atoms/FeedObject";
+import FriendTopAlbums from "../components/molecules/FriendTopAlbums";
+import TopSongs from "../components/molecules/TopSongs";
+import TopArtists from "../components/molecules/TopArtists";
 
 const Container = Styled.div`
     width: 100vw;
@@ -54,7 +57,6 @@ const StyledText = Styled.h1`
 
 `;
 
-
 function ProfilePage() {
     return (
         <Container>
@@ -63,7 +65,15 @@ function ProfilePage() {
                 <StyledText>Feed</StyledText>
                 <FeedObject title="#Post Title" content="#Post Content" details="#Song Details" link="#"></FeedObject>
             </Feed>
-            
+            <TopArtists>
+
+            </TopArtists>
+            <TopSongs>
+
+            </TopSongs>
+            <FriendTopAlbums>
+                
+            </FriendTopAlbums>
         </Container>
     );
 }

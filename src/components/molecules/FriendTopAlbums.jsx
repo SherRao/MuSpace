@@ -23,7 +23,7 @@ function FriendTopAlbums() {
             </StyledDiv>
             <StyledDiv style={{ width: "100%", justifyContent: "center" }}>
                 <h3 style={{ margin: "0.2em" }}><b>Username</b></h3>
-                <p style={{ margin: "0.2em" }}>Song Title - Artist Name</p>
+                <p style={{ margin: "0.2em" }}>Album Title - Artist Name</p>
             </StyledDiv>
             <StyledDiv>
                 <StyledIcon>
