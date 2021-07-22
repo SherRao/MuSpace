@@ -9,7 +9,7 @@ function PageRouter() {
         <Switch>
             <UnprotectedRoute path="/login" component={LoginPage} />
             <UnprotectedRoute path="/register" component={RegisterPage} />
-            <UnprotectedRoute path="/verify" component={VerifyEmailPage} />
+            <Route path="/verify" component={VerifyEmailPage} />
 
             <ProtectedRoute exact={true} path="/" component={HomePage} />
             <ProtectedRoute path="/redirect" component={RedirectPage} />

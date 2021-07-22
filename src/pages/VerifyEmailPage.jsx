@@ -3,6 +3,7 @@ import Styled from "styled-components";
 import { Redirect } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 
+
 import { MuspaceLogo } from "@atoms";
 import { GoogleSigninButton } from "@atoms";
 import { LoginForm } from "@molecules"; 
@@ -31,9 +32,23 @@ const Container = Styled.div`
     box-sizing: border-box;         /* Opera/IE 8+ */
 `;
 
+const Header = Styled.h1`
+    color: ${props => props.theme.colors.white};
+    font-size: ${props => props.theme.fontSizes.medium};
+`;
+
+const SubHeader = Styled.h3`
+    color: ${props => props.theme.colors.white};
+    font-size: ${props => props.theme.fontSizes.small};
+    
+`;
+
 function VerifyEmailPage() {
     return (
         <Container>
+            <MuspaceLogo></MuspaceLogo>
+            <Header>Verify your email!</Header>
+            <SubHeader>Click the link in the verification email</SubHeader>
         </Container>
     );
 }
