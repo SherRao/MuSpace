@@ -42,7 +42,6 @@ const PageContainer = Styled.div`
 
 function ProtectedRoute({ exact = false, path, component }) {
     const [user] = useAuthState(Firebase.firebase.auth());
-    alert(user);
     if (!user)
         return <Redirect to="/login" />;
 

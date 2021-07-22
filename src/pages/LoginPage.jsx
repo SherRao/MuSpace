@@ -71,7 +71,7 @@ const Dot = Styled.span`
 `;
 
 function LoginPage() {
-    const [user] = useAuthState(Firebase.firebase.auth());
+    const [user] = useAuthState(Firebase.auth);
     if(user)
         return (<Redirect to="/home"/>);
 
@@ -80,8 +80,8 @@ function LoginPage() {
             <MuspaceLogo width="25em"/>
             <Header>Log in</Header>
             
-            <LoginForm onSubmit={loginWithEmail}/>
-            <GoogleSigninButton text="Login with Google" type="text" onClick={loginWithGoogle}/>
+            <LoginForm onSubmit={Firebase.loginWithEmail}/>
+            <GoogleSigninButton text="Login with Google" type="text" onClick={Firebase.loginWithGoogle}/>
 
             <LinkedTextDiv>
                 <LinkText href="/reset">Forgot Password</LinkText>
@@ -90,24 +90,6 @@ function LoginPage() {
             </LinkedTextDiv>
         </Container >
     );
-}
-
-function loginWithEmail(event) {
-    event.preventDefault();
-
-    const email = event.target.elements[0].value;
-    const pass = event.target.elements[1].value;
-    Firebase.auth.signInWithEmailAndPassword(email, pass)
-        .catch((error) => {
-            alert(error.message);
-        
-        } );
-}
-
-function loginWithGoogle() {
-    const provider = new Firebase.firebase.auth.GoogleAuthProvider();
-    Firebase.auth.signInWithPopup(provider);
-
 }
 
 export default LoginPage;
