@@ -7,8 +7,6 @@ import { MuspaceLogo } from "@atoms";
 import { RegisterForm } from "@molecules";
 
 import { Firebase } from "@functions";
-// eslint-disable-next-line no-undef
-require("firebase/auth");
 
 const Container = Styled.div`
     width: 100vw;
@@ -41,7 +39,7 @@ const Header = Styled.h3`
 `;
 
 function RegisterPage() {
-    const [user] = useAuthState(Firebase.firebase.auth());
+    const [user] = useAuthState(Firebase.auth);
     if(user)
         return (<Redirect to="/home"/>);
 
@@ -49,53 +47,9 @@ function RegisterPage() {
         <Container>
             <MuspaceLogo width="25em"/>
             <Header>Create Your Account</Header>
-            <RegisterForm onSubmit={registerWithEmail}/>
-        </Container >
+            <RegisterForm onSubmit={Firebase.registerWithEmail}/>
+        </Container>
     );
-}
-
-async function registerWithEmail(event) {
-    event.preventDefault();
-
-    const email = event.target.elements[0].value;
-    const confirmEmail = event.target.elements[1].value;
-    const firstName = event.target.elements[2].value;
-    const lastName = event.target.elements[3].value;
-    const username = event.target.elements[4].value;
-    const pass = event.target.elements[5].value;
-    const dob = event.target.elements[6].value;
-
-    Firebase.auth.createUser({
-        email: email,
-        emailVerified: true,
-        phoneNumber: "+11234567890",
-        password: pass,
-        displayName: username,
-        photoURL: "http://www.example.com/12345678/photo.png",
-        disabled: false,
-
-    }).then((userCredential) => {
-        console.log(userCredential);
-        storeNewUserData(userCredential.uid, email, firstName, lastName, dob);
-
-    }).catch((error) => {
-        var errorMessage = error.message;
-        alert(errorMessage);
-        
-    } );
-}
-
-async function storeNewUserData(id, email, firstName, lastName, dob) {
-    const userData = {
-        "email": email,
-        "firstName": firstName,
-        "lastName": lastName,
-        "dob": dob
-    };
-
-    await Firebase.firestore.collections("user")
-        .doc(id).set(userData);
-
 }
 
 export default RegisterPage;

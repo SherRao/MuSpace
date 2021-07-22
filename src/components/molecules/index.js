@@ -1,9 +1,9 @@
-import TestMoleculeComponent from "./TestMoleculeComponent";
 import ListeningActivityCard from "./ListeningActivityCard";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import FriendTopAlbums from "./FriendTopAlbums";
 import TopArtists from "./TopArtists";
 import TopSongs from "./TopSongs";
+import SearchBar from "./SearchBar";
 
-export { TestMoleculeComponent, LoginForm, ListeningActivityCard, RegisterForm, FriendTopAlbums, TopArtists, TopSongs };
+export { LoginForm, ListeningActivityCard, RegisterForm, FriendTopAlbums, TopArtists, TopSongs, SearchBar };

@@ -21,7 +21,6 @@ const StyledDiv = Styled.div`
     :hover {
         cursor: pointer;
         background-color: ${props => props.theme.colors.lightGrey};
-
     }
 `;
 
@@ -31,11 +30,9 @@ const StyledLink = Styled.a`
     size: 0;
     display: block;
     text-decoration: none;
-
 `;
 
 const StyledText = Styled.p`
-    
     @media (max-width: 974px){
         display: none;
     }

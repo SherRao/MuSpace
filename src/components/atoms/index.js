@@ -1,5 +1,4 @@
 import AlbumCover from "./AlbumCover";
-import TestAtomComponent from "./TestAtomComponent";
 import SidebarButton from "./SidebarButton";
 import MuspaceLogo from "./MuspaceLogo";
 import LoginField from "./LoginField";
@@ -13,7 +12,6 @@ import SearchField from "./SearchField";
 
 export {
     AlbumCover,
-    TestAtomComponent,
     SidebarButton,
     MuspaceLogo,
     LoginField,
