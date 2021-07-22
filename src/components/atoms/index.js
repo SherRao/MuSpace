@@ -9,6 +9,7 @@ import LeaderBoardStat from "./LeaderBoardStat";
 import Card from "./Card";
 import RegisterField from "./RegisterField";
 import GoogleSigninButton from "./GoogleSigninButton";
+import SearchField from "./SearchField";
 
 export {
     AlbumCover,
@@ -21,5 +22,6 @@ export {
     RegisterField,
     LeaderBoardLabel,
     LeaderBoardStat,
-    GoogleSigninButton
+    GoogleSigninButton,
+    SearchField
 };

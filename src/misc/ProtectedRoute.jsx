@@ -1,10 +1,11 @@
 import React from "react";
 import Styled from "styled-components";
 import { Route, Redirect } from "react-router-dom";
-
-import { Firebase } from "@functions";
 import { useAuthState } from "react-firebase-hooks/auth";
 
+import { Firebase } from "@functions";
+
+import { SearchBar } from "@molecules";
 import { Sidebar } from "@organisms";
 
 const StyledDiv = Styled.div`
@@ -40,19 +41,20 @@ const PageContainer = Styled.div`
 `;
 
 function ProtectedRoute({ exact = false, path, component }) {
-    const [user] = useAuthState(Firebase.auth);
+    const [user] = useAuthState(Firebase.firebase.auth());
+    alert(user);
     if (!user)
         return <Redirect to="/login" />;
 
     return (
         <StyledDiv>
             <Sidebar />
+            <SearchBar />
             <PageContainer>
-                <Route path={path} component={component} />
+                <Route exact={exact} path={path} component={component} />
             </PageContainer>
         </StyledDiv>
     );
-
 }
 
 export default ProtectedRoute;
