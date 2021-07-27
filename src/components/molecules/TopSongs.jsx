@@ -1,35 +1,50 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { FaBookmark } from "react-icons/fa";
-import { AlbumCover, Card } from  "@atoms";
+import { AlbumCover, Card, MiniTopCategory, LeaderBoardLabel } from  "@atoms";
 
 const StyledDiv = Styled.div`
     display: flex;
+    background-color: ${props => props.theme.colors.white};
     flex-direction: column;
     width: min-content;
+    justify-content: center;
+    border-radius: 12px;
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
+    padding: 10px;
+    margin: 0.6em 0.3em;
+    width: auto;
+    height: auto;
 `;
 
-const StyledIcon = Styled.div`
-    color: ${props => props.theme.colors.gr }
+const StyledText = Styled.p`
+    font-family: "Roboto";
+    font-size: ${props => props.theme.fontSizes.mediumMedium};
+    color: ${props => props.theme.colors.black};
+    flex: 1;
+    margin: 0 auto;
+    text-align: top;
+    text-align: left;
+    font-weight: bold;
+`;
+
+const StyledOuterDiv = Styled.div`
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 `;
 
 function TopSongs() {
     return (
-        <Card style={{ width: "auto", height: "auto" }}>
-            <StyledDiv>
-                <AlbumCover width="132px" />
-            </StyledDiv>
-            <StyledDiv style={{ width: "100%", justifyContent: "center" }}>
-                <h3 style={{ margin: "0.2em" }}><b>Username</b></h3>
-                <p style={{ margin: "0.2em" }}>Song Title - Artist Name</p>
-            </StyledDiv>
-            <StyledDiv>
-                <StyledIcon>
-                    <FaBookmark size="1.8em" style={{ margin: "0.5em 0.4em 0 0" }}/>
-                </StyledIcon>
-            </StyledDiv>
-        </Card>
+        <StyledDiv>
+            <StyledText>Your Top Songs</StyledText>
+            <StyledOuterDiv>
+                <MiniTopCategory username = "" text = "#Song" artist = "#Artist"></MiniTopCategory>
+                <MiniTopCategory username = "" text = "#Song" artist = "#Artist"></MiniTopCategory>
+                <MiniTopCategory username = "" text = "#Song" artist = "#Artist"></MiniTopCategory>
+            </StyledOuterDiv>
+        </StyledDiv>
     );
 }
 

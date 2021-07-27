@@ -4,17 +4,18 @@ import AlbumCover from "@atoms/AlbumCover";
 
 const StyledDiv = Styled.div`
     color: ${props => props.theme.colors.white};
+    width: 100%;
     height: auto;
     align-self: center;
-    border-radius: 15px;
-
+    margin: 15px 0 15px 0;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
     transition: all 0.25s ease;
 
-    -webkit-box-shadow: 3px 5px 4px 3px rgba(0,0,0,0.19); 
-    box-shadow: 3px 5px 4px 3px rgba(0,0,0,0.19);
+    border-radius: 20px;
+    border-style: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 `;
 
 const StyledLink = Styled.a`

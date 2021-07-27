@@ -12,7 +12,7 @@ const StyledDiv = Styled.div`
     width: 20%;
     height: 100vh; 
     padding: 0; 
-
+    
     background-color: ${(props) => props.theme.colors.white};
     border-right: 1px solid ${(props) => props.theme.colors.black};
 
@@ -47,6 +47,8 @@ function Sidebar() {
     async function getProfilePic() {
         const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
         setProfilePic(x);
+
+        console.log(username);
 
     }
 
