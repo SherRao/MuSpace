@@ -15,7 +15,7 @@ function PageRouter() {
             <ProtectedRoute path="/redirect" component={RedirectPage} />
             <ProtectedRoute path="/home"><Redirect to="/" /></ProtectedRoute>
             <ProtectedRoute path="/test" component={TestPage} /> 
-            <ProtectedRoute path="/profile" component={ProfilePage} />
+            <Route path="/profile" component={ProfilePage} />
 
         </Switch>
     );
