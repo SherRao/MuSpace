@@ -1,6 +1,10 @@
 import React from "react";
 import Styled from "styled-components";
 import { Firebase } from "@functions";
+<<<<<<< HEAD
+=======
+import default_profile from "../assets/default_profile.jpg"
+>>>>>>> db14871d9071fcf0b023766275cbd3f46c1193d0
 
 import Sidebar from "../components/organisms/Sidebar";
 import AlbumCover from "../components/atoms/AlbumCover";
@@ -44,7 +48,6 @@ const Feed = Styled.div`
 
     -webkit-box-shadow: 3px 5px 4px 3px rgba(0,0,0,0.19); 
     box-shadow: 3px 5px 4px 3px rgba(0,0,0,0.19);
-
 `;
 
 const StyledText = Styled.h1`
@@ -55,7 +58,28 @@ const StyledText = Styled.h1`
     align: right;
     margin: 15px;
     text-align: center;
+`;
 
+const StyledImg = Styled.img`
+    max-width: 100%; 
+    height: 13em;
+    border-radius: 100%;
+    padding: 0.2em;
+    margin-left: 0.8em;
+`;
+
+const StyledTitle = Styled.p`
+    font-family: ${props => props.theme.fonts.title};
+    font-size: ${props => props.theme.fontSizes.large};
+    color: ${props => props.theme.colors.black};
+    font-weight: bold;
+    margin: 0em 0em 0em 1em;
+`;
+
+const titleDiv = Styled.div`
+    display: flex;
+    flex-direction: row;
+    aling-items = center;
 `;
 const StyledTexts = Styled.h1`
     font-family: "Roboto";
@@ -69,6 +93,7 @@ const StyledTexts = Styled.h1`
 
 function ProfilePage() {
 
+<<<<<<< HEAD
     // const [profilePic, setProfilePic ] = React.useState(null);
 
     // const user = Firebase.auth.currentUser;
@@ -98,6 +123,15 @@ function ProfilePage() {
             </ProfileUserName> */}
             
 
+=======
+    return (
+        <Container>
+            <titleDiv style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+                <StyledImg src={default_profile} alt="Default Profile image" />
+                <StyledTitle>Nishy Naushy Poo</StyledTitle>
+            </titleDiv>
+            
+>>>>>>> db14871d9071fcf0b023766275cbd3f46c1193d0
             <Feed>
                 <StyledText>Feed</StyledText>
                 <FeedObject title="#Post Title" content="#Post Content" details="#Song Details" link="#"></FeedObject>

@@ -35,6 +35,7 @@
 
 This project was made in JavaScript and TypeScript
 
+- React
 - Node.js
 - Google Firestore
 - StyledComponents

@@ -8,15 +8,15 @@
     MuSpace is a social media application that utilizes the Spotify API (and others in the future) to match and
     connect users that listen to similar artists, genres, songs, etc.
 </p>
-<h3>1.2 Project Summary</h3>
+<h3>1.2 Purpose</h3>
 <p>
     This is the requirement document, which contains everything necessary for MuSpace. Additionally, the document
     includes features along with a description of how each feature will function. The audience for this document is
     potential clients and their corresponding development teams. This is a reference guide for the development teams
     to ensure that everything runs smoothly, and some potential questions are answered.
 </p>
-<h2>1.3 Scope and Business Model</h2>
-<h3>1.3.1 Scope</h3>
+<h3>1.3 Scope and Business Model</h3>
+<h4>1.3.1 Scope</h4>
 <p>
     This document outlines the overall functionality, constraints and specifications of MuSpace, an application
     available on various platforms - iOS, Android, and the Web. This is to be used as a social media platform that
@@ -26,7 +26,7 @@
     creation of the room - the room name has to be a minimum of 5 characters long, and the password should be a
     minimum of 8 characters long.
 </p>
-<h3>1.3.2 Business Model</h3>
+<h4>1.3.2 Business Model</h4>
 <p>
     The platform will be free to use. It will cost users nothing to download and there will be no advertisements in
     the application. The reasons for allowing users to use the application for free are to first gain exposure and
@@ -34,7 +34,7 @@
     be completed to introduce some form of monetization, like monetized concerts and DJ sessions.
 </p>
 <h2>1.4 Definitions, Acryonyms and Abbreviations</h2>
-<h3>1.4.1 Acronyms and Abbreviations</h3>
+<h4>1.4.1 Acronyms and Abbreviations</h4>
 <ul>
     <li>API - Application Program Interface - External software</li>
     <li>GUI - Graphical User Interface</li>
@@ -44,7 +44,7 @@
     <li>Mobile-based - for Android / iOS platforms</li>
     <li>R&D - Research and Development</li>
 </ul>
-<h3>1.4.2 Definitions</h3>
+<h4>1.4.2 Definitions</h4>
 <ul>
     <li>Chat - String of messages sent back and forth between users of an application</li>
 </ul>
@@ -81,7 +81,8 @@
     using React Native. Major components include user connection to Spotify using Spotify’s Web API, and web-based
     chat functionality and listening rooms using Google Firebase’s Realtime No-SQL Database.
 </p>
-<h4>2.1.1 <a href="" target="_blank">Sample GUI</a></h4>
+<h4>2.1.1 <a href="https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=327%3A12583" target="_blank">Sample GUI</a></h4>
+<iframe width="960px" height="720px" src="https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=327%3A12583" frameBorder="0" scrolling="no" allowFullScreen></iframe>
 <h3>2.2 Product Functions</h3>
 <p>
     MuSpace is a music-matchmaking application that takes the user’s musical interest (i.e. Songs, artists, albums,
@@ -91,27 +92,45 @@
 </p>
 <h3>2.3 User Characteristics</h3>
 <p>
-    MuSpace’s primary users are those trying to connect with others who have a similar taste in music. MuSpace is
-    accessible as a web client or on Android or IOS. MuSpace will be easy to use with a minimalistic UI, allowing
-    users with minimal technical literacy to navigate through the application to connect with their friends and share
-    music. A help section, as well as an FAQ, will be included in all versions of MuSpace so that users can quickly
-    get up to speed.
+    MuSpace’s primary users are those trying to connect with others who have a similar taste in music. MuSpace will be easy to use with a minimalistic UI, allowing     users with minimal technical literacy to navigate through the application to connect with their friends and share music. A help section, as well as an FAQ,         will be included in all versions of MuSpace so that users can quickly get up to speed. 
 </p>
 <h3>2.4 Constraints</h3>
 <p>
-    MuSpace users must have an active Spotify account and will benefit from being subscribed to premium. MuSpace will
-    function for all users on IOS and Android, however, some functionality may be limited between users on different
-    platforms. MuSpace will have time, cost and reliability constraints. Development and testing must be finished
-    before August 15th, 2021, and will be developed for free with no funding from the school or the students.
-    Publication to the Apple App store requires a fee, so this will be a constraint.
+    MuSpace users must have an active Spotify account. Without a spotify account, users will be unable to create their MuSpace account. MuSpace, at this current       point in time, will not function on iOS or Android devices, it will only be available on a web browser. iOS and Android functionality will be done later in         time. 
+</p>
+<p>
+    MuSpace users must have a stable internet connection in order to use the web application. Weak internet connection can result in excessive buffering time.
+</p
+<p>
+    MuSpace will have time, cost and reliability constraints. Development and testing must be finished before August 15th, 2021, and will be developed for free         with no funding from the school or the students. Publication to the Apple App store requires a fee, so this will be a constraint.
 </p>
 <h3>2.5 Assumptions and Dependencies</h3>
 <p>
-    It is assumed that users of MuSpace all have Spotify accounts, with some level of activity on the platform in
-    order to build a profile. MuSpace is dependent on how rich the user's musical history (songs listened to, artists
-    followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile will be and better
-    the experience they will get from MuSpace.
+    It is required that users of MuSpace all have Spotify accounts, with some level of activity on the platform in order to build a profile. MuSpace is dependent       on how rich the user's musical history (songs listened to, artists followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile     will be and better the experience they will get from MuSpace.
 </p>
+<h3>2.6 User Interfaces</h3>
+<h4>2.6.1 Sidebar</h4>
+<p>The Sidebar will be consistent in all of the pages, except that of the Login/ Register  (2.6.3/ 2.6.4) Pages. It’s functionality will be to access all other pages (except Login/ Register pages) from any other page.</p>
+<h4>2.6.2 Searchbar</h4>
+<p>The Searchbar, similar to the SideBar (2.6.1) will be present on all pages.. The use of the search bar is to search for friends/ people’s  profiles. Along with this, the search bar contains the notification icon that indicates when a notification is present.</p>
+<h4>2.6.3 Login Page</h4>
+<p>The Login Page will be the first page that will be displayed to the user. This page will allow the user to login with the credentials using different authentications such as “login with Email” or “login with Google” (with their Google account). The page consists of a “Forgot Password” function that allows the user to reset their password with a link sent to the email linked to the MuSpace account. The sign up/register functionality is available for the user to create a new account and is  found beside the “Forgot Password” function, this function redirects the user to the Registration Page (2.6.4).</p>
+<h4>2.6.4 Register Page</h4>
+<p>The Register Page, asks for the new user’s information, such as First and Last names, Date of Birth, Username, Email and Password. This information will go into the database.</p>
+<h4>2.6.5 Home Page</h4>
+<p>The Home Page is the main page the user is redirected to after successfully logging in. This page displays some statistics about the user’s activity on MuSpace including favourite artists of the week, favourite songs of the week, hours spent listening to music, and more. The page also shows the friends activity tab which displays the music and album a particular friend (added previously by the user) is listening to.</p>
+<h4>2.6.6 Messages Page</h4>
+<p>The Messages Page is where users can go to see all of their chat history with each of their friends. The main messages page is a list of conversations the user has had with each friend, sorted by the most recent history. Clicking on one of these conversations will bring the user to the chat page, in which they can send a message to the friend who’s chat page they opened.</p>
+<h4>2.6.7 Notification Page</h4>
+<p>The Notification Page is where users can see any unread notifications they received. These could include new messages, friend requests, updates from the developers, or required actions such as updating account information.</p>
+<h4>2.6.8 Profile Page</h4>
+<p>The profile page is where users go to see their own or their friends' listening activity and statistics on spotify. Each person's profile page can be customized with a profile picture, and a short biography (max 100 words).</p>
+<h4>2.6.9 Friends Page</h4>
+<p>The Friends Page will display all current friends, along with their listening activity (what they are currently listening to), along with leaderboards, and a similarity bar. The Leaderboard shows which of your friends has the most listening hours and Unique artists listened to in a given amount of time (to be determined).</p>
+
+<h3>2.7 Use Case Diagram</h3>
+<div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/3b73c13e-821d-4b73-aea6-bfda8448a12e" id="7rQYm4LzcUxa"></iframe></div>
+
 <h2>3. Technical Requirements</h2>
 <h3>3.1 External Interfaces</h3>
 <ul>
@@ -126,13 +145,13 @@
     </ul>
 </ul>
 <h3>3.2 Performance Requirements</h3>
-<h3>3.2.1 Client Requirements</h3>
+<h4>3.2.1 Client Requirements</h4>
 <ul>
     <li>OS: Windows, MacOS, GNU/Linux, Android, iOS</li>
     <li>Stable network connection</li>
     <li>A device that has access to a modern web browser with JavaScript ES6 capabilities</li>
 </ul>
-<h3>3.2.2 Server/Development Requirements</h3>
+<h4>3.2.2 Server/Development Requirements</h4>
 <ul>
     <li>Cloudflare</li>
     <li>Amazon Web Services</li>
@@ -151,35 +170,75 @@
 <h3>3.3 Security</h3>
 <ul>
     <li>Cloudflare</li>
-    <li>Google Authentication</li>
-    <li>Google reCaptcha v2</li>
-    <li>2FA (User Safety)</li>
+    <ul>
+        <li>Used as DDOS protection through their Content Delivery Network (CDN) to prevent many simultaneous connections taking down the server. Also minify our               code and allow it to reach the client quicker.</li>
+    </ul>
+    <li>Firebase Authentication</li>
+    <ul>
+        <li>Used as a central repository to create and store users with a generated internal ID that is used to refer to all their settings, data, etc…</li>
+    </ul>
+    <li>Firebase Firestore</li>
+    <ul>
+        <li>Used as the main database to store messages, feeds, posts, relationships, and user data. All data is stored as a key-value pair, with the key usually               being a user ID that is generated by Authentication.</li>
+    </ul>
+    <li>Firebase Cloud Storage</li>
+    <ul>
+        <li>Used as a CDN to store basic files that are served to clients, such as images.</li>
+    </ul>
     <li>Report Feature</li>
+    <ul>
+        <li>Button on the sidebar that allows anyone to submit an issue that they have encountered via Github Issues.</li>
+    </ul>
 </ul>
-<h3>3.4 Portability</h3>
+<h3>3.4 Design Constraints</h3>
+<p>
+    The design tools are limited in solely budget, as the budget is $0.00. The Developer fees however for publishing are not tied down to the cost of the project       itself, and will be split with all team members. All other resources (frameworks, APIs, etc.) are free and open-source.
+</p>
+<h3>3.5 Portability</h3>
 <p>
     Since this is a web-based application. It will be accessible on any device with a modern web browser as long as
     the user has a Spotify account and an internet connection to utilize the app. It will also be available on iOS and
     Android mobile devices.
 </p>
-<h2>4. Versions</h2>
+<h2>4. Extra Details</h2>
+<h3>Version History:</h3>
 <ul>
-    <li>Version 0.1 20/05/2021 Base Document</li>
+    <li>Version 0.1.0 [Base Document]</li>
+    <ul>
+        <li>May 24th</li>
+        <li>Members - All members</li>
+    </ul>
+    <li>Version 0.1.1 [Completion]</li>
+    <ul>
+        <li>May 26th</li>
+        <li>Members - All members</li>
+    </ul>
+    <li>Version 1.0.0 [Finalizing and Publishing]</li>
+    <ul>
+        <li>May 28th</li>
+        <li>Members - All members</li>
+    </ul>
+    <li>Version 2.0.0 [Reviewing Feedback and Finalizing]</li>
+    <ul>
+        <li>July 27th</li>
+        <li>Members - All members</li>
+    </ul>
 </ul>
-<h2>5. Developers</h2>
+<!-- Authored By: -->
+<h3>Authored By:</h3>
 <ul>
-    <li><a target="_blank" href="https://www.github.com/Adepeju-nefa">Adepeju Olowonefa</a></li>
-    <li><a target="_blank" href="https://github.com/AdrianAltingMees">Adrian Alting-Mees</a></li>
-    <li><a target="_blank" href="https://github.com/danerkestey">Daner Yasin</a></li>
-    <li><a target="_blank" href="https://github.com/wowitsdeclan">Declan Hollingworth</a></li>
-    <li><a target="_blank" href="https://github.com/MAHAULMUSIC">Gur Armaan Maan</a></li>
-    <li><a target="_blank" href="https://github.com/Caboji">Jacob Goldman</a></li>
-    <li><a target="_blank" href="https://github.com/Jagveer-Sangha">Jagveer Sangha</a></li>
-    <li><a target="_blank" href="https://github.com/aylanij">Jiten Aylani</a></li>
-    <li><a target="_blank" href="https://github.com/kelvinkellner">Kelvin Kellner</a></li>
-    <li><a target="_blank" href="https://www.github.com/MattDank">Mathumithan Manimaran</a></li>
-    <li><a target="_blank" href="https://github.com/zancrash">Muhammad Ali</a></li>
-    <li><a target="_blank" href="https://www.github.com/sherrao">Nausher Rao</a></li>
-    <li><a target="_blank" href="https://github.com/XSilviaX">Nishant Tewari</a></li>
-    <li><a target="_blank" href="https://github.com/Robert336">Robert Mazza</a></li>
+    <li>Ali, Farzan</li>
+    <li>Alting-Mees, Adrian</li>
+    <li>Aylani, Jiten</li>
+    <li>Goldman, Jacob</li>
+    <li>Hollingworth, Declan</li>
+    <li>Kellner, Kelvin</li>
+    <li>Maan, Gur Armaan</li>
+    <li>Manimaran, Mathu</li>
+    <li>Mazza, Robert</li>
+    <li>Olowonefa, Peju</li>
+    <li>Rao, Nausher</li>
+    <li>Sangha, Jagveer</li>
+    <li>Tewari, Nish</li>
+    <li>Yasin, Daner</li>
 </ul>

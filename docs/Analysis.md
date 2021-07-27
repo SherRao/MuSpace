@@ -2,16 +2,19 @@
     <a href="./"><img id="header-logo" src="./logo.svg" width="250" alt="MuSpace logo"/></a>
 </h1>
 <h1 align="center">Analysis Document</h1>
+
 <!-- Introduction -->
 <h2>Table of Contents</h2>
 <h2>1. Introduction</h2>
 <h3>1.1 Project Overview</h3>
-<p>MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. When users share similar listening habits with others, they are recommended as connections via a point-based rating system using the <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Spotify SDK</a> data. MuSpace will also offer listening rooms that allow users to listen along with their friends and chat with each other in real-time. Additionally, users can recommend which songs will be played in the listening room.</p>
+<p>MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. Users will be able to add friends on MuSpace who they can chat with, and look at their detailed Spotify listening history. Users will also be able to view detailed statistics about their own listening habits, such as listening time, favourite genres, favourite artists, and more.</p>
+
 <!-- Object Classification -->
 <h2>2. Object Classification</h2>
 <h3>2.1 Object Diagram</h3>
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/f369b257-772d-4250-b476-e0a7f3c92e25" id="UtiOslhxY_iS"></iframe></div>
 <!-- #################################################### -->
+
 <!-- Entity Objects -->
 <h3>2.2 Entity Objects</h3>
 <ul>
@@ -235,7 +238,7 @@
 <!-- Further Steps -->
 <h2>3. Further Steps</h2>
 <h3>3.1 State Diagram</h3>
-<div><iframe width="768" height="432" src="https://miro.com/app/live-embed/o9J_l-_TB-k=/?moveToViewport=-3168,751,1845,1101" frameBorder="0" scrolling="no" allowFullScreen></iframe></div>
+<div><iframe width="960px" height="720px" src="https://miro.com/app/live-embed/o9J_l-_TB-k=/?moveToViewport=-3168,751,1845,1101" frameBorder="0" scrolling="no" allowFullScreen></iframe></div>
 <br/><br/>
 
 <!-- Non Functional Attributes -->
@@ -259,8 +262,11 @@
 <p><b>This is an ongoing diagram that is being continuously updated.</b></p>
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/dd3c7144-fde2-4d4e-96a5-1df4cb1198b3" id="QuUPrM8LWEpi"></iframe></div>
 
+<!-- Extra Details -->
+<h2>6. Extra Details</h2>
+
 <!-- Versions -->
-<h2>6. Versions</h2>
+<h3>Version History:</h3>
 <ul>
     <li>Version 0.1.0 [Sections 1-3] Preliminary Document</li>
     <ul>
@@ -277,9 +283,14 @@
         <li>June 24th</li>
         <li>Members - All members</li>
     </ul>
+    <li>Version 1.0.1 [Editing 4-7, Reviewing Feedback and Finalizing]</li>
+    <ul>
+        <li>July 27th</li>
+        <li>Members - All members</li>
+    </ul>
 </ul>
 <!-- Authored By: -->
-<h2>7. Authored By</h2>
+<h3>Authored By:</h3>
 <ul>
     <li>Ali, Farzan</li>
     <li>Alting-Mees, Adrian</li>
