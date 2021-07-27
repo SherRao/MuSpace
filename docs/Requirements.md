@@ -81,7 +81,7 @@
     using React Native. Major components include user connection to Spotify using Spotify’s Web API, and web-based
     chat functionality and listening rooms using Google Firebase’s Realtime No-SQL Database.
 </p>
-<h4>2.1.1 <a href="" target="_blank">Sample GUI</a></h4>
+<h4>2.1.1 <a href="https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=327%3A12583" target="_blank">Sample GUI</a></h4>
 <h3>2.2 Product Functions</h3>
 <p>
     MuSpace is a music-matchmaking application that takes the user’s musical interest (i.e. Songs, artists, albums,
