@@ -106,18 +106,11 @@
     It is required that users of MuSpace all have Spotify accounts, with some level of activity on the platform in order to build a profile. MuSpace is dependent       on how rich the user's musical history (songs listened to, artists followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile     will be and better the experience they will get from MuSpace.
 </p>
 <h2>3. Technical Requirements</h2>
-<h3>3.1 External Interfaces</h3>
-<ul>
-    <li>Authentication</li>
-    <ul>
-        <li>Username/ Password (Google Authentication)</li>
-    </ul>
-    <li>Messaging</li>
-    <ul>
-        <li>Timestamps</li>
-        <li>Message ID</li>
-    </ul>
-</ul>
+<h3>3.1 Hardware Interface</h3>
+<p>
+    The application will run on any Windows, OSx or Linux machine. The web browsers that can be used include Google Chrome, Mozilla Firefox, Apple Safari,             Microsoft Edge. The input will be received from the keyboard and mouse the system is attached to. 
+</p>
+
 <h3>3.2 Performance Requirements</h3>
 <h3>3.2.1 Client Requirements</h3>
 <ul>
@@ -142,6 +135,9 @@
     </ul>
 </ul>
 <h3>3.3 Security</h3>
+<p>
+    MuSpace will allow users to create accounts either by signing up with Google, or by creating a username and password. All transactions for authentication are       passed through a secure encrypted end-to-end pipeline to the Google Firebase Authentication servers. Google Firebase Authentication is compliant with the ISO       27001, ISO 27017, ISO 27018, SOC 1, SOC 2, and SOC 3 security evaluation standards. Below are some technologies MuSpace itself uses for security:
+</p>
 <ul>
     <li>Cloudflare</li>
     <li>Google Authentication</li>
@@ -155,11 +151,12 @@
     the user has a Spotify account and an internet connection to utilize the app. It will also be available on iOS and
     Android mobile devices.
 </p>
-<h2>4. Versions</h2>
+<h2>4. Extra Details</h2>
+<h3>Versions</h3>
 <ul>
     <li>Version 0.1 20/05/2021 Base Document</li>
 </ul>
-<h2>5. Developers</h2>
+<h3>Developers</h3>
 <ul>
     <li><a target="_blank" href="https://www.github.com/Adepeju-nefa">Adepeju Olowonefa</a></li>
     <li><a target="_blank" href="https://github.com/AdrianAltingMees">Adrian Alting-Mees</a></li>
