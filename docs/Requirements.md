@@ -92,26 +92,18 @@
 </p>
 <h3>2.3 User Characteristics</h3>
 <p>
-    MuSpace’s primary users are those trying to connect with others who have a similar taste in music. MuSpace is
-    accessible as a web client or on Android or IOS. MuSpace will be easy to use with a minimalistic UI, allowing
-    users with minimal technical literacy to navigate through the application to connect with their friends and share
-    music. A help section, as well as an FAQ, will be included in all versions of MuSpace so that users can quickly
-    get up to speed.
+    MuSpace’s primary users are those trying to connect with others who have a similar taste in music. MuSpace will be easy to use with a minimalistic UI, allowing     users with minimal technical literacy to navigate through the application to connect with their friends and share music. A help section, as well as an FAQ,         will be included in all versions of MuSpace so that users can quickly get up to speed. 
 </p>
 <h3>2.4 Constraints</h3>
 <p>
-    MuSpace users must have an active Spotify account and will benefit from being subscribed to premium. MuSpace will
-    function for all users on IOS and Android, however, some functionality may be limited between users on different
-    platforms. MuSpace will have time, cost and reliability constraints. Development and testing must be finished
-    before August 15th, 2021, and will be developed for free with no funding from the school or the students.
-    Publication to the Apple App store requires a fee, so this will be a constraint.
+    MuSpace users must have an active Spotify account. Without a spotify account, users will be unable to create their MuSpace account. MuSpace, at this current       point in time, will not function on iOS or Android devices, it will only be available on a web browser. iOS and Android functionality will be done later in         time. 
+</p>
+<p>
+    MuSpace will have time, cost and reliability constraints. Development and testing must be finished before August 15th, 2021, and will be developed for free         with no funding from the school or the students. Publication to the Apple App store requires a fee, so this will be a constraint.
 </p>
 <h3>2.5 Assumptions and Dependencies</h3>
 <p>
-    It is assumed that users of MuSpace all have Spotify accounts, with some level of activity on the platform in
-    order to build a profile. MuSpace is dependent on how rich the user's musical history (songs listened to, artists
-    followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile will be and better
-    the experience they will get from MuSpace.
+    It is required that users of MuSpace all have Spotify accounts, with some level of activity on the platform in order to build a profile. MuSpace is dependent       on how rich the user's musical history (songs listened to, artists followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile     will be and better the experience they will get from MuSpace.
 </p>
 <h2>3. Technical Requirements</h2>
 <h3>3.1 External Interfaces</h3>
