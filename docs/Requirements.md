@@ -107,7 +107,6 @@
 </p>
 <h3>2.7 Use Case Diagram</h3>
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/3b73c13e-821d-4b73-aea6-bfda8448a12e" id="7rQYm4LzcUxa"></iframe></div>
-<br></br>
 
 <h2>3. Technical Requirements</h2>
 <h3>3.1 External Interfaces</h3>
