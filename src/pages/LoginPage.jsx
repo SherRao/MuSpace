@@ -10,9 +10,9 @@ import { LoginForm } from "@molecules";
 import { Firebase } from "@functions";
 
 const Container = Styled.div`
-    width: 100vw;
+    width: calc(100vw - 6em);
     height: max-content;
-    padding: 5em;
+    padding: auto auto;
 
     margin: 0;
     top: 0;

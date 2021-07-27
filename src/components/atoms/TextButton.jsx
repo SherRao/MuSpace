@@ -9,7 +9,7 @@ const StyledButton = Styled.button`
 
     font-size: ${props => props.theme.fontSizes.mediumSmall};
     width: 22em;
-    padding: 1em 0 1em 0;
+    padding: 1em 0;
     border: 0px; 
 
     :focus {
