@@ -105,6 +105,9 @@
 <p>
     It is required that users of MuSpace all have Spotify accounts, with some level of activity on the platform in order to build a profile. MuSpace is dependent       on how rich the user's musical history (songs listened to, artists followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile     will be and better the experience they will get from MuSpace.
 </p>
+<h3>2.7 Use Case Diagram</h3>
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embeddedchart/3b73c13e-821d-4b73-aea6-bfda8448a12e" id="7rQYm4LzcUxa"></iframe></div>
+<iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/dd3c7144-fde2-4d4e-96a5-1df4cb1198b3" id="QuUPrM8LWEpi"></iframe>
 <h2>3. Technical Requirements</h2>
 <h3>3.1 External Interfaces</h3>
 <ul>
