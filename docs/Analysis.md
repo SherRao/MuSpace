@@ -259,8 +259,11 @@
 <p><b>This is an ongoing diagram that is being continuously updated.</b></p>
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/dd3c7144-fde2-4d4e-96a5-1df4cb1198b3" id="QuUPrM8LWEpi"></iframe></div>
 
+<!-- Extra Details -->
+<h2>Extra Details</h2>
+
 <!-- Versions -->
-<h2>6. Versions</h2>
+<h3>Versions</h3>
 <ul>
     <li>Version 0.1.0 [Sections 1-3] Preliminary Document</li>
     <ul>
@@ -277,9 +280,14 @@
         <li>June 24th</li>
         <li>Members - All members</li>
     </ul>
+    <li>Version 1.0.1 [Editing 4-7, Reviewing Feedback and Finalizing]</li>
+    <ul>
+        <li>July 27th</li>
+        <li>Members - All members</li>
+    </ul>
 </ul>
 <!-- Authored By: -->
-<h2>7. Authored By</h2>
+<h3>Authored By</h3>
 <ul>
     <li>Ali, Farzan</li>
     <li>Alting-Mees, Adrian</li>
