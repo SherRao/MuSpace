@@ -99,6 +99,9 @@
     MuSpace users must have an active Spotify account. Without a spotify account, users will be unable to create their MuSpace account. MuSpace, at this current       point in time, will not function on iOS or Android devices, it will only be available on a web browser. iOS and Android functionality will be done later in         time. 
 </p>
 <p>
+    MuSpace users must have a stable internet connection in order to use the web application. Weak internet connection can result in excessive buffering time.
+</p
+<p>
     MuSpace will have time, cost and reliability constraints. Development and testing must be finished before August 15th, 2021, and will be developed for free         with no funding from the school or the students. Publication to the Apple App store requires a fee, so this will be a constraint.
 </p>
 <h3>2.5 Assumptions and Dependencies</h3>
