@@ -501,24 +501,7 @@
 <img src="https://en.meming.world/images/en/0/0d/In_Terms_Of_Money%2C_We_Have_No_Money.jpg" width="256" alt="Meme from Despicable Me movie: In terms of money, we have no money" />
 <p>This project is solely dependent on the time and effort of the developers. No monetary funding is collected or needed. All resources (frameworks, APIs, etc.) are free and open-source with the exception of purchasing a one-year domain subscription that was divided equally between all team members. A <i>Spotify Account</i> is required for developing and testing <i>Spotify SDK</i> features.</p>
 <h2>6. Extra Details</h2>
-<p><b>Authored by: </b></p>
-<ul>
-    <li>Ali, Farzan</li>
-    <li>Alting-Mees, Adrian</li>
-    <li>Aylani, Jiten</li>
-    <li>Goldman, Jacob</li>
-    <li>Hollingworth, Declan</li>
-    <li>Kellner, Kelvin</li>
-    <li>Maan, Gur Armaan</li>
-    <li>Manimaran, Mathu</li>
-    <li>Mazza, Robert</li>
-    <li>Olowonefa, Peju</li>
-    <li>Rao, Nausher</li>
-    <li>Sangha, Jagveer</li>
-    <li>Tewari, Nish</li>
-    <li>Yasin, Daner</li>
-</ul>
-<p><b>Version History: </b></p>
+<h3>Version History:</h3>
 <ul>
     <li>Version 0.1.0 [Sections 1-5] Preliminary Document</li>
     <ul>
@@ -535,4 +518,22 @@
         <li>June 3rd</li>
         <li>All Members </li>
     </ul>
+</ul>
+
+<h3>Authored by:</h3>
+<ul>
+    <li>Ali, Farzan</li>
+    <li>Alting-Mees, Adrian</li>
+    <li>Aylani, Jiten</li>
+    <li>Goldman, Jacob</li>
+    <li>Hollingworth, Declan</li>
+    <li>Kellner, Kelvin</li>
+    <li>Maan, Gur Armaan</li>
+    <li>Manimaran, Mathu</li>
+    <li>Mazza, Robert</li>
+    <li>Olowonefa, Peju</li>
+    <li>Rao, Nausher</li>
+    <li>Sangha, Jagveer</li>
+    <li>Tewari, Nish</li>
+    <li>Yasin, Daner</li>
 </ul>

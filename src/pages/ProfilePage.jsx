@@ -9,6 +9,7 @@ import FeedObject from "../components/atoms/FeedObject";
 import FriendTopAlbums from "../components/molecules/FriendTopAlbums";
 import TopSongs from "../components/molecules/TopSongs";
 import TopArtists from "../components/molecules/TopArtists";
+import ProfileUserName from "../components/atoms/ProfileUserName";
 
 const Container = Styled.div`
     width: 100vw;
@@ -33,10 +34,9 @@ const Container = Styled.div`
 `;
 
 const Feed = Styled.div`
-    width: 30vw;
-    height: 30vh;
+    width: 80%;
     padding: 20px;
-    
+    margin: 0 0 15px 0;
     border-radius: 15px;
 
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -49,7 +49,7 @@ const Feed = Styled.div`
 
 const StyledText = Styled.h1`
     font-family: "Roboto";
-    font-size: ${props => props.theme.fontSizes.small};
+    font-size: ${props => props.theme.fontSizes.mediumMedium};
     color: ${props => props.theme.colors.black};
     font-weight: bold;
     align: right;
@@ -78,6 +78,15 @@ const titleDiv = Styled.div`
     flex-direction: row;
     aling-items = center;
 `;
+const StyledTexts = Styled.h1`
+    font-family: "Roboto";
+    font-size: ${props => props.theme.fontSizes.medium};
+    color: ${props => props.theme.colors.muSpacePurple};
+    font-weight: bold;
+    align: right;
+    margin: 15px;
+
+`;
 
 function ProfilePage() {
 
@@ -91,15 +100,14 @@ function ProfilePage() {
             <Feed>
                 <StyledText>Feed</StyledText>
                 <FeedObject title="#Post Title" content="#Post Content" details="#Song Details" link="#"></FeedObject>
+                <FeedObject title="#Post Title" content="#Post Content" details="#Song Details" link="#"></FeedObject>
+                <FeedObject title="#Post Title" content="#Post Content" details="#Song Details" link="#"></FeedObject>
             </Feed>
             <TopArtists>
-
             </TopArtists>
             <TopSongs>
-
             </TopSongs>
-            <FriendTopAlbums>
-                
+            <FriendTopAlbums> 
             </FriendTopAlbums>
         </Container>
     );

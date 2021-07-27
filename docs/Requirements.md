@@ -15,8 +15,8 @@
     potential clients and their corresponding development teams. This is a reference guide for the development teams
     to ensure that everything runs smoothly, and some potential questions are answered.
 </p>
-<h2>1.3 Scope and Business Model</h2>
-<h3>1.3.1 Scope</h3>
+<h3>1.3 Scope and Business Model</h3>
+<h4>1.3.1 Scope</h4>
 <p>
     This document outlines the overall functionality, constraints and specifications of MuSpace, an application
     available on various platforms - iOS, Android, and the Web. This is to be used as a social media platform that
@@ -26,7 +26,7 @@
     creation of the room - the room name has to be a minimum of 5 characters long, and the password should be a
     minimum of 8 characters long.
 </p>
-<h3>1.3.2 Business Model</h3>
+<h4>1.3.2 Business Model</h4>
 <p>
     The platform will be free to use. It will cost users nothing to download and there will be no advertisements in
     the application. The reasons for allowing users to use the application for free are to first gain exposure and
@@ -34,7 +34,7 @@
     be completed to introduce some form of monetization, like monetized concerts and DJ sessions.
 </p>
 <h2>1.4 Definitions, Acryonyms and Abbreviations</h2>
-<h3>1.4.1 Acronyms and Abbreviations</h3>
+<h4>1.4.1 Acronyms and Abbreviations</h4>
 <ul>
     <li>API - Application Program Interface - External software</li>
     <li>GUI - Graphical User Interface</li>
@@ -44,7 +44,7 @@
     <li>Mobile-based - for Android / iOS platforms</li>
     <li>R&D - Research and Development</li>
 </ul>
-<h3>1.4.2 Definitions</h3>
+<h4>1.4.2 Definitions</h4>
 <ul>
     <li>Chat - String of messages sent back and forth between users of an application</li>
 </ul>
@@ -108,6 +108,26 @@
 <p>
     It is required that users of MuSpace all have Spotify accounts, with some level of activity on the platform in order to build a profile. MuSpace is dependent       on how rich the user's musical history (songs listened to, artists followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile     will be and better the experience they will get from MuSpace.
 </p>
+<h3>2.6 User Interfaces</h3>
+<h4>2.6.1 Sidebar</h4>
+<p>The Sidebar will be consistent in all of the pages, except that of the Login/ Register  (2.6.3/ 2.6.4) Pages. It’s functionality will be to access all other pages (except Login/ Register pages) from any other page.</p>
+<h4>2.6.2 Searchbar</h4>
+<p>The Searchbar, similar to the SideBar (2.6.1) will be present on all pages.. The use of the search bar is to search for friends/ people’s  profiles. Along with this, the search bar contains the notification icon that indicates when a notification is present.</p>
+<h4>2.6.3 Login Page</h4>
+<p>The Login Page will be the first page that will be displayed to the user. This page will allow the user to login with the credentials using different authentications such as “login with Email” or “login with Google” (with their Google account). The page consists of a “Forgot Password” function that allows the user to reset their password with a link sent to the email linked to the MuSpace account. The sign up/register functionality is available for the user to create a new account and is  found beside the “Forgot Password” function, this function redirects the user to the Registration Page (2.6.4).</p>
+<h4>2.6.4 Register Page</h4>
+<p>The Register Page, asks for the new user’s information, such as First and Last names, Date of Birth, Username, Email and Password. This information will go into the database.</p>
+<h4>2.6.5 Home Page</h4>
+<p>The Home Page is the main page the user is redirected to after successfully logging in. This page displays some statistics about the user’s activity on MuSpace including favourite artists of the week, favourite songs of the week, hours spent listening to music, and more. The page also shows the friends activity tab which displays the music and album a particular friend (added previously by the user) is listening to.</p>
+<h4>2.6.6 Messages Page</h4>
+<p>The Messages Page is where users can go to see all of their chat history with each of their friends. The main messages page is a list of conversations the user has had with each friend, sorted by the most recent history. Clicking on one of these conversations will bring the user to the chat page, in which they can send a message to the friend who’s chat page they opened.</p>
+<h4>2.6.7 Notification Page</h4>
+<p>The Notification Page is where users can see any unread notifications they received. These could include new messages, friend requests, updates from the developers, or required actions such as updating account information.</p>
+<h4>2.6.8 Profile Page</h4>
+<p>The profile page is where users go to see their own or their friends' listening activity and statistics on spotify. Each person's profile page can be customized with a profile picture, and a short biography (max 100 words).</p>
+<h4>2.6.9 Friends Page</h4>
+<p>The Friends Page will display all current friends, along with their listening activity (what they are currently listening to), along with leaderboards, and a similarity bar. The Leaderboard shows which of your friends has the most listening hours and Unique artists listened to in a given amount of time (to be determined).</p>
+
 <h3>2.7 Use Case Diagram</h3>
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/3b73c13e-821d-4b73-aea6-bfda8448a12e" id="7rQYm4LzcUxa"></iframe></div>
 
@@ -125,13 +145,13 @@
     </ul>
 </ul>
 <h3>3.2 Performance Requirements</h3>
-<h3>3.2.1 Client Requirements</h3>
+<h4>3.2.1 Client Requirements</h4>
 <ul>
     <li>OS: Windows, MacOS, GNU/Linux, Android, iOS</li>
     <li>Stable network connection</li>
     <li>A device that has access to a modern web browser with JavaScript ES6 capabilities</li>
 </ul>
-<h3>3.2.2 Server/Development Requirements</h3>
+<h4>3.2.2 Server/Development Requirements</h4>
 <ul>
     <li>Cloudflare</li>
     <li>Amazon Web Services</li>
@@ -181,7 +201,7 @@
     Android mobile devices.
 </p>
 <h2>4. Extra Details</h2>
-<h3>Versions</h3>
+<h3>Version History:</h3>
 <ul>
     <li>Version 0.1.0 [Base Document]</li>
     <ul>
@@ -205,7 +225,7 @@
     </ul>
 </ul>
 <!-- Authored By: -->
-<h3>Authored By</h3>
+<h3>Authored By:</h3>
 <ul>
     <li>Ali, Farzan</li>
     <li>Alting-Mees, Adrian</li>

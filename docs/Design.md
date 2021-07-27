@@ -669,26 +669,8 @@ Database: Firestore, FirebaseOn every view, the sidebar,
 
 <!-- 6. Maintenance -->
 <h2>7. Extra Details</h2>
-<!-- Authored By: -->
-<h3>Authored By</h3>
-<ul>
-    <li>Ali, Farzan</li>
-    <li>Alting-Mees, Adrian</li>
-    <li>Aylani, Jiten</li>
-    <li>Goldman, Jacob</li>
-    <li>Hollingworth, Declan</li>
-    <li>Kellner, Kelvin</li>
-    <li>Maan, Gur Armaan</li>
-    <li>Manimaran, Mathu</li>
-    <li>Mazza, Robert</li>
-    <li>Olowonefa, Peju</li>
-    <li>Rao, Nausher</li>
-    <li>Sangha, Jagveer</li>
-    <li>Tewari, Nish</li>
-    <li>Yasin, Daner</li>
-</ul>
 
-<h3>Versions</h3>
+<h3>Version History:</h3>
 <ul>
     <li>Version 0.1.0 [Sections 1-7 Created] Preliminary Document</li>
     <ul>
@@ -706,3 +688,24 @@ Database: Firestore, FirebaseOn every view, the sidebar,
         <li>Members - All members</li>
     </ul>
 </ul>
+
+<!-- Authored By: -->
+<h3>Authored By:</h3>
+<ul>
+    <li>Ali, Farzan</li>
+    <li>Alting-Mees, Adrian</li>
+    <li>Aylani, Jiten</li>
+    <li>Goldman, Jacob</li>
+    <li>Hollingworth, Declan</li>
+    <li>Kellner, Kelvin</li>
+    <li>Maan, Gur Armaan</li>
+    <li>Manimaran, Mathu</li>
+    <li>Mazza, Robert</li>
+    <li>Olowonefa, Peju</li>
+    <li>Rao, Nausher</li>
+    <li>Sangha, Jagveer</li>
+    <li>Tewari, Nish</li>
+    <li>Yasin, Daner</li>
+</ul>
+
+
