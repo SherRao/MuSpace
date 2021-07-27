@@ -159,6 +159,7 @@
     Android mobile devices.
 </p>
 <h2>4. Extra Details</h2>
+<!-- Versions -->
 <h3>Versions</h3>
 <ul>
     <li>Version 0.1.0 [Base Document]</li>
@@ -182,20 +183,22 @@
         <li>Members - All members</li>
     </ul>
 </ul>
-<h3>Developers</h3>
+<!-- Authored By: -->
+<h3>Authored By</h3>
 <ul>
-    <li><a target="_blank" href="https://www.github.com/Adepeju-nefa">Adepeju Olowonefa</a></li>
-    <li><a target="_blank" href="https://github.com/AdrianAltingMees">Adrian Alting-Mees</a></li>
-    <li><a target="_blank" href="https://github.com/danerkestey">Daner Yasin</a></li>
-    <li><a target="_blank" href="https://github.com/wowitsdeclan">Declan Hollingworth</a></li>
-    <li><a target="_blank" href="https://github.com/MAHAULMUSIC">Gur Armaan Maan</a></li>
-    <li><a target="_blank" href="https://github.com/Caboji">Jacob Goldman</a></li>
-    <li><a target="_blank" href="https://github.com/Jagveer-Sangha">Jagveer Sangha</a></li>
-    <li><a target="_blank" href="https://github.com/aylanij">Jiten Aylani</a></li>
-    <li><a target="_blank" href="https://github.com/kelvinkellner">Kelvin Kellner</a></li>
-    <li><a target="_blank" href="https://www.github.com/MattDank">Mathumithan Manimaran</a></li>
-    <li><a target="_blank" href="https://github.com/zancrash">Muhammad Ali</a></li>
-    <li><a target="_blank" href="https://www.github.com/sherrao">Nausher Rao</a></li>
-    <li><a target="_blank" href="https://github.com/XSilviaX">Nishant Tewari</a></li>
-    <li><a target="_blank" href="https://github.com/Robert336">Robert Mazza</a></li>
+    <li>Ali, Farzan</li>
+    <li>Alting-Mees, Adrian</li>
+    <li>Aylani, Jiten</li>
+    <li>Goldman, Jacob</li>
+    <li>Hollingworth, Declan</li>
+    <li>Kellner, Kelvin</li>
+    <li>Maan, Gur Armaan</li>
+    <li>Manimaran, Mathu</li>
+    <li>Mazza, Robert</li>
+    <li>Olowonefa, Peju</li>
+    <li>Rao, Nausher</li>
+    <li>Sangha, Jagveer</li>
+    <li>Tewari, Nish</li>
+    <li>Yasin, Daner</li>
 </ul>
+
