@@ -26,7 +26,6 @@ const theme = {
     fontSizes: {
         small: "0.4rem",
         smallMedium: "0.6rem",
-        kindaMed: "0.5rem", // Change this please bro wtf is this
         mediumSmall: "0.84rem",
         medium: "1rem",
         mediumMedium: "1rem",

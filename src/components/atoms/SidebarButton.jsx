@@ -47,33 +47,31 @@ const StyledText = Styled.p`
     color: ${props => props.theme.colors.purple};
         
     align: left;
-    margin: 0.2rem 0.4rem 0 0.8rem;
+    margin: 0.1rem 0.4rem 0 0.4rem;
 `;
 
 const StyledIcon = Styled.div`
-     align: left;
-     max-width: 20%;
-     height: auto;
-     flex: 1;
-   
-     padding: 2px;
-     color: ${props => props.theme.colors.purple};
+    align: left;
+    max-width: 20%;
+    height: auto;
 
-     *{
+    padding: 2px 8px;
+    color: ${props => props.theme.colors.purple};
+
+    *{
         display: block;
         margin: 0 0.5em;
         width: 2em;
         height: 2em;
-     }
+    }
 
-     @media (max-width: 974px){
+    @media (max-width: 974px){
         align: center;
         max-width: 100%;
     }
-
 `;
 
-function SidebarButton({ text, icon, children, location }) {
+function SidebarButton({ text, children, location }) {
     return (
         <StyledDiv>
             <StyledIcon>{children}</StyledIcon>

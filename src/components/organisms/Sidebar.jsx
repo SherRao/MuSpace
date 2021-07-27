@@ -10,13 +10,15 @@ import { RiChat4Fill } from "react-icons/ri"; // message button icon outline and
 import { FaBug } from "react-icons/fa"; // Report a bug button icon
 
 const StyledDiv = Styled.div`
-    width: 20vw;
+    width: 16vw;
     height: 100vh; 
     padding: 0.4rem 0.4rem;
 
     background-color: ${(props) => props.theme.colors.white};
     border-right: 1px solid ${(props) => props.theme.colors.black};
 
+    display: flex;
+    flex-direction: column;
     align-items: center;
     transition: all 0.25s ease;
 `;
@@ -40,7 +42,7 @@ function Sidebar() {
     const [profilePic, setProfilePic ] = React.useState(null);
 
     const user = Firebase.auth.currentUser;
-    const username = user.displayName;
+    const username = user.displayName === null ? "@username" : user.displayName;
 
     React.useEffect(() => {
         if(!profilePic)
@@ -51,7 +53,6 @@ function Sidebar() {
     async function getProfilePic() {
         const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
         setProfilePic(x);
-
     }
 
     return (
@@ -72,7 +73,7 @@ function Sidebar() {
                 <FaBug/>
             </SidebarButton>
 
-            <SpaceFillerDiv size={1} />
+            <SpaceFillerDiv />
 
             <StyledText>Total Listening Time</StyledText>
             <StatNumber>120,560</StatNumber>
@@ -81,7 +82,7 @@ function Sidebar() {
             <StyledText>Albums Liked</StyledText>
             <StatNumber>1,560</StatNumber>
 
-            <SpaceFillerDiv size={1} />
+            <SpaceFillerDiv />
 
             <UserButton
                 text={username}
