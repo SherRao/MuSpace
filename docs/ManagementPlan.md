@@ -111,7 +111,6 @@
 <h4>1.5.1 Definitions</h4>
 <ul>
     <li><b>Spotify</b> - Spotify is an audio streaming and media services provider.</li>
-    <li><b>Spotify Premium Account</b> - The paid music service offered by Spotify that gives users advanced features. For this project, it is required by the Spotify API and SDK for connected Spotify accounts to be a Spotify Premium member to use their web music player features. See <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">here</a> for more information.</li>
     <li><b>Listening Room/Music Room</b> - A chat room hosted by users where they can listen along to the host and chat with other users in the room.</li>
     <li><b>Agile Approach</b> - A method to manage a project by breaking it up into several phases.</li>
     <li><b>Web-based</b> - A piece of software that is solely hosted on a web server over the internet.</li>
@@ -125,7 +124,7 @@
     <li><b>Friends</b> - Refers to accounts the user has matched with (See 4.1.1 Feature Specific Requirements) or has added by username.</li>
     <li><b>Sprint</b> - Refers to a two-week block designated to the development of a specific component of the product.</li>
     <li><b>Spam</b> - A large amount (typically more than 10 messages per second) of requests/messages sent to the system.</li>
-    <li><b>User</b> - A website visitor who has successfully created and authenticated a MuSpace account login and has connected to a Spotify Premium Account.</li>
+    <li><b>User</b> - A website visitor who has successfully created and authenticated a MuSpace account login and has connected to a Spotify Account.</li>
     <li><b>OAuth2</b> -  Open-standard authorization protocol or framework that describes how unrelated servers and services can safely allow authenticated access to their assets without actually sharing the initial, related, single logon credential.</li>
     <li><b>Sidebar</b> - Menu component on the side of the screen, separate from the main page content. In our case, the sidebar will be on the left side of the screen.</li>
     <li><b>Client-Side</b> - Action takes place on the user’s (the client’s) computer.</li>
@@ -463,7 +462,7 @@
 <h3>4.2.2 Software Design Description (SDD)</h3>
 <p>We will be using <i>JavaScript</i>, <i>TypeScript</i>, <i>CSS</i>, and <i>HTML</i> as the languages for the project. These languages are the easiest to implement for a web application of this magnitude which requires the front-end and back-end to work with each other seamlessly. Without the hassle of separate code bases for both. <i>JavaScript</i> and <i>TypeScript</i> are also ideal languages that have a great capability of handling asynchronous server-side requests.</p>
 <p>We will be using <i>ReactJS</i>, <i>StyledComponents</i>, and <i>Semantic UI</i> to create the front-end of the application - this is the code that will be executed and displayed client-side using a built-in browser <i>JavaScript</i> engine, such as <i>Google’s V8 JavaScript Engine</i>.</p>
-<p>For the back-end of the application, we are using <i>Node.js</i> to run a headless <i>Chromium</i> instance to execute server-side code. The back-end will integrate the <i>Spotify SDK Spotify API, and LyricGenius API</i> to draw all user data - artists, albums, genres, and songs that the artist listens to. The API can also extract music listening and other statistics. This data will be used to connect with other users using a scoring system and to discover new music. The <i>Spotify Web SDK</i> will be used to play music using the user's <i>Spotify</i> account in the web app. The <i>SDK</i> requires the users to have a <i>Spotify</i> Premium account. The <i>LyricGenius API</i> will be used to display lyrics of the songs that the user listens to as well as related lyrical trivia. </p>
+<p>For the back-end of the application, we are using <i>Node.js</i> to run a headless <i>Chromium</i> instance to execute server-side code. The back-end will integrate the <i>Spotify SDK Spotify API, and LyricGenius API</i> to draw all user data - artists, albums, genres, and songs that the artist listens to. The API can also extract music listening and other statistics. This data will be used to connect with other users using a scoring system and to discover new music. The <i>Spotify Web SDK</i> will be used to play music using the user's <i>Spotify</i> account in the web app. The <i>SDK</i> requires the users to have a <i>Spotify</i> account. The <i>LyricGenius API</i> will be used to display lyrics of the songs that the user listens to as well as related lyrical trivia. </p>
 <p>The other portion of the back-end uses <i>Google’s</i> suite of APIs included in <i>Google Firebase</i>. These are but are not limited to Firestore and Authentication. Firestore will be used to store a lot of data:</p>
 <ul>
     <li>User data</li>
@@ -500,7 +499,7 @@
 <p>All pieces of code will be properly documented in order to ensure clarity of the purpose and function of the program. Up to date user documentation will be posted on our projects wiki page, which can be found here: <a href="https://wiki.muspace.me" target="_blank">MuSpace Wiki</a>. All other documents can be found on our project webpage here: <a href="https://muspace.me">MuSpace Documentation</a>.</p>
 <h2>5. Money/Cost</h2>
 <img src="https://en.meming.world/images/en/0/0d/In_Terms_Of_Money%2C_We_Have_No_Money.jpg" width="256" alt="Meme from Despicable Me movie: In terms of money, we have no money" />
-<p>This project is solely dependent on the time and effort of the developers. No monetary funding is collected or needed. All resources (frameworks, APIs, etc.) are free and open-source with the exception of purchasing a one-year domain subscription that was divided equally between all team members. A <i>Spotify Premium Account</i> is required for developing and testing <i>Spotify SDK</i> features.</p>
+<p>This project is solely dependent on the time and effort of the developers. No monetary funding is collected or needed. All resources (frameworks, APIs, etc.) are free and open-source with the exception of purchasing a one-year domain subscription that was divided equally between all team members. A <i>Spotify Account</i> is required for developing and testing <i>Spotify SDK</i> features.</p>
 <h2>6. Extra Details</h2>
 <p><b>Authored by: </b></p>
 <ul>
