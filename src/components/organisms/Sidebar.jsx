@@ -12,13 +12,8 @@ import { FaBug } from "react-icons/fa"; // Report a bug button icon
 const StyledDiv = Styled.div`
     width: 16vw;
     height: 100vh; 
-<<<<<<< HEAD
-    padding: 0; 
-    
-=======
     padding: 0.4rem 0.4rem;
 
->>>>>>> db14871d9071fcf0b023766275cbd3f46c1193d0
     background-color: ${(props) => props.theme.colors.white};
     border-right: 1px solid ${(props) => props.theme.colors.black};
 
@@ -58,12 +53,6 @@ function Sidebar() {
     async function getProfilePic() {
         const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
         setProfilePic(x);
-<<<<<<< HEAD
-
-        console.log(username);
-
-=======
->>>>>>> db14871d9071fcf0b023766275cbd3f46c1193d0
     }
 
     return (

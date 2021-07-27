@@ -1,10 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 import { Firebase } from "@functions";
-<<<<<<< HEAD
-=======
 import default_profile from "../assets/default_profile.jpg"
->>>>>>> db14871d9071fcf0b023766275cbd3f46c1193d0
 
 import Sidebar from "../components/organisms/Sidebar";
 import AlbumCover from "../components/atoms/AlbumCover";
@@ -93,37 +90,6 @@ const StyledTexts = Styled.h1`
 
 function ProfilePage() {
 
-<<<<<<< HEAD
-    // const [profilePic, setProfilePic ] = React.useState(null);
-
-    // const user = Firebase.auth.currentUser;
-    // const username = user.displayName;
-
-    
-
-    // React.useEffect(() => {
-    //     if(!profilePic)
-    //         getProfilePic();
-
-    // }, []);
-
-    // async function getProfilePic() {
-    //     const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
-    //     setProfilePic(x);
-
-    // }
-
-    return (
-        <Container>
-
-            {/* <ProfileUserName
-                text={username}
-                profileImage={profilePic}
-            >
-            </ProfileUserName> */}
-            
-
-=======
     return (
         <Container>
             <titleDiv style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
@@ -131,7 +97,6 @@ function ProfilePage() {
                 <StyledTitle>Nishy Naushy Poo</StyledTitle>
             </titleDiv>
             
->>>>>>> db14871d9071fcf0b023766275cbd3f46c1193d0
             <Feed>
                 <StyledText>Feed</StyledText>
                 <FeedObject title="#Post Title" content="#Post Content" details="#Song Details" link="#"></FeedObject>
