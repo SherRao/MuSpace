@@ -11,6 +11,7 @@ const StyledDiv = Styled.div`
   margin: 0.2rem 0;
   display: flex;
   flex-direction: row;
+  width: 100%;
 
   @media (max-width: 900){
     flex-direction: column;
@@ -76,7 +77,7 @@ function UserButton({ text, icon, location, profileImage }) {
             <StyledLink href="/profile">
                 <StyledText>{text}</StyledText>
             </StyledLink>
-            <SpaceFillerDiv />
+            <div style={{margin: "0 auto"}} />
             <StyledLink href="/settings">
                 <StyledIcon><FaCog/></StyledIcon>
             </StyledLink>

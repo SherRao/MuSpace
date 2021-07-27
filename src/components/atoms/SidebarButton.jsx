@@ -71,10 +71,10 @@ const StyledIcon = Styled.div`
     }
 `;
 
-function SidebarButton({ text, icon, profilePic, location }) {
+function SidebarButton({ text, children, location }) {
     return (
         <StyledDiv>
-            <StyledIcon>{profilePic}</StyledIcon>
+            <StyledIcon>{children}</StyledIcon>
             <StyledLink href={location}>
                 <StyledText>{text}</StyledText>
             </StyledLink>
