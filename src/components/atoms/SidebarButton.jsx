@@ -1,5 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
+import SpaceFillerDiv from "@misc/SpaceFillerDiv";
 
 const StyledDiv = Styled.div`
     color: ${props => props.theme.colors.grey};

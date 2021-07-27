@@ -1,5 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
+import SpaceFillerDiv from "@misc/SpaceFillerDiv";
 
 import { FaCog } from "react-icons/fa"; /* cog button fill icon*/
 
@@ -10,7 +11,6 @@ const StyledDiv = Styled.div`
   margin: 0.2rem 0;
   display: flex;
   flex-direction: row;
-
 
   @media (max-width: 900){
     flex-direction: column;
@@ -32,7 +32,6 @@ const StyledText = Styled.p`
     color: ${(props) => props.theme.colors.mediumGrey};
     
     text-align: center;
-    flex: 1;
     margin: 0;
 
     :hover{
@@ -46,7 +45,6 @@ const StyledIcon = Styled.div`
      align: right;
      max-width: 40%;
      height: auto;
-     flex: 1;
      margin: 0px;
      padding: 3px;
 
@@ -67,10 +65,8 @@ const UserProfPic = Styled.img`
     max-width: 20%; 
     height: auto;
     border-radius: 100%;
-    flex: 1;
     padding: 0.2em;
     margin-left: 0.8em;
-
 `;
 
 function UserButton({ text, icon, location, profileImage }) {
@@ -80,6 +76,7 @@ function UserButton({ text, icon, location, profileImage }) {
             <StyledLink href="/profile">
                 <StyledText>{text}</StyledText>
             </StyledLink>
+            <SpaceFillerDiv />
             <StyledLink href="/settings">
                 <StyledIcon><FaCog/></StyledIcon>
             </StyledLink>
