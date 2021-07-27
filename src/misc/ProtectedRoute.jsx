@@ -9,14 +9,11 @@ import { SearchBar } from "@molecules";
 import { Sidebar } from "@organisms";
 
 const StyledDiv = Styled.div`
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-
     background-color: ${props => props.theme.colors.white};
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 20vw auto;
+    grid-auto-rows: 10vh auto;
+
     transition: all 0.25s ease;
 
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -25,14 +22,14 @@ const StyledDiv = Styled.div`
 `;
 
 const PageContainer = Styled.div`
-    width: 80vw;
-    height: 100vh;
     padding: 0;
 
     background-color: ${props => props.theme.colors.white};
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
+    /*display: inline-flex;*/
+    /*flex-direction: row;*/
+    /*align-items: inline;*/
+    grid-column-start: 2;
+
     transition: all 0.25s ease;
 
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -51,8 +48,8 @@ function ProtectedRoute({ exact = false, path, component }) {
     else 
         return (
             <StyledDiv>
-                <Sidebar />
-                <SearchBar />
+                <Sidebar/>
+                <SearchBar/>
                 <PageContainer>
                     <Route exact={exact} path={path} component={component} />
                 </PageContainer>
