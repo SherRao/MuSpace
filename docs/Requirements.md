@@ -126,7 +126,7 @@
 <h3>2.6.8 Profile Page</h3>
 <p>The profile page is where users go to see their own or their friends' listening activity and statistics on spotify. Each person's profile page can be customized with a profile picture, and a short biography (max 100 words).</p>
 <h3>2.6.9 Friends Page</h3>
-<p>The Friends Page will display all current friends, along with their listening activity (what they are currently listening to), along with leaderboards, and a similarity bar. The Leaderboard shows which of your friends has the most listening hours and Unique artists listened to in a given amount of time (to be determined)</p>
+<p>The Friends Page will display all current friends, along with their listening activity (what they are currently listening to), along with leaderboards, and a similarity bar. The Leaderboard shows which of your friends has the most listening hours and Unique artists listened to in a given amount of time (to be determined).</p>
 
 <h3>2.7 Use Case Diagram</h3>
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/3b73c13e-821d-4b73-aea6-bfda8448a12e" id="7rQYm4LzcUxa"></iframe></div>
