@@ -86,8 +86,8 @@
     <tr>
         <th>7</th>
         <td>Final Publishing & Deployment</td>
-        <td>August 4th, 2021</td>
-        <td>August 5th, 2021</td>
+        <td>August 14th, 2021</td>
+        <td>August 15th, 2021</td>
     </tr>
 </table>
 <h3>1.3 Reference Materials</h3>
