@@ -7,7 +7,7 @@ const StyledButton = Styled.button`
     border-radius: 33px;
     margin-top: 2.5em;
 
-    font-size: ${props => props.theme.fontSizes.small};
+    font-size: ${props => props.theme.fontSizes.medium};
     width: 22em;
     padding: 1em 0 1em 0;
     border: 0px; 
