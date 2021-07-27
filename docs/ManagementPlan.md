@@ -80,7 +80,7 @@
     </tr>
     <tr>
         <td>User Documentation Review</td>
-        <td>August 13rd, 2021</td>
+        <td>August 13th, 2021</td>
     </tr>
     <!-- No. 7 -->
     <tr>
