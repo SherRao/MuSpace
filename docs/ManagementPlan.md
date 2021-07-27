@@ -2,6 +2,7 @@
     <a href="./"><img id="header-logo" src="./logo.svg" width="250" alt="MuSpace logo"/></a>
 </h1>
 <h1 align="center">Software Project Management Plan (SPMP)</h1>
+
 <!-- Introduction -->
 <h2>1. Introduction</h2>
 <h3>1.1 Project Overview</h3>
@@ -268,7 +269,7 @@
 <!-- 3. Managerial Process -->
 <h2>3. Managerial Process</h2>
 <h3>3.1 Management Objectives and Priorities</h3>
-<p>The main objective of this project is to develop a web-based music application that will eventually branch out to Android and iOS. This uses the <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Spotify SDK</a> to connect people listening to similar styles of music. By the end of the term (August, 5th 2021), our goal is to have all project deliverables (the SRS, the SPMP, analysis, document, design documentation, back-end implementation, front-end implementation, mobile implementation, and user documentation) complete. By then our goal is to also have a complete well-implemented version of our application, which would be heavily Quality Tested. This project's major priority is to have an easy-to-understand, easy-to-read, consistent, and informative set of documentation as well as a seamless project flow. Since the project has no monetary funding, the completion of deliverables is solely dependent on our time and resources. </p>
+<p>The main objective of this project is to develop a web-based music application that will eventually branch out to Android and iOS. This uses the <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Spotify SDK</a> to connect people listening to similar styles of music. By the end of the term (August, 5th 2021), our goal is to have all project deliverables (the SRS, the SPMP, analysis, document, design documentation, back-end implementation, front-end implementation, and user documentation) complete. By then our goal is to also have a complete well-implemented version of our application, which would be heavily Quality Tested. This project's major priority is to have an easy-to-understand, easy-to-read, consistent, and informative set of documentation as well as a seamless project flow. Since the project has no monetary funding, the completion of deliverables is solely dependent on our time and resources. </p>
 <h3>3.2 Monitoring and Controlling Mechanisms</h3>
 <p>Our group meetings take place every Tuesday and Thursday during lectures, where we send one person to listen to the lecture, in this case, Jagveer. During this time, we split into groups for sprints, where work ethic is peer-checked.</p>
 <p>All calls are done via Discord (as in a person is not applicable), Documentation is done on Google Docs and then transferred onto our project webpage. The UI is designed on Figma. The Github project is our team's central repository for code and resources</p>
@@ -277,16 +278,11 @@
 <ol>
     <li>
         <b>Risk:</b> Too many users attempting to connect to the website/application. This can overload any of our back-end components by creating too many concurrent requests and crashing.<br>
-        <b>Solution:</b>Access to the site will be throttled by Cloudflare - Cloudflare is a DNS service that also provides DDOS mitigation. Cloudflare limits the number of people that can concurrently access the website.
+        <b>Solution:</b> Access to the site will be throttled by Cloudflare - Cloudflare is a DNS service that also provides DDOS mitigation. Cloudflare limits the number of people that can concurrently access the website.
     </li>
     <br>
     <li>
-        <b>Risk:</b> Too many users attempting to join the same listening room. This can crash a listening room and may even crash the back-end used to store the listening room data.<br>
-        <b>Solution:</b> If a certain number of users (128) try to connect to a listening room concurrently, they will be put into a queue where the application will limit the number of people who get through to the listening room per second (20 users/second).
-    </li>
-    <br>
-    <li>
-        <b>Risk:</b> Too many users attempting to connect to the website/application. This can overload any of our back-end components by creating too many concurrent requests and crashing.<br>
+        <b>Risk:</b> Someone who programs a bot to sign up as a user on the platform and send spam messages/harasses to others, overload the system by sending too many requests, or automate certain tasks.<br>
         <b>Solution:</b> All account creation, user sign-in and important actions will be verified using Google reCaptcha v2 to assure that the user is indeed human and not a bot. See Risk 4 for the answer for spam messages.
     </li>
     <br>
@@ -335,14 +331,11 @@
     <li><b>TypeScript</b> - <a href="https://www.typescriptlang.org/" target="_blank">TypeScript: Typed JavaScript at Any Scale. (typescriptlang.org)</a></li>
     <li><b>ReactJS framework</b><a href="https://reactjs.org/" target="_blank">React</a></li>
     <li><b>Node.js</b> - <a href="https://nodejs.org/en/" target="_blank">Node.js (nodejs.org)</a></li>
-    <li><b>Js-logger</b> - <a href="https://www.npmjs.com/package/js-logger" target="_blank">js-logger - npm (npmjs.com)</a></li>
     <li><b>Google Firestore</b> - <a href="https://cloud.google.com/firestore" target="_blank">Firestore: NoSQL document database | Google Cloud</a></li>
     <li><b>Google Authentication</b> - <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA&gl=US" target="_blank">Google Authenticator – Apps on Google Play</a></li>
-    <li><b>LyricsGenius API</b> - <a href="https://docs.genius.com/" target="_blank">Genius API</a></li>
     <li><b>Google reCaptcha v2</b> - <a href="https://developers.google.com/recaptcha/docs/display" target="_blank">reCaptcha v2</a></li>
     <li><b>Spotify API</b> - <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Web API | Spotify for Developers</a></li>
     <li><b>Spotify SDK</b> - <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Web Playback SDK | Spotify for Developers</a></li>
-    <li><b>Semantic UI</b> - <a href="https://semantic-ui.com/" target="_blank">Semantic UI</a></li>
     <li><b>StyledComponents</b> - <a href="https://styled-components.com/" target="_blank">styled-components</a></li>
 </ul>
 <h4>Project Management Tools:</h4>
@@ -368,10 +361,6 @@
         <li>The user will then press the submit button to login.</li>
         <li>The data from the form will be sent to <i>Firebase Authentication</i> - this will return a success or failure message that will then be displayed to the user.</li>
         <li>If the user is successful in logging in, they will be redirected to their home page.</li>
-        <li>If the user fails to login, they stay on the login page where they can try again.</li>
-        <ul>
-            <li>They have 3 tries to get the right and then they are locked out.</li>
-        </ul>
     </ul>
     <li><b>Account Creation:</b></li>
     <ul>
@@ -395,7 +384,6 @@
         <li>The home page is the central component of the user experience.</li>
         <li>The home page includes basic user information such as the most-streamed music that day and recently listened to songs.</li>
         <li>It also displays the user’s friend’s top albums and listening activity. There’s a section that also displays popular public listening rooms that the user may be interested in joining.</li>
-        <li>The home page includes an “I’m feeling lucky button” which once clicked will play a random song that the user may enjoy listening to. A song will be chosen based on the user’s current listening preferences.</li>
     </ul>
     <li><b>User Profile:</b></li>
     <ul>
@@ -412,38 +400,12 @@
         <li>On the Friends page, clicking/tapping on a friend's name will present the user with options to send a private message, or unfriend the selected user.</li>
         <li>A request is sent to the Firestore database, which will then return a list of chat room IDs that the user is a part of. The client can then request each chat room specifically, which the database will return.</li>
     </ul>
-    <li><b>Discover Page:</b></li>
-    <ul>
-        <li>Finding new friends:</li>
-        <ul>
-            <li>Adding a friend by searching a username in the search bar. Where a dropdown will appear with accounts that match the search and by selecting the profile it navigates you to their profile page. On this page, there will be a button next to the person’s name to add them as a friend.</li>
-            <li>Users are given recommended connections/matches (See 4.1.1 Suggested Connections). This allows the users to share listening activities, chat with each other, and have listening rooms.</li>
-        </ul>
-        <li>Finding new music:</li>
-        <ul>
-            <li>The back-end will generate a set of new songs/albums/artists that the user can listen to depending on their collated data.</li>
-            <li>This will be displayed on the discover page.</li>
-        </ul>
-    </ul>
     <li><b>Messaging Page:</b></li>
     <ul>
-        <li>The Messaging page shows a list of all ongoing chat rooms with friends</li>
+        <li>The Messaging page shows a list of all ongoing chat with friends</li>
         <li>These rooms are React components, which can individually be clicked on.</li>
         <li>Users will be able to select a conversation that will open it in a bigger component which will display the chats between all users, alongside their names and profile pictures. Any messages sent will be sent to the <i>Firestore</i> database, which will then be sent to all other users’ clients.</li>
         <li>Users will also be able to delete conversations. Deleting the conversation will remove it from the Messaging page and also remove the user from the list of users participating in the said chat room.</li>
-    </ul>
-    <li><b>Suggested Connections:</b></li>
-    <ul>
-        <li>Matches individuals based on:</li>
-        <ul>
-            <li>Location</li>
-            <li>Artists Shared</li>
-            <li>Songs Shared</li>
-            <li>Albums Shared</li>
-            <li>Genres Shared</li>
-        </ul>
-        <li>The Spotify API is used in order to obtain the items users have in common (including top items from recent/current listening and all-time)</li>
-        <li>A point-based rating system will be used to determine likelihood of a particular user being displayed as a suggested connection, the algorithm used for this calculation is yet to be defined.</li>
     </ul>
 </ul>
 <h3>4.2 Software Documentation</h3>
@@ -520,13 +482,6 @@
         <li>Chat room ID</li>
         <li>Chat messages</li>
         <li>Room participants</li>
-    </ul>
-    <li>Listening Rooms:</li>
-    <ul>
-        <li>Host user ID</li>
-        <li>A queue of URLs for songs to be played</li>
-        <li>List of user IDs for users who are currently listening</li>
-        <li>Counter of likes and dislikes</li>
     </ul>
 </ul>
 <p>The code styling and conventions have been outlined in this <a href="https://sherrao.github.io/MuSpace/Conventions.html">Github document</a>.</p>
