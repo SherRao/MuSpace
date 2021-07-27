@@ -260,7 +260,7 @@
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/dd3c7144-fde2-4d4e-96a5-1df4cb1198b3" id="QuUPrM8LWEpi"></iframe></div>
 
 <!-- Extra Details -->
-<h2>Extra Details</h2>
+<h2>6. Extra Details</h2>
 
 <!-- Versions -->
 <h3>Versions</h3>
