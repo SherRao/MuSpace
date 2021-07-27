@@ -11,7 +11,7 @@ import { Firebase } from "@functions";
 
 const Container = Styled.div`
     width: 100vw;
-    height: 100vh;
+    height: max-content;
     padding: 5em;
 
     margin: 0;
@@ -77,7 +77,7 @@ function LoginPage() {
 
     return (
         <Container>
-            <MuspaceLogo width="25em"/>
+            <MuspaceLogo width="25rem"/>
             <Header>Log in</Header>
             
             <LoginForm onSubmit={Firebase.loginWithEmail}/>

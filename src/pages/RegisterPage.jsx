@@ -10,7 +10,7 @@ import { Firebase } from "@functions";
 
 const Container = Styled.div`
     width: 100vw;
-    height: 100vh;
+    height: max-content;
     padding: 5em;
 
     margin: 0;
