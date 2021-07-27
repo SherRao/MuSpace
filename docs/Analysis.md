@@ -266,7 +266,7 @@
 <h2>6. Extra Details</h2>
 
 <!-- Versions -->
-<h3>Versions</h3>
+<h3>Version History:</h3>
 <ul>
     <li>Version 0.1.0 [Sections 1-3] Preliminary Document</li>
     <ul>
@@ -290,7 +290,7 @@
     </ul>
 </ul>
 <!-- Authored By: -->
-<h3>Authored By</h3>
+<h3>Authored By:</h3>
 <ul>
     <li>Ali, Farzan</li>
     <li>Alting-Mees, Adrian</li>
