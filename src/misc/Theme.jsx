@@ -23,15 +23,15 @@ const theme = {
     },
 
     fontSizes: {
-        small: "1em",
-        smallMedium: "1.33em",
-        kindaMed: "1.5em", // Change this please bro wtf is this
-        mediumSmall: "1.66em",
-        medium: "2em",
-        mediumMedium: "2em",
-        mediumLarge: "2.33em",
-        largeMedium: "2.66em",
-        large: "3em",
+        small: "1rem",
+        smallMedium: "1.33rem",
+        kindaMed: "1.5rem", // Change this please bro wtf is this
+        mediumSmall: "1.66rem",
+        medium: "1rem",
+        mediumMedium: "1rem",
+        mediumLarge: "1.33rem",
+        largeMedium: "1.66rem",
+        large: "2rem",
     },
 };
 
