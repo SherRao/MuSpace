@@ -155,11 +155,12 @@
     the user has a Spotify account and an internet connection to utilize the app. It will also be available on iOS and
     Android mobile devices.
 </p>
-<h2>4. Versions</h2>
+<h2>4. Extra Details</h2>
+<h3>Versions</h3>
 <ul>
     <li>Version 0.1 20/05/2021 Base Document</li>
 </ul>
-<h2>5. Developers</h2>
+<h3>Developers</h3>
 <ul>
     <li><a target="_blank" href="https://www.github.com/Adepeju-nefa">Adepeju Olowonefa</a></li>
     <li><a target="_blank" href="https://github.com/AdrianAltingMees">Adrian Alting-Mees</a></li>
