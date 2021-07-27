@@ -64,12 +64,12 @@
     <tr>
         <th rowspan="2">5</th>
         <td>Implementation</td>
-        <td>July 24th, 2021</td>
-        <td rowspan="2">August 5th, 2021</td>
+        <td>August 13th, 2021</td>
+        <td rowspan="2">August 15th, 2021</td>
     </tr>
     <tr>
         <td>Implementation SQA</td>
-        <td>July 26th, 2021</td>
+        <td>August 14th, 2021</td>
     </tr>
     <!-- No. 6 -->
     <tr>
