@@ -47,7 +47,7 @@ const StyledText = Styled.p`
     color: ${props => props.theme.colors.purple};
         
     align: left;
-    margin: 0.2rem 0.4rem 0 0.4rem;
+    margin: 0.1rem 0.4rem 0 0.4rem;
 `;
 
 const StyledIcon = Styled.div`
