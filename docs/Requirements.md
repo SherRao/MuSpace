@@ -8,7 +8,7 @@
     MuSpace is a social media application that utilizes the Spotify API (and others in the future) to match and
     connect users that listen to similar artists, genres, songs, etc.
 </p>
-<h3>1.2 Project Summary</h3>
+<h3>1.2 Purpose</h3>
 <p>
     This is the requirement document, which contains everything necessary for MuSpace. Additionally, the document
     includes features along with a description of how each feature will function. The audience for this document is
