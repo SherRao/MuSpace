@@ -16,9 +16,6 @@ const StyledForm = Styled.form`
         transition: all 0.25s ease;
     }
     
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
     transition: all 0.25s ease;
 `;
 
