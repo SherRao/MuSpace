@@ -13,6 +13,7 @@ const theme = {
         muSpacePurple: "#8162FF",
         mediumGrey: "#838383",
         lightGrey: "#D4D4D4",
+        lightPurple: "##E6DFFF"
     },
 
     fonts: {
@@ -23,15 +24,15 @@ const theme = {
     },
 
     fontSizes: {
-        small: "1rem",
-        smallMedium: "1.33rem",
-        kindaMed: "1.5rem", // Change this please bro wtf is this
-        mediumSmall: "1.66rem",
+        small: "0.4rem",
+        smallMedium: "0.6rem",
+        kindaMed: "0.5rem", // Change this please bro wtf is this
+        mediumSmall: "0.84rem",
         medium: "1rem",
         mediumMedium: "1rem",
-        mediumLarge: "1.33rem",
-        largeMedium: "1.66rem",
-        large: "2rem",
+        mediumLarge: "1.2rem",
+        largeMedium: "1.4rem",
+        large: "1.8rem",
     },
 };
 

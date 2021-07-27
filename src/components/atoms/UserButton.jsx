@@ -7,7 +7,7 @@ const StyledDiv = Styled.div`
   color: ${(props) => props.theme.colors.grey};
   align-items: center;
   transition: all 0.25s ease;
-  margin-top: 18em;  
+  margin: 0.2rem 0;
   display: flex;
   flex-direction: row;
 
@@ -27,7 +27,7 @@ const StyledLink = Styled.a`
 
 const StyledText = Styled.p`
     font-family: "Roboto";
-    font-size: ${(props) => props.theme.fontSizes.small};
+    font-size: ${(props) => props.theme.fontSizes.medium};
     font-weight: normal;
     color: ${(props) => props.theme.colors.mediumGrey};
     
@@ -51,7 +51,7 @@ const StyledIcon = Styled.div`
      padding: 3px;
 
      :hover{
-       color: ${props => props.theme.colors.muSpacePurple};
+       color: ${props => props.theme.colors.lightPurple};
        transition: all 0.25s ease-in-out;
      }
 

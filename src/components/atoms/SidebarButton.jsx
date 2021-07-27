@@ -3,10 +3,12 @@ import Styled from "styled-components";
 
 const StyledDiv = Styled.div`
     color: ${props => props.theme.colors.grey};
-    width: 90%;
+    width: 80%;
     height: 8%;
     align-self: center;
     border-radius: 15px;
+
+    margin: 0.2rem 0;
 
     display: inline-flex;
     flex-direction: row;
@@ -40,13 +42,12 @@ const StyledText = Styled.p`
     font-family: "Roboto";
         
     font-size: ${props => props.theme.fontSizes.medium};
-    font-weight: medium;
+    font-weight: 400;
         
     color: ${props => props.theme.colors.purple};
         
     align: left;
-    flex: 1;
-    margin: 1px;
+    margin: 0.2rem 0.4rem 0 0.8rem;
 `;
 
 const StyledIcon = Styled.div`
@@ -79,7 +80,6 @@ function SidebarButton({ text, icon, children, location }) {
             <StyledLink href={location}>
                 <StyledText>{text}</StyledText>
             </StyledLink>
-            
         </StyledDiv>
     );
 }
