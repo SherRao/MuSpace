@@ -108,6 +108,26 @@
 <p>
     It is required that users of MuSpace all have Spotify accounts, with some level of activity on the platform in order to build a profile. MuSpace is dependent       on how rich the user's musical history (songs listened to, artists followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile     will be and better the experience they will get from MuSpace.
 </p>
+<h2>2.6 User Interfaces</h2>
+<h3>2.6.1 Sidebar</h3>
+<p>The Sidebar will be consistent in all of the pages, except that of the Login/ Register  (2.6.3/ 2.6.4) Pages. It’s functionality will be to access all other pages (except Login/ Register pages) from any other page.</p>
+<h3>2.6.2 Searchbar</h3>
+<p>The Searchbar, similar to the SideBar (2.6.1) will be present on all pages.. The use of the search bar is to search for friends/ people’s  profiles. Along with this, the search bar contains the notification icon that indicates when a notification is present.</p>
+<h3>2.6.3 Login Page</h3>
+<p>The Login Page will be the first page that will be displayed to the user. This page will allow the user to login with the credentials using different authentications such as “login with Email” or “login with Google” (with their Google account). The page consists of a “Forgot Password” function that allows the user to reset their password with a link sent to the email linked to the MuSpace account. The sign up/register functionality is available for the user to create a new account and is  found beside the “Forgot Password” function, this function redirects the user to the Registration Page (2.6.4).</p>
+<h3>2.6.4 Register Page</h3>
+<p>The Register Page, asks for the new user’s information, such as First and Last names, Date of Birth, Username, Email and Password. This information will go into the database.</p>
+<h3>2.6.5 Home Page</h3>
+<p>The Home Page is the main page the user is redirected to after successfully logging in. This page displays some statistics about the user’s activity on MuSpace including favourite artists of the week, favourite songs of the week, hours spent listening to music, and more. The page also shows the friends activity tab which displays the music and album a particular friend (added previously by the user) is listening to.</p>
+<h3>2.6.6 Messages Page</h3>
+<p>The Messages Page is where users can go to see all of their chat history with each of their friends. The main messages page is a list of conversations the user has had with each friend, sorted by the most recent history. Clicking on one of these conversations will bring the user to the chat page, in which they can send a message to the friend who’s chat page they opened.</p>
+<h3>2.6.7 Notification Page</h3>
+<p>The Notification Page is where users can see any unread notifications they received. These could include new messages, friend requests, updates from the developers, or required actions such as updating account information.</p>
+<h3>2.6.8 Profile Page</h3>
+<p>The profile page is where users go to see their own or their friends' listening activity and statistics on spotify. Each person's profile page can be customized with a profile picture, and a short biography (max 100 words).</p>
+<h3>2.6.9 Friends Page</h3>
+<p>The Friends Page will display all current friends, along with their listening activity (what they are currently listening to), along with leaderboards, and a similarity bar. The Leaderboard shows which of your friends has the most listening hours and Unique artists listened to in a given amount of time (to be determined)</p>
+
 <h3>2.7 Use Case Diagram</h3>
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/3b73c13e-821d-4b73-aea6-bfda8448a12e" id="7rQYm4LzcUxa"></iframe></div>
 
