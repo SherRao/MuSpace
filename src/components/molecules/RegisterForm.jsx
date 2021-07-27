@@ -14,7 +14,7 @@ const StyledForm = Styled.form`
 
 const StyledHeader = Styled.h3`
     color: ${props => props.theme.colors.lightBlue};
-    font-size: ${props => props.theme.fontSizes.small};
+    font-size: ${props => props.theme.fontSizes.mediumSmall};
     margin-bottom: -0.7em;
     padding-bottom: 0.5em;
     align-content: left;
