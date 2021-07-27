@@ -235,7 +235,7 @@
 <!-- Further Steps -->
 <h2>3. Further Steps</h2>
 <h3>3.1 State Diagram</h3>
-<div><iframe width="768" height="432" src="https://miro.com/app/live-embed/o9J_l-_TB-k=/?moveToViewport=-3168,751,1845,1101" frameBorder="0" scrolling="no" allowFullScreen></iframe></div>
+<div><iframe width="960px" height="720px" src="https://miro.com/app/live-embed/o9J_l-_TB-k=/?moveToViewport=-3168,751,1845,1101" frameBorder="0" scrolling="no" allowFullScreen></iframe></div>
 <br/><br/>
 
 <!-- Non Functional Attributes -->
