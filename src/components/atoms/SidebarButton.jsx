@@ -47,7 +47,7 @@ const StyledText = Styled.p`
     color: ${props => props.theme.colors.purple};
         
     align: left;
-    margin: 0.2rem 0.4rem 0 0.8rem;
+    margin: 0.2rem 0.4rem 0 0.4rem;
 `;
 
 const StyledIcon = Styled.div`
@@ -55,7 +55,7 @@ const StyledIcon = Styled.div`
     max-width: 20%;
     height: auto;
 
-    padding: 2px;
+    padding: 2px 8px;
     color: ${props => props.theme.colors.purple};
 
     *{
