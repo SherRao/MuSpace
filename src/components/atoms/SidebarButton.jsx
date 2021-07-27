@@ -1,6 +1,5 @@
 import React from "react";
 import Styled from "styled-components";
-import SpaceFillerDiv from "@misc/SpaceFillerDiv";
 
 const StyledDiv = Styled.div`
     color: ${props => props.theme.colors.grey};
@@ -52,32 +51,30 @@ const StyledText = Styled.p`
 `;
 
 const StyledIcon = Styled.div`
-     align: left;
-     max-width: 20%;
-     height: auto;
-     flex: 1;
-   
-     padding: 2px;
-     color: ${props => props.theme.colors.purple};
+    align: left;
+    max-width: 20%;
+    height: auto;
 
-     *{
+    padding: 2px;
+    color: ${props => props.theme.colors.purple};
+
+    *{
         display: block;
         margin: 0 0.5em;
         width: 2em;
         height: 2em;
-     }
+    }
 
-     @media (max-width: 974px){
+    @media (max-width: 974px){
         align: center;
         max-width: 100%;
     }
-
 `;
 
-function SidebarButton({ text, icon, children, location }) {
+function SidebarButton({ text, icon, profilePic, location }) {
     return (
         <StyledDiv>
-            <StyledIcon>{children}</StyledIcon>
+            <StyledIcon>{profilePic}</StyledIcon>
             <StyledLink href={location}>
                 <StyledText>{text}</StyledText>
             </StyledLink>

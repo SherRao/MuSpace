@@ -42,7 +42,7 @@ function Sidebar() {
     const [profilePic, setProfilePic ] = React.useState(null);
 
     const user = Firebase.auth.currentUser;
-    const username = user.displayName;
+    const username = user.displayName === null ? "@username" : user.displayName;
 
     React.useEffect(() => {
         if(!profilePic)
@@ -53,7 +53,6 @@ function Sidebar() {
     async function getProfilePic() {
         const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
         setProfilePic(x);
-
     }
 
     return (
@@ -74,7 +73,7 @@ function Sidebar() {
                 <FaBug/>
             </SidebarButton>
 
-            <SpaceFillerDiv size={1} />
+            <SpaceFillerDiv />
 
             <StyledText>Total Listening Time</StyledText>
             <StatNumber>120,560</StatNumber>
@@ -83,7 +82,7 @@ function Sidebar() {
             <StyledText>Albums Liked</StyledText>
             <StatNumber>1,560</StatNumber>
 
-            <SpaceFillerDiv size={1} />
+            <SpaceFillerDiv />
 
             <UserButton
                 text={username}
