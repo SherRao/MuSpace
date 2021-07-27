@@ -15,23 +15,9 @@
     potential clients and their corresponding development teams. This is a reference guide for the development teams
     to ensure that everything runs smoothly, and some potential questions are answered.
 </p>
-<h2>1.3 Scope and Business Model</h2>
-<h3>1.3.1 Scope</h3>
+<h2>1.3 Business Model</h2>
 <p>
-    This document outlines the overall functionality, constraints and specifications of MuSpace, an application
-    available on various platforms - iOS, Android, and the Web. This is to be used as a social media platform that
-    matches people based on their favourite genre, artist, albums, and other musical tastes. You can also message
-    various artists directly using an AI chatbot. Users will also be able to host live music-sharing sessions with
-    friends, family, and strangers. Music sharing rooms can be locked with user IDs and passwords, generated on the
-    creation of the room - the room name has to be a minimum of 5 characters long, and the password should be a
-    minimum of 8 characters long.
-</p>
-<h3>1.3.2 Business Model</h3>
-<p>
-    The platform will be free to use. It will cost users nothing to download and there will be no advertisements in
-    the application. The reasons for allowing users to use the application for free are to first gain exposure and
-    publicity as well as develop monetizable content. Once enough exposure and publicity have been reached, R&D will
-    be completed to introduce some form of monetization, like monetized concerts and DJ sessions.
+    The platform will be free to use. It will cost users nothing to download and there will be no advertisements in the application. The reasons for allowing users     to use the application for free are to first gain exposure and publicity as well as develop monetizable content. 
 </p>
 <h2>1.4 Definitions, Acryonyms and Abbreviations</h2>
 <h3>1.4.1 Acronyms and Abbreviations</h3>
