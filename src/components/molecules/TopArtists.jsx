@@ -12,12 +12,12 @@ const StyledDiv = Styled.div`
     border-radius: 12px;
     filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
     padding: 10px;
-    margin: 0.6em 0.3em;
+    margin: 0 0.3em 0.6em 0.3em;
 `;
 
 const StyledText = Styled.p`
     font-family: "Roboto";
-    font-size: ${props => props.theme.fontSizes.mediumMedium};
+    font-size: ${props => props.theme.fontSizes.mediumLarge};
     color: ${props => props.theme.colors.black};
     flex: 1;
     margin: 0 auto;

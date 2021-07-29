@@ -17,7 +17,7 @@ const StyledDiv = Styled.div`
 
 const StyledText = Styled.p`
     font-family: "Roboto";
-    font-size: ${props => props.theme.fontSizes.mediumMedium};
+    font-size: ${props => props.theme.fontSizes.mediumLarge};
     color: ${props => props.theme.colors.black};
     flex: 1;
     margin: 0 auto;

@@ -28,7 +28,7 @@ const StyledLink = Styled.a`
 
 const StyledText = Styled.p`
     font-family: "Roboto";
-    font-size: ${props => props.theme.fontSizes.small};
+    font-size: ${props => props.theme.fontSizes.medium};
     font-weight: medium;
         
     color: ${props => props.theme.colors.grey};

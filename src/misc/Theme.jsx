@@ -32,6 +32,7 @@ const theme = {
         mediumLarge: "1.2rem",
         largeMedium: "1.4rem",
         large: "1.8rem",
+        extraLarge: "5.2rem"
     },
 };
 
