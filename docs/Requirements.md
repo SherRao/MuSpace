@@ -144,7 +144,10 @@ The application will run on any Windows, OSx or Linux machine. The web browsers 
 <ul>
     <li>OS: <a href="https://www.microsoft.com/en-ca/windows" target="_blank">Windows</a>, <a href="https://www.apple.com/ca/macos/big-sur/" target="_blank">MacOS</a>, <a href="https://www.linux.org/" target="_blank">GNU/Linux</a></li>
     <li>Stable network connection</li>
-    <li>A device that has access to a modern web browser with JavaScript ES6 capabilities</li>
+    <li>A device that has access to a modern web browser with JavaScript ES6 capabilities. E.G. <a href="https://www.google.com/intl/en_ca/chrome/" target="_blank">Google Chrome</a>, 
+        
+  <a href="https://www.mozilla.org/en-CA/firefox/new/" target="_blank">Firefox</a>, <a href="https://www.apple.com/ca/safari/" target="_blank">Safari</a>, <a href="https://www.microsoft.com/en-us/edge" target="_blank">Microsoft Edge</a>, etc. </li>
+    <li><a href="https://www.spotify.com/us/home/" target="_blank">Active Spotify Account</a></li>
 </ul>
 <h4>3.2.2 Server/Development Requirements</h4>
 <ul>
