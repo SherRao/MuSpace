@@ -1,7 +1,7 @@
 import React from "react";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router, Redirect} from "react-router-dom";
 
-import { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, ErrorPage } from "@pages";
+import { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, MessagesPage, ErrorPage } from "@pages";
 import { Firebase } from "@functions";
 
 import { ProtectedRoute } from "@misc";
@@ -16,26 +16,58 @@ function PageRouter() {
         <Router>
             <Switch>
                 <ProtectedRoute
-                    path="/home"
+                    exact path="/"
                     component={HomePage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
+                <Route path="/home"><Redirect to="/" /></Route>
+
+                <UnprotectedRoute
+                    path="/login"
+                    component={LoginPage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
+                <UnprotectedRoute
+                    path="/register"
+                    component={RegisterPage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
+
+                <Route
+                    path="/verify"
+                    component={VerifyEmailPage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
+                <Route
+                    path="/redirect"
+                    component={RedirectPage}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
                 />
 
                 <ProtectedRoute
-                    path="/Profile"
+                    path="/profile"
                     component={ProfilePage}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
                 />
-
-                <UnprotectedRoute
-                    path="/login"
-                    page={LoginPage}
+                <ProtectedRoute
+                    path="/messages"
+                    component={MessagesPage}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
                 />
 
+                <Route
+                    path="/test"
+                    component={TestPage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
             </Switch>
         </Router>
     );

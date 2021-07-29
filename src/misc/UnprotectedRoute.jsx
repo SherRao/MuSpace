@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import Styled from "styled-components";
 import { Route, Redirect } from "react-router-dom";
 
-function UnprotectedRoute({ page, isLoggedIn, isVerified, ...rest }) {
+function UnprotectedRoute({ component, isLoggedIn, isVerified, ...rest }) {
     if (isLoggedIn && isVerified) {
         return (
             <Route {...rest}>
@@ -20,7 +20,7 @@ function UnprotectedRoute({ page, isLoggedIn, isVerified, ...rest }) {
     } else {
         return (
             <Route {...rest}>
-                {page}
+                {component}
             </Route>
         );
     }

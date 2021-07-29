@@ -34,13 +34,17 @@ const PageContainer = Styled.div`
     box-sizing: border-box;         /* Opera/IE 8+ */
 `;
 
-function ProtectedRoute({ page, isLoggedIn, isVerified, ...rest }) {
+function ProtectedRoute({ component, isLoggedIn, isVerified, ...rest }) {
     if (isLoggedIn && isVerified) {
         return (
             <Route {...rest}>
-                <Sidebar />
-                <SearchBar />
-                {page}
+                <StyledDiv>
+                    <Sidebar />
+                    <SearchBar />
+                    <PageContainer>
+                        {component}
+                    </PageContainer>
+                </StyledDiv>
             </Route>
         );
             

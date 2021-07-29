@@ -28,6 +28,7 @@ function HomePage() {
     return (
         <Container>
             <FavArtist/>
+            <h1>Hello world</h1>
         </Container>
     );
 }
