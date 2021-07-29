@@ -151,21 +151,17 @@ The application will run on any Windows, OSx or Linux machine. The web browsers 
 </ul>
 <h4>3.2.2 Server/Development Requirements</h4>
 <ul>
-    <li>Cloudflare</li>
-    <li>Amazon Web Services</li>
+    <li><a href="https://www.cloudflare.com/" target="_blank">Cloudflare</a></li>
+    <li><a href="https://firebase.google.com/" target="_blank">Google Firebase</a></li>
     <ul>
-        <li>EC2</li>
-        <li>CodeDeploy</li>
-        <li>S3</li>
-    </ul>
-    <li>Google Firebase</li>
-    <ul>
-        <li>Authentication</li>
-        <li>Realtime Database</li>
-        <li>Firestore</li>
+        <li><a href="https://firebase.google.com/docs/auth" target="_blank">Authentication</a></li>
+        <li><a href="https://firebase.google.com/docs/firestore" target="_blank">Firestore</a></li>
+        <li><a href="https://firebase.google.com/docs/storage" target="_blank">Cloud Storage</a></li>
     </ul>
 </ul>
 <h3>3.3 Security</h3>
+<p>MuSpace will allow users to create accounts either by signing up with Google or by creating a username and password. All transactions for authentication are passed through a secure encrypted end-to-end pipeline to the Google Firebase Authentication servers. Google Firebase Authentication is compliant with the ISO 27001, ISO 27017, ISO 27018, SOC 1, SOC 2, and SOC 3 security evaluation standards. Below are some technologies MuSpace itself uses for security:
+</p>
 <ul>
     <li>Cloudflare</li>
     <ul>
