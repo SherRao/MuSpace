@@ -6,5 +6,6 @@ import RedirectPage from "./SpotifyRedirectPage";
 import ProfilePage from "./ProfilePage";
 import VerifyEmailPage from "./VerifyEmailPage";
 import ErrorPage from "./ErrorPage";
+import MessagesPage from "./MessagesPage";
 
-export { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, ErrorPage };
+export { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, ErrorPage, MessagesPage };

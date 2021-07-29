@@ -1,7 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { AlbumCover, Card, MiniTopCategory, LeaderBoardLabel } from  "@atoms";
+import {MiniTopCategory} from  "@atoms";
 
 const StyledDiv = Styled.div`
     display: flex;
@@ -27,7 +27,6 @@ const StyledText = Styled.p`
 `;
 
 const StyledOuterDiv = Styled.div`
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
