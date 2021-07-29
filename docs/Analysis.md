@@ -144,7 +144,7 @@
     <br/>
     <!-- Friends View -->
     <li>
-        <b>FriendsView</b> - Where a User goes to see their friends.
+        <b>FriendsPageView</b> - Where a User goes to see their friends.
         <ul>
             <li><b>FriendsListView</b> - Where a User views a list of all their Friends</li>
             <li><b>AddFriendsView</b> - Where a User can see to search for Friends.</li>
