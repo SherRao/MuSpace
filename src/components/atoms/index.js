@@ -10,6 +10,7 @@ import RegisterField from "./RegisterField";
 import GoogleSigninButton from "./GoogleSigninButton";
 import SearchField from "./SearchField";
 import MiniTopCategory from "./MiniTopCategory";
+import UserButton from "./UserButton";
 
 export {
     AlbumCover,
@@ -23,5 +24,6 @@ export {
     LeaderBoardStat,
     GoogleSigninButton,
     SearchField,
-    MiniTopCategory
+    MiniTopCategory,
+    UserButton
 };

@@ -1,24 +1,49 @@
 import React from "react";
-import { Redirect, Switch, Route } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
-import { ProtectedRoute, UnprotectedRoute } from "@misc";
-import { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage } from "@pages";
+import { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, ErrorPage } from "@pages";
+import { Firebase } from "@functions";
+
+import { ProtectedRoute } from "@misc";
+import { UnprotectedRoute } from "@misc";
 
 function PageRouter() {
+    let user = getUser();
+    let isLoggedIn = true;//user !== null;
+    let isVerified = true;//user != null ? user.emailVerified : false;
+
     return (
-        <Switch>
-            <UnprotectedRoute path="/login" component={LoginPage} />
-            <UnprotectedRoute path="/register" component={RegisterPage} />
-            <Route path="/verify" component={VerifyEmailPage} />
+        <Router>
+            <Switch>
+                <ProtectedRoute
+                    path="/home"
+                    component={HomePage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
 
-            <ProtectedRoute exact={true} path="/" component={HomePage} />
-            <ProtectedRoute path="/redirect" component={RedirectPage} />
-            <ProtectedRoute path="/home"><Redirect to="/" /></ProtectedRoute>
-            <ProtectedRoute path="/test" component={TestPage} /> 
-            <Route path="/profile" component={ProfilePage} />
+                <ProtectedRoute
+                    path="/Profile"
+                    component={ProfilePage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
 
-        </Switch>
+                <UnprotectedRoute
+                    path="/login"
+                    page={LoginPage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
+
+            </Switch>
+        </Router>
     );
+}
+
+function getUser() {
+    Firebase.auth.onAuthStateChanged((user) => {return user;});
+
 }
 
 export default PageRouter;

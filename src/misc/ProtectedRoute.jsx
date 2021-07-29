@@ -1,9 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
 import { Route, Redirect } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-
-import { Firebase } from "@functions";
 
 import { SearchBar } from "@molecules";
 import { Sidebar } from "@organisms";
@@ -37,24 +34,30 @@ const PageContainer = Styled.div`
     box-sizing: border-box;         /* Opera/IE 8+ */
 `;
 
-function ProtectedRoute({ exact = false, path, component }) {
-    const [user] = useAuthState(Firebase.firebase.auth());
-    if (!user)
-        return <Redirect to="/login" />;
-
-    else if(user && !user.emailVerified) 
-        return <Redirect to="/verify" />;
-
-    else 
+function ProtectedRoute({ page, isLoggedIn, isVerified, ...rest }) {
+    if (isLoggedIn && isVerified) {
         return (
-            <StyledDiv>
-                <Sidebar/>
-                <SearchBar/>
-                <PageContainer>
-                    <Route exact={exact} path={path} component={component} />
-                </PageContainer>
-            </StyledDiv>
+            <Route {...rest}>
+                <Sidebar />
+                <SearchBar />
+                {page}
+            </Route>
         );
+            
+    } else if(isLoggedIn) {
+        return (
+            <Route {...rest}>
+                <Redirect to="/verify"/>
+            </Route>
+        );
+        
+    } else {
+        return (
+            <Route {...rest}>
+                <Redirect to="/login"/>
+            </Route>
+        );
+    }
 }
 
 export default ProtectedRoute;

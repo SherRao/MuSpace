@@ -1,16 +1,11 @@
 import React from "react";
 import Styled from "styled-components";
-import { Redirect } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
 
 import { MuspaceLogo } from "@atoms";
-import { RegisterForm } from "@molecules";
-
-import { Firebase } from "@functions";
 
 const Container = Styled.div`
     width: 100vw;
-    height: max-content;
+    height: 100vh;
     padding: 5em;
 
     margin: 0;
@@ -30,22 +25,13 @@ const Container = Styled.div`
     box-sizing: border-box;         /* Opera/IE 8+ */
 `;
 
-const Header = Styled.h3`
-    color: ${props => props.theme.colors.lightBlue};
-    font-size: ${props => props.theme.fontSizes.medium};
-    margin-bottom: -0.5em;
-    padding-bottom: 0.5em;
-
-`;
-
-function RegisterPage() {
+function ErrorPage() {
     return (
         <Container>
-            <MuspaceLogo width="25em"/>
-            <Header>Create Your Account</Header>
-            <RegisterForm onSubmit={Firebase.registerWithEmail}/>
-        </Container>
+            <MuspaceLogo/>
+            404 Error
+        </Container >
     );
 }
 
-export default RegisterPage;
+export default ErrorPage;

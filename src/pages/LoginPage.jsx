@@ -71,10 +71,6 @@ const Dot = Styled.span`
 `;
 
 function LoginPage() {
-    const [user] = useAuthState(Firebase.auth);
-    if(user)
-        return (<Redirect to="/home"/>);
-
     return (
         <Container>
             <MuspaceLogo width="25rem"/>

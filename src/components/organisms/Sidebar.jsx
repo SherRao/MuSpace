@@ -1,7 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 import { SidebarButton, MuspaceLogo } from "@atoms";
-import UserButton from "@atoms/UserButton";
+import { UserButton } from "@atoms";
 import { Firebase } from "@functions";
 import { SpaceFillerDiv } from "@misc";
 
@@ -39,16 +39,16 @@ const StatNumber = Styled.h4`
 `;
 
 function Sidebar() {
-    const [profilePic, setProfilePic ] = React.useState(null);
+    const [profilePic, setProfilePic] = React.useState(null);
 
     const user = Firebase.auth.currentUser;
-    const username = user.displayName === null ? "@username" : user.displayName;
+    const username = user ? user.displayName : "@username";
 
-    React.useEffect(() => {
+    /* React.useEffect(() => {
         if(!profilePic)
             getProfilePic();
 
-    }, []);
+    }, []); */
 
     async function getProfilePic() {
         const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
