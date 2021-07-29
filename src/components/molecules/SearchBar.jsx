@@ -8,7 +8,8 @@ const StyledForm = Styled.form`
     padding: 1em;
     background-color: transparent;
     transition: all 0.25s ease;
-    height: 10px;
+    width: 100%;
+    height: min-content;
     
     :focus {
         border: 1px solid ${props => props.theme.colors.lightBlue};
