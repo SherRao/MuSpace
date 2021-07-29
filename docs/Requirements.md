@@ -5,15 +5,11 @@
 <h2>1. Introduction</h2>
 <h3>1.1 Project Summary</h3>
 <p>
-    MuSpace is a social media application that utilizes the Spotify API (and others in the future) to match and
-    connect users that listen to similar artists, genres, songs, etc.
+    MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. Users will be able to add friends on MuSpace with who they can chat, and look at their detailed Spotify listening history. Users will also be able to view detailed statistics about their listening habits, such as listening time, favourite genres, favourite artists, and more. 
 </p>
 <h3>1.2 Purpose</h3>
 <p>
-    This is the requirement document, which contains everything necessary for MuSpace. Additionally, the document
-    includes features along with a description of how each feature will function. The audience for this document is
-    potential clients and their corresponding development teams. This is a reference guide for the development teams
-    to ensure that everything runs smoothly, and some potential questions are answered.
+    This is the requirement document, which contains everything necessary for MuSpace. Additionally, the document includes the project features along with a description of how each feature will function.  The audience for this document is potential clients and their corresponding development teams. This is a reference guide for the development teams to ensure that everything runs smoothly, and answer potential questions along the way.
 </p>
 <h3>1.3 Scope and Business Model</h3>
 <h4>1.3.1 Scope</h4>
@@ -77,32 +73,28 @@
 <h2>2. Overall description</h2>
 <h3>2.1 Product Perspective</h3>
 <p>
-    MuSpace will take a web-based development approach using React and eventually be transferred to IOS and Android
-    using React Native. Major components include user connection to Spotify using Spotify’s Web API, and web-based
-    chat functionality and listening rooms using Google Firebase’s Realtime No-SQL Database.
+    MuSpace will take a web-based development approach using <a href="https://reactjs.org/" target="_blank">React</a>.
+    Major components include user connection to Spotify using <a href="https://developer.spotify.com/documentation/web-api/"     target="_blank">Spotify’s Web API</a>, and web-based chat functionality and listening rooms using <a           href="https://firebase.google.com/?gclid=Cj0KCQjw6NmHBhD2ARIsAI3hrM2r9bx-3SnvqnYGD46fymSbcpADc9fc4uqnhUJbNTPDoJXRWrtDO3gaAhNfEALw_wcB&gclsrc=aw.ds" target="_blank">Google Firebase’s</a> Realtime No-SQL Database.
 </p>
 <h4>2.1.1 <a href="https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=327%3A12583" target="_blank">Sample GUI</a></h4>
 <iframe width="960px" height="720px" src="https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=327%3A12583" frameBorder="0" scrolling="no" allowFullScreen></iframe>
 <h3>2.2 Product Functions</h3>
 <p>
-    MuSpace is a music-matchmaking application that takes the user’s musical interest (i.e. Songs, artists, albums,
-    etc.) and uses that to build a profile of that user. MuSpace then uses that profile to match the user with other
-    users with similar interests. Matched users can chat with each other using the in-app chat feature and can make
-    new friends. The app currently supports Spotify for music preference data.
+    MuSpace is a music application allowing users to connect and chat with each other, as well as look at what music their friends have been listening to. Users will be able to add friends, and friends can chat with each other using the in-app chat feature. The app currently supports Spotify for music preference data.
 </p>
 <h3>2.3 User Characteristics</h3>
 <p>
-    MuSpace’s primary users are those trying to connect with others who have a similar taste in music. MuSpace will be easy to use with a minimalistic UI, allowing     users with minimal technical literacy to navigate through the application to connect with their friends and share music. A help section, as well as an FAQ,         will be included in all versions of MuSpace so that users can quickly get up to speed. 
+   MuSpace’s primary users are those trying to connect with others who have a similar taste in music. MuSpace will be easy to use with a minimalistic UI, allowing users with minimal technical literacy to navigate through the application to connect with their friends and share music. A help section, as well as an FAQ, will be included in all versions of MuSpace so that users can quickly get up to speed. 
 </p>
 <h3>2.4 Constraints</h3>
 <p>
-    MuSpace users must have an active Spotify account. Without a spotify account, users will be unable to create their MuSpace account. MuSpace, at this current       point in time, will not function on iOS or Android devices, it will only be available on a web browser. iOS and Android functionality will be done later in         time. 
+    MuSpace users must have an active Spotify account. Without a Spotify account, users will be unable to create their MuSpace account. MuSpace, at this current point in time, will not function on iOS or Android devices, it will only be available on a web browser. IOS and Android functionality will be added in the the near future. 
 </p>
 <p>
     MuSpace users must have a stable internet connection in order to use the web application. Weak internet connection can result in excessive buffering time.
-</p
+</p>
 <p>
-    MuSpace will have time, cost and reliability constraints. Development and testing must be finished before August 15th, 2021, and will be developed for free         with no funding from the school or the students. Publication to the Apple App store requires a fee, so this will be a constraint.
+    MuSpace will have time, cost and reliability constraints. Development and testing must be finished before August 15th, 2021, and will be developed for free with no funding from the school or the students. Publication to the Apple App store requires a fee, so this will be a constraint.
 </p>
 <h3>2.5 Assumptions and Dependencies</h3>
 <p>
