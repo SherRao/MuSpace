@@ -124,8 +124,8 @@
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/3b73c13e-821d-4b73-aea6-bfda8448a12e" id="7rQYm4LzcUxa"></iframe></div>
 
 <h2>3. Technical Requirements</h2>
-<h3>3.1 External Interfaces</h3>
-<ul>
+<h3>3.1 Hardware Interfaces</h3>
+<!-- <ul>
     <li>Authentication</li>
     <ul>
         <li>Username/ Password (Google Authentication)</li>
@@ -135,11 +135,14 @@
         <li>Timestamps</li>
         <li>Message ID</li>
     </ul>
-</ul>
-<h3>3.2 Performance Requirements</h3>
+</ul> -->
+<p>
+The application will run on any Windows, OSx or Linux machine. The web browsers that can be used include Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge. The input will be received from the keyboard and mouse the system is attached to. 
+</p>
+<h3>3.2 Functional Requirements</h3>
 <h4>3.2.1 Client Requirements</h4>
 <ul>
-    <li>OS: Windows, MacOS, GNU/Linux, Android, iOS</li>
+    <li>OS: <a href="https://www.microsoft.com/en-ca/windows" target="_blank">Windows</a>, <a href="https://www.apple.com/ca/macos/big-sur/" target="_blank">MacOS</a>, <a href="https://www.linux.org/" target="_blank">GNU/Linux</a></li>
     <li>Stable network connection</li>
     <li>A device that has access to a modern web browser with JavaScript ES6 capabilities</li>
 </ul>
