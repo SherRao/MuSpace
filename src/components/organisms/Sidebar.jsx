@@ -10,8 +10,8 @@ import { RiChat4Fill } from "react-icons/ri"; // message button icon outline and
 import { FaBug } from "react-icons/fa"; // Report a bug button icon
 
 const StyledDiv = Styled.div`
-    width: 16vw;
-    height: 100vh; 
+    width: 100%;
+    height: 100%;
     padding: 0.4rem 0.4rem;
 
     background-color: ${(props) => props.theme.colors.white};

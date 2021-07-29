@@ -5,48 +5,48 @@ import { Route, Redirect } from "react-router-dom";
 import { SearchBar } from "@molecules";
 import { Sidebar } from "@organisms";
 
-const StyledDiv = Styled.div`
-    background-color: ${props => props.theme.colors.white};
-    display: grid;
-    grid-template-columns: 20vw auto;
-    grid-auto-rows: 10vh auto;
+const LeftDiv = Styled.div`
+    width: 18vw;
+    height: 100vh;
+    position: fixed;
+`;
 
-    transition: all 0.25s ease;
+const RightDiv = Styled.div`
+    width: 80vw;
+    height 100%;
 
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
+    left: 18vw;
+    position: sticky;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 1vw;
 `;
 
 const PageContainer = Styled.div`
-    padding: 0;
+    padding: 0 1vw;
 
-    background-color: ${props => props.theme.colors.white};
-    /*display: inline-flex;*/
-    /*flex-direction: row;*/
-    /*align-items: inline;*/
-    grid-column-start: 2;
-
+    display: flex;
+    flex-grow: 1;
+    
     transition: all 0.25s ease;
-
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
 `;
 
 function ProtectedRoute({ component, isLoggedIn, isVerified, ...rest }) {
+    const Component = component; // react sucks....
     if (isLoggedIn && isVerified) {
-        return (
-            <Route {...rest}>
-                <StyledDiv>
-                    <Sidebar />
-                    <SearchBar />
-                    <PageContainer>
-                        {component}
-                    </PageContainer>
-                </StyledDiv>
-            </Route>
-        );
+        return (<Route {...rest}>
+            <LeftDiv>
+                <Sidebar />
+            </LeftDiv>
+            <RightDiv>
+                <SearchBar />
+                <PageContainer>
+                    <Component />
+                </PageContainer>
+            </RightDiv>
+        </Route>);
             
     } else if(isLoggedIn) {
         return (

@@ -8,9 +8,11 @@ import { ProtectedRoute } from "@misc";
 import { UnprotectedRoute } from "@misc";
 
 function PageRouter() {
-    let user = getUser();
-    let isLoggedIn = true;//user !== null;
-    let isVerified = true;//user != null ? user.emailVerified : false;
+    const [user, setUser] = React.useState(null);
+    Firebase.auth.onAuthStateChanged( (user) => {setUser(user);} );
+    
+    let isLoggedIn = user != null;
+    let isVerified = isLoggedIn ? user.emailVerified : false;
 
     return (
         <Router>
@@ -21,7 +23,9 @@ function PageRouter() {
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
                 />
+
                 <Route path="/home"><Redirect to="/" /></Route>
+
 
                 <UnprotectedRoute
                     path="/login"
@@ -29,22 +33,10 @@ function PageRouter() {
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
                 />
+
                 <UnprotectedRoute
                     path="/register"
                     component={RegisterPage}
-                    isLoggedIn={isLoggedIn}
-                    isVerified={isVerified}
-                />
-
-                <Route
-                    path="/verify"
-                    component={VerifyEmailPage}
-                    isLoggedIn={isLoggedIn}
-                    isVerified={isVerified}
-                />
-                <Route
-                    path="/redirect"
-                    component={RedirectPage}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
                 />
@@ -55,9 +47,24 @@ function PageRouter() {
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
                 />
+
                 <ProtectedRoute
                     path="/messages"
                     component={MessagesPage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
+
+                <Route
+                    path="/verify"
+                    component={VerifyEmailPage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
+
+                <Route
+                    path="/redirect"
+                    component={RedirectPage}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
                 />
@@ -68,14 +75,11 @@ function PageRouter() {
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
                 />
+
+                <Route component={ErrorPage}/>
             </Switch>
         </Router>
     );
-}
-
-function getUser() {
-    Firebase.auth.onAuthStateChanged((user) => {return user;});
-
 }
 
 export default PageRouter;

@@ -2,14 +2,13 @@ import React from "react";
 import Styled from "styled-components";
 
 const StyledTextInput = Styled.input`
-    width: 90%;
+    width: 100%;
     height: 1.5em;
-    margin-top: 1.5em;
 
     border: 1px solid ${props => props.theme.colors.pink};
     color: ${props => props.theme.colors.lightGrey};
 
-    border-radius: 7px;
+    border-radius: 0.45em;
     padding: 1em;
     background-color: transparent;
     transition: all 0.25s ease;
@@ -19,7 +18,6 @@ const StyledTextInput = Styled.input`
         outline: none;
 
         transition: all 0.25s ease;
-    
     }
 `;
 
