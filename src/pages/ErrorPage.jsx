@@ -25,11 +25,18 @@ const Container = Styled.div`
     box-sizing: border-box;         /* Opera/IE 8+ */
 `;
 
+const Header = Styled.h3`
+    color: ${props => props.theme.colors.purple};
+    font-size: ${props => props.theme.fontSizes.large};
+    margin-bottom: -0.5em;
+    padding-bottom: 0.5em;
+`;
+
 function ErrorPage() {
     return (
         <Container>
-            <MuspaceLogo/>
-            404 Error
+            <MuspaceLogo width="25rem"/>
+            <Header>404 Error</Header>
         </Container >
     );
 }
