@@ -1,9 +1,10 @@
 import React from "react";
 import Styled from "styled-components";
+import {FavArtist} from "@molecules";
 
 const Container = Styled.div`
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     padding: 5em;
 
     margin: 0;
@@ -25,7 +26,10 @@ const Container = Styled.div`
 
 function HomePage() {
     return (
-        <Container/>
+        <Container>
+            <FavArtist/>
+            <h1>Hello world</h1>
+        </Container>
     );
 }
 

@@ -1,60 +1,80 @@
 import React from "react";
 import Styled from "styled-components";
 import { Route, Redirect } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-
-import { Firebase } from "@functions";
 
 import { SearchBar } from "@molecules";
 import { Sidebar } from "@organisms";
 
+import { HomePage } from "@pages";
+
 const StyledDiv = Styled.div`
     background-color: ${props => props.theme.colors.white};
-    display: grid;
-    grid-template-columns: 20vw auto;
-    grid-auto-rows: 10vh auto;
-
     transition: all 0.25s ease;
 
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
+    width: 100vw;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: row;
+`;
+
+const LeftDiv = Styled.div`
+    width: 18vw;
+    height: 100vh;
+    position: fixed;
+`;
+
+const RightDiv = Styled.div`
+    width: 80vw;
+    height 100%;
+
+    left: 18vw;
+    position: sticky;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 1vw;
 `;
 
 const PageContainer = Styled.div`
-    padding: 0;
+    padding: 0 1vw;
 
-    background-color: ${props => props.theme.colors.white};
-    /*display: inline-flex;*/
-    /*flex-direction: row;*/
-    /*align-items: inline;*/
-    grid-column-start: 2;
-
+    display: flex;
+    flex-grow: 1;
+    
     transition: all 0.25s ease;
-
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
 `;
 
-function ProtectedRoute({ exact = false, path, component }) {
-    const [user] = useAuthState(Firebase.firebase.auth());
-    if (!user)
-        return <Redirect to="/login" />;
-
-    else if(user && !user.emailVerified) 
-        return <Redirect to="/verify" />;
-
-    else 
-        return (
-            <StyledDiv>
-                <Sidebar/>
-                <SearchBar/>
+function ProtectedRoute({ component, isLoggedIn, isVerified, ...rest }) {
+    const Component = component; // react sucks....
+    if (isLoggedIn && isVerified) {
+        return (<Route {...rest}>
+            <LeftDiv>
+                <Sidebar />
+            </LeftDiv>
+            <RightDiv>
+                <SearchBar />
                 <PageContainer>
-                    <Route exact={exact} path={path} component={component} />
+                    <Component />
                 </PageContainer>
-            </StyledDiv>
+            </RightDiv>
+        </Route>);
+            
+    } else if(isLoggedIn) {
+        return (
+            <Route {...rest}>
+                <Redirect to="/verify"/>
+            </Route>
         );
+        
+    } else {
+        return (
+            <Route {...rest}>
+                <Redirect to="/login"/>
+            </Route>
+        );
+    }
 }
 
 export default ProtectedRoute;

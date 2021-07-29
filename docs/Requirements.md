@@ -5,15 +5,11 @@
 <h2>1. Introduction</h2>
 <h3>1.1 Project Summary</h3>
 <p>
-    MuSpace is a social media application that utilizes the Spotify API (and others in the future) to match and
-    connect users that listen to similar artists, genres, songs, etc.
+    MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. Users will be able to add friends on MuSpace with who they can chat, and look at their detailed Spotify listening history. Users will also be able to view detailed statistics about their listening habits, such as listening time, favourite genres, favourite artists, and more. 
 </p>
 <h3>1.2 Purpose</h3>
 <p>
-    This is the requirement document, which contains everything necessary for MuSpace. Additionally, the document
-    includes features along with a description of how each feature will function. The audience for this document is
-    potential clients and their corresponding development teams. This is a reference guide for the development teams
-    to ensure that everything runs smoothly, and some potential questions are answered.
+    This is the requirement document, which contains everything necessary for MuSpace. Additionally, the document includes the project features along with a description of how each feature will function.  The audience for this document is potential clients and their corresponding development teams. This is a reference guide for the development teams to ensure that everything runs smoothly, and answer potential questions along the way.
 </p>
 <h3>1.3 Scope and Business Model</h3>
 <h4>1.3.1 Scope</h4>
@@ -77,36 +73,32 @@
 <h2>2. Overall description</h2>
 <h3>2.1 Product Perspective</h3>
 <p>
-    MuSpace will take a web-based development approach using React and eventually be transferred to IOS and Android
-    using React Native. Major components include user connection to Spotify using Spotify’s Web API, and web-based
-    chat functionality and listening rooms using Google Firebase’s Realtime No-SQL Database.
+    MuSpace will take a web-based development approach using <a href="https://reactjs.org/" target="_blank">React</a>.
+    Major components include user connection to Spotify using <a href="https://developer.spotify.com/documentation/web-api/"     target="_blank">Spotify’s Web API</a>, and web-based chat functionality and listening rooms using <a           href="https://firebase.google.com/?gclid=Cj0KCQjw6NmHBhD2ARIsAI3hrM2r9bx-3SnvqnYGD46fymSbcpADc9fc4uqnhUJbNTPDoJXRWrtDO3gaAhNfEALw_wcB&gclsrc=aw.ds" target="_blank">Google Firebase’s</a> Realtime No-SQL Database.
 </p>
 <h4>2.1.1 <a href="https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=327%3A12583" target="_blank">Sample GUI</a></h4>
 <iframe width="960px" height="720px" src="https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=327%3A12583" frameBorder="0" scrolling="no" allowFullScreen></iframe>
 <h3>2.2 Product Functions</h3>
 <p>
-    MuSpace is a music-matchmaking application that takes the user’s musical interest (i.e. Songs, artists, albums,
-    etc.) and uses that to build a profile of that user. MuSpace then uses that profile to match the user with other
-    users with similar interests. Matched users can chat with each other using the in-app chat feature and can make
-    new friends. The app currently supports Spotify for music preference data.
+    MuSpace is a music application allowing users to connect and chat with each other, as well as look at what music their friends have been listening to. Users will be able to add friends, and friends can chat with each other using the in-app chat feature. The app currently supports Spotify for music preference data.
 </p>
 <h3>2.3 User Characteristics</h3>
 <p>
-    MuSpace’s primary users are those trying to connect with others who have a similar taste in music. MuSpace will be easy to use with a minimalistic UI, allowing     users with minimal technical literacy to navigate through the application to connect with their friends and share music. A help section, as well as an FAQ,         will be included in all versions of MuSpace so that users can quickly get up to speed. 
+   MuSpace’s primary users are those trying to connect with others who have a similar taste in music. MuSpace will be easy to use with a minimalistic UI, allowing users with minimal technical literacy to navigate through the application to connect with their friends and share music. A help section, as well as an FAQ, will be included in all versions of MuSpace so that users can quickly get up to speed. 
 </p>
 <h3>2.4 Constraints</h3>
 <p>
-    MuSpace users must have an active Spotify account. Without a spotify account, users will be unable to create their MuSpace account. MuSpace, at this current       point in time, will not function on iOS or Android devices, it will only be available on a web browser. iOS and Android functionality will be done later in         time. 
+    MuSpace users must have an active Spotify account. Without a Spotify account, users will be unable to create their MuSpace account. MuSpace, at this current point in time, will not function on iOS or Android devices, it will only be available on a web browser. IOS and Android functionality will be added in the the near future. 
 </p>
 <p>
     MuSpace users must have a stable internet connection in order to use the web application. Weak internet connection can result in excessive buffering time.
-</p
+</p>
 <p>
-    MuSpace will have time, cost and reliability constraints. Development and testing must be finished before August 15th, 2021, and will be developed for free         with no funding from the school or the students. Publication to the Apple App store requires a fee, so this will be a constraint.
+    MuSpace will have time, cost and reliability constraints. Development and testing must be finished before August 15th, 2021, and will be developed for free with no funding from the school or the students. Publication to the Apple App store requires a fee, so this will be a constraint.
 </p>
 <h3>2.5 Assumptions and Dependencies</h3>
 <p>
-    It is required that users of MuSpace all have Spotify accounts, with some level of activity on the platform in order to build a profile. MuSpace is dependent       on how rich the user's musical history (songs listened to, artists followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile     will be and better the experience they will get from MuSpace.
+    It is required that users of MuSpace all have Spotify accounts, with some level of activity on the platform to build a profile. MuSpace is dependent on how rich the user's musical history (songs listened to, artists followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile will be and better the experience they will get from MuSpace.
 </p>
 <h3>2.6 User Interfaces</h3>
 <h4>2.6.1 Sidebar</h4>
@@ -120,11 +112,11 @@
 <h4>2.6.5 Home Page</h4>
 <p>The Home Page is the main page the user is redirected to after successfully logging in. This page displays some statistics about the user’s activity on MuSpace including favourite artists of the week, favourite songs of the week, hours spent listening to music, and more. The page also shows the friends activity tab which displays the music and album a particular friend (added previously by the user) is listening to.</p>
 <h4>2.6.6 Messages Page</h4>
-<p>The Messages Page is where users can go to see all of their chat history with each of their friends. The main messages page is a list of conversations the user has had with each friend, sorted by the most recent history. Clicking on one of these conversations will bring the user to the chat page, in which they can send a message to the friend who’s chat page they opened.</p>
+<p>The Messages Page is where users can go to see all of their chat histories with each of their friends. The main messages page is a list of conversations the user has had with each friend, sorted by the most recent history. Clicking on one of these conversations will bring the user to the chat page, in which they can send a message to the friend whose chat page they opened.</p>
 <h4>2.6.7 Notification Page</h4>
 <p>The Notification Page is where users can see any unread notifications they received. These could include new messages, friend requests, updates from the developers, or required actions such as updating account information.</p>
 <h4>2.6.8 Profile Page</h4>
-<p>The profile page is where users go to see their own or their friends' listening activity and statistics on spotify. Each person's profile page can be customized with a profile picture, and a short biography (max 100 words).</p>
+<p>The profile page is where users go to see their own or their friends' listening activity and statistics on Spotify. Each person's profile page can be customized with a profile picture, and a short biography (max 100 words).</p>
 <h4>2.6.9 Friends Page</h4>
 <p>The Friends Page will display all current friends, along with their listening activity (what they are currently listening to), along with leaderboards, and a similarity bar. The Leaderboard shows which of your friends has the most listening hours and Unique artists listened to in a given amount of time (to be determined).</p>
 
@@ -132,8 +124,8 @@
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/3b73c13e-821d-4b73-aea6-bfda8448a12e" id="7rQYm4LzcUxa"></iframe></div>
 
 <h2>3. Technical Requirements</h2>
-<h3>3.1 External Interfaces</h3>
-<ul>
+<h3>3.1 Hardware Interfaces</h3>
+<!-- <ul>
     <li>Authentication</li>
     <ul>
         <li>Username/ Password (Google Authentication)</li>
@@ -143,62 +135,63 @@
         <li>Timestamps</li>
         <li>Message ID</li>
     </ul>
-</ul>
-<h3>3.2 Performance Requirements</h3>
+</ul> -->
+<p>
+The application will run on any Windows, OSx or Linux machine. The web browsers that can be used include Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge. The input will be received from the keyboard and mouse the system is attached to. 
+</p>
+<h3>3.2 Functional Requirements</h3>
 <h4>3.2.1 Client Requirements</h4>
 <ul>
-    <li>OS: Windows, MacOS, GNU/Linux, Android, iOS</li>
+    <li>OS: <a href="https://www.microsoft.com/en-ca/windows" target="_blank">Windows</a>, <a href="https://www.apple.com/ca/macos/big-sur/" target="_blank">MacOS</a>, <a href="https://www.linux.org/" target="_blank">GNU/Linux</a></li>
     <li>Stable network connection</li>
-    <li>A device that has access to a modern web browser with JavaScript ES6 capabilities</li>
+    <li>A device that has access to a modern web browser with JavaScript ES6 capabilities. E.G. <a href="https://www.google.com/intl/en_ca/chrome/" target="_blank">Google Chrome</a>, 
+        
+  <a href="https://www.mozilla.org/en-CA/firefox/new/" target="_blank">Firefox</a>, <a href="https://www.apple.com/ca/safari/" target="_blank">Safari</a>, <a href="https://www.microsoft.com/en-us/edge" target="_blank">Microsoft Edge</a>, etc. </li>
+    <li><a href="https://www.spotify.com/us/home/" target="_blank">Active Spotify Account</a></li>
 </ul>
 <h4>3.2.2 Server/Development Requirements</h4>
 <ul>
-    <li>Cloudflare</li>
-    <li>Amazon Web Services</li>
+    <li><a href="https://www.cloudflare.com/" target="_blank">Cloudflare</a></li>
+    <li><a href="https://firebase.google.com/" target="_blank">Google Firebase</a></li>
     <ul>
-        <li>EC2</li>
-        <li>CodeDeploy</li>
-        <li>S3</li>
-    </ul>
-    <li>Google Firebase</li>
-    <ul>
-        <li>Authentication</li>
-        <li>Realtime Database</li>
-        <li>Firestore</li>
+        <li><a href="https://firebase.google.com/docs/auth" target="_blank">Authentication</a></li>
+        <li><a href="https://firebase.google.com/docs/firestore" target="_blank">Firestore</a></li>
+        <li><a href="https://firebase.google.com/docs/storage" target="_blank">Cloud Storage</a></li>
     </ul>
 </ul>
 <h3>3.3 Security</h3>
+<p>MuSpace will allow users to create accounts either by signing up with Google or by creating a username and password. All transactions for authentication are passed through a secure encrypted end-to-end pipeline to the Google Firebase Authentication servers. Google Firebase Authentication is compliant with the ISO 27001, ISO 27017, ISO 27018, SOC 1, SOC 2, and SOC 3 security evaluation standards. Below are some technologies MuSpace itself uses for security:
+</p>
 <ul>
-    <li>Cloudflare</li>
+    <li>Cloudflare:</li>
     <ul>
         <li>Used as DDOS protection through their Content Delivery Network (CDN) to prevent many simultaneous connections taking down the server. Also minify our               code and allow it to reach the client quicker.</li>
     </ul>
-    <li>Firebase Authentication</li>
+    <li>Firebase Authentication:</li>
     <ul>
         <li>Used as a central repository to create and store users with a generated internal ID that is used to refer to all their settings, data, etc…</li>
     </ul>
-    <li>Firebase Firestore</li>
+    <li>Firebase Firestore:</li>
     <ul>
         <li>Used as the main database to store messages, feeds, posts, relationships, and user data. All data is stored as a key-value pair, with the key usually               being a user ID that is generated by Authentication.</li>
     </ul>
-    <li>Firebase Cloud Storage</li>
+    <li>Firebase Cloud Storage:</li>
     <ul>
         <li>Used as a CDN to store basic files that are served to clients, such as images.</li>
     </ul>
-    <li>Report Feature</li>
+    <li>Report Feature:</li>
     <ul>
         <li>Button on the sidebar that allows anyone to submit an issue that they have encountered via Github Issues.</li>
     </ul>
 </ul>
 <h3>3.4 Design Constraints</h3>
 <p>
-    The design tools are limited in solely budget, as the budget is $0.00. The Developer fees however for publishing are not tied down to the cost of the project       itself, and will be split with all team members. All other resources (frameworks, APIs, etc.) are free and open-source.
+    The design tools are limited in solely budget, as the budget is $0.00. The Developer fees however for publishing are not tied down to the cost of the project itself and will be split with all team members. All other resources (frameworks, APIs, etc.) are free and open-source.
 </p>
 <h3>3.5 Portability</h3>
 <p>
     Since this is a web-based application. It will be accessible on any device with a modern web browser as long as
-    the user has a Spotify account and an internet connection to utilize the app. It will also be available on iOS and
-    Android mobile devices.
+    the user has a Spotify account and an internet connection to utilize the app.
 </p>
 <h2>4. Extra Details</h2>
 <h3>Version History:</h3>

@@ -4,18 +4,20 @@ import Styled from "styled-components";
 import { SearchField } from "@atoms";
 
 const StyledForm = Styled.form`
-    border-radius: 7px;
-    padding: 1em;
+    padding: 2.5em 3vw 1.5em 3vw;
     background-color: transparent;
     transition: all 0.25s ease;
-    height: 10px;
+    height: min-content;
     
+    display: flex;
+    flex-direction: row;
+
     :focus {
         border: 1px solid ${props => props.theme.colors.lightBlue};
         outline: none;
         transition: all 0.25s ease;
     }
-    
+
     transition: all 0.25s ease;
 `;
 

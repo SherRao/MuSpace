@@ -1,7 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { AlbumCover, Card} from  "@atoms";
+import {AlbumCover} from  "@atoms";
 
 const StyledDiv = Styled.div`
     display: flex;

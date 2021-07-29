@@ -5,8 +5,6 @@ import { Theme, PageRouter } from "@misc";
 import { Firebase } from "@functions";
 
 function App() {
-    //logoutOnClose();
-
     return (
         <BrowserRouter>
             <Theme>
@@ -16,6 +14,7 @@ function App() {
     );
 }
 
+// eslint-disable-next-line no-unused-vars
 function logoutOnClose() {
     window.addEventListener("beforeunload", (event) => {
         event.preventDefault();

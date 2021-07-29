@@ -36,14 +36,6 @@
         </ul>
     </li>
     <br/>
-    <!-- Profile -->
-    <li>
-        <b>Profile (Object)</b> - A user’s profile page displaying recent listening history, friends, and account information
-        <ul>
-            <li>User (Object) - a reference to the user object for showing the users details like username and fullname, and to be used for editing the users account details.</li>
-        </ul>
-    </li>
-    <br/>
     <!-- Feed -->
     <li>
         <b>Feed (Object)</b> - Collection of posts created by a User
@@ -152,7 +144,7 @@
     <br/>
     <!-- Friends View -->
     <li>
-        <b>FriendsView</b> - Where a User goes to see their friends.
+        <b>FriendsPageView</b> - Where a User goes to see their friends.
         <ul>
             <li><b>FriendsListView</b> - Where a User views a list of all their Friends</li>
             <li><b>AddFriendsView</b> - Where a User can see to search for Friends.</li>
@@ -197,33 +189,33 @@
     <li><b>Home Page Controllers</b></li>
     <ul>
         <li><b>DisplayProfileStatsController</b> - Coordinates the User-specific data that is shown on the home page.</li>
-        <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently Listening to.</li>
+        <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently listening to.</li>
         <li><b>DisplayFriendMusicDataController</b> - Coordinates music data related to the User’s friends.</li>
     </ul>
     <br/>
     <!-- Friends Controllers -->
     <li><b>Friends Controllers</b></li>
     <ul>
-        <li><b>DisplayFriendListController</b> - Coordinates the List of friends that is displayed to the User.</li>
+        <li><b>DisplayFriendListController</b> - Coordinates the list of friends that is displayed to the User.</li>
         <li><b>DisplayFriendMusicDataController</b> - Coordinates music data related to the User’s friends.</li>
-        <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently Listening to.</li>
+        <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently listening to.</li>
     </ul>
     <br/>
     <!-- Chat Page Controllers -->
     <li><b>Chat Page Controllers</b></li>
     <ul>
-        <li><b>DisplayRecentMessagesController</b> - Coordinates the List of recently messaged friends from the User to be displayed.</li>
-        <li><b>DisplayMessageRetreivalController</b> - Coordinates the retrieval of the List of all messages sent and received from a specific User.</li>
+        <li><b>DisplayRecentMessagesController</b> - Coordinates the list of recently messaged friends from the User to be displayed.</li>
+        <li><b>DisplayMessageRetreivalController</b> - Coordinates the retrieval of the list of all messages sent and received from a specific User.</li>
         <li><b>SendMessageController</b> - Coordinates the sending of a message to another User.</li>
         <li><b>ReceiveMessageController</b> - Coordinates the receiving of a message from another User.</li>
-        <li><b>NewMessageController</b> - Coordinates starting a new DM with another User.</li>
+        <li><b>NewMessageController</b> - Coordinates starting a new chat with another User.</li>
     </ul>
     <br/>
     <!-- Settings Page Controllers -->
     <li><b>Settings Page Controllers</b></li>
     <ul>
-        <li><b>EditUserDataController</b> - Coordinates changing and deletion of User data, like the Username, email, password, and date of birth.</li>
-        <li><b>DisplayUserDataController</b> - Coordinates the display of User data.</li>
+        <li><b>EditUserController</b> - Coordinates changing and deletion of User data, like the Username, email, password, and date of birth.</li>
+        <li><b>DisplayUserController</b> - Coordinates the display of User data.</li>
     </ul>
     <br/>
     <!-- Profile Page Controllers -->
@@ -243,10 +235,10 @@
 
 <!-- Non Functional Attributes -->
 <h2>4. Non Functional Attributes</h2>
-<p><b>Performance and scalability.</b> How fast does the system return results? How much will this performance change with higher workloads?</p>
+
 <p><b>Performance and compatibility.</b> Which hardware, operating systems, browsers, and their versions does the software run on? Does it conflict with other applications and processes within these environments?</p>
-<p>MuSpace will be accessible on any device with a modern web browser such as google chrome or firefox as long as the user has a Spotify account and an internet connection to utilize the app. It will also be available on iOS and Android mobile devices.</p>
-<p><b>Reliabilty, availability, maintainability.</b> How often does the system experience critical failures? and how much time is available to users against downtimes?</p>
+<p>MuSpace will be accessible on any device with a modern web browser such as google chrome or firefox as long as the user has a Spotify account and an internet connection to utilize the app. It will also be available on iOS and Android mobile devices in the near future.</p>
+
 <p><b>Security.</b> How are the system and its data protected against attacks?</p>
 <p>
     All data will be securely transferred from a client to the server with Google Firebase’s implementation of data privacy and security. All endpoints used on Firebase are secured through Google’s servers. See 
@@ -257,6 +249,7 @@
 <p><b>This attribute defines how well a system or its element falls in line with the context of the local market-to-be. The context includes local languages, laws, currencies, cultures, spellings, and other aspects. The more a product sticks with it, the more success it should have with a particular target audience.</b></p>
 <p><b>The date format must be as follows: day.month.year</b></p>
 <p><b>Usability.</b> How easy is it for a customer to use the system?</p>
+<p>Usability of the app is straightforward, the app is laid out in such a way that any user can understand what is happening. Each button goes to the titled page, making the learning curve small, if not non-existent.</p>
 <!-- Classes -->
 <h2>5. Classes</h2>
 <p><b>This is an ongoing diagram that is being continuously updated.</b></p>
