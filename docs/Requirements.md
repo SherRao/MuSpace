@@ -98,7 +98,7 @@
 </p>
 <h3>2.5 Assumptions and Dependencies</h3>
 <p>
-    It is required that users of MuSpace all have Spotify accounts, with some level of activity on the platform in order to build a profile. MuSpace is dependent       on how rich the user's musical history (songs listened to, artists followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile     will be and better the experience they will get from MuSpace.
+    It is required that users of MuSpace all have Spotify accounts, with some level of activity on the platform to build a profile. MuSpace is dependent on how rich the user's musical history (songs listened to, artists followed, hours spent listening to certain genres, etc.) is, the more in-depth their profile will be and better the experience they will get from MuSpace.
 </p>
 <h3>2.6 User Interfaces</h3>
 <h4>2.6.1 Sidebar</h4>
@@ -112,11 +112,11 @@
 <h4>2.6.5 Home Page</h4>
 <p>The Home Page is the main page the user is redirected to after successfully logging in. This page displays some statistics about the user’s activity on MuSpace including favourite artists of the week, favourite songs of the week, hours spent listening to music, and more. The page also shows the friends activity tab which displays the music and album a particular friend (added previously by the user) is listening to.</p>
 <h4>2.6.6 Messages Page</h4>
-<p>The Messages Page is where users can go to see all of their chat history with each of their friends. The main messages page is a list of conversations the user has had with each friend, sorted by the most recent history. Clicking on one of these conversations will bring the user to the chat page, in which they can send a message to the friend who’s chat page they opened.</p>
+<p>The Messages Page is where users can go to see all of their chat histories with each of their friends. The main messages page is a list of conversations the user has had with each friend, sorted by the most recent history. Clicking on one of these conversations will bring the user to the chat page, in which they can send a message to the friend whose chat page they opened.</p>
 <h4>2.6.7 Notification Page</h4>
 <p>The Notification Page is where users can see any unread notifications they received. These could include new messages, friend requests, updates from the developers, or required actions such as updating account information.</p>
 <h4>2.6.8 Profile Page</h4>
-<p>The profile page is where users go to see their own or their friends' listening activity and statistics on spotify. Each person's profile page can be customized with a profile picture, and a short biography (max 100 words).</p>
+<p>The profile page is where users go to see their own or their friends' listening activity and statistics on Spotify. Each person's profile page can be customized with a profile picture, and a short biography (max 100 words).</p>
 <h4>2.6.9 Friends Page</h4>
 <p>The Friends Page will display all current friends, along with their listening activity (what they are currently listening to), along with leaderboards, and a similarity bar. The Leaderboard shows which of your friends has the most listening hours and Unique artists listened to in a given amount of time (to be determined).</p>
 
