@@ -73,9 +73,8 @@
 <h2>2. Overall description</h2>
 <h3>2.1 Product Perspective</h3>
 <p>
-    MuSpace will take a web-based development approach using React and eventually be transferred to IOS and Android
-    using React Native. Major components include user connection to Spotify using Spotify’s Web API, and web-based
-    chat functionality and listening rooms using Google Firebase’s Realtime No-SQL Database.
+    MuSpace will take a web-based development approach using <a href="https://reactjs.org/" target="_blank">React</a>.
+    Major components include user connection to Spotify using <a href="https://developer.spotify.com/documentation/web-api/"     target="_blank">Spotify’s Web API</a>, and web-based chat functionality and listening rooms using <a           href="https://firebase.google.com/?gclid=Cj0KCQjw6NmHBhD2ARIsAI3hrM2r9bx-3SnvqnYGD46fymSbcpADc9fc4uqnhUJbNTPDoJXRWrtDO3gaAhNfEALw_wcB&gclsrc=aw.ds" target="_blank">Google Firebase’s</a> Realtime No-SQL Database.
 </p>
 <h4>2.1.1 <a href="https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=327%3A12583" target="_blank">Sample GUI</a></h4>
 <iframe width="960px" height="720px" src="https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=327%3A12583" frameBorder="0" scrolling="no" allowFullScreen></iframe>
