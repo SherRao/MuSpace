@@ -76,8 +76,7 @@ function PageRouter() {
                     isVerified={isVerified}
                 />
 
-                <Route component = {ErrorPage}/>
-
+                <Route component={ErrorPage}/>
             </Switch>
         </Router>
     );
