@@ -9,10 +9,7 @@
 </p>
 <h3>1.2 Purpose</h3>
 <p>
-    This is the requirement document, which contains everything necessary for MuSpace. Additionally, the document
-    includes features along with a description of how each feature will function. The audience for this document is
-    potential clients and their corresponding development teams. This is a reference guide for the development teams
-    to ensure that everything runs smoothly, and some potential questions are answered.
+    This is the requirement document, which contains everything necessary for MuSpace. Additionally, the document includes the project features along with a description of how each feature will function.  The audience for this document is potential clients and their corresponding development teams. This is a reference guide for the development teams to ensure that everything runs smoothly, and answer potential questions along the way.
 </p>
 <h3>1.3 Scope and Business Model</h3>
 <h4>1.3.1 Scope</h4>
