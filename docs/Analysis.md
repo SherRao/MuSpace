@@ -36,14 +36,6 @@
         </ul>
     </li>
     <br/>
-    <!-- Profile -->
-    <li>
-        <b>Profile (Object)</b> - A user’s profile page displaying recent listening history, friends, and account information
-        <ul>
-            <li>User (Object) - a reference to the user object for showing the users details like username and fullname, and to be used for editing the users account details.</li>
-        </ul>
-    </li>
-    <br/>
     <!-- Feed -->
     <li>
         <b>Feed (Object)</b> - Collection of posts created by a User
@@ -152,7 +144,7 @@
     <br/>
     <!-- Friends View -->
     <li>
-        <b>FriendsView</b> - Where a User goes to see their friends.
+        <b>FriendsPageView</b> - Where a User goes to see their friends.
         <ul>
             <li><b>FriendsListView</b> - Where a User views a list of all their Friends</li>
             <li><b>AddFriendsView</b> - Where a User can see to search for Friends.</li>
