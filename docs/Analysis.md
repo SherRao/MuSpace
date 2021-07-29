@@ -189,33 +189,33 @@
     <li><b>Home Page Controllers</b></li>
     <ul>
         <li><b>DisplayProfileStatsController</b> - Coordinates the User-specific data that is shown on the home page.</li>
-        <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently Listening to.</li>
+        <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently listening to.</li>
         <li><b>DisplayFriendMusicDataController</b> - Coordinates music data related to the User’s friends.</li>
     </ul>
     <br/>
     <!-- Friends Controllers -->
     <li><b>Friends Controllers</b></li>
     <ul>
-        <li><b>DisplayFriendListController</b> - Coordinates the List of friends that is displayed to the User.</li>
+        <li><b>DisplayFriendListController</b> - Coordinates the list of friends that is displayed to the User.</li>
         <li><b>DisplayFriendMusicDataController</b> - Coordinates music data related to the User’s friends.</li>
-        <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently Listening to.</li>
+        <li><b>DisplayFriendListeningActivityController</b> - Coordinates the music that the User’s friends are currently listening to.</li>
     </ul>
     <br/>
     <!-- Chat Page Controllers -->
     <li><b>Chat Page Controllers</b></li>
     <ul>
-        <li><b>DisplayRecentMessagesController</b> - Coordinates the List of recently messaged friends from the User to be displayed.</li>
-        <li><b>DisplayMessageRetreivalController</b> - Coordinates the retrieval of the List of all messages sent and received from a specific User.</li>
+        <li><b>DisplayRecentMessagesController</b> - Coordinates the list of recently messaged friends from the User to be displayed.</li>
+        <li><b>DisplayMessageRetreivalController</b> - Coordinates the retrieval of the list of all messages sent and received from a specific User.</li>
         <li><b>SendMessageController</b> - Coordinates the sending of a message to another User.</li>
         <li><b>ReceiveMessageController</b> - Coordinates the receiving of a message from another User.</li>
-        <li><b>NewMessageController</b> - Coordinates starting a new DM with another User.</li>
+        <li><b>NewMessageController</b> - Coordinates starting a new chat with another User.</li>
     </ul>
     <br/>
     <!-- Settings Page Controllers -->
     <li><b>Settings Page Controllers</b></li>
     <ul>
-        <li><b>EditUserDataController</b> - Coordinates changing and deletion of User data, like the Username, email, password, and date of birth.</li>
-        <li><b>DisplayUserDataController</b> - Coordinates the display of User data.</li>
+        <li><b>EditUserController</b> - Coordinates changing and deletion of User data, like the Username, email, password, and date of birth.</li>
+        <li><b>DisplayUserController</b> - Coordinates the display of User data.</li>
     </ul>
     <br/>
     <!-- Profile Page Controllers -->
