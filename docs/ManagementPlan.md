@@ -329,7 +329,7 @@
 <ul>
     <li><b>JavaScript</b> - <a href="https://www.javascript.com/" target="_blank">JavaScript.com</a></li>
     <li><b>TypeScript</b> - <a href="https://www.typescriptlang.org/" target="_blank">TypeScript: Typed JavaScript at Any Scale. (typescriptlang.org)</a></li>
-    <li><b>ReactJS framework</b><a href="https://reactjs.org/" target="_blank">React</a></li>
+    <li><b>ReactJS framework</b> - <a href="https://reactjs.org/" target="_blank">React</a></li>
     <li><b>Node.js</b> - <a href="https://nodejs.org/en/" target="_blank">Node.js (nodejs.org)</a></li>
     <li><b>Google Firestore</b> - <a href="https://cloud.google.com/firestore" target="_blank">Firestore: NoSQL document database | Google Cloud</a></li>
     <li><b>Google Authentication</b> - <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA&gl=US" target="_blank">Google Authenticator – Apps on Google Play</a></li>
@@ -342,7 +342,7 @@
 <ul>
     <li><b>GitHub</b> - <a href="https://github.com/SherRao/MuSpace" target="_blank">GitHub Repository</a></li>
     <li><b>Figma</b> - <a href="https://www.figma.com/team_invite/redeem/bENflg8BpmlHQtsnZpDSoz" target="_blank">Figma Project</a></li>
-    <li><b>Google Drive (Docs, Sheets)</b></li>
+    <li><b>Google Drive (Docs, Sheets)</b> - <a href="https://drive.google.com/" target="_blank">Google Drive</a></li>
     <li><b>Discord</b> - <a href="https://discord.com/brand-new" target="_blank">Discord</a></li>
 </ul>
 <h4>Project Support Functions:</h4>
@@ -365,7 +365,7 @@
     <li><b>Account Creation:</b></li>
     <ul>
         <li>The first page of the account creation process requires the user to input their email address, username, full name, and password. These will be a part of a form, where the username and full name field are plaintexts, the password field is a password field, and the email address field is an email address field.</li>
-        <li>The password will need to be entered twice for verification.</li>
+<!--         <li>The password will need to be entered twice for verification.</li> -->
         <li>This data will then be verified to make sure it meets certain criteria. These criteria are as follows: </li>
         <ul>
             <li>The username must be a minimum of 5 characters and a maximum of 32 characters.</li>
@@ -395,8 +395,8 @@
     </ul>
     <li><b>Friends Page:</b></li>
     <ul>
-        <li>The Friends page will list all the user’s friends and their status (Online, Offline).</li>
-        <li>On the Friends page, there will be a button to add a new friend by username.</li>
+        <li>The Friends page will list all the user’s friends.</li>
+<!--         <li>On the Friends page, there will be a button to add a new friend by username.</li> -->
         <li>On the Friends page, clicking/tapping on a friend's name will present the user with options to send a private message, or unfriend the selected user.</li>
         <li>A request is sent to the Firestore database, which will then return a list of chat room IDs that the user is a part of. The client can then request each chat room specifically, which the database will return.</li>
     </ul>
