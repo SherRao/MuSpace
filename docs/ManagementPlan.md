@@ -519,7 +519,7 @@
         <li>June 3rd</li>
         <li>All Members </li>
     </ul>
-    <li>Version 1.0.1 [Sections 1-6, Update to reflect changes made]</li>
+    <li>Version 1.0.1 [Sections 1-6, Update to Reflect Changes Made]</li>
     <ul>
         <li>July 30th</li>
         <li>Members - Jagveer, Jiten</li>
