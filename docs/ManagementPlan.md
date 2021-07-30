@@ -161,7 +161,7 @@
 <p><b>Stage 6:</b> Deployment</p>
 <p><b>Stage 7:</b> Operations & Maintenance (Post Submission)</p>
 <h3>2.2 Organizational Structure</h3>
-<p>Using the agile approach, we will be starting on the back-end of the project and the UI design as a group. As soon as the UI design is finished and laid out, the front-end developers will begin development. Concurrently, the back-end developers will also begin development. Everything worked on will be done through sprints. After both the front-end and back-end of the project are finished, we will port the web-based application onto Android and iOS.</p>
+<p>Using the agile approach, we will be starting on the back-end of the project and the UI design as a group. As soon as the UI design is finished and laid out, the front-end developers will begin development. Concurrently, the back-end developers will also begin development. Everything worked on will be done through sprints.</p>
 <h3>2.2 Project Responsibilities</h3>
 <table>
     <!-- Headers -->
@@ -237,7 +237,7 @@
         <td>Back-end team</td>
         <td>July 29th, 2021</td>
     </tr>
-    <tr>
+<!--     <tr>
         <td>Mobile Implementation</td>
         <td rowspan="2">All Members</td>
         <td>August 3rd, 2021</td>
@@ -245,7 +245,7 @@
     <tr>
         <td>Mobile Implementation SQA</td>
         <td>August 5th, 2021</td>
-    </tr>
+    </tr> -->
     <!-- No. 6 -->
     <tr>
         <th rowspan="2">6</th>
