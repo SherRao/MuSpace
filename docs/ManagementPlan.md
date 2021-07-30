@@ -217,7 +217,8 @@
     </tr>
     <!-- No. 5 -->
     <tr>
-        <th rowspan="6">5</th>
+<!--        6span  -->
+        <th rowspan="4">5</th>
         <td>Back-end Implementation</td>
         <td>Nausher, Robert, Daner, Nish, Jagveer, Jacob, Madhumitha</td>
         <td>July 27th, 2021</td>
@@ -248,7 +249,7 @@
     </tr> -->
     <!-- No. 6 -->
     <tr>
-<!--         <th rowspan="2">6</th> -->
+        <th rowspan="2">6</th>
         <td>User Documentation</td>
         <td rowspan="2">All Members</td>
         <td>August 10th, 2021</td>
