@@ -248,7 +248,7 @@
     </tr> -->
     <!-- No. 6 -->
     <tr>
-        <th rowspan="2">6</th>
+<!--         <th rowspan="2">6</th> -->
         <td>User Documentation</td>
         <td rowspan="2">All Members</td>
         <td>August 10th, 2021</td>
