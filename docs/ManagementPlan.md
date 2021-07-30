@@ -436,15 +436,15 @@
     </tr>
     <tr>
         <td style="text-align:center">Analysis Document</td>
-        <td style="text-align:center">TBD</td>
+        <td style="text-align:center">Modified IEEE</td>
     </tr>
     <tr>
         <td style="text-align:center">Design Document</td>
-        <td style="text-align:center">TBD</td>
+        <td style="text-align:center">Modified IEEE</td>
     </tr>
     <tr>
         <td style="text-align:center">User Document</td>
-        <td style="text-align:center">TBD</td>
+        <td style="text-align:center">Modified IEEE</td>
     </tr>
     <tr>
         <td style="text-align:center">Participation Record (Hours)</td>
@@ -453,17 +453,17 @@
     </tr>
     <tr>
         <td style="text-align:center">Source Code</td>
-        <td style="text-align:center">TBD</td>
+        <td style="text-align:center">Modified IEEE</td>
         <td style="text-align:center">All Developers</td>
     </tr>
 </table>
 <!-- UPDATED TO HERE -->
 <h3>4.2.1 Software Requirements Specification (SRS)</h3>
-<p>Up to date <a href="https://sherrao.github.io/MuSpace/SRS.html">SRS Documentation</a>.</p>
+<p>Up to date <a href="https://sherrao.github.io/MuSpace/Requirements.html">SRS Documentation</a>.</p>
 <h3>4.2.2 Software Design Description (SDD)</h3>
 <p>We will be using <i>JavaScript</i>, <i>TypeScript</i>, <i>CSS</i>, and <i>HTML</i> as the languages for the project. These languages are the easiest to implement for a web application of this magnitude which requires the front-end and back-end to work with each other seamlessly. Without the hassle of separate code bases for both. <i>JavaScript</i> and <i>TypeScript</i> are also ideal languages that have a great capability of handling asynchronous server-side requests.</p>
 <p>We will be using <i>ReactJS</i>, <i>StyledComponents</i>, and <i>Semantic UI</i> to create the front-end of the application - this is the code that will be executed and displayed client-side using a built-in browser <i>JavaScript</i> engine, such as <i>Google’s V8 JavaScript Engine</i>.</p>
-<p>For the back-end of the application, we are using <i>Node.js</i> to run a headless <i>Chromium</i> instance to execute server-side code. The back-end will integrate the <i>Spotify SDK Spotify API, and LyricGenius API</i> to draw all user data - artists, albums, genres, and songs that the artist listens to. The API can also extract music listening and other statistics. This data will be used to connect with other users using a scoring system and to discover new music. The <i>Spotify Web SDK</i> will be used to play music using the user's <i>Spotify</i> account in the web app. The <i>SDK</i> requires the users to have a <i>Spotify</i> account. The <i>LyricGenius API</i> will be used to display lyrics of the songs that the user listens to as well as related lyrical trivia. </p>
+<p>For the back-end of the application, we are using <i>Node.js</i> to run a headless <i>Chromium</i> instance to execute server-side code. The back-end will integrate the <i>Spotify SDK Spotify API</i> to draw all user data - artists, albums, genres, and songs that the artist listens to. The API can also extract music listening and other statistics. This data will be used to connect with other users using a scoring system and to discover new music. The <i>Spotify Web SDK</i> will be used to play music using the user's <i>Spotify</i> account in the web app. The <i>SDK</i> requires the users to have a <i>Spotify</i> account.</p>
 <p>The other portion of the back-end uses <i>Google’s</i> suite of APIs included in <i>Google Firebase</i>. These are but are not limited to Firestore and Authentication. Firestore will be used to store a lot of data:</p>
 <ul>
     <li>User data</li>
