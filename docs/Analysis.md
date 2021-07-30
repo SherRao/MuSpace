@@ -281,6 +281,11 @@
         <li>July 27th</li>
         <li>Members - All members</li>
     </ul>
+    <li>Version 1.1.0 [Sections 1-7, Update to reflect changes made]</li>
+    <ul>
+        <li>July 30th</li>
+        <li>Members - Jagveer, Jiten</li>
+    </ul>
 </ul>
 <!-- Authored By: -->
 <h3>Authored By:</h3>
