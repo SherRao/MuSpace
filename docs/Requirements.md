@@ -216,6 +216,11 @@ The application will run on any Windows, OSx or Linux machine. The web browsers 
         <li>July 27th</li>
         <li>Members - All members</li>
     </ul>
+    <li>Version 2.0.1 [Update to Reflect Changes Made]</li>
+    <ul>
+        <li>July 30th</li>
+        <li>Members - Jagveer, Jiten</li>
+    </ul>
 </ul>
 <!-- Authored By: -->
 <h3>Authored By:</h3>
