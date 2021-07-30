@@ -24,9 +24,9 @@
 
 <h3>2.1 Choice of Language</h3>
 <p>
-Front-end: HTML, Javascript, CSS, ReactJS <br>
-Back-end: Javascript <br>
-Database: Firestore, FirebaseOn every view, the sidebar,
+    Front-end: <a href="https://devdocs.io/html/" target="_blank">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Javascript</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" >CSS</a>, <a href="" target="_blank" >ReactJS</a> <br>
+    Back-end: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" >Javascript</a> <br>
+    Database: <a  href="https://firebase.google.com/docs/firestore" target="_blank" >Firestore</a>, <a href="https://firebase.google.com/" target="_blank">Firebase</a>
 </p>
 
 <h3>2.2 Resources Referenced</h3>
