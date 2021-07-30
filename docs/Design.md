@@ -690,6 +690,11 @@ Database: Firestore, FirebaseOn every view, the sidebar,
         <li>July 15th</li>
         <li>Members - All members</li>
     </ul>
+    <li>Version 1.0.1 [Sections 1-7, Update to Reflect Changes Made]</li>
+    <ul>
+        <li>July 30th</li>
+        <li>Members - Jagveer, Jiten</li>
+    </ul>
 </ul>
 
 <!-- Authored By: -->
