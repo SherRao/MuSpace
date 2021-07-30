@@ -111,11 +111,11 @@
 <h4>1.5.1 Definitions</h4>
 <ul>
     <li><b>Spotify</b> - Spotify is an audio streaming and media services provider.</li>
-    <li><b>Listening Room/Music Room</b> - A chat room hosted by users where they can listen along to the host and chat with other users in the room.</li>
+<!--     <li><b>Listening Room/Music Room</b> - A chat room hosted by users where they can listen along to the host and chat with other users in the room.</li> -->
     <li><b>Agile Approach</b> - A method to manage a project by breaking it up into several phases.</li>
     <li><b>Web-based</b> - A piece of software that is solely hosted on a web server over the internet.</li>
-    <li><b>Android</b> - The operating system suite developed by Google for mobile devices.</li>
-    <li><b>iOS</b> - The operating system developed by Apple for their mobile phones.</li>
+<!--     <li><b>Android</b> - The operating system suite developed by Google for mobile devices.</li>
+    <li><b>iOS</b> - The operating system developed by Apple for their mobile phones.</li> -->
     <li><b>Front-end</b> - The user interface and presentation of the application.</li>
     <li><b>Back-end</b> - Data and infrastructure of the application.</li>
     <li><b>DNS Service</b> - Servers responsible for translating the domain names to numeric IP addresses leading them to the correct website.</li>
@@ -136,7 +136,7 @@
     <li><b>Headless</b> - The application is running without a graphical user interface (GUI) and sometimes without a user interface at all.</li>
     <li><b>Chromium</b> - An open-source browser project that aims to build a safer, faster, and more stable way for all users to experience the web.</li>
     <li><b>Plaintexts</b> - Text that is not computationally tagged, specially formatted, or written in code.</li>
-    <li><b>Chat Rooms/Messaging Page</b> - Personal messaging page between 2 or more people.</li>
+    <li><b>Messaging Page</b> - Personal messaging page between 2 or more people.</li>
 </ul>
 <h4>1.5.2 Acronyms and Abbreviations</h4>
 <ul>
