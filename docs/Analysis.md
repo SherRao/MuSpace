@@ -281,7 +281,7 @@
         <li>July 27th</li>
         <li>Members - All members</li>
     </ul>
-    <li>Version 1.1.0 [Sections 1-7, Update to reflect changes made]</li>
+    <li>Version 1.1.0 [Sections 1-7, Update to Reflect Changes Made]</li>
     <ul>
         <li>July 30th</li>
         <li>Members - Jagveer, Jiten</li>
