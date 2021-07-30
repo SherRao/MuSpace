@@ -646,12 +646,12 @@ Database: Firestore, FirebaseOn every view, the sidebar,
 </ol>
 
 <h3>6.2 Preventative</h3>
-<ol> 
+<ul> 
     <li>Github actions</li>
-</ol>
+</ul>
 
 <h3>6.3 Perfective</h3>
-<ol> 
+<ul> 
     <li>Time is a major factor in what we as a group can accomplish, however after the completion of this project, some ideas on a shortlist to implement are</li>
     <ol> 
         <li><b>Matching Algorithm: </b>(To match with other users, you may not know)</li>
@@ -663,7 +663,7 @@ Database: Firestore, FirebaseOn every view, the sidebar,
         <li><b>Themes:</b> Allows the user to choose a theme for the app (light/ dark mode)</li>
         <li><b>Language:</b> Allows the user to change the language of the app</li>
     </ol>
-</ol>
+</ul>
 
 <h3>6.4 Adaptive</h3>
 <ul>
