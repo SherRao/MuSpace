@@ -666,9 +666,9 @@ Database: Firestore, FirebaseOn every view, the sidebar,
 </ol>
 
 <h3>6.4 Adaptive</h3>
-<ol>
+<ul>
     <li>As the Spotify API is updated, we will adapt to the changes and update accordingly</li>
-</ol>
+</ul>
 
 <!-- 6. Maintenance -->
 <h2>7. Extra Details</h2>
