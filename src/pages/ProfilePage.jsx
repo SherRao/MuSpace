@@ -13,8 +13,6 @@ import ProfileUserName from "../components/atoms/ProfileUserName";
 
 const Container = Styled.div`
     width: 100%;
-    height: 100vh;
-    padding: 5em;
 
     margin: 0;
     top: 0;
@@ -36,7 +34,7 @@ const Container = Styled.div`
 const Feed = Styled.div`
     
     padding: 20px;
-    margin: 0 0 15px 0;
+    margin: 0 1vw 15px 1vw;
     border-radius: 15px;
 
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -100,7 +98,7 @@ const FeedContainer = Styled.div`
 const FriendFeeds = Styled.div`
     display: flex;
     flex-direction: column;
-
+    margin: 0 1vw 15px 1vw;
 `;
 
 
