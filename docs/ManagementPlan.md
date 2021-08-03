@@ -220,7 +220,7 @@
 <!--        6span  -->
         <th rowspan="4">5</th>
         <td>Back-end Implementation</td>
-        <td>Nausher, Robert, Daner, Nish, Jagveer, Jacob, Madhumitha</td>
+        <td>Nausher, Robert, Daner, Nish, Jagveer, Jacob, Mathumithan</td>
         <td>July 27th, 2021</td>
     </tr>
     <tr>

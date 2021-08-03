@@ -9,7 +9,7 @@ const PageContainer = Styled.div`
     transition: all 0.25s ease;
 `;
 
-function MessagesPage() {
+function FriendsPage() {
     return (
         <PageContainer>
 
@@ -17,4 +17,4 @@ function MessagesPage() {
     );
 }
 
-export default MessagesPage;
+export default FriendsPage;
