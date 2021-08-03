@@ -250,13 +250,17 @@
 <p><b>The date format must be as follows: day.month.year</b></p>
 <p><b>Usability.</b> How easy is it for a customer to use the system?</p>
 <p>Usability of the app is straightforward, the app is laid out in such a way that any user can understand what is happening. Each button goes to the titled page, making the learning curve small, if not non-existent.</p>
+
+<!-- Data Dictionary -->
+<h2>5. Data Dictionary</h2>
+<iframe width="960px" height="720px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRImyLXr4bhR2edzzLzhL9lxpPbIJsijbu4JbeLb7EWUWZLBmMctlpJkmVVrNEdqr9c54lwAu4RJiRB/pubhtml?widget=true&amp;headers=false"></iframe>
 <!-- Classes -->
-<h2>5. Classes</h2>
+<h2>6. Classes</h2>
 <p><b>This is an ongoing diagram that is being continuously updated.</b></p>
 <div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://lucid.app/documents/embeddedchart/dd3c7144-fde2-4d4e-96a5-1df4cb1198b3" id="QuUPrM8LWEpi"></iframe></div>
 
 <!-- Extra Details -->
-<h2>6. Extra Details</h2>
+<h2>7. Extra Details</h2>
 
 <!-- Versions -->
 <h3>Version History:</h3>
