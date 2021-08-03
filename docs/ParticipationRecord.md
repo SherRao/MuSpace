@@ -3,5 +3,5 @@
 </h1>
 <h1 align="center">MuSpace Member Participation Records</h1>
 
-<iframe width="1200px" height="1000px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKQgYcLBCHaf2yaINqsR2FzN7gdIXeouSHoJgC73aOWJkfTqLDJRDLVKtr5x8He2Alu81mz_ZF5GSV/pubhtml?widget=true&amp;headers=false"></iframe>
+<iframe width="1000px" height="1000px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKQgYcLBCHaf2yaINqsR2FzN7gdIXeouSHoJgC73aOWJkfTqLDJRDLVKtr5x8He2Alu81mz_ZF5GSV/pubhtml?widget=true&amp;headers=false"></iframe>
 
