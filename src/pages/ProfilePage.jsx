@@ -12,9 +12,7 @@ import TopArtists from "../components/molecules/TopArtists";
 import ProfileUserName from "../components/atoms/ProfileUserName";
 
 const Container = Styled.div`
-    width: 100vw;
-    height: 100vh;
-    padding: 5em;
+    width: 100%;
 
     margin: 0;
     top: 0;
@@ -34,9 +32,9 @@ const Container = Styled.div`
 `;
 
 const Feed = Styled.div`
-    width: 80%;
+    
     padding: 20px;
-    margin: 0 0 15px 0;
+    margin: 0 1vw 15px 1vw;
     border-radius: 15px;
 
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -49,7 +47,7 @@ const Feed = Styled.div`
 
 const StyledText = Styled.h1`
     font-family: "Roboto";
-    font-size: ${props => props.theme.fontSizes.mediumMedium};
+    font-size: ${props => props.theme.fontSizes.large};
     color: ${props => props.theme.colors.black};
     font-weight: bold;
     align: right;
@@ -88,6 +86,22 @@ const StyledTexts = Styled.h1`
 
 `;
 
+const FeedContainer = Styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 4em;
+      
+`;
+
+const FriendFeeds = Styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 0 1vw 15px 1vw;
+`;
+
+
 function ProfilePage() {
 
     return (
@@ -97,18 +111,27 @@ function ProfilePage() {
                 <StyledTitle>Nishy Naushy Poo</StyledTitle>
             </titleDiv>
             
-            <Feed>
-                <StyledText>Feed</StyledText>
-                <FeedObject title="#Post Title" content="#Post Content" details="#Song Details" link="#"></FeedObject>
-                <FeedObject title="#Post Title" content="#Post Content" details="#Song Details" link="#"></FeedObject>
-                <FeedObject title="#Post Title" content="#Post Content" details="#Song Details" link="#"></FeedObject>
-            </Feed>
-            <TopArtists>
-            </TopArtists>
-            <TopSongs>
-            </TopSongs>
-            <FriendTopAlbums> 
-            </FriendTopAlbums>
+            <FeedContainer>
+                <Feed>
+                    <StyledText>Feed</StyledText>
+                    <FeedObject title="#Post Title" content="#Post Content" details="#Song Details" link="#"></FeedObject>
+                    <FeedObject title="#Post Title" content="#Post Content" details="#Song Details" link="#"></FeedObject>
+                    <FeedObject title="#Post Title" content="#Post Content" details="#Song Details" link="#"></FeedObject>
+                </Feed>
+
+                <FriendFeeds>
+                    <TopArtists>
+                    </TopArtists>
+                    <TopSongs>
+                    </TopSongs>
+                    <FriendTopAlbums> 
+                    </FriendTopAlbums>
+                </FriendFeeds>
+
+                
+
+            </FeedContainer>
+            
         </Container>
     );
 }

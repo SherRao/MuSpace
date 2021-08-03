@@ -1,6 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
-import { AlbumCover, Card } from "@atoms";
+import { ArtistProfilePic, Card } from "@atoms";
 
 
 const StyledDiv = Styled.div`
@@ -21,9 +21,21 @@ const StyledDiv = Styled.div`
 
 const Banner = Styled.div`
     background-color: grey;
-    height: 2em;
+    height: 3em;
     width: 100%;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
+    margin-top: 0px;
+    
+`;
+
+const BannerText = Styled.p`
+    margin-left: 1em;
+    color: white;
+
+    @media (max-width: 521px){
+        font-size: 3vw;
+    }
+
 
 `;
 
@@ -36,23 +48,41 @@ const TextDiv = Styled.div`
 
 const ArtistName = Styled.div`
     font-size: ${props => props.theme.fontSizes.large};
+    font-weight: bold;
+
+    @media (max-width: 521px){
+        font-size: 5vw;
+    }
 
 `;
 
 const HoursPlayed = Styled.div`
     font-size: ${props => props.theme.fontSizes.medium};
+
+    @media (max-width: 521px){
+        font-size: 3vw;
+    }
+`;
+
+const ResponsivePic = Styled(ArtistProfilePic)`
+    && {    
+        @media (max-width: 521px){
+            display: none;
+        }
+    }
 `;
 
 
-
-function FavArtist({artist_name, hours_played}) {
+function FavArtist({artist_name, hours_played, artist_pic_url}) {
     return (
         <StyledDiv>
-            <Banner/>
-            <AlbumCover width="6em"/>
+            <Banner>
+                <BannerText>Your favoutite artist of the week</BannerText>
+            </Banner>
+            <ResponsivePic width="5em" artist_pic_url={artist_pic_url}/>
             <TextDiv>
                 <ArtistName>{artist_name}</ArtistName>
-                <HoursPlayed>{hours_played}</HoursPlayed>
+                <HoursPlayed>{hours_played} hours played</HoursPlayed>
             </TextDiv>
         </StyledDiv>
     );

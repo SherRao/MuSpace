@@ -27,7 +27,7 @@ const Container = Styled.div`
 function HomePage() {
     return (
         <Container>
-            <FavArtist/>
+            <FavArtist artist_name="Lil Uzi Vert" hours_played="10" artist_pic_url="https://i.scdn.co/image/ab676161000051749cc6d44767dda18ee4e1be9f"/>
             <h1>Hello world</h1>
         </Container>
     );

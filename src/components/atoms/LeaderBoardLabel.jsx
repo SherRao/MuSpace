@@ -3,7 +3,7 @@ import Styled from "styled-components";
 
 const StyledText = Styled.p`
     font-family: "Roboto";
-    font-size: ${props => props.theme.fontSizes.smallMedium};
+    font-size: ${props => props.theme.fontSizes.medium};
     color: ${props => props.theme.colors.black};
     text-align: left;
     text-align: top;

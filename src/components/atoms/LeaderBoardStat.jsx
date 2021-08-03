@@ -11,7 +11,7 @@ const StyledDiv = Styled.div`
 `;
 
 const StyledNumber = Styled.p`
-    font-size: ${props => props.theme.fontSizes.smallMedium};
+    font-size: ${props => props.theme.fontSizes.medium};
     font-weight: bold;
 `;
 
@@ -24,7 +24,7 @@ const StyledProfilePic = Styled.img`
 
 const StyledText = Styled.p`
     color: ${props => props.theme.colors.grey};
-    font-size: ${props => props.theme.fontSizes.small};
+    font-size: ${props => props.theme.fontSizes.mediumSmall};
     text-align: right;
     width: 80px;
 `;
