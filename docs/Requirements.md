@@ -11,23 +11,9 @@
 <p>
     This is the requirement document, which contains everything necessary for MuSpace. Additionally, the document includes the project features along with a description of how each feature will function.  The audience for this document is potential clients and their corresponding development teams. This is a reference guide for the development teams to ensure that everything runs smoothly, and answer potential questions along the way.
 </p>
-<h3>1.3 Scope and Business Model</h3>
-<h4>1.3.1 Scope</h4>
+<h3>1.3 Business Model</h3>
 <p>
-    This document outlines the overall functionality, constraints and specifications of MuSpace, an application
-    available on various platforms - iOS, Android, and the Web. This is to be used as a social media platform that
-    matches people based on their favourite genre, artist, albums, and other musical tastes. You can also message
-    various artists directly using an AI chatbot. Users will also be able to host live music-sharing sessions with
-    friends, family, and strangers. Music sharing rooms can be locked with user IDs and passwords, generated on the
-    creation of the room - the room name has to be a minimum of 5 characters long, and the password should be a
-    minimum of 8 characters long.
-</p>
-<h4>1.3.2 Business Model</h4>
-<p>
-    The platform will be free to use. It will cost users nothing to download and there will be no advertisements in
-    the application. The reasons for allowing users to use the application for free are to first gain exposure and
-    publicity as well as develop monetizable content. Once enough exposure and publicity have been reached, R&D will
-    be completed to introduce some form of monetization, like monetized concerts and DJ sessions.
+    The platform will be free to use. It will cost users nothing to download and there will be no advertisements in the application. The reasons for allowing users to use the application for free are to first gain exposure and publicity as well as develop monetizable content.
 </p>
 <h2>1.4 Definitions, Acryonyms and Abbreviations</h2>
 <h4>1.4.1 Acronyms and Abbreviations</h4>
@@ -37,7 +23,6 @@
     <li>SRS - Software Requirement Specification</li>
     <li>2FA - Two Factor Authentication</li>
     <li>PC - Personal Computer</li>
-    <li>Mobile-based - for Android / iOS platforms</li>
     <li>R&D - Research and Development</li>
 </ul>
 <h4>1.4.2 Definitions</h4>
@@ -74,7 +59,7 @@
 <h3>2.1 Product Perspective</h3>
 <p>
     MuSpace will take a web-based development approach using <a href="https://reactjs.org/" target="_blank">React</a>.
-    Major components include user connection to Spotify using <a href="https://developer.spotify.com/documentation/web-api/"     target="_blank">Spotify’s Web API</a>, and web-based chat functionality and listening rooms using <a           href="https://firebase.google.com/?gclid=Cj0KCQjw6NmHBhD2ARIsAI3hrM2r9bx-3SnvqnYGD46fymSbcpADc9fc4uqnhUJbNTPDoJXRWrtDO3gaAhNfEALw_wcB&gclsrc=aw.ds" target="_blank">Google Firebase’s</a> Realtime No-SQL Database.
+    Major components include user connection to Spotify using <a href="https://developer.spotify.com/documentation/web-api/"     target="_blank">Spotify’s Web API</a>, and web-based chat functionality.
 </p>
 <h4>2.1.1 <a href="https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=327%3A12583" target="_blank">Sample GUI</a></h4>
 <iframe width="960px" height="720px" src="https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=327%3A12583" frameBorder="0" scrolling="no" allowFullScreen></iframe>
