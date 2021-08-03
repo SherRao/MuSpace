@@ -1,13 +1,13 @@
 import React from "react";
 import Styled from "styled-components";
 
-import {MiniTopCategory} from  "@atoms";
+import { Card, MiniTopCategory } from  "@atoms";
 
 const StyledDiv = Styled.div`
     display: flex;
     background-color: ${props => props.theme.colors.white};
     flex-direction: column;
-    width: min-content;
+    min-width: max-content;
     justify-content: center;
     border-radius: 12px;
     filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
@@ -15,7 +15,7 @@ const StyledDiv = Styled.div`
     margin: 0.6em 0.3em;
 `;
 
-const StyledText = Styled.p`
+const StyledTitle = Styled.p`
     font-family: "Roboto";
     font-size: ${props => props.theme.fontSizes.mediumLarge};
     color: ${props => props.theme.colors.black};
@@ -34,14 +34,14 @@ const StyledOuterDiv = Styled.div`
 
 function FriendTopAlbums() {
     return (
-        <StyledDiv>
-            <StyledText>Your Friend's Top Albums</StyledText>
+        <Card>
+            <StyledTitle>Your Friend's Top Albums</StyledTitle>
             <StyledOuterDiv>
-                <MiniTopCategory username = "#Username" text = "#Album Title" artist = "#Artist"></MiniTopCategory>
-                <MiniTopCategory username = "#Username" text = "#Album Title" artist = "#Artist"></MiniTopCategory>
-                <MiniTopCategory username = "#Username" text = "#Album Title" artist = "#Artist"></MiniTopCategory>
+                <MiniTopCategory username="#Username" text="#Album Title" artist="#Artist" />
+                <MiniTopCategory username="#Username" text="#Album Title" artist="#Artist" />
+                <MiniTopCategory username="#Username" text="#Album Title" artist="#Artist" />
             </StyledOuterDiv>
-        </StyledDiv>
+        </Card>
     );
 }
 

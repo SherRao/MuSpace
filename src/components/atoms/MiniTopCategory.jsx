@@ -11,18 +11,19 @@ const StyledDiv = Styled.div`
 
 `;
 
-const StyledText = Styled.b`
+const StyledText = Styled.p`
     display: flex;
     justify-content: center;
-    font-family: "Roboto";
-    font-size: ${props => props.theme.fontSizes.medium};
+    margin: 0;
+    font-size: ${props => props.theme.fontSizes.mediumSmall};
     color: ${props => props.theme.colors.black};
     text-align: center;
     font-weight: medium;
 `;
 
-const StyledUsername = Styled.u`
+const StyledUsername = Styled.p`
     font-weight: bold;
+    margin: 0.4rem 0;
 `;
 
 function MiniTopCategory({username, text, artist}){
