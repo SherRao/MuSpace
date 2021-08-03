@@ -532,9 +532,12 @@
         <td style="text-align:center">A live feed that shows the song that your friend is listening to</td>
     </tr>
 </table>
+<!-- Data Dictionary -->
+<h2>5. Data Dictionary</h2>
+<iframe width="960px" height="720px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRImyLXr4bhR2edzzLzhL9lxpPbIJsijbu4JbeLb7EWUWZLBmMctlpJkmVVrNEdqr9c54lwAu4RJiRB/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
-<h2>5. Detailed Design</h2>
-<h3>5.1 Module Detailed Design</h3>
+<h2>6. Detailed Design</h2>
+<h3>6.1 Module Detailed Design</h3>
 
 <p>RegisterPage()</p>
 <ol> 
@@ -635,9 +638,9 @@
 </ol>
 
 <!-- 6. Maintenance -->
-<h2>6. Maintenance</h2>
+<h2>7. Maintenance</h2>
 
-<h3>6.1 Corrective</h3>
+<h3>7.1 Corrective</h3>
 <p>GitHub Issues Tracking tool is going to be used to organize issues that need to be resolved</p>
 <ol> 
     <li>Review: GitHub issues will be periodically monitored by the team to track new issues and their status</li>
@@ -645,12 +648,12 @@
     <li>Correction: Once the issue’s root cause is identified, the developer will fix the issue in the code and update the Github repository with the fix and documented changes.</li>
 </ol>
 
-<h3>6.2 Preventative</h3>
+<h3>7.2 Preventative</h3>
 <ul> 
     <li>Github actions</li>
 </ul>
 
-<h3>6.3 Perfective</h3>
+<h3>7.3 Perfective</h3>
 <ul> 
     <li>Time is a major factor in what we as a group can accomplish, however after the completion of this project, some ideas on a shortlist to implement are</li>
     <ol> 
@@ -665,13 +668,13 @@
     </ol>
 </ul>
 
-<h3>6.4 Adaptive</h3>
+<h3>7.4 Adaptive</h3>
 <ul>
     <li>As the Spotify API is updated, we will adapt to the changes and update accordingly</li>
 </ul>
 
-<!-- 6. Maintenance -->
-<h2>7. Extra Details</h2>
+<!-- 8. Maintenance -->
+<h2>8. Extra Details</h2>
 
 <h3>Version History:</h3>
 <ul>

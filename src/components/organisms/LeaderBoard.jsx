@@ -1,8 +1,9 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { LeaderBoardLabel, LeaderBoardStat } from "@atoms"; 
+import { Card, LeaderBoardLabel, LeaderBoardStat } from "@atoms"; 
 import { Firebase } from "@functions";
+import { DefaultProfilePic } from "@assets";
 
 const StyledDiv = Styled.div`
     color:${props => props.theme.colors.black};
@@ -36,7 +37,7 @@ const StyledLink = Styled.a`
     margin-top: 5%;
 `;
 
-const StyledText = Styled.p`
+const StyledTitle = Styled.p`
     font-family: "Roboto";
     font-size: ${props => props.theme.fontSizes.mediumLarge};
     color: ${props => props.theme.colors.black};
@@ -48,24 +49,25 @@ const StyledText = Styled.p`
 `;
 
 function LeaderBoard({ text }){
-    const [profilePic, setProfilePic ] = React.useState(null);
-    const user = Firebase.auth.currentUser;
+    // const [profilePic, setProfilePic ] = React.useState(null);
+    // const user = Firebase.auth.currentUser;
     
-    React.useEffect(() => {
-        if(!profilePic)
-            getProfilePic();
+    // React.useEffect(() => {
+    //     if(!profilePic)
+    //         getProfilePic();
 
-    }, []);
+    // }, []);
 
-    async function getProfilePic() {
-        const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
-        setProfilePic(x);
+    // async function getProfilePic() {
+    //     const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
+    //     setProfilePic(x);
 
-    }
+    // }
+    let profilePic = DefaultProfilePic;
 
     return (
-        <StyledDiv>
-            <StyledText>Leaderboard</StyledText>
+        <Card>
+            <StyledTitle>Leaderboard</StyledTitle>
             <StyledInnerDiv>
                 <LeaderBoardLabel text="Top Listening Hours:"/>
                 <StyledInnerDiv>
@@ -80,7 +82,7 @@ function LeaderBoard({ text }){
                     <LeaderBoardStat number={3} username="username" hours={69} href="/" src={profilePic}></LeaderBoardStat>
                 </StyledInnerDiv>
             </StyledInnerDiv>
-        </StyledDiv>
+        </Card>
     );
 }
 

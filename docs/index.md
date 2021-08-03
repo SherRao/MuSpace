@@ -35,6 +35,9 @@
             <li>
                 <a href="./Conventions.html">Convention Guidelines Document</a>
             </li>
+            <li>
+                <a href="./ParticipationRecord.html">Participation Record Document</a>
+            </li>
         </ul>
     </body>
 </html>
