@@ -11,19 +11,21 @@ import GoogleSigninButton from "./GoogleSigninButton";
 import SearchField from "./SearchField";
 import MiniTopCategory from "./MiniTopCategory";
 import UserButton from "./UserButton";
+import SectionButton from "./SectionButton";
 
 export {
-    AlbumCover,
-    SidebarButton,
-    MuspaceLogo,
-    LoginField,
-    TextButton,
-    Card,
-    RegisterField,
-    LeaderBoardLabel,
-    LeaderBoardStat,
-    GoogleSigninButton,
-    SearchField,
-    MiniTopCategory,
-    UserButton
+  AlbumCover,
+  SidebarButton,
+  MuspaceLogo,
+  LoginField,
+  TextButton,
+  Card,
+  RegisterField,
+  LeaderBoardLabel,
+  LeaderBoardStat,
+  GoogleSigninButton,
+  SearchField,
+  MiniTopCategory,
+  UserButton,
+  SectionButton,
 };

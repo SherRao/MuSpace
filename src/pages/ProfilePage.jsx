@@ -67,7 +67,7 @@ const StyledImg = Styled.img`
 
 const StyledTitle = Styled.p`
     font-family: ${props => props.theme.fonts.title};
-    font-size: ${props => props.theme.fontSizes.large};
+    font-size: ${props => props.theme.fontSizes.extraLarge};
     color: ${props => props.theme.colors.black};
     font-weight: bold;
     margin: 0em 0em 0em 1em;
