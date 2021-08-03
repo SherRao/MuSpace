@@ -12,7 +12,7 @@ import SearchField from "./SearchField";
 import MiniTopCategory from "./MiniTopCategory";
 import UserButton from "./UserButton";
 import SectionButton from "./SectionButton";
-import { ArtisticProfilePic } from ".";
+import ArtistProfilePic from "./ArtistProfilePic";
 
 export {
   AlbumCover,
@@ -29,5 +29,5 @@ export {
   MiniTopCategory,
   UserButton,
   SectionButton,
-  ArtisticProfilePic,
+  ArtistProfilePic,
 };
