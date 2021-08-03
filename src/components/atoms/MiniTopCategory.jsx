@@ -15,7 +15,7 @@ const StyledText = Styled.b`
     display: flex;
     justify-content: center;
     font-family: "Roboto";
-    font-size: ${props => props.theme.fontSizes.small};
+    font-size: ${props => props.theme.fontSizes.smallMedium};
     color: ${props => props.theme.colors.black};
     text-align: center;
     font-weight: medium;
