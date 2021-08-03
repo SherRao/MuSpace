@@ -6,7 +6,7 @@
 <!-- Introduction -->
 <h2>1. Introduction</h2>
 <h3>1.1 Project Overview</h3>
-<p>MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. When users share similar listening habits with others, they are recommended as connections via a point-based rating system using the <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Spotify SDK</a> data. MuSpace will also offer listening rooms that allow users to listen along with their friends and chat with each other in real-time. Additionally, users can recommend which songs will be played in the listening room.</p>
+<p>MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. Users will be able to add friends on MuSpace and look at their detailed Spotify listening history. Users will also be able to view detailed statistics about their listening habits, such as listening time, favourite genres, favourite artists, and more.</p>
 <h3>1.2 Project Deliverables</h3>
 <table>
     <!-- Headers -->
@@ -111,11 +111,11 @@
 <h4>1.5.1 Definitions</h4>
 <ul>
     <li><b>Spotify</b> - Spotify is an audio streaming and media services provider.</li>
-    <li><b>Listening Room/Music Room</b> - A chat room hosted by users where they can listen along to the host and chat with other users in the room.</li>
+<!--     <li><b>Listening Room/Music Room</b> - A chat room hosted by users where they can listen along to the host and chat with other users in the room.</li> -->
     <li><b>Agile Approach</b> - A method to manage a project by breaking it up into several phases.</li>
     <li><b>Web-based</b> - A piece of software that is solely hosted on a web server over the internet.</li>
-    <li><b>Android</b> - The operating system suite developed by Google for mobile devices.</li>
-    <li><b>iOS</b> - The operating system developed by Apple for their mobile phones.</li>
+<!--     <li><b>Android</b> - The operating system suite developed by Google for mobile devices.</li>
+    <li><b>iOS</b> - The operating system developed by Apple for their mobile phones.</li> -->
     <li><b>Front-end</b> - The user interface and presentation of the application.</li>
     <li><b>Back-end</b> - Data and infrastructure of the application.</li>
     <li><b>DNS Service</b> - Servers responsible for translating the domain names to numeric IP addresses leading them to the correct website.</li>
@@ -136,7 +136,7 @@
     <li><b>Headless</b> - The application is running without a graphical user interface (GUI) and sometimes without a user interface at all.</li>
     <li><b>Chromium</b> - An open-source browser project that aims to build a safer, faster, and more stable way for all users to experience the web.</li>
     <li><b>Plaintexts</b> - Text that is not computationally tagged, specially formatted, or written in code.</li>
-    <li><b>Chat Rooms/Messaging Page</b> - Personal messaging page between 2 or more people.</li>
+    <li><b>Messaging Page</b> - Personal messaging page between 2 or more people.</li>
 </ul>
 <h4>1.5.2 Acronyms and Abbreviations</h4>
 <ul>
@@ -161,7 +161,7 @@
 <p><b>Stage 6:</b> Deployment</p>
 <p><b>Stage 7:</b> Operations & Maintenance (Post Submission)</p>
 <h3>2.2 Organizational Structure</h3>
-<p>Using the agile approach, we will be starting on the back-end of the project and the UI design as a group. As soon as the UI design is finished and laid out, the front-end developers will begin development. Concurrently, the back-end developers will also begin development. Everything worked on will be done through sprints. After both the front-end and back-end of the project are finished, we will port the web-based application onto Android and iOS.</p>
+<p>Using the agile approach, we will be starting on the back-end of the project and the UI design as a group. As soon as the UI design is finished and laid out, the front-end developers will begin development. Concurrently, the back-end developers will also begin development. Everything worked on will be done through sprints.</p>
 <h3>2.2 Project Responsibilities</h3>
 <table>
     <!-- Headers -->
@@ -217,9 +217,10 @@
     </tr>
     <!-- No. 5 -->
     <tr>
-        <th rowspan="6">5</th>
+<!--        6span  -->
+        <th rowspan="4">5</th>
         <td>Back-end Implementation</td>
-        <td>Nausher, Robert, Daner, Nish, Jagveer, Jacob, Madhumitha</td>
+        <td>Nausher, Robert, Daner, Nish, Jagveer, Jacob, Mathumithan</td>
         <td>July 27th, 2021</td>
     </tr>
     <tr>
@@ -237,7 +238,7 @@
         <td>Back-end team</td>
         <td>July 29th, 2021</td>
     </tr>
-    <tr>
+<!--     <tr>
         <td>Mobile Implementation</td>
         <td rowspan="2">All Members</td>
         <td>August 3rd, 2021</td>
@@ -245,7 +246,7 @@
     <tr>
         <td>Mobile Implementation SQA</td>
         <td>August 5th, 2021</td>
-    </tr>
+    </tr> -->
     <!-- No. 6 -->
     <tr>
         <th rowspan="2">6</th>
@@ -271,7 +272,7 @@
 <p>The main objective of this project is to develop a web-based music application that will eventually branch out to Android and iOS. This uses the <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify API</a> and <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Spotify SDK</a> to connect people listening to similar styles of music. By the end of the term (August, 5th 2021), our goal is to have all project deliverables (the SRS, the SPMP, analysis, document, design documentation, back-end implementation, front-end implementation, and user documentation) complete. By then our goal is to also have a complete well-implemented version of our application, which would be heavily Quality Tested. This project's major priority is to have an easy-to-understand, easy-to-read, consistent, and informative set of documentation as well as a seamless project flow. Since the project has no monetary funding, the completion of deliverables is solely dependent on our time and resources. </p>
 <h3>3.2 Monitoring and Controlling Mechanisms</h3>
 <p>Our group meetings take place every Tuesday and Thursday during lectures, where we send one person to listen to the lecture, in this case, Jagveer. During this time, we split into groups for sprints, where work ethic is peer-checked.</p>
-<p>All calls are done via Discord (as in a person is not applicable), Documentation is done on Google Docs and then transferred onto our project webpage. The UI is designed on Figma. The Github project is our team's central repository for code and resources</p>
+<p>All calls are done via <a href="https://discord.com/" target="_blank">Discord</a> (as in a person is not applicable), Documentation is done on <a href="https://www.google.ca/docs/about/" target="_blank">Google Docs</a> and then transferred onto our project webpage. The UI is designed on <a href="https://www.figma.com/" target="_blank">Figma</a>. The Github project is our team's central repository for code and resources</p>
 <p>SQA is conducted when sprints are done. The process is conducted by those not in the sprint to ensure that quality control is unbiased.</p>
 <h3>3.3 Risk Management / User Privacy / User Safety</h3>
 <ol>
@@ -328,7 +329,7 @@
 <ul>
     <li><b>JavaScript</b> - <a href="https://www.javascript.com/" target="_blank">JavaScript.com</a></li>
     <li><b>TypeScript</b> - <a href="https://www.typescriptlang.org/" target="_blank">TypeScript: Typed JavaScript at Any Scale. (typescriptlang.org)</a></li>
-    <li><b>ReactJS framework</b><a href="https://reactjs.org/" target="_blank">React</a></li>
+    <li><b>ReactJS framework</b> - <a href="https://reactjs.org/" target="_blank">React</a></li>
     <li><b>Node.js</b> - <a href="https://nodejs.org/en/" target="_blank">Node.js (nodejs.org)</a></li>
     <li><b>Google Firestore</b> - <a href="https://cloud.google.com/firestore" target="_blank">Firestore: NoSQL document database | Google Cloud</a></li>
     <li><b>Google Authentication</b> - <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA&gl=US" target="_blank">Google Authenticator – Apps on Google Play</a></li>
@@ -341,7 +342,7 @@
 <ul>
     <li><b>GitHub</b> - <a href="https://github.com/SherRao/MuSpace" target="_blank">GitHub Repository</a></li>
     <li><b>Figma</b> - <a href="https://www.figma.com/team_invite/redeem/bENflg8BpmlHQtsnZpDSoz" target="_blank">Figma Project</a></li>
-    <li><b>Google Drive (Docs, Sheets)</b></li>
+    <li><b>Google Drive (Docs, Sheets)</b> - <a href="https://drive.google.com/" target="_blank">Google Drive</a></li>
     <li><b>Discord</b> - <a href="https://discord.com/brand-new" target="_blank">Discord</a></li>
 </ul>
 <h4>Project Support Functions:</h4>
@@ -364,7 +365,7 @@
     <li><b>Account Creation:</b></li>
     <ul>
         <li>The first page of the account creation process requires the user to input their email address, username, full name, and password. These will be a part of a form, where the username and full name field are plaintexts, the password field is a password field, and the email address field is an email address field.</li>
-        <li>The password will need to be entered twice for verification.</li>
+<!--         <li>The password will need to be entered twice for verification.</li> -->
         <li>This data will then be verified to make sure it meets certain criteria. These criteria are as follows: </li>
         <ul>
             <li>The username must be a minimum of 5 characters and a maximum of 32 characters.</li>
@@ -394,8 +395,8 @@
     </ul>
     <li><b>Friends Page:</b></li>
     <ul>
-        <li>The Friends page will list all the user’s friends and their status (Online, Offline).</li>
-        <li>On the Friends page, there will be a button to add a new friend by username.</li>
+        <li>The Friends page will list all the user’s friends.</li>
+<!--         <li>On the Friends page, there will be a button to add a new friend by username.</li> -->
         <li>On the Friends page, clicking/tapping on a friend's name will present the user with options to send a private message, or unfriend the selected user.</li>
         <li>A request is sent to the Firestore database, which will then return a list of chat room IDs that the user is a part of. The client can then request each chat room specifically, which the database will return.</li>
     </ul>
@@ -435,15 +436,15 @@
     </tr>
     <tr>
         <td style="text-align:center">Analysis Document</td>
-        <td style="text-align:center">TBD</td>
+        <td style="text-align:center">Modified IEEE</td>
     </tr>
     <tr>
         <td style="text-align:center">Design Document</td>
-        <td style="text-align:center">TBD</td>
+        <td style="text-align:center">Modified IEEE</td>
     </tr>
     <tr>
         <td style="text-align:center">User Document</td>
-        <td style="text-align:center">TBD</td>
+        <td style="text-align:center">Modified IEEE</td>
     </tr>
     <tr>
         <td style="text-align:center">Participation Record (Hours)</td>
@@ -452,17 +453,17 @@
     </tr>
     <tr>
         <td style="text-align:center">Source Code</td>
-        <td style="text-align:center">TBD</td>
+        <td style="text-align:center">Modified IEEE</td>
         <td style="text-align:center">All Developers</td>
     </tr>
 </table>
 <!-- UPDATED TO HERE -->
 <h3>4.2.1 Software Requirements Specification (SRS)</h3>
-<p>Up to date <a href="https://sherrao.github.io/MuSpace/SRS.html">SRS Documentation</a>.</p>
+<p>Up to date <a href="https://sherrao.github.io/MuSpace/Requirements.html">SRS Documentation</a>.</p>
 <h3>4.2.2 Software Design Description (SDD)</h3>
 <p>We will be using <i>JavaScript</i>, <i>TypeScript</i>, <i>CSS</i>, and <i>HTML</i> as the languages for the project. These languages are the easiest to implement for a web application of this magnitude which requires the front-end and back-end to work with each other seamlessly. Without the hassle of separate code bases for both. <i>JavaScript</i> and <i>TypeScript</i> are also ideal languages that have a great capability of handling asynchronous server-side requests.</p>
 <p>We will be using <i>ReactJS</i>, <i>StyledComponents</i>, and <i>Semantic UI</i> to create the front-end of the application - this is the code that will be executed and displayed client-side using a built-in browser <i>JavaScript</i> engine, such as <i>Google’s V8 JavaScript Engine</i>.</p>
-<p>For the back-end of the application, we are using <i>Node.js</i> to run a headless <i>Chromium</i> instance to execute server-side code. The back-end will integrate the <i>Spotify SDK Spotify API, and LyricGenius API</i> to draw all user data - artists, albums, genres, and songs that the artist listens to. The API can also extract music listening and other statistics. This data will be used to connect with other users using a scoring system and to discover new music. The <i>Spotify Web SDK</i> will be used to play music using the user's <i>Spotify</i> account in the web app. The <i>SDK</i> requires the users to have a <i>Spotify</i> account. The <i>LyricGenius API</i> will be used to display lyrics of the songs that the user listens to as well as related lyrical trivia. </p>
+<p>For the back-end of the application, we are using <i>Node.js</i> to run a headless <i>Chromium</i> instance to execute server-side code. The back-end will integrate the <i>Spotify SDK Spotify API</i> to draw all user data - artists, albums, genres, and songs that the artist listens to. The API can also extract music listening and other statistics. This data will be used to connect with other users using a scoring system and to discover new music. The <i>Spotify Web SDK</i> will be used to play music using the user's <i>Spotify</i> account in the web app. The <i>SDK</i> requires the users to have a <i>Spotify</i> account.</p>
 <p>The other portion of the back-end uses <i>Google’s</i> suite of APIs included in <i>Google Firebase</i>. These are but are not limited to Firestore and Authentication. Firestore will be used to store a lot of data:</p>
 <ul>
     <li>User data</li>
@@ -517,6 +518,11 @@
     <ul>
         <li>June 3rd</li>
         <li>All Members </li>
+    </ul>
+    <li>Version 1.0.1 [Sections 1-6, Update to Reflect Changes Made]</li>
+    <ul>
+        <li>July 30th</li>
+        <li>Members - Jagveer, Jiten</li>
     </ul>
 </ul>
 

@@ -10,8 +10,6 @@ import { LoginForm } from "@molecules";
 import { Firebase } from "@functions";
 
 const Container = Styled.div`
-    width: calc(100vw - 6em);
-    height: max-content;
     padding: auto auto;
 
     margin: 0;
@@ -33,7 +31,7 @@ const Container = Styled.div`
 
 const Header = Styled.h3`
     color: ${props => props.theme.colors.purple};
-    font-size: ${props => props.theme.fontSizes.medium};
+    font-size: ${props => props.theme.fontSizes.mediumLarge};
     margin-bottom: -0.5em;
     padding-bottom: 0.5em;
 `;

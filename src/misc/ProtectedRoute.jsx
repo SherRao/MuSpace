@@ -5,19 +5,6 @@ import { Route, Redirect } from "react-router-dom";
 import { SearchBar } from "@molecules";
 import { Sidebar } from "@organisms";
 
-import { HomePage } from "@pages";
-
-const StyledDiv = Styled.div`
-    background-color: ${props => props.theme.colors.white};
-    transition: all 0.25s ease;
-
-    width: 100vw;
-    height: 10vh;
-
-    display: flex;
-    flex-direction: row;
-`;
-
 const LeftDiv = Styled.div`
     width: 18vw;
     height: 100vh;

@@ -9,8 +9,6 @@ import { RegisterForm } from "@molecules";
 import { Firebase } from "@functions";
 
 const Container = Styled.div`
-    width: 100vw;
-    height: max-content;
     padding: 5em;
 
     margin: 0;
@@ -32,7 +30,7 @@ const Container = Styled.div`
 
 const Header = Styled.h3`
     color: ${props => props.theme.colors.lightBlue};
-    font-size: ${props => props.theme.fontSizes.medium};
+    font-size: ${props => props.theme.fontSizes.mediumLarge};
     margin-bottom: -0.5em;
     padding-bottom: 0.5em;
 

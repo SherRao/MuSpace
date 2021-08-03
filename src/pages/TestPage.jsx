@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import SpotifyWebApi from "spotify-web-api-node";
 import axios from "axios";
 
+import {FavArtist} from "@molecules";
+
 function TestPage1() {
     const [result, setResult] = useState("");
 
@@ -33,6 +35,16 @@ function TestPage1() {
         </div>
     );
 }
+
+
+function TestPage2() {
+    
+    
+    return (
+        <FavArtist artist_name="Lil Uzi Vert" hours_played="10"/>
+    );
+}
+
 
 function TestPage() {
     const [result, setResult] = useState("");
@@ -72,4 +84,4 @@ async function getAlbumArtist() {
 
 }
 
-export default TestPage;
+export default TestPage2;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, BrowserRouter as Router, Redirect} from "react-router-dom";
 
-import { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, MessagesPage, ErrorPage } from "@pages";
+import { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, MessagesPage, FriendsPage, SettingsPage, ErrorPage } from "@pages";
 import { Firebase } from "@functions";
 
 import { ProtectedRoute } from "@misc";
@@ -55,6 +55,20 @@ function PageRouter() {
                     isVerified={isVerified}
                 />
 
+                <ProtectedRoute
+                    path="/friends"
+                    component={FriendsPage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
+
+                <ProtectedRoute
+                    path="/settings"
+                    component={SettingsPage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
+
                 <Route
                     path="/verify"
                     component={VerifyEmailPage}
@@ -76,8 +90,7 @@ function PageRouter() {
                     isVerified={isVerified}
                 />
 
-                <Route component = {ErrorPage}/>
-
+                <Route component={ErrorPage}/>
             </Switch>
         </Router>
     );

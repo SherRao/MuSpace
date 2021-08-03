@@ -34,12 +34,12 @@ const Container = Styled.div`
 
 const Header = Styled.h1`
     color: ${props => props.theme.colors.white};
-    font-size: ${props => props.theme.fontSizes.medium};
+    font-size: ${props => props.theme.fontSizes.large};
 `;
 
 const SubHeader = Styled.h3`
     color: ${props => props.theme.colors.white};
-    font-size: ${props => props.theme.fontSizes.small};
+    font-size: ${props => props.theme.fontSizes.medium};
     
 `;
 

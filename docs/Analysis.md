@@ -237,7 +237,7 @@
 <h2>4. Non Functional Attributes</h2>
 
 <p><b>Performance and compatibility.</b> Which hardware, operating systems, browsers, and their versions does the software run on? Does it conflict with other applications and processes within these environments?</p>
-<p>MuSpace will be accessible on any device with a modern web browser such as google chrome or firefox as long as the user has a Spotify account and an internet connection to utilize the app. It will also be available on iOS and Android mobile devices in the near future.</p>
+<p>MuSpace will be accessible on any device with a modern web browser such as Google Chrome or Firefox as long as the user has a Spotify account and an internet connection to utilize the app. It will also be available on iOS and Android mobile devices in the near future.</p>
 
 <p><b>Security.</b> How are the system and its data protected against attacks?</p>
 <p>
@@ -280,6 +280,11 @@
     <ul>
         <li>July 27th</li>
         <li>Members - All members</li>
+    </ul>
+    <li>Version 1.1.0 [Sections 1-7, Update to Reflect Changes Made]</li>
+    <ul>
+        <li>July 30th</li>
+        <li>Members - Jagveer, Jiten</li>
     </ul>
 </ul>
 <!-- Authored By: -->
