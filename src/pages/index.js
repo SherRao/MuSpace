@@ -7,5 +7,6 @@ import ProfilePage from "./ProfilePage";
 import VerifyEmailPage from "./VerifyEmailPage";
 import ErrorPage from "./ErrorPage";
 import MessagesPage from "./MessagesPage";
+import FriendsPage from "./FriendsPage";
 
-export { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, ErrorPage, MessagesPage };
+export { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, ErrorPage, MessagesPage, FriendsPage };

@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, BrowserRouter as Router, Redirect} from "react-router-dom";
 
-import { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, MessagesPage, ErrorPage } from "@pages";
+import { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, MessagesPage, FriendsPage, ErrorPage } from "@pages";
 import { Firebase } from "@functions";
 
 import { ProtectedRoute } from "@misc";
@@ -51,6 +51,13 @@ function PageRouter() {
                 <ProtectedRoute
                     path="/messages"
                     component={MessagesPage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                />
+
+                <ProtectedRoute
+                    path="/friends"
+                    component={FriendsPage}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
                 />
