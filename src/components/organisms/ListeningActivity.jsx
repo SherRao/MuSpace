@@ -1,9 +1,8 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { Card } from "@atoms"; 
+import { Card, TextButton } from "@atoms"; 
 import { ListeningActivityCard } from "@molecules";
-import { DefaultProfilePic } from "@assets";
 
 const StyledInnerDiv = Styled.div`
     display: flex;
@@ -26,6 +25,10 @@ function ListeningActivity(){
             <StyledTitle>Friend Listening Activity</StyledTitle>
             <StyledInnerDiv>
                 <ListeningActivityCard />
+                <ListeningActivityCard />
+                <ListeningActivityCard />
+                <ListeningActivityCard />
+                <TextButton text="See More" style={{ width: "100%", marginTop: "0.4rem" }}/>
             </StyledInnerDiv>
         </Card>
     );

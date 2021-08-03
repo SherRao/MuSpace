@@ -3,6 +3,7 @@ import Styled from "styled-components";
 
 import { FaBookmark } from "react-icons/fa";
 import { AlbumCover, Card } from "@atoms";
+import { SpaceFillerDiv } from "@misc";
 
 const StyledDiv = Styled.div`
     display: flex;
@@ -26,16 +27,17 @@ const StyledUsername = Styled.p`
 
 function ListeningActivityCard() {
     return (
-        <Card style={{flexDirection: "row", padding: 0}} color="grey">
+        <Card style={{flexDirection: "row", padding: 0}} bgColor="grey">
             <StyledDiv>
                 <AlbumCover width="6rem" />
             </StyledDiv>
-            <StyledDiv style={{ width: "100%", justifyContent: "center" }}>
+            <StyledDiv style={{ width: "max-content", maxWidth: "100%", justifyContent: "center" }}>
                 <StyledUsername>
                     <StyledText>Username</StyledText>
                 </StyledUsername>
                 <StyledText>Song Title - Artist Name</StyledText>
             </StyledDiv>
+            <SpaceFillerDiv />
             <StyledDiv>
                 <StyledIcon>
                     <FaBookmark size="1.6em" style={{ margin: "0.8em 0.6em 0 0" }}/>

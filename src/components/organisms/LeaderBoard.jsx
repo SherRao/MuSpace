@@ -7,7 +7,7 @@ import { DefaultProfilePic } from "@assets";
 
 const StyledDiv = Styled.div`
     color:${props => props.theme.colors.black};
-    width: 400px;
+    min-width: 400px;
     height: auto;
     padding: 0.8em;
     align-self: right;

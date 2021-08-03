@@ -38,7 +38,7 @@ const Col = Styled.div`
 function FriendsPage() {
     return (
         <Page>
-            <Col>
+            <Col style={{ flexGrow: 2 }}>
                 <Row>
                     <Col>
                         <FriendTopAlbums />
