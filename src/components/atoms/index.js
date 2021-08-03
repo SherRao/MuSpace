@@ -11,6 +11,8 @@ import GoogleSigninButton from "./GoogleSigninButton";
 import SearchField from "./SearchField";
 import MiniTopCategory from "./MiniTopCategory";
 import UserButton from "./UserButton";
+import ArtistProfilePic from "./ArtistProfilePic"
+
 
 export {
     AlbumCover,
@@ -25,5 +27,6 @@ export {
     GoogleSigninButton,
     SearchField,
     MiniTopCategory,
-    UserButton
+    UserButton,
+    ArtistProfilePic 
 };
