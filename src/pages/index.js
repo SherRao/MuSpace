@@ -7,6 +7,7 @@ import ProfilePage from "./ProfilePage";
 import VerifyEmailPage from "./VerifyEmailPage";
 import ErrorPage from "./ErrorPage";
 import MessagesPage from "./MessagesPage";
+import FriendsPage from "./FriendsPage";
 import SettingsPage from "./SettingsPage";
 
 export {
@@ -19,5 +20,6 @@ export {
   VerifyEmailPage,
   ErrorPage,
   MessagesPage,
+  FriendsPage,
   SettingsPage,
 };
