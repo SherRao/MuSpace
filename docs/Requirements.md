@@ -62,7 +62,7 @@
     Major components include user connection to Spotify using <a href="https://developer.spotify.com/documentation/web-api/"     target="_blank">Spotify’s Web API</a>, and web-based chat functionality.
 </p>
 <h4>2.1.1 <a href="https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=327%3A12583" target="_blank">Sample GUI</a></h4>
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FJh6rAs4sNIZPaELM6qcGEt%2FWebsite%3Fnode-id%3D327%253A12583" allowfullscreen></iframe>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="900" height="700" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FJh6rAs4sNIZPaELM6qcGEt%2FWebsite%3Fnode-id%3D327%253A12583" allowfullscreen></iframe>
 <h3>2.2 Product Functions</h3>
 <p>
     MuSpace is a music application allowing users to connect and chat with each other, as well as look at what music their friends have been listening to. Users will be able to add friends, and friends can chat with each other using the in-app chat feature. The app currently supports Spotify for music preference data.
