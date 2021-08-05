@@ -33,34 +33,39 @@ const PageContainer = Styled.div`
     transition: all 0.25s ease;
 `;
 
-function ProtectedRoute({ component, isLoggedIn, isVerified, ...rest }) {
-    const Component = component; // react sucks....
-    if (isLoggedIn && isVerified) {
-        return (<Route {...rest}>
-            <LeftDiv>
-                <Sidebar />
-            </LeftDiv>
-            <RightDiv>
-                <SearchBar />
-                <PageContainer>
-                    <Component />
-                </PageContainer>
-            </RightDiv>
-        </Route>);
+function ProtectedRoute({ component, isLoading, isLoggedIn, isVerified, ...rest }) {
+    if(isLoading)
+        return (<div>Loading...</div>);
+
+    else {
+        const Component = component; // react sucks....
+        if (isLoggedIn && isVerified) {
+            return (<Route {...rest}>
+                <LeftDiv>
+                    <Sidebar />
+                </LeftDiv>
+                <RightDiv>
+                    <SearchBar />
+                    <PageContainer>
+                        <Component />
+                    </PageContainer>
+                </RightDiv>
+            </Route>);
+                
+        } else if(isLoggedIn) {
+            return (
+                <Route {...rest}>
+                    <Redirect to="/verify"/>
+                </Route>
+            );
             
-    } else if(isLoggedIn) {
-        return (
-            <Route {...rest}>
-                <Redirect to="/verify"/>
-            </Route>
-        );
-        
-    } else {
-        return (
-            <Route {...rest}>
-                <Redirect to="/login"/>
-            </Route>
-        );
+        } else {
+            return (
+                <Route {...rest}>
+                    <Redirect to="/login"/>
+                </Route>
+            );
+        }
     }
 }
 

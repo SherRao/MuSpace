@@ -1,13 +1,14 @@
 import React from "react";
+import config from "@src/config.json";
+
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
-import config from "@src/config.json";
 
 firebase.initializeApp(config.firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
-const AuthContext = React.createContext(null);
+// const AuthContext = React.createContext(null);
 
 /**
  * 
@@ -81,4 +82,4 @@ async function storeNewUserData(id, email, firstName, lastName, username, dob) {
         .doc(id).set(userData);
 }
 
-export default { firebase, auth, db, loginWithEmail, loginWithGoogle, registerWithEmail, AuthContext };
+export default { firebase, auth, db, loginWithEmail, loginWithGoogle, registerWithEmail };
