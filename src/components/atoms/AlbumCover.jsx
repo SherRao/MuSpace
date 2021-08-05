@@ -10,7 +10,6 @@ const StyledImage = Styled.img`
 
     border-radius: 0.6rem;
     border-style: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 
     :hover {
         filter: brightness(75%);
