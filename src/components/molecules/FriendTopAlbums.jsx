@@ -35,7 +35,7 @@ const StyledOuterDiv = Styled.div`
 function FriendTopAlbums() {
     return (
         <Card>
-            <StyledTitle>Your Friend's Top Albums</StyledTitle>
+            <StyledTitle>Your Top Albums</StyledTitle>
             <StyledOuterDiv>
                 <MiniTopCategory username="#Username" text="#Album Title" artist="#Artist" />
                 <MiniTopCategory username="#Username" text="#Album Title" artist="#Artist" />
