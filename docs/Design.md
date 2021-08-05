@@ -543,7 +543,7 @@
 <ol> 
     <li>Check if user is not logged in</li>
     <li>Display the register page, giving the option to create an account</li>
-    <li>When a user tries to register, communicate with the Firebase backend for authentication. Also stores basic user information into the Firestore database.</li>
+    <li>When a user tries to register, communicate with the Firebase database backend for account authentication. Also stores basic user information into the Firestore database.</li>
     <li>Else, redirect to the main page</li>
 </ol>
 
@@ -571,7 +571,7 @@
 <ol> 
     <li>Check if the user is not logged in</li>
     <li>Display login page, giving user option to log in, recover password, or sign up</li>
-    <li>When the user tries to login, communicate with the Firebase backend for authentication</li>
+    <li>When the user tries to login, communicate with the Firebase database backend for account authentication</li>
     <li>Else, redirect to the main page.</li>
 </ol>
 
