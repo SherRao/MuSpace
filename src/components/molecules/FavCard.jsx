@@ -4,7 +4,7 @@ import { ArtistProfilePic } from "@atoms";
 
 
 const StyledDiv = Styled.div`
-    width: 90%;
+    width: clamp(20em, 30vw, 50em);
     height: 10em;
     
     display: flex;
