@@ -44,8 +44,10 @@ function FeedObject({title, content, details, link}){
             <AlbumCover></AlbumCover>
             <StyledLink href={link}>
                 <StyledText>{title}</StyledText>
+                
                 <StyledText>{content}</StyledText>
             </StyledLink>
+            <br/>
             <StyledText>{details}</StyledText>
         </StyledDiv>
         
