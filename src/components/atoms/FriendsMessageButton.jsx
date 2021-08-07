@@ -3,6 +3,8 @@ import Styled from "styled-components";
 
 import { ProfileUserName } from "./ProfileUserName";
 import { UserButton } from "./UserButton";
+import Firebase from "firebase/app";
+import "firebase/auth";
 
 const StyledButton = Styled.button`
     color: ${props => props.theme.colors.black};
@@ -32,7 +34,7 @@ const StyledButton = Styled.button`
 function FriendsMessageButton(){
     const [profilePic, setProfilePic] = React.useState(null);
 
-    const user = Firebase.auth.currentUser;
+    const user = Firebase.auth().currentUser;
     const username = user ? user.displayName : "@username";
 
     /* React.useEffect(() => {
