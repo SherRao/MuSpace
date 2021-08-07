@@ -1,8 +1,8 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { ProfileUserName } from "./ProfileUserName";
-import { UserButton } from "./UserButton";
+import { ProfileUserName } from "@atoms";
+import { UserButton } from "@atoms";
 import Firebase from "firebase/app";
 import "firebase/auth";
 
