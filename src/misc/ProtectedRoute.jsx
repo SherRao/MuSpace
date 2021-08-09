@@ -12,21 +12,17 @@ const LeftDiv = Styled.div`
 `;
 
 const RightDiv = Styled.div`
-    width: 80vw;
-    height 100%;
+    width: 79vw;
+    height: 100%;
 
-    left: 18vw;
-    position: sticky;
+    left: 20vw;
+    position: fixed;
 
     display: flex;
     flex-direction: column;
-
-    margin-left: 1vw;
 `;
 
 const PageContainer = Styled.div`
-    padding: 0 1vw;
-
     display: flex;
     flex-grow: 1;
     
