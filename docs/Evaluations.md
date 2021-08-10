@@ -15,3 +15,4 @@
 <p>Jacob, 190509690: </p>
 <p>Jagveer Sangha, 190612960: </p>
 <p>Nishant Tewari, 190684430: </p>
+<p>Daner Yasin, 190773490: </p>
