@@ -41,6 +41,9 @@
             <li>
                 <a href="./Evaluations.html">Group Member Evaluations</a>
             </li>
+            <li>
+                <a href="./SQA.html">SQA</a>
+            </li>
         </ul>
     </body>
 </html>
