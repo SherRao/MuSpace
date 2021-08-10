@@ -16,7 +16,7 @@ const RightDiv = Styled.div`
     height: 100%;
 
     left: 20vw;
-    position: fixed;
+    position: sticky;
 
     display: flex;
     flex-direction: column;
