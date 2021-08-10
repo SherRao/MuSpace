@@ -6,6 +6,8 @@ import { ArtistProfilePic } from "@atoms";
 const StyledDiv = Styled.div`
     width: clamp(20em, 30vw, 50em);
     height: 10em;
+
+    margin: 0.5em 1em;
     
     display: flex;
     flex-flow: row wrap;
