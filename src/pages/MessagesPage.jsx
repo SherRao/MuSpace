@@ -1,6 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
-import { FriendsMessageButton } from "@atoms";
+import { FriendsMessageButton, ChatBubble } from "@atoms";
 
 const Panels = Styled.div`
     display: flex;
@@ -42,6 +42,14 @@ const FriendsListDiv = Styled.div`
     padding: 0.2em;
 `;
 
+const Chats = Styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 87%;
+    overflow: auto;
+    padding: 0.2em;
+`;
 
 function MessagesPage() {
     return (
@@ -58,11 +66,13 @@ function MessagesPage() {
                 <div>
                     <h3>Username</h3>
                 </div>
+                <Chats>
+                    <ChatBubble from="friend">Hi</ChatBubble>
+                    <ChatBubble from="user">What up?</ChatBubble>
+                </Chats>
                 <div>
-
-                </div>
-                <div>
-
+                    <p>Your message here</p>
+                    <p>Send</p>
                 </div>
             </RightDiv>
         </Panels>

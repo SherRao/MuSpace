@@ -13,7 +13,7 @@ const theme = {
         muSpacePurple: "#8162FF",
         mediumGrey: "#838383",
         lightGrey: "#D4D4D4",
-        lightPurple: "##E6DFFF"
+        lightPurple: "#E6DFFF"
     },
 
     fonts: {
