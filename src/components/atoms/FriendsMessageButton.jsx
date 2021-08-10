@@ -1,8 +1,8 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { ProfileUserName } from "@atoms";
-import { UserButton } from "@atoms";
+import { Card } from "@atoms";
+import { FriendUserButton } from "@atoms";
 import Firebase from "firebase/app";
 import "firebase/auth";
 
@@ -49,12 +49,13 @@ function FriendsMessageButton(){
     }
     
     return(
-        <UserButton
-            text={username}
-            location="/messages"
-            profileImage={profilePic}
-
-        />
+        <Card>
+            <FriendUserButton
+                text={username}
+                location="/messages"
+                profileImage={profilePic}
+            />
+        </Card>
     );
 }
 

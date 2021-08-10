@@ -41,6 +41,7 @@ const CardContainer = Styled.div`
 
 const Heading = Styled.h2`
     font-size: ${props => props.theme.fontSizes.large};
+    color: ${props => props.theme.colors.purple};
     margin: 0;
 `;
 

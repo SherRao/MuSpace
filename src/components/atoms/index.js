@@ -11,6 +11,7 @@ import GoogleSigninButton from "./GoogleSigninButton";
 import SearchField from "./SearchField";
 import MiniTopCategory from "./MiniTopCategory";
 import UserButton from "./UserButton";
+import FriendUserButton from "./FriendUserButton";
 import SectionButton from "./SectionButton";
 import ArtistProfilePic from "./ArtistProfilePic";
 import FriendsMessageButton from "./FriendsMessageButton";
@@ -28,6 +29,7 @@ export {
   GoogleSigninButton,
   SearchField,
   MiniTopCategory,
+  FriendUserButton,
   UserButton,
   SectionButton,
   ArtistProfilePic,
