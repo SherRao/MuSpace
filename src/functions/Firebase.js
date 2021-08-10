@@ -8,7 +8,6 @@ import "firebase/firestore";
 firebase.initializeApp(config.firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
-// const AuthContext = React.createContext(null);
 
 /**
  * 
@@ -33,9 +32,16 @@ function loginWithEmail(event) {
  * Bring up the Google SSO to login with a Google account.
  * 
  */
-function loginWithGoogle() {
+async function loginWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider);
+    const userCredentials = await auth.signInWithPopup(provider);
+
+    const docRef = db.collection("users").doc(userCredentials.user.uid);
+    const doc = await docRef.get();
+    alert(doc.exists);
+
+    if (!doc.exists)
+        await storeNewUserData(userCredentials.user.uid, userCredentials.user.email, null, null, userCredentials.user.displayName, null, userCredentials.user.photoURL);
 
 }
 
@@ -68,14 +74,14 @@ async function registerWithEmail(event) {
 }
 
 
-async function storeNewUserData(id, email, firstName, lastName, username, dob) {
+async function storeNewUserData(id, email, firstName, lastName, username, dob, profile_picture) {
     const userData = {
         "email": email,
         "firstName": firstName,
         "lastName": lastName,
         "username": username,
         "dob": dob,
-        "profile_picture": "https://firebasestorage.googleapis.com/v0/b/cp-317.appspot.com/o/default_profile.jpg?alt=media&token=4ed26d80-388b-4814-95b3-01740138285a"
+        "profile_picture": profile_picture ? profile_picture : "https://firebasestorage.googleapis.com/v0/b/cp-317.appspot.com/o/default_profile.jpg?alt=media&token=4ed26d80-388b-4814-95b3-01740138285a"
     };
 
     await db.collection("users")

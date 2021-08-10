@@ -40,19 +40,24 @@ const StatNumber = Styled.h4`
 
 function Sidebar() {
     const [profilePic, setProfilePic] = React.useState(null);
-
     const user = Firebase.auth.currentUser;
     const username = user ? user.displayName : "@username";
 
-    /* React.useEffect(() => {
+    React.useEffect(() => {
         if(!profilePic)
             getProfilePic();
 
-    }, []); */
+    }, []);
 
     async function getProfilePic() {
-        const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
-        setProfilePic(x);
+        const docRef = Firebase.db.collection("users").doc(user.uid);
+        const doc = await docRef.get();
+        console.log(doc.data());
+
+        const profilePicture = doc.data().profile_picture;
+
+        setProfilePic(profilePicture);
+        console.log(doc.data());
     }
 
     return (

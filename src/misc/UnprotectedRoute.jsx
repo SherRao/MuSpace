@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Styled from "styled-components";
 import { Route, Redirect } from "react-router-dom";
 
@@ -15,36 +15,37 @@ const Center = Styled.div`
     background-color: ${props => props.theme.colors.black};
 `;
 
-function UnprotectedRoute({ component, isLoading, isLoggedIn, isVerified, ...rest }) {
-    if(isLoading) {
-        return (<div>Loading...</div>);
-        
-    }
-    else {
-        const Component = component;
-        if (isLoggedIn && isVerified) {
-            return (
-                <Route {...rest}>
-                    <Redirect to="/home"/>
-                </Route>
-            );
-                
-        } else if(isLoggedIn) {
-            return (
-                <Route {...rest}>
-                    <Redirect to="/verify"/>
-                </Route>
-            );
+function UnprotectedRoute({ component, isLoggedIn, isVerified, isSpotifyVerified, ...rest }) {
+    const Component = component;
+    if (isLoggedIn && isVerified && isSpotifyVerified) {
+        return (
+            <Route {...rest}>
+                <Redirect to="/home"/>
+            </Route>
+        );
             
-        } else {
-            return (
-                <Route {...rest}>
-                    <Center>
-                        <Component />
-                    </Center>
-                </Route>
-            );
-        }
+    } else if(isLoggedIn && !isVerified) {
+        return (
+            <Route {...rest}>
+                <Redirect to="/verify"/>
+            </Route>
+        );
+        
+    } else if(isLoggedIn && isVerified && !isSpotifyVerified) {
+        return (
+            <Route {...rest}>
+                <Redirect to="/spotify-verify"/>
+            </Route>
+        );
+
+    } else {
+        return (
+            <Route {...rest}>
+                <Center>
+                    <Component />
+                </Center>
+            </Route>
+        );
     }
 }
 
