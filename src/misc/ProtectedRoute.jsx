@@ -12,55 +12,56 @@ const LeftDiv = Styled.div`
 `;
 
 const RightDiv = Styled.div`
-    width: 80vw;
-    height 100%;
+    width: 79vw;
+    height: 100%;
 
-    left: 18vw;
-    position: sticky;
+    left: 20vw;
+    position: fixed;
 
     display: flex;
     flex-direction: column;
-
-    margin-left: 1vw;
 `;
 
 const PageContainer = Styled.div`
-    padding: 0 1vw;
-
     display: flex;
     flex-grow: 1;
     
     transition: all 0.25s ease;
 `;
 
-function ProtectedRoute({ component, isLoggedIn, isVerified, ...rest }) {
-    const Component = component; // react sucks....
-    if (isLoggedIn && isVerified) {
-        return (<Route {...rest}>
-            <LeftDiv>
-                <Sidebar />
-            </LeftDiv>
-            <RightDiv>
-                <SearchBar />
-                <PageContainer>
-                    <Component />
-                </PageContainer>
-            </RightDiv>
-        </Route>);
+function ProtectedRoute({ component, isLoading, isLoggedIn, isVerified, ...rest }) {
+    if(isLoading)
+        return (<div>Loading...</div>);
+
+    else {
+        const Component = component; // react sucks....
+        if (isLoggedIn && isVerified) {
+            return (<Route {...rest}>
+                <LeftDiv>
+                    <Sidebar />
+                </LeftDiv>
+                <RightDiv>
+                    <SearchBar />
+                    <PageContainer>
+                        <Component />
+                    </PageContainer>
+                </RightDiv>
+            </Route>);
+                
+        } else if(isLoggedIn) {
+            return (
+                <Route {...rest}>
+                    <Redirect to="/verify"/>
+                </Route>
+            );
             
-    } else if(isLoggedIn) {
-        return (
-            <Route {...rest}>
-                <Redirect to="/verify"/>
-            </Route>
-        );
-        
-    } else {
-        return (
-            <Route {...rest}>
-                <Redirect to="/login"/>
-            </Route>
-        );
+        } else {
+            return (
+                <Route {...rest}>
+                    <Redirect to="/login"/>
+                </Route>
+            );
+        }
     }
 }
 

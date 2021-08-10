@@ -22,7 +22,7 @@ const Container = Styled.div`
 
     display: inline-flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     transition: all 0.25s ease;
     background-color: ${props => props.theme.colors.white};
 
@@ -60,7 +60,7 @@ const StyledImg = Styled.img`
     height: 13em;
     border-radius: 100%;
     padding: 0.2em;
-    margin-left: 0.8em;
+    margin-left: 1em;
 `;
 
 const StyledTitle = Styled.p`

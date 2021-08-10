@@ -41,7 +41,7 @@ const StyledText = Styled.p`
 
     font-family: "Roboto";
         
-    font-size: ${props => props.theme.fontSizes.medium};
+    font-size: ${props => props.theme.fontSizes.largeMedium};
     font-weight: 400;
         
     color: ${props => props.theme.colors.purple};

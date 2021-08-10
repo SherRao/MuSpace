@@ -5,6 +5,6 @@ import FriendTopAlbums from "./FriendTopAlbums";
 import TopArtists from "./TopArtists";
 import TopSongs from "./TopSongs";
 import SearchBar from "./SearchBar";
-import FavArtist from "./FavArtist";
+import FavCard from "./FavCard";
 
-export { LoginForm, ListeningActivityCard, RegisterForm, FriendTopAlbums, TopArtists, TopSongs, SearchBar, FavArtist };
+export { LoginForm, ListeningActivityCard, RegisterForm, FriendTopAlbums, TopArtists, TopSongs, SearchBar, FavCard };

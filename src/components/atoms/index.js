@@ -13,6 +13,7 @@ import MiniTopCategory from "./MiniTopCategory";
 import UserButton from "./UserButton";
 import SectionButton from "./SectionButton";
 import ArtistProfilePic from "./ArtistProfilePic";
+import FriendsMessageButton from "./FriendsMessageButton";
 
 export {
   AlbumCover,
@@ -30,4 +31,5 @@ export {
   UserButton,
   SectionButton,
   ArtistProfilePic,
+  FriendsMessageButton,
 };

@@ -12,36 +12,40 @@ const Center = Styled.div`
     justify-content: center;
 
     position: sticky;
-
     background-color: ${props => props.theme.colors.black};
 `;
 
-function UnprotectedRoute({ component, isLoggedIn, isVerified, ...rest }) {
-    const Component = component;
-    if (isLoggedIn && isVerified) {
-        return (
-            <Route {...rest}>
-                <Redirect to="/home"/>
-            </Route>
-        );
-            
-    } else if(isLoggedIn) {
-        return (
-            <Route {...rest}>
-                <Redirect to="/verify"/>
-            </Route>
-        );
+function UnprotectedRoute({ component, isLoading, isLoggedIn, isVerified, ...rest }) {
+    if(isLoading) {
+        return (<div>Loading...</div>);
         
-    } else {
-        return (
-            <Route {...rest}>
-                <Center>
-                    <Component />
-                </Center>
-            </Route>
-        );
     }
-
+    else {
+        const Component = component;
+        if (isLoggedIn && isVerified) {
+            return (
+                <Route {...rest}>
+                    <Redirect to="/home"/>
+                </Route>
+            );
+                
+        } else if(isLoggedIn) {
+            return (
+                <Route {...rest}>
+                    <Redirect to="/verify"/>
+                </Route>
+            );
+            
+        } else {
+            return (
+                <Route {...rest}>
+                    <Center>
+                        <Component />
+                    </Center>
+                </Route>
+            );
+        }
+    }
 }
 
 export default UnprotectedRoute;
