@@ -13,4 +13,6 @@
 <p>Muhammad Farzan Ali, 191651560: </p>
 <p>Declan Hollingworth, 190765210: </p>
 <p>Jacob, 190509690: </p>
-<p>Jagveer Sangha, 190612960 </p>
+<p>Jagveer Sangha, 190612960: </p>
+<p>Nishant Tewari, 190684430: </p>
+<p>Daner Yasin, 190773490: </p>
