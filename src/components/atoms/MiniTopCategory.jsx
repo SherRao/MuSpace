@@ -11,7 +11,7 @@ const StyledDiv = Styled.div`
 
 `;
 
-const StyledText = Styled.b`
+const StyledText = Styled.p`
     display: flex;
     justify-content: center;
     margin: 0;
@@ -22,8 +22,9 @@ const StyledText = Styled.b`
     font-weight: medium;
 `;
 
-const StyledUsername = Styled.u`
+const StyledUsername = Styled.p`
     font-weight: bold;
+    margin: 0;
 `;
 
 function MiniTopCategory({username, text, artist}){
@@ -33,7 +34,7 @@ function MiniTopCategory({username, text, artist}){
                 <StyledUsername>{username}</StyledUsername>
             </StyledText>
             <StyledDiv>
-                <AlbumCover width="132px" />
+                <AlbumCover width="5em" />
             </StyledDiv>
             <StyledText>{text}</StyledText>
             <StyledText>{artist}</StyledText>
