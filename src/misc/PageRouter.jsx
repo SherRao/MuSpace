@@ -1,8 +1,8 @@
 import React from "react";
 import { Switch, Route, BrowserRouter as Router, Redirect} from "react-router-dom";
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { useAuthState } from "react-firebase-hooks/auth";
 
-import { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, MessagesPage, FriendsPage, SettingsPage, ErrorPage } from "@pages";
+import { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, VerifySpotifyPage, SpotifyRedirectPage, MessagesPage, FriendsPage, SettingsPage, ErrorPage } from "@pages";
 import { Firebase } from "@functions";
 
 import { ProtectedRoute } from "@misc";
@@ -12,6 +12,7 @@ function PageRouter() {
     const [user, loading, error] = useAuthState(Firebase.auth);
     let isLoggedIn = user != null;
     let isVerified = isLoggedIn ? user.emailVerified : false;
+    let isSpotifyVerified = false;
 
     if (loading) {
         return (
@@ -35,9 +36,9 @@ function PageRouter() {
                 <ProtectedRoute
                     exact path="/"
                     component={HomePage}
-                    isLoading={loading}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
+                    isSpotifyVerified={isSpotifyVerified}
                 />
 
                 <Route path="/home">
@@ -47,49 +48,50 @@ function PageRouter() {
                 <UnprotectedRoute
                     path="/login"
                     component={LoginPage}
-                    isLoading={loading}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
+                    isSpotifyVerified={isSpotifyVerified}
                 />
 
                 <UnprotectedRoute
                     path="/register"
                     component={RegisterPage}
-                    isLoading={loading}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
+                    isSpotifyVerified={isSpotifyVerified}
                 />
 
                 <ProtectedRoute
                     path="/profile"
                     component={ProfilePage}
-                    isLoading={loading}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
+                    isSpotifyVerified={isSpotifyVerified}
                 />
 
                 <ProtectedRoute
                     path="/messages"
                     component={MessagesPage}
-                    isLoading={loading}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
+                    isSpotifyVerified={isSpotifyVerified}
+
                 />
 
                 <ProtectedRoute
                     path="/friends"
                     component={FriendsPage}
-                    isLoading={loading}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
+                    isSpotifyVerified={isSpotifyVerified}
                 />
 
                 <ProtectedRoute
                     path="/settings"
                     component={SettingsPage}
-                    isLoading={loading}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
+                    isSpotifyVerified={isSpotifyVerified}
                 />
 
                 <Route
@@ -97,6 +99,23 @@ function PageRouter() {
                     component={VerifyEmailPage}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
+                    isSpotifyVerified={isSpotifyVerified}
+                />
+
+                <Route
+                    path="/spotify-verify"
+                    component={VerifySpotifyPage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                    isSpotifyVerified={isSpotifyVerified}
+                />
+
+                <Route
+                    path="/spotify-redirect"
+                    component={SpotifyRedirectPage}
+                    isLoggedIn={isLoggedIn}
+                    isVerified={isVerified}
+                    isSpotifyVerified={isSpotifyVerified}
                 />
 
                 <Route
@@ -104,6 +123,7 @@ function PageRouter() {
                     component={RedirectPage}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
+                    isSpotifyVerified={isSpotifyVerified}
                 />
 
                 <Route
@@ -111,6 +131,7 @@ function PageRouter() {
                     component={TestPage}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
+                    isSpotifyVerified={isSpotifyVerified}
                 />
 
                 <Route component={ErrorPage}/>
