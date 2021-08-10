@@ -4,8 +4,9 @@ import { ArtistProfilePic } from "@atoms";
 
 
 const StyledDiv = Styled.div`
-    width: clamp(20em, 30vw, 50em);
-    height: 10em;
+    width: calc(100% - 2em);
+    min-height: 10em;
+    height: max-content;
 
     margin: 0.5em 1em;
     
@@ -19,7 +20,6 @@ const StyledDiv = Styled.div`
 
     background: linear-gradient(89.84deg, rgba(0, 194, 255, 0.7) 0.12%, rgba(177, 13, 255, 0.7) 99.86%);
     border-radius: 20px;
-    
 `;
 
 const Banner = Styled.div`
@@ -29,12 +29,13 @@ const Banner = Styled.div`
     border-radius: 20px 20px 0px 0px;
     margin-top: 0px;
     align-self: flex-start;
-    
 `;
 
 const BannerText = Styled.p`
     margin-left: 1em;
     color: white;
+
+    font-size: ${props => props.theme.fontSizes.medium};
 
     @media (max-width: 521px){
         font-size: 3vw;
@@ -45,24 +46,31 @@ const BannerText = Styled.p`
 const TextDiv = Styled.div`
     display: flex;
     flex-direction: column;
+
+    margin-left: 0.4em;
 `;
 
-const MainText = Styled.div`
+const MainText = Styled.h2`
     font-size: clamp(0.5em, 0.5em + 1.5vw, ${props => props.theme.fontSizes.large});
     font-weight: bold;
+
+    margin: 0;
 `;
 
-const HoursPlayed = Styled.div`
-    font-size: ${props => props.theme.fontSizes.medium};
-
+const HoursPlayed = Styled.p`
+    font-size: ${props => props.theme.fontSizes.medium}
+    
     @media (max-width: 521px){
         font-size: 3vw;
     }
+
+    margin: 0;
 `;
 
-const SubText = Styled.div`
-    font-size: 1em;
+const SubText = Styled.p`
+    font-size: ${props => props.theme.fontSizes.mediumSmall};
 
+    margin: 0 0 0.8em 0;
 `;
 
 const ResponsivePic = Styled(ArtistProfilePic)`
@@ -79,7 +87,7 @@ function FavCard({card_title, main_text, sub_text, hours_played, pic_url}) {
             <Banner>
                 <BannerText>{card_title}</BannerText>
             </Banner>
-            <ResponsivePic width="5em" artist_pic_url={pic_url}/>
+            <ResponsivePic width="6em" artist_pic_url={pic_url}/>
             <TextDiv>
                 <MainText>{main_text}</MainText>
                 <SubText>{sub_text}</SubText>
