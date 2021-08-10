@@ -38,6 +38,9 @@
             <li>
                 <a href="./ParticipationRecord.html">Participation Record Document</a>
             </li>
+            <li>
+                <a href="./Evaluations.html">Group Member Evaluations</a>
+            </li>
         </ul>
     </body>
 </html>
