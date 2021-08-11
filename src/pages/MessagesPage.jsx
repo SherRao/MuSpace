@@ -1,11 +1,13 @@
 import React from "react";
 import Styled from "styled-components";
-import { FriendsMessageButton, ChatBubble } from "@atoms";
+import { FriendsMessageButton, ChatBubble, TextButton, Field } from "@atoms";
 
 const Panels = Styled.div`
+    width: 100%;
+    heigth: 100%;
     display: flex;
     flex-direction: row;
-    flex-grow: 1;  
+    flex-grow: 1;
 `;
 
 const LeftDiv = Styled.div`
@@ -21,6 +23,7 @@ const RightDiv = Styled.div`
     flex-direction: column;
     flex-grow: 1;
     height: 100%;
+    margin-left: 1.2em;
 `;
 
 const StyledText = Styled.p`
@@ -28,9 +31,10 @@ const StyledText = Styled.p`
     margin: 0;
     color: ${props => props.theme.colors.black};
     font-weight: bold;
+    text-align: center;
 `;
 
-const FriendsListTitle = Styled.p`
+const Title = Styled.p`
     font-size: ${props => props.theme.fontSizes.mediumLarge};
 `;
 
@@ -42,10 +46,16 @@ const FriendsListDiv = Styled.div`
     padding: 0.2em;
 `;
 
+const SendDiv = Styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1.2em 0;
+`;
+
 const Chats = Styled.div`
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     height: 87%;
     overflow: auto;
     padding: 0.2em;
@@ -55,25 +65,25 @@ function MessagesPage() {
     return (
         <Panels>
             <LeftDiv>
-                <FriendsListTitle>
+                <Title>
                     <StyledText>Friends</StyledText>
-                </FriendsListTitle>
+                </Title>
                 <FriendsListDiv>
                     <FriendsMessageButton text="Username" type="text" onClick={console.log("test")}/>
                 </FriendsListDiv>
             </LeftDiv>
             <RightDiv>
-                <div>
-                    <h3>Username</h3>
-                </div>
+                <Title>
+                    <StyledText>Username</StyledText>
+                </Title>
                 <Chats>
                     <ChatBubble from="friend">Hi</ChatBubble>
                     <ChatBubble from="user">What up?</ChatBubble>
                 </Chats>
-                <div>
-                    <p>Your message here</p>
-                    <p>Send</p>
-                </div>
+                <SendDiv>
+                    <Field placeholder="Your message here" />
+                    <TextButton text="Send" style={{margin: 0, marginLeft: "1.2em"}} />
+                </SendDiv>
             </RightDiv>
         </Panels>
     );

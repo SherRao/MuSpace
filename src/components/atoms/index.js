@@ -16,6 +16,7 @@ import SectionButton from "./SectionButton";
 import ArtistProfilePic from "./ArtistProfilePic";
 import FriendsMessageButton from "./FriendsMessageButton";
 import ChatBubble from "./ChatBubble";
+import Field from "./Field";
 
 export {
   AlbumCover,
@@ -35,5 +36,6 @@ export {
   SectionButton,
   ArtistProfilePic,
   FriendsMessageButton,
-  ChatBubble
+  ChatBubble,
+  Field
 };
