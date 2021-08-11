@@ -30,6 +30,12 @@
                 <a href="./Design.html">Design Document</a>
             </li>
             <li>
+                <a href="./UserManual.html">User Manual</a>
+            </li>
+            <li>
+                <a href="./FeaturesMissing.html">Implementation details we couldn't complete</a>
+            </li>
+            <li>
                 <a href="./ParticipationRecord.html">Participation Record Document</a>
             </li>
             <li>

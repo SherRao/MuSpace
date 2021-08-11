@@ -16,3 +16,4 @@
 <p>Jagveer Sangha, 190612960: </p>
 <p>Nishant Tewari, 190684430: </p>
 <p>Daner Yasin, 190773490: </p>
+<p>Adrian Alting-Mees, 190743560: </p>
