@@ -5,6 +5,7 @@ import { Theme, PageRouter } from "@misc";
 import { Firebase } from "@functions";
 
 function App() {
+    resetCache();
     return (
         <BrowserRouter>
             <Theme>
@@ -12,6 +13,15 @@ function App() {
             </Theme>
         </BrowserRouter>
     );
+}
+
+
+function resetCache() {
+    window.addEventListener("beforeunload", (event) => {
+        event.preventDefault();
+        localStorage.setItem("spotifyUpdated", false);
+
+    });
 }
 
 // eslint-disable-next-line no-unused-vars

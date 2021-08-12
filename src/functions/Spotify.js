@@ -18,15 +18,47 @@ async function startCompile() {
     const userData = userDoc.data();
 
     api.setAccessToken(userData.spotifyData.access_token);
-    console.log(userData.spotifyData.access_token);
-    const response = await getAlbumArtist();
+    console.log(userData);
+    const response = await getTopArtists();
     console.log(response);
 }
 
-async function getAlbumArtist() {
-    const response = await api.getArtistAlbums("43ZHCT0cAZBISjO8DG9PnE", { limit: 10, offset: 20 });
-    return response.body;
+async function getTopSongs() {
+    const data = await api.getMyTopTracks();
+    const songs = Object.values(data.body.items);
 
+    const arr = [];
+    for (let i = 0; i < Math.min(10, songs.length); i++) {
+        const element = songs[i];
+        const data = {};
+        data.name = element.name;
+        data.album = element.album.name;
+        data.artist = element.artists[0].name;
+        data.image = element.album.images[0].url;
+        data.score = element.popularity;
+
+        arr.push(data);
+    }
+
+    return arr;
+}
+
+async function getTopArtists() {
+    const data = await api.getMyTopArtists();
+    const artists = Object.values(data.body.items);
+
+    const arr = [];
+    for (let i = 0; i < Math.min(10, artists.length); i++) {
+        const element = artists[i];
+        const data = {};
+        data.name = element.name;
+        data.image = element.images[0].url;
+        data.score = element.popularity;
+
+        arr.push(data);
+    }
+
+    return arr;
 }
 
 export default { api, startCompile };
