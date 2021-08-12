@@ -1,5 +1,6 @@
 import React from "react";
 import config from "@src/config.json";
+import validator from "validator";
 
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -60,8 +61,31 @@ async function registerWithEmail(event) {
     const username = event.target.elements[4].value;
     const pass = event.target.elements[5].value;
     const dob = event.target.elements[6].value;
+    const legalDate = new Date();
+    legalDate.setFullYear(legalDate.getFullYear() - 18);
 
     try {
+        // validate input first
+        if(!validator.isEmail(email) || validator.isEmpty(email) || validator.isEmpty(confirmEmail))
+            throw Error("Please enter a valid email address.");
+        if(!(email === confirmEmail))
+            throw Error("Emails do not match.");
+        if(validator.isEmpty(firstName) || validator.isEmpty(lastName))
+            throw Error("Please enter your full name.");
+        if(validator.isEmpty(username))
+            throw Error("Please enter a username.");
+        if(username.length < 5 || username.length > 32)
+            throw Error("Username must be between 5 and 32 characters in length.");
+        if(validator.isEmpty(pass))
+            throw Error("Please enter a password.");
+        if(pass.length < 6)
+            throw Error("Password must be at least 6 characters long.");
+        if(!validator.isDate(new Date(dob)))
+            throw Error("Please select a date of birth.");
+        if(validator.isAfter(dob, legalDate.toString()))
+            throw Error("You must be at least 18 years of age to create an account.");
+        
+        // if error has not been thrown, then create the account
         const userCredentials = await auth.createUserWithEmailAndPassword(email, pass);
         await storeNewUserData(userCredentials.user.uid, email, firstName, lastName, username, dob);
         auth.currentUser.sendEmailVerification();
