@@ -1,44 +1,32 @@
 import SpotifyWebApi from "spotify-web-api-node";
-import axios from "axios";
+import { Firebase } from "@functions";
 
 const api = new SpotifyWebApi(
     {
         clientId: "1e4ee4e30b23405d8643d058642dffaf",
         clientSecret: "8ab0151237234a22877c4e644fa1b433",
-        redirectUri: "https://muspace.me/spotify-callback"
+        redirectUri: "https://muspace.me/spotify-redirect"
     }
 );
 
-/**
- * 
- * Sets up the auth headers to send and receive shit from the Spotify Web SDK.
- * 
- */
-function setAuthHeader() {
-    try {
-        const params = JSON.parse(localStorage.getItem("params"));
-        if (params)
-            axios.defaults.headers.common["Authorization"] = `Bearer ${params.access_token}`;
+async function startCompile() {
+    const user = Firebase.auth.currentUser;
+    const uid = user.uid;
 
-    } catch (error) {
-        console.log("Error setting auth", error);
-    }
+    const usersRef = Firebase.db.collection("users");
+    const userDoc = await usersRef.doc(uid).get();
+    const userData = userDoc.data();
+
+    api.setAccessToken(userData.spotifyData.access_token);
+    console.log(userData.spotifyData.access_token);
+    const response = await getAlbumArtist();
+    console.log(response);
 }
 
-/**
- * 
- * Returns something something chops up a url idk
- * 
- */
-function getParamValues(url) {
-    return url.slice(1)
-        .split("&")
-        .reduce((prev, curr) => {
-            const [title, value] = curr.split("=");
-            prev[title] = value;
-            return prev;
+async function getAlbumArtist() {
+    const response = await api.getArtistAlbums("43ZHCT0cAZBISjO8DG9PnE", { limit: 10, offset: 20 });
+    return response.body;
 
-        }, {});
 }
 
-export default { setAuthHeader, getParamValues };
+export default { api, startCompile };

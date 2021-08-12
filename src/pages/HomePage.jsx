@@ -1,6 +1,8 @@
 import React from "react";
 import Styled from "styled-components";
+import { Spotify } from "@functions";
 
+import { TextButton } from "@atoms";
 import { FavCard } from "@molecules";
 import { ListeningActivity } from "@organisms";
 
@@ -55,6 +57,7 @@ function HomePage() {
         <Panels>
             <LeftDiv>
                 <TopDiv>
+                    <TextButton text="test" type="text" onClick={dostuff}/>
                     <Heading>Good Evening, Username</Heading>
                     <Subtext>You listened to ### hours of music this week.</Subtext>
                 </TopDiv>
@@ -68,6 +71,11 @@ function HomePage() {
             </RightDiv>
         </Panels>
     );
+}
+
+async function dostuff() {
+    Spotify.startCompile();
+
 }
 
 export default HomePage;

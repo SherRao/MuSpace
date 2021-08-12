@@ -34,15 +34,14 @@ function loginWithEmail(event) {
  */
 async function loginWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
-    const userCredentials = await auth.signInWithPopup(provider);
+    auth.signInWithPopup(provider).then((userCredentials) => {
+        const docRef = db.collection("users").doc(userCredentials.user.uid);
+        docRef.get().then(doc => {
+            if (!doc.exists)
+                storeNewUserData(true, false, {}, userCredentials.user.uid, userCredentials.user.email, null, null, userCredentials.user.displayName, null, userCredentials.user.photoURL);
 
-    const docRef = db.collection("users").doc(userCredentials.user.uid);
-    const doc = await docRef.get();
-    alert(doc.exists);
-
-    if (!doc.exists)
-        await storeNewUserData(userCredentials.user.uid, userCredentials.user.email, null, null, userCredentials.user.displayName, null, userCredentials.user.photoURL);
-
+        });
+    });
 }
 
 /**
@@ -73,9 +72,16 @@ async function registerWithEmail(event) {
     }
 }
 
-
+/**
+ *
+ * Function to store new user data on a new user register. 
+ * 
+ */
 async function storeNewUserData(id, email, firstName, lastName, username, dob, profile_picture) {
     const userData = {
+        "spotifyVerified": false,
+        "spotifyData": {},
+
         "email": email,
         "firstName": firstName,
         "lastName": lastName,
@@ -88,4 +94,14 @@ async function storeNewUserData(id, email, firstName, lastName, username, dob, p
         .doc(id).set(userData);
 }
 
-export default { firebase, auth, db, loginWithEmail, loginWithGoogle, registerWithEmail };
+/**
+ * 
+ * Function to log out the current user.
+ * 
+ */
+async function logout() {
+    await auth.signOut();
+}
+
+
+export default { firebase, auth, db, loginWithEmail, loginWithGoogle, registerWithEmail, logout };

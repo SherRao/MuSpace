@@ -48,7 +48,7 @@ function VerifyEmailPage() {
         <Container>
             <MuspaceLogo></MuspaceLogo>
             <Header>Verify your email!</Header>
-            <SubHeader>Click the link in the verification email</SubHeader>
+            <SubHeader>Click the link in the verification email and then click <a href="/">here</a>!</SubHeader>
         </Container>
     );
 }

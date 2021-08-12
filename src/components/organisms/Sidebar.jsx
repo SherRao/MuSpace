@@ -51,12 +51,8 @@ function Sidebar() {
     async function getProfilePic() {
         const docRef = Firebase.db.collection("users").doc(user.uid);
         const doc = await docRef.get();
-        console.log(doc.data());
-
         const profilePicture = doc.data().profile_picture;
-
         setProfilePic(profilePicture);
-        console.log(doc.data());
     }
 
     return (

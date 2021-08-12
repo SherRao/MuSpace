@@ -3,16 +3,15 @@ import { Switch, Route, BrowserRouter as Router, Redirect} from "react-router-do
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, VerifySpotifyPage, SpotifyRedirectPage, MessagesPage, FriendsPage, SettingsPage, ErrorPage } from "@pages";
-import { Firebase } from "@functions";
-
-import { ProtectedRoute } from "@misc";
-import { UnprotectedRoute } from "@misc";
+import { Spotify, Firebase } from "@functions";
+import { ProtectedRoute, UnprotectedRoute } from "@misc";
 
 function PageRouter() {
     const [user, loading, error] = useAuthState(Firebase.auth);
-    let isLoggedIn = user != null;
-    let isVerified = isLoggedIn ? user.emailVerified : false;
-    let isSpotifyVerified = false;
+
+    const isLoggedIn = user != null;
+    const isVerified = isLoggedIn ? user.emailVerified : false;
+    const isSpotifyVerified = localStorage.getItem("spotifyUpdated");
 
     if (loading) {
         return (
@@ -25,10 +24,11 @@ function PageRouter() {
     if (error) {
         return (
             <div>
-                <p>Error: {error}</p>
+                <p>Error while loading Firebase stuff: {error}</p>
             </div>
         );
     }
+
 
     return (
         <Router>
