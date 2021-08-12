@@ -22,7 +22,7 @@ const StyledText = Styled.p`
     font-weight: medium;
 `;
 
-const StyledUsername = Styled.p`
+const StyledUsername = Styled(StyledText)`
     font-weight: bold;
     margin: 0;
 `;
@@ -30,9 +30,7 @@ const StyledUsername = Styled.p`
 function MiniTopCategory({username, text, artist}){
     return (
         <StyledDiv>
-            <StyledText>
-                <StyledUsername>{username}</StyledUsername>
-            </StyledText>
+            <StyledUsername>{username}</StyledUsername>
             <StyledDiv>
                 <AlbumCover width="5em" />
             </StyledDiv>

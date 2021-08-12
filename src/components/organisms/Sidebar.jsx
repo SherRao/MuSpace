@@ -25,7 +25,7 @@ const StyledDiv = Styled.div`
 
 const StyledText = Styled.h3`
     font-family: "Roboto";
-    font-size: ${props => props.theme.fontSizes.mediumSmall};
+    font-size: ${props => props.theme.fontSizes.medium};
     color: ${props => props.theme.colors.muSpacePurple};
     font-weight: bold;
     align: right;
@@ -33,7 +33,7 @@ const StyledText = Styled.h3`
 `;
 
 const StatNumber = Styled.h4`
-    font-size: ${props => props.theme.fontSizes.mediumSmall};
+    font-size: ${props => props.theme.fontSizes.medium};
     margin: 0.2rem 0.2rem 0.8rem 0.2rem;
     color: ${props => props.theme.colors.grey}
 `;
@@ -46,7 +46,6 @@ function Sidebar() {
     React.useEffect(() => {
         if(!profilePic)
             getProfilePic();
-
     }, []);
 
     async function getProfilePic() {

@@ -20,7 +20,7 @@ const StyledText = Styled.p`
     font-size: ${props => props.theme.fontSizes.medium}
 `;
 
-const StyledUsername = Styled.p`
+const StyledUsername = Styled(StyledText)`
     margin: 0;
     font-weight: bold;
 `;
@@ -32,9 +32,7 @@ function ListeningActivityCard() {
                 <AlbumCover width="6rem" />
             </StyledDiv>
             <StyledDiv style={{ width: "max-content", maxWidth: "100%", justifyContent: "center" }}>
-                <StyledUsername>
-                    <StyledText>Username</StyledText>
-                </StyledUsername>
+                <StyledUsername>Username</StyledUsername>
                 <StyledText>Song Title - Artist Name</StyledText>
             </StyledDiv>
             <SpaceFillerDiv />
