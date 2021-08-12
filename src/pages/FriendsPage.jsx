@@ -1,7 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { FriendTopAlbums } from "@molecules";
+import { FriendTopAlbums, FriendTopArtists } from "@molecules";
 import { LeaderBoard, ListeningActivity } from "@organisms";
 
 const Page = Styled.div`
@@ -42,16 +42,11 @@ function FriendsPage() {
                 <Row>
                     <Col>
                         <FriendTopAlbums />
+                        <FriendTopArtists />
                     </Col>
                     <Col>
                         <LeaderBoard />
                     </Col>
-                </Row>
-                <Row>
-
-                </Row>
-                <Row>
-
                 </Row>
             </Col>
             <Col>

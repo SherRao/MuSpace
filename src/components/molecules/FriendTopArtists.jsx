@@ -30,13 +30,12 @@ const StyledOuterDiv = Styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 0.2em;
 `;
 
-function FriendTopAlbums() {
+function FriendTopArtists() {
     return (
         <Card>
-            <StyledTitle>Your Friends Top Albums</StyledTitle>
+            <StyledTitle>Your Friends Top Artists</StyledTitle>
             <StyledOuterDiv>
                 <MiniTopCategory username="#Username" text="#Album Title" artist="#Artist" />
                 <MiniTopCategory username="#Username" text="#Album Title" artist="#Artist" />
@@ -46,4 +45,4 @@ function FriendTopAlbums() {
     );
 }
 
-export default FriendTopAlbums;
+export default FriendTopArtists;

@@ -1,33 +1,26 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
-@import url("https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext');
 
 body {
-    margin: 0;
-    font-size: 16px;
-    font-family: -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "Roboto",
-        "Oxygen",
-        "Ubuntu",
-        "Cantarell",
-        "Fira Sans",
-        "Droid Sans",
-        "Helvetica Neue",
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
 }
 
 code {
-    font-family: source-code-pro,
-        Menlo,
-        Monaco,
-        Consolas,
-        "Courier New",
-        monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

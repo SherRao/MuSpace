@@ -30,13 +30,25 @@
                 <a href="./Design.html">Design Document</a>
             </li>
             <li>
+                <a href="./UserManual.html">User Manual</a>
+            </li>
+            <li>
+                <a href="./FeaturesMissing.html">Implementation details we couldn't complete</a>
+            </li>
+            <li>
+                <a href="./ParticipationRecord.html">Participation Record Document</a>
+            </li>
+            <li>
+                <a href="./SQA.html">SQA</a>
+            </li>
+             <li>
+                <a href="./Evaluations.html">Group Member Evaluations</a>
+            </li>
+            <li>
                 <a href="./Testing.html">Testing Guidelines Document</a>
             </li>
             <li>
                 <a href="./Conventions.html">Convention Guidelines Document</a>
-            </li>
-            <li>
-                <a href="./ParticipationRecord.html">Participation Record Document</a>
             </li>
         </ul>
     </body>
