@@ -24,10 +24,14 @@ const StyledImage = Styled.img`
 
 function ArtistProfilePic({ width, artist_pic_url, location }) {
     return (
-        <a href="/">
+        <a onClick={notImplemented}>
             <StyledImage src={artist_pic_url} width={width} height="auto" />
         </a>
     );
+}
+
+function notImplemented(){
+    alert("This feature has not been implemented yet!");
 }
 
 export default ArtistProfilePic;

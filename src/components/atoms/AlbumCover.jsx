@@ -31,10 +31,13 @@ const StyledLink = Styled.a`
 
 function AlbumCover({ width }) {
     return (
-        <StyledLink href="/">
+        <StyledLink onClick={notImplemented}>
             <StyledImage src={DefaultCover} width={width} height="auto"></StyledImage>
         </StyledLink>
     );
+}
+function notImplemented(){
+    alert("This featire has not been implemented yet!");
 }
 
 export default AlbumCover;

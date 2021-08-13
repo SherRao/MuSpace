@@ -28,10 +28,14 @@ function ListeningActivity(){
                 <ListeningActivityCard />
                 <ListeningActivityCard />
                 <ListeningActivityCard />
-                <TextButton text="See More" style={{ width: "100%", marginTop: "0.4rem" }}/>
+                <TextButton text="See More" style={{ width: "100%", marginTop: "0.4rem" }} onClick={notImplemented}/>
             </StyledInnerDiv>
         </Card>
     );
+}
+
+function notImplemented(){
+    alert("This feature has not been implemented yet!");
 }
 
 export default ListeningActivity;

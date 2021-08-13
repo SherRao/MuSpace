@@ -38,11 +38,14 @@ function LeaderBoardStat({ number, src, username, hours, href }) {
         <StyledDiv style={{borderBottom: number === 3 ? "0px" : "1px solid grey"}}>
             <StyledNumber>{number}.</StyledNumber>
             <StyledProfilePic src={src} alt={username} />
-            <StyledLink href={href}><StyledText>@{username}</StyledText></StyledLink>
+            <StyledLink onClick={notImplemented}><StyledText>@{username}</StyledText></StyledLink>
             <StyledText width="120px">{hours} hours</StyledText>
         </StyledDiv>
     );
 }
 
+function notImplemented(){
+    alert("This feature has not been implemented yet!");
+}
 
 export default LeaderBoardStat;
