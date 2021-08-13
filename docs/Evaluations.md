@@ -2,7 +2,7 @@
     <a href="./"><img id="header-logo" src="./logo.svg" width="250" alt="MuSpace logo"/></a>
 </h1>
 <h1 align="center">MuSpace Member Overall Evaluations Averages</h1>
-<p>-- Name, ID: rating out of 5 </p>
+<p> Name || ID: rating out of 5 </p>
 
 <!-- Remeber to give evalutations alphabetically -->
 
