@@ -29,7 +29,7 @@ function ListeningActivityCard() {
     return (
         <Card style={{flexDirection: "row", padding: 0}} bgColor="grey">
             <StyledDiv>
-                <AlbumCover width="5em" />
+                <AlbumCover width="5em" onClick={notImplemented}/>
             </StyledDiv>
             <StyledDiv style={{ width: "max-content", maxWidth: "100%", justifyContent: "center" }}>
                 <StyledUsername>Username</StyledUsername>
@@ -43,6 +43,10 @@ function ListeningActivityCard() {
             </StyledDiv>
         </Card>
     );
+}
+
+function notImplemented(){
+    alert("This feature has not been implemented yet!");
 }
 
 export default ListeningActivityCard;
