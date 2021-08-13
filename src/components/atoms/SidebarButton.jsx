@@ -1,14 +1,16 @@
 import React from "react";
 import Styled from "styled-components";
 
-const StyledDiv = Styled.div`
+const StyledButton = Styled.a`
     color: ${props => props.theme.colors.grey};
     width: 80%;
     height: 8%;
     align-self: center;
+    border: 0px;
     border-radius: 15px;
-
     margin: 0.2rem 0;
+    background-color: ${props => props.theme.colors.white};
+    text-decoration: none;
 
     display: inline-flex;
     flex-direction: row;
@@ -73,12 +75,10 @@ const StyledIcon = Styled.div`
 
 function SidebarButton({ text, children, location }) {
     return (
-        <StyledDiv>
+        <StyledButton href={location}>
             <StyledIcon>{children}</StyledIcon>
-            <StyledLink href={location}>
-                <StyledText>{text}</StyledText>
-            </StyledLink>
-        </StyledDiv>
+            <StyledText>{text}</StyledText>
+        </StyledButton>
     );
 }
 
