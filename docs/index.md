@@ -31,7 +31,7 @@
             </li>
             <li>
 <!--                 <a href="./UserManual.html">User Manual</a> -->
-                <a href="./MuSpace.wiki">User Manual</a>
+                <a href="https://github.com/SherRao/MuSpace/wiki">User Manual</a>
             </li>
             <li>
                 <a href="./FeaturesMissing.html">Implementation details we couldn't complete</a>
