@@ -30,6 +30,7 @@ const StyledText = Styled.h3`
     font-weight: bold;
     align: right;
     margin: 0.2rem;
+    text-align: center;
 `;
 
 const StatNumber = Styled.h4`
