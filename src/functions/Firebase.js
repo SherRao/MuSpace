@@ -104,6 +104,9 @@ async function storeNewUserData(id, email, firstName, lastName, username, dob, p
         spotifyVerified: false,
         spotifyData: {},
 
+        friends: [],
+        chats: [],
+
         email: email,
         firstName: firstName,
         lastName: lastName,
@@ -144,4 +147,102 @@ async function logout() {
 
 }
 
-export default { firebase, auth, db, loginWithEmail, loginWithGoogle, registerWithEmail, logout };
+async function deleteAccount() {
+
+}
+
+async function changePass() {
+
+}
+
+/**
+ *
+ * Adds a new friend.
+ *
+ * @oaran targetId The ID of the user to add as a friend.
+ *
+ */
+async function addFriend(targetId) {
+    // Adds current user to target friend.
+    const targetDoc = await db.collection("users").doc(targetId).get();
+    const targetData = targetDoc.data();
+    targetData.friends.push(auth.currentUser.uid);
+    await db.collection("users").doc(targetId).set(targetData);
+
+    // Adds target friend to current user.
+    const userDoc = await db.collection("users").doc(auth.currentUser.uid).get();
+    const userData = userDoc.data();
+    userData.friends.push(targetId);
+    await db.collection("users").doc(auth.currentUser.uid).set(userData);
+}
+
+/**
+ * 
+ * Creates a new chat room.
+ * 
+ * @oaran targetId The ID of the user to create a chat room with.
+ * 
+ */
+async function createNewChatRoom(targetId) {
+
+    // Create new chat room in "chats" collection
+    const counter = await db.collection("chats").doc("counter").get();
+    const newChatId = counter.counterField + 1;
+    await db.collection("chats").doc(newChatId).set(
+        {
+            messages: [],
+            source: auth.currentUser.uid,
+            target: targetId
+        }
+    );
+
+    // Update counter for the next new chat room.
+    counter.counterField = newChatId;
+    await db.collection("chats").doc("counter").set(counter);
+
+    // add chat to current users chat array
+    const userDoc = await db.collection("users").doc(auth.currentUser.uid).get();
+    const userData = userDoc.data();
+    userData.chats.push(newChatId);
+    await db.collection("users").doc(auth.currentUser.uid).set(userData);
+
+    // add chat to current user's chat array
+    const targetDoc = await db.collection("users").doc(targetId).get();
+    const targetData = targetDoc.data();
+    targetData.chats.push(newChatId);
+    await db.collection("users").doc(targetId).set(targetData);
+}
+
+/**
+ * 
+ * Adds a chat message to a chat room.
+ * 
+ */
+async function sendChat(message, chatId) {
+    const chatData = {
+        message: message,
+        timestamp: new Date().toString(),
+        sender: auth.currentUser.uid
+    };
+
+    const doc = await db.collection("chats").doc(chatId).get();
+    const data = doc.data();
+    data.messages.push(chatData);
+
+    await db.collection("chats").doc(chatId).set(data);
+
+}
+
+async function updateProfilePicture(file) {
+    console.log(file);
+
+}
+
+
+
+export default {
+    firebase, auth, db,
+    loginWithEmail, loginWithGoogle, registerWithEmail,
+    logout, deleteAccount, changePass, updateProfilePicture,
+    addFriend, createNewChatRoom, sendChat
+};

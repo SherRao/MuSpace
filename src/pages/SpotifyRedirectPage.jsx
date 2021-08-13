@@ -15,7 +15,7 @@ function SpotifyRedirectPage() {
     }, []);
 
     async function storeSpotifyData() {
-        const token = data.access_token;
+        const access_token = data.access_token;
         const expiry = data.expires_in;
         const state = data.state;
         const type = data.token_type;
@@ -27,7 +27,7 @@ function SpotifyRedirectPage() {
         const userDoc = await usersRef.doc(uid).get();
         const userData = userDoc.data();
         userData.spotifyVerified = true;
-        userData.spotifyData = {token, expiry, state, type};
+        userData.spotifyData = {access_token, expiry, state, type};
 
         await usersRef.doc(uid).set(userData);
         localStorage.setItem("spotifyUpdated", true);

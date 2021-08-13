@@ -1,8 +1,9 @@
 import React from "react";
 import Styled from "styled-components";
-import default_profile from "../assets/default_profile.jpg"
+import default_profile from "../assets/default_profile.jpg";
 
 import { SectionButton } from "@atoms";
+import { Firebase } from "@functions";
 
 const Container = Styled.div`
     width: 100%;
@@ -94,9 +95,10 @@ function SettingsPage() {
                     <StyledSectionTitle>
                         <StyledText>Account Settings</StyledText>
                     </StyledSectionTitle>
-                    <SectionButton text="Upload Profile Picture" type="text" onClick={console.log("test")}/>
-                    <SectionButton text="Change Password" type="text" onClick={console.log("test")}/>
-                    <SectionButton text="Delete Account" type="text" onClick={console.log("test")}/>
+                    <SectionButton text="Upload Profile Picture" type="text" onClick={notImplemented}/>
+                    <SectionButton text="Change Password" type="text" onClick={Firebase.changePass}/>
+                    <SectionButton text="Delete Account" type="text" onClick={Firebase.deleteAccount}/>
+                    <SectionButton text="Logout" type="text" onClick={Firebase.logout}/>
                 </SectionDiv>
 
                 <SectionDiv>
@@ -111,6 +113,10 @@ function SettingsPage() {
 
         </Container>
     );
+}
+
+function notImplemented() {
+    alert("This feature has not been implemented yet!");
 }
 
 export default SettingsPage;

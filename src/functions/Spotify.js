@@ -1,15 +1,15 @@
 import SpotifyWebApi from "spotify-web-api-node";
 import { Firebase } from "@functions";
 
-const api = new SpotifyWebApi(
-    {
-        clientId: "1e4ee4e30b23405d8643d058642dffaf",
-        clientSecret: "8ab0151237234a22877c4e644fa1b433",
-        redirectUri: "https://muspace.me/spotify-redirect"
-    }
-);
-
 async function startCompile() {
+    const api = new SpotifyWebApi(
+        {
+            clientId: "1e4ee4e30b23405d8643d058642dffaf",
+            clientSecret: "8ab0151237234a22877c4e644fa1b433",
+            redirectUri: "https://muspace.me/spotify-redirect"
+        }
+    );
+
     const user = Firebase.auth.currentUser;
     const uid = user.uid;
 
@@ -17,11 +17,10 @@ async function startCompile() {
     const userDoc = await usersRef.doc(uid).get();
     const userData = userDoc.data();
 
-    api.setAccessToken(userData.spotifyData.code);
-    api.setRefreshToken(userData.spotifyData.refresh_token);
+    api.setAccessToken(userData.spotifyData.access_token);
 
-    const topSongs = await getTopSongs();
-    const topArtists = await getTopArtists();
+    const topSongs = await loadTopSongs(api);
+    const topArtists = await loadTopArtists(api);
 
     const doc = await Firebase.db.collection("users").doc(uid).get();
     const data = doc.data();
@@ -29,10 +28,9 @@ async function startCompile() {
     data.spotifyData.topArtists = topArtists;
 
     await Firebase.db.collection("users").doc(uid).set(data);
-
 }
 
-async function getTopSongs() {
+async function loadTopSongs(api) {
     const data = await api.getMyTopTracks();
     const songs = Object.values(data.body.items);
 
@@ -52,7 +50,7 @@ async function getTopSongs() {
     return arr;
 }
 
-async function getTopArtists() {
+async function loadTopArtists(api) {
     const data = await api.getMyTopArtists();
     const artists = Object.values(data.body.items);
 
@@ -70,4 +68,16 @@ async function getTopArtists() {
     return arr;
 }
 
-export default { api, startCompile };
+async function getTopSongs() {
+    const doc = await Firebase.db.collection("users").doc(Firebase.auth.currentUser.uid).get();
+    return doc.data().spotifyData.topSongs;
+
+}
+
+async function getTopArtists() {
+    const doc = await Firebase.db.collection("users").doc(Firebase.auth.currentUser.uid).get();
+    return doc.data().spotifyData.topArtists;
+
+}
+
+export default { startCompile, getTopSongs, getTopArtists };
