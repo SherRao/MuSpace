@@ -3,13 +3,8 @@ import Styled from "styled-components";
 import { Firebase } from "@functions";
 import default_profile from "../assets/default_profile.jpg"
 
-import Sidebar from "../components/organisms/Sidebar";
-import AlbumCover from "../components/atoms/AlbumCover";
-import FeedObject from "../components/atoms/FeedObject";
-import FriendTopAlbums from "../components/molecules/FriendTopAlbums";
-import TopSongs from "../components/molecules/TopSongs";
-import TopArtists from "../components/molecules/TopArtists";
-import ProfileUserName from "../components/atoms/ProfileUserName";
+import { AlbumCover, FeedObject, ProfileUserName } from "@atoms";
+import { FriendTopAlbums, TopArtists, TopSongs } from "@molecules";
 
 const Container = Styled.div`
     width: 100%;

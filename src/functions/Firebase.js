@@ -1,4 +1,3 @@
-import React from "react";
 import config from "@src/config.json";
 import validator from "validator";
 

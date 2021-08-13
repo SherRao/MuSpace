@@ -5,36 +5,12 @@ import { Card, LeaderBoardLabel, LeaderBoardStat } from "@atoms";
 import { Firebase } from "@functions";
 import { DefaultProfilePic } from "@assets";
 
-const StyledDiv = Styled.div`
-    color:${props => props.theme.colors.black};
-    min-width: 400px;
-    height: auto;
-    padding: 0.8em;
-    align-self: right;
-    display: flex;
-    flex-direction: column;
-    align-items: top;
-    border-style: hidden; 
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-`;
-
 const StyledInnerDiv = Styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
     width: 100%;
-`;
-
-const StyledLink = Styled.a`
-    border: none;
-    padding: 0;
-    size: 0;
-    display: block;
-    margin: 0 auto;
-    text-decoration: none;
-    margin-top: 5%;
 `;
 
 const StyledTitle = Styled.p`
