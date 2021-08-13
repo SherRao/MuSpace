@@ -96,6 +96,7 @@ function SettingsPage() {
                     </StyledSectionTitle>
                     <SectionButton text="Upload Profile Picture" type="text" onClick={console.log("test")}/>
                     <SectionButton text="Change Password" type="text" onClick={console.log("test")}/>
+                    <SectionButton text="Delete Account" type="text" onClick={console.log("test")}/>
                 </SectionDiv>
 
                 <SectionDiv>
