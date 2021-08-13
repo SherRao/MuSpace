@@ -1,16 +1,17 @@
 import React from "react";
 import Styled from "styled-components";
 
-const StyledTextInput = Styled.input`
-    width: 100%;
-    height: 1.5em;
+const TextInput = Styled.input`
+    width: calc(100%-2em);
+    height: 100%;
 
+    background-color: ${props => props.theme.colors.white};
     border: 1px solid ${props => props.theme.colors.pink};
-    color: ${props => props.theme.colors.lightGrey};
-
     border-radius: 0.45em;
+    
+    color: ${props => props.theme.colors.black};
+
     padding: 1em;
-    background-color: transparent;
     transition: all 0.25s ease;
 
     :focus {
@@ -23,7 +24,7 @@ const StyledTextInput = Styled.input`
 
 function SearchField({ text, type, placeholder, icon }) {
     return (
-        <StyledTextInput text={text} type={type} placeholder={placeholder} />
+        <TextInput text={text} type={type} placeholder={placeholder} />
     );
 }
 

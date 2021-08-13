@@ -1,6 +1,5 @@
 import React from "react";
 import Styled from "styled-components";
-import { DefaultCover } from "@assets";
 
 const StyledImage = Styled.img`
 

@@ -12,7 +12,7 @@ const LeftDiv = Styled.div`
 `;
 
 const RightDiv = Styled.div`
-    width: 79vw;
+    width: 78vw;
     min-height: 100vh;
     height: max-content;
 

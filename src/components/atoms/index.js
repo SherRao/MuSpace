@@ -18,6 +18,7 @@ import FriendsMessageButton from "./FriendsMessageButton";
 import ChatBubble from "./ChatBubble";
 import Field from "./Field";
 import FeedObject from "./FeedObject";
+import SearchResult from "./SearchResult";
 
 export {
   AlbumCover,
@@ -39,5 +40,6 @@ export {
   FriendsMessageButton,
   ChatBubble,
   Field,
-  FeedObject
+  FeedObject,
+  SearchResult
 };
