@@ -127,14 +127,33 @@ async function storeNewUserData(id, email, firstName, lastName, username, dob, p
     await db.collection("search").doc("usernames").set(usernames);
 }
 
-async function searchUsernames(query) {
+async function _searchUsernames(query) {
     const doc = await db.collection("search").doc("usernames").get();
     const usernames = Object.keys(doc.data());
     const ids = Object.values(doc.data());
 
     const regex = new RegExp(query, "i");
-    //return usernames.filter(username => regex.test(username));
-    return [{ username: "username", profile_picture: "", id: "" }];
+    return usernames.filter(username => regex.test(username));
+}
+
+async function searchUsernames(query) {
+    const doc = await db.collection("search").doc("usernames").get();
+    const users = Object.entries(doc.data());
+    const regex = new RegExp(query, "i");
+
+    const result = [];
+
+    users.forEach(async ([username, id]) => {
+        if (regex.test(username)) {
+            const doc = await db.collection("users").doc(id).get();
+            const user = doc.data();
+            const profile_picture = user.profile_picture;
+            result.push({ username, id, profile_picture });
+
+        }
+    });
+
+    return result;
 }
 
 /**
@@ -244,5 +263,5 @@ export default {
     firebase, auth, db,
     loginWithEmail, loginWithGoogle, registerWithEmail,
     logout, deleteAccount, changePass, updateProfilePicture,
-    addFriend, createNewChatRoom, sendChat
+    addFriend, createNewChatRoom, sendChat, searchUsernames
 };
