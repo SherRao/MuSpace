@@ -2,7 +2,7 @@ import React from "react";
 import Styled from "styled-components";
 
 const TextInput = Styled.input`
-    width: calc(100%-2em);
+    width: 100%;
     height: 100%;
 
     background-color: ${props => props.theme.colors.white};

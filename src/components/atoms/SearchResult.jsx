@@ -21,6 +21,8 @@ const Result = Styled.a`
         background-color: ${props => props.theme.colors.lightGrey};
         color: ${props => props.theme.colors.purple};
     }
+
+    transition: all 0.25s ease;
 `;
 
 const FirstResult = Styled(Result)`
