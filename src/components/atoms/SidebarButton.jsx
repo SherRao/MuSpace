@@ -28,14 +28,6 @@ const StyledButton = Styled.a`
     }
 `;
 
-const StyledLink = Styled.a`
-    border: none;
-    padding: 0;
-    size: 0;
-    display: block;
-    text-decoration: none;
-`;
-
 const StyledText = Styled.p`
     @media (max-width: 974px){
         display: none;

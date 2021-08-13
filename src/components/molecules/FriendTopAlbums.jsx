@@ -19,6 +19,7 @@ const StyledOuterDiv = Styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 0.2em;
+    min-width: max-content;
 `;
 
 function FriendTopAlbums() {

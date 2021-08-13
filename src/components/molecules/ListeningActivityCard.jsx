@@ -29,7 +29,7 @@ function ListeningActivityCard() {
     return (
         <Card style={{flexDirection: "row", padding: 0}} bgColor="grey">
             <StyledDiv>
-                <AlbumCover width="6rem" />
+                <AlbumCover width="5em" />
             </StyledDiv>
             <StyledDiv style={{ width: "max-content", maxWidth: "100%", justifyContent: "center" }}>
                 <StyledUsername>Username</StyledUsername>
@@ -38,7 +38,7 @@ function ListeningActivityCard() {
             <SpaceFillerDiv />
             <StyledDiv>
                 <StyledIcon>
-                    <FaBookmark size="1.6em" style={{ margin: "0.8em 0.6em 0 0" }}/>
+                    <FaBookmark size="1.6em" style={{ margin: "0.8em 0.6em 0 0", visibility: "hidden" }}/>
                 </StyledIcon>
             </StyledDiv>
         </Card>

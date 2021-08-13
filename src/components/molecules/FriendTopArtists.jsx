@@ -18,6 +18,7 @@ const StyledOuterDiv = Styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    min-width: max-content;
 `;
 
 function FriendTopArtists() {
