@@ -6,20 +6,20 @@
 
 <!-- Remeber to give evalutations alphabetically -->
 
-<p>Ali, Farzan                   || 191651560: 5</p>
-<p>Alting-Mees, Adrian           || 190743560: 5</p>
-<p>Aylani, Jiten                 || 190469460: 5</p>
-<p>Hollingworth, Declan          || 190765210: 5</p>
-<p>Kellner, Kelvin               || 190668940: 5</p>
-<p>Maan, Armaan                  || 190623760:  </p>
-<p>Manimaran, Mathumithan "Matt" || 190546910: 5</p>
-<p>Mazza, Robert                 || 190778040: 5</p>
-<p>Goldman, Jacob                || 190509690: 5</p>
-<p>Olowonefa,Adepeju             || 193049300: 5</p>
-<p>Rao, Nausher                  || 190906250: 5</p>
-<p>Sangha, Jagveer               || 190612960: 5</p>
-<p>Tewari, Nishant               || 190684430: 5</p>
-<p>Yasin, Daner                  || 190773490: 5</p>
+<p>Ali, Farzan                   || 191651560: 5    </p>
+<p>Alting-Mees, Adrian           || 190743560: 5    </p>
+<p>Aylani, Jiten                 || 190469460: 5    </p>
+<p>Hollingworth, Declan          || 190765210: 5    </p>
+<p>Kellner, Kelvin               || 190668940: 5    </p>
+<p>Maan, Armaan                  || 190623760: 4.71 </p>
+<p>Manimaran, Mathumithan "Matt" || 190546910: 5    </p>
+<p>Mazza, Robert                 || 190778040: 5    </p>
+<p>Goldman, Jacob                || 190509690: 5    </p>
+<p>Olowonefa,Adepeju             || 193049300: 5    </p>
+<p>Rao, Nausher                  || 190906250: 5    </p>
+<p>Sangha, Jagveer               || 190612960: 5    </p>
+<p>Tewari, Nishant               || 190684430: 5    </p>
+<p>Yasin, Daner                  || 190773490: 5    </p>
 
 
 
