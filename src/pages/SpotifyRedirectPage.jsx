@@ -7,14 +7,15 @@ import { Spotify, Firebase } from "@functions";
 
 function SpotifyRedirectPage() {
     const data = queryString.parse(window.location.hash);
-
+    localStorage.setItem("spotifyUpdated", false);
+    
     React.useEffect(() => {
         storeSpotifyData();
 
     }, []);
 
     async function storeSpotifyData() {
-        const access_token = data.access_token;
+        const token = data.access_token;
         const expiry = data.expires_in;
         const state = data.state;
         const type = data.token_type;
@@ -26,15 +27,11 @@ function SpotifyRedirectPage() {
         const userDoc = await usersRef.doc(uid).get();
         const userData = userDoc.data();
         userData.spotifyVerified = true;
-        userData.spotifyData = {
-            access_token,
-            expiry,
-            state,
-            type
-        };
+        userData.spotifyData = {token, expiry, state, type};
 
         await usersRef.doc(uid).set(userData);
         localStorage.setItem("spotifyUpdated", true);
+
         await Spotify.startCompile();
         console.log("ok");
     }

@@ -2,25 +2,30 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Theme, PageRouter } from "@misc";
 
+import { TextButton } from "@atoms";
 import { Firebase } from "@functions";
+import { css } from "styled-components";
 
 function App() {
     resetCache();
     return (
-        <BrowserRouter>
-            <Theme>
-                <PageRouter />
-            </Theme>
-        </BrowserRouter>
+        <Theme>
+            <TextButton text="clear cache" type="text" onClick={cs} />
+            <PageRouter />
+        </Theme >
     );
 }
 
 
+function cs() {
+    localStorage.clear();
+    alert("Done: ", localStorage.getItem("spotifyUpdated"));
+
+}
+
 function resetCache() {
     window.addEventListener("beforeunload", (event) => {
         event.preventDefault();
-        localStorage.setItem("spotifyUpdated", false);
-
     });
 }
 

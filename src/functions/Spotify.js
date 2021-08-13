@@ -17,10 +17,19 @@ async function startCompile() {
     const userDoc = await usersRef.doc(uid).get();
     const userData = userDoc.data();
 
-    api.setAccessToken(userData.spotifyData.access_token);
-    console.log(userData);
-    const response = await getTopArtists();
-    console.log(response);
+    api.setAccessToken(userData.spotifyData.code);
+    api.setRefreshToken(userData.spotifyData.refresh_token);
+
+    const topSongs = await getTopSongs();
+    const topArtists = await getTopArtists();
+
+    const doc = await Firebase.db.collection("users").doc(uid).get();
+    const data = doc.data();
+    data.spotifyData.topSongs = topSongs;
+    data.spotifyData.topArtists = topArtists;
+
+    await Firebase.db.collection("users").doc(uid).set(data);
+
 }
 
 async function getTopSongs() {

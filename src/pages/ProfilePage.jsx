@@ -1,7 +1,9 @@
 import React from "react";
 import Styled from "styled-components";
 import { Firebase } from "@functions";
-import default_profile from "../assets/default_profile.jpg"
+import queryString from "query-string";
+
+import default_profile from "../assets/default_profile.jpg";
 
 import { AlbumCover, FeedObject, ProfileUserName } from "@atoms";
 import { FriendTopAlbums, TopArtists, TopSongs } from "@molecules";
@@ -71,6 +73,7 @@ const titleDiv = Styled.div`
     flex-direction: row;
     aling-items = center;
 `;
+
 const StyledTexts = Styled.h1`
     font-family: "Roboto";
     font-size: ${props => props.theme.fontSizes.medium};
@@ -96,8 +99,11 @@ const FriendFeeds = Styled.div`
     margin: 0 1vw 15px 1vw;
 `;
 
-
 function ProfilePage() {
+    let data = queryString.parse(window.location.search);
+    let query = null;
+    if(data) 
+        query = data.username;
 
     return (
         <Container>

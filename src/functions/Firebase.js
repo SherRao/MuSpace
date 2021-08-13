@@ -38,7 +38,7 @@ async function loginWithGoogle() {
         const docRef = db.collection("users").doc(userCredentials.user.uid);
         docRef.get().then(doc => {
             if (!doc.exists)
-                storeNewUserData(true, false, {}, userCredentials.user.uid, userCredentials.user.email, null, null, userCredentials.user.displayName, null, userCredentials.user.photoURL);
+                storeNewUserData(userCredentials.user.uid, userCredentials.user.email, null, null, userCredentials.user.displayName, null, userCredentials.user.photoURL);
 
         });
     });
@@ -65,25 +65,25 @@ async function registerWithEmail(event) {
 
     try {
         // validate input first
-        if(!validator.isEmail(email) || validator.isEmpty(email) || validator.isEmpty(confirmEmail))
+        if (!validator.isEmail(email) || validator.isEmpty(email) || validator.isEmpty(confirmEmail))
             throw Error("Please enter a valid email address.");
-        if(!(email === confirmEmail))
+        if (!(email === confirmEmail))
             throw Error("Emails do not match.");
-        if(validator.isEmpty(firstName) || validator.isEmpty(lastName))
+        if (validator.isEmpty(firstName) || validator.isEmpty(lastName))
             throw Error("Please enter your full name.");
-        if(validator.isEmpty(username))
+        if (validator.isEmpty(username))
             throw Error("Please enter a username.");
-        if(username.length < 5 || username.length > 32)
+        if (username.length < 5 || username.length > 32)
             throw Error("Username must be between 5 and 32 characters in length.");
-        if(validator.isEmpty(pass))
+        if (validator.isEmpty(pass))
             throw Error("Please enter a password.");
-        if(pass.length < 6)
+        if (pass.length < 6)
             throw Error("Password must be at least 6 characters long.");
-        if(!validator.isDate(new Date(dob)))
+        if (!validator.isDate(new Date(dob)))
             throw Error("Please select a date of birth.");
-        if(validator.isAfter(dob, legalDate.toString()))
+        if (validator.isAfter(dob, legalDate.toString()))
             throw Error("You must be at least 18 years of age to create an account.");
-        
+
         // if error has not been thrown, then create the account
         const userCredentials = await auth.createUserWithEmailAndPassword(email, pass);
         await storeNewUserData(userCredentials.user.uid, email, firstName, lastName, username, dob);
@@ -91,7 +91,6 @@ async function registerWithEmail(event) {
 
     } catch (err) {
         alert(err.message);
-
     }
 }
 
@@ -102,19 +101,37 @@ async function registerWithEmail(event) {
  */
 async function storeNewUserData(id, email, firstName, lastName, username, dob, profile_picture) {
     const userData = {
-        "spotifyVerified": false,
-        "spotifyData": {},
+        spotifyVerified: false,
+        spotifyData: {},
 
-        "email": email,
-        "firstName": firstName,
-        "lastName": lastName,
-        "username": username,
-        "dob": dob,
-        "profile_picture": profile_picture ? profile_picture : "https://firebasestorage.googleapis.com/v0/b/cp-317.appspot.com/o/default_profile.jpg?alt=media&token=4ed26d80-388b-4814-95b3-01740138285a"
+        email: email,
+        firstName: firstName,
+        lastName: lastName,
+        username: username,
+        dob: dob,
+        profile_picture: profile_picture ? profile_picture : "https://firebasestorage.googleapis.com/v0/b/cp-317.appspot.com/o/default_profile.jpg?alt=media&token=4ed26d80-388b-4814-95b3-01740138285a"
     };
 
+    // Create a new user entry in the users collection.
     await db.collection("users")
         .doc(id).set(userData);
+
+    // Add the new users username to the list of all usernames.
+    const doc = await db.collection("search").doc("usernames").get();
+    const usernames = doc.data();
+    usernames[username] = id;
+
+    await db.collection("search").doc("usernames").set(usernames);
+}
+
+async function searchUsernames(query) {
+    const doc = await db.collection("search").doc("usernames").get();
+    const usernames = Object.keys(doc.data());
+    const ids = Object.values(doc.data());
+
+    const regex = new RegExp(query, "i");
+    //return usernames.filter(username => regex.test(username));
+    return [{ username: "username", profile_picture: "", id: "" }];
 }
 
 /**
@@ -124,7 +141,7 @@ async function storeNewUserData(id, email, firstName, lastName, username, dob, p
  */
 async function logout() {
     await auth.signOut();
-}
 
+}
 
 export default { firebase, auth, db, loginWithEmail, loginWithGoogle, registerWithEmail, logout };
