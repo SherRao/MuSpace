@@ -8,6 +8,8 @@ import "firebase/firestore";
 firebase.initializeApp(config.firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
+const storage = firebase.storage();
+
 
 /**
  * 
@@ -127,15 +129,14 @@ async function storeNewUserData(id, email, firstName, lastName, username, dob, p
     await db.collection("search").doc("usernames").set(usernames);
 }
 
-async function _searchUsernames(query) {
-    const doc = await db.collection("search").doc("usernames").get();
-    const usernames = Object.keys(doc.data());
-    const ids = Object.values(doc.data());
-
-    const regex = new RegExp(query, "i");
-    return usernames.filter(username => regex.test(username));
-}
-
+/**
+ * 
+ * Takes a string and returns matching usernames.
+ * TODO: try/catch
+ * 
+ * @param query The string query to search for.
+ * 
+ */
 async function searchUsernames(query) {
     const doc = await db.collection("search").doc("usernames").get();
     const users = Object.entries(doc.data());
@@ -158,7 +159,8 @@ async function searchUsernames(query) {
 
 /**
  * 
- * Function to log out the current user.
+ * Logs out the current user.
+ * TODO: try/catch
  * 
  */
 async function logout() {
@@ -166,17 +168,47 @@ async function logout() {
 
 }
 
+/**
+ * 
+ * Deletes the current user's account. 
+ * TODO: try/catch
+ * 
+ */
 async function deleteAccount() {
+    const doc = await db.collection("users").doc(auth.currentUser.uid).get();
+    const user = doc.data();
+    const username = user.username;
 
+    // Remove the user from the search list of usernames.
+    const doc2 = await db.collection("search").doc("usernames").get();
+    const usernames = doc2.data();
+    delete usernames[username];
+    await db.collection("search").doc("usernames").set(usernames);
+
+    // Remove the user from the users collection.
+    await db.collection("users").doc(auth.currentUser.uid).delete();
+
+    // Remove the user's chat history.
+    await auth.currentUser.delete();
+    await auth.signOut();
 }
 
+
+/**
+ * 
+ * Allows the user to change their password.
+ * TODO: try/catch
+ * 
+ */
 async function changePass() {
+    await firebase.auth().sendPasswordResetEmail(auth.currentUser.email);
 
 }
 
 /**
  *
  * Adds a new friend.
+ * TODO: try/catch
  *
  * @oaran targetId The ID of the user to add as a friend.
  *
@@ -198,6 +230,7 @@ async function addFriend(targetId) {
 /**
  * 
  * Creates a new chat room.
+ * TODO: try/catch
  * 
  * @oaran targetId The ID of the user to create a chat room with.
  * 
@@ -235,6 +268,7 @@ async function createNewChatRoom(targetId) {
 /**
  * 
  * Adds a chat message to a chat room.
+ * TODO: try/catch
  * 
  */
 async function sendChat(message, chatId) {
@@ -252,15 +286,26 @@ async function sendChat(message, chatId) {
 
 }
 
+/**
+ * 
+ * Changes the current users profile picture to whatever was uploaded.
+ * 
+ * TODO: try/catch
+ * 
+ */
 async function updateProfilePicture(file) {
-    console.log(file);
+    const storageRef = storage.ref();
+    const fileRef = storageRef.child(auth.currentUser.uid + ".jpg");
+    await fileRef.put(file);
 
+    const user = await db.collection("users").doc(auth.currentUser.uid).get();
+    const userData = user.data();
+    userData.profile_picture = await fileRef.getDownloadURL();
+    await db.collection("users").doc(auth.currentUser.uid).set(userData);
 }
 
-
-
 export default {
-    firebase, auth, db,
+    firebase, auth, db, storage,
     loginWithEmail, loginWithGoogle, registerWithEmail,
     logout, deleteAccount, changePass, updateProfilePicture,
     addFriend, createNewChatRoom, sendChat, searchUsernames
