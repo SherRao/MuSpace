@@ -25,32 +25,30 @@ const Row = Styled.div`
 `;
 
 const Col = Styled.div`
-    min-width: min-content;
-    max-width: 100%;
-    min-height: min-content;
+    width: max-content;
+    min-height: max-content;
     height: 100%;
 
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
 `;
 
 function FriendsPage() {
     return (
         <Page>
-            <Col style={{ flexGrow: 2 }}>
+            <Col style={{ flexGrow: 4, marginRight: "0.8em" }}>
                 <Row>
-                    <Col>
+                    <Col style={{ flexGrow: 1 }}>
                         <FriendTopAlbums />
                         <FriendTopArtists />
                     </Col>
-                    <Col>
+                    <Col style={{ flexGrow: 1, marginLeft: "0.8em" }}>
                         <LeaderBoard />
                     </Col>
                 </Row>
             </Col>
-            <Col>
-                <ListeningActivity />
+            <Col style={{ flexGrow: 1 }}>
+                <ListeningActivity/>
             </Col>
         </Page>
     );

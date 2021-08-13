@@ -1,44 +1,64 @@
 import SpotifyWebApi from "spotify-web-api-node";
-import axios from "axios";
+import { Firebase } from "@functions";
 
 const api = new SpotifyWebApi(
     {
         clientId: "1e4ee4e30b23405d8643d058642dffaf",
         clientSecret: "8ab0151237234a22877c4e644fa1b433",
-        redirectUri: "https://muspace.me/spotify-callback"
+        redirectUri: "https://muspace.me/spotify-redirect"
     }
 );
 
-/**
- * 
- * Sets up the auth headers to send and receive shit from the Spotify Web SDK.
- * 
- */
-function setAuthHeader() {
-    try {
-        const params = JSON.parse(localStorage.getItem("params"));
-        if (params)
-            axios.defaults.headers.common["Authorization"] = `Bearer ${params.access_token}`;
+async function startCompile() {
+    const user = Firebase.auth.currentUser;
+    const uid = user.uid;
 
-    } catch (error) {
-        console.log("Error setting auth", error);
+    const usersRef = Firebase.db.collection("users");
+    const userDoc = await usersRef.doc(uid).get();
+    const userData = userDoc.data();
+
+    api.setAccessToken(userData.spotifyData.access_token);
+    console.log(userData);
+    const response = await getTopArtists();
+    console.log(response);
+}
+
+async function getTopSongs() {
+    const data = await api.getMyTopTracks();
+    const songs = Object.values(data.body.items);
+
+    const arr = [];
+    for (let i = 0; i < Math.min(10, songs.length); i++) {
+        const element = songs[i];
+        const data = {};
+        data.name = element.name;
+        data.album = element.album.name;
+        data.artist = element.artists[0].name;
+        data.image = element.album.images[0].url;
+        data.score = element.popularity;
+
+        arr.push(data);
     }
+
+    return arr;
 }
 
-/**
- * 
- * Returns something something chops up a url idk
- * 
- */
-function getParamValues(url) {
-    return url.slice(1)
-        .split("&")
-        .reduce((prev, curr) => {
-            const [title, value] = curr.split("=");
-            prev[title] = value;
-            return prev;
+async function getTopArtists() {
+    const data = await api.getMyTopArtists();
+    const artists = Object.values(data.body.items);
 
-        }, {});
+    const arr = [];
+    for (let i = 0; i < Math.min(10, artists.length); i++) {
+        const element = artists[i];
+        const data = {};
+        data.name = element.name;
+        data.image = element.images[0].url;
+        data.score = element.popularity;
+
+        arr.push(data);
+    }
+
+    return arr;
 }
 
-export default { setAuthHeader, getParamValues };
+export default { api, startCompile };

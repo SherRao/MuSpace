@@ -21,7 +21,7 @@ const StyledTitle = Styled.p`
 
 function ListeningActivity(){
     return (
-        <Card>
+        <Card style={{ minWidth: "max-content", maxWidth: "100%" }}>
             <StyledTitle>Friend Listening Activity</StyledTitle>
             <StyledInnerDiv>
                 <ListeningActivityCard />

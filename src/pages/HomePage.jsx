@@ -1,6 +1,8 @@
 import React from "react";
 import Styled from "styled-components";
+import { Spotify } from "@functions";
 
+import { TextButton } from "@atoms";
 import { FavCard } from "@molecules";
 import { ListeningActivity } from "@organisms";
 
@@ -37,6 +39,8 @@ const CardContainer = Styled.div`
     align-items: center;
     
     transition: all 0.25s ease;
+
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
 `;
 
 const Heading = Styled.h2`
@@ -55,6 +59,7 @@ function HomePage() {
         <Panels>
             <LeftDiv>
                 <TopDiv>
+                    <TextButton text="test" type="text" onClick={dostuff}/>
                     <Heading>Good Evening, Username</Heading>
                     <Subtext>You listened to ### hours of music this week.</Subtext>
                 </TopDiv>
@@ -68,6 +73,11 @@ function HomePage() {
             </RightDiv>
         </Panels>
     );
+}
+
+async function dostuff() {
+    Spotify.startCompile();
+
 }
 
 export default HomePage;

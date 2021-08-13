@@ -75,12 +75,12 @@ function LoginPage() {
             <Header>Log in</Header>
             
             <LoginForm onSubmit={Firebase.loginWithEmail}/>
-            <GoogleSigninButton text="Login with Google" type="text" onClick={Firebase.loginWithGoogle}/>
+            {/* <GoogleSigninButton text="Login with Google" type="text" onClick={Firebase.loginWithGoogle}/> */}
 
             <LinkedTextDiv>
                 <LinkText href="/reset">Forgot Password</LinkText>
                 <Dot />
-                <LinkText href="/register">Sign Up</LinkText>
+                <LinkText href="/register">Register</LinkText>
             </LinkedTextDiv>
         </Container >
     );

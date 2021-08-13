@@ -18,8 +18,8 @@ const StyledNumber = Styled.p`
 const StyledProfilePic = Styled.img`
     background-color: ${props => props.theme.colors.grey};
     border-radius: 100%;
-    width: 42px;
-    height: 42px;
+    width: 36px;
+    height: 36px;
 `;
 
 const StyledText = Styled.p`
@@ -36,7 +36,7 @@ const StyledLink = Styled.a`
 function LeaderBoardStat({ number, src, username, hours, href }) {
     return (
         <StyledDiv style={{borderBottom: number === 3 ? "0px" : "1px solid grey"}}>
-            <StyledNumber >{number}.</StyledNumber>
+            <StyledNumber>{number}.</StyledNumber>
             <StyledProfilePic src={src} alt={username} />
             <StyledLink href={href}><StyledText>@{username}</StyledText></StyledLink>
             <StyledText width="120px">{hours} hours</StyledText>

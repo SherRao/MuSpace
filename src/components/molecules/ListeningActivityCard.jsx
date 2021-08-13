@@ -20,7 +20,7 @@ const StyledText = Styled.p`
     font-size: ${props => props.theme.fontSizes.medium}
 `;
 
-const StyledUsername = Styled.p`
+const StyledUsername = Styled(StyledText)`
     margin: 0;
     font-weight: bold;
 `;
@@ -29,18 +29,16 @@ function ListeningActivityCard() {
     return (
         <Card style={{flexDirection: "row", padding: 0}} bgColor="grey">
             <StyledDiv>
-                <AlbumCover width="6rem" />
+                <AlbumCover width="5em" />
             </StyledDiv>
             <StyledDiv style={{ width: "max-content", maxWidth: "100%", justifyContent: "center" }}>
-                <StyledUsername>
-                    <StyledText>Username</StyledText>
-                </StyledUsername>
+                <StyledUsername>Username</StyledUsername>
                 <StyledText>Song Title - Artist Name</StyledText>
             </StyledDiv>
             <SpaceFillerDiv />
             <StyledDiv>
                 <StyledIcon>
-                    <FaBookmark size="1.6em" style={{ margin: "0.8em 0.6em 0 0" }}/>
+                    <FaBookmark size="1.6em" style={{ margin: "0.8em 0.6em 0 0", visibility: "hidden" }}/>
                 </StyledIcon>
             </StyledDiv>
         </Card>

@@ -13,7 +13,8 @@ const LeftDiv = Styled.div`
 
 const RightDiv = Styled.div`
     width: 79vw;
-    height: 100%;
+    min-height: 100vh;
+    height: max-content;
 
     left: 20vw;
     position: sticky;

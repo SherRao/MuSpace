@@ -23,7 +23,7 @@ const StyledDiv = Styled.div`
 `;
 
 const Banner = Styled.div`
-    background-color: grey;
+    background-color: ${props => props.theme.colors.grey};
     height: 3em;
     width: 100%;
     border-radius: 20px 20px 0px 0px;
@@ -33,7 +33,7 @@ const Banner = Styled.div`
 
 const BannerText = Styled.p`
     margin-left: 1em;
-    color: white;
+    color: ${props => props.theme.colors.white};
 
     font-size: ${props => props.theme.fontSizes.medium};
 

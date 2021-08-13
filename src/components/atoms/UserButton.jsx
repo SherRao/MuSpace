@@ -1,6 +1,5 @@
 import React from "react";
 import Styled from "styled-components";
-import SpaceFillerDiv from "@misc/SpaceFillerDiv";
 
 import { FaCog } from "react-icons/fa"; /* cog button fill icon*/
 

@@ -1,5 +1,5 @@
-import React from "react";
 import config from "@src/config.json";
+import validator from "validator";
 
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -34,15 +34,14 @@ function loginWithEmail(event) {
  */
 async function loginWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
-    const userCredentials = await auth.signInWithPopup(provider);
+    auth.signInWithPopup(provider).then((userCredentials) => {
+        const docRef = db.collection("users").doc(userCredentials.user.uid);
+        docRef.get().then(doc => {
+            if (!doc.exists)
+                storeNewUserData(true, false, {}, userCredentials.user.uid, userCredentials.user.email, null, null, userCredentials.user.displayName, null, userCredentials.user.photoURL);
 
-    const docRef = db.collection("users").doc(userCredentials.user.uid);
-    const doc = await docRef.get();
-    alert(doc.exists);
-
-    if (!doc.exists)
-        await storeNewUserData(userCredentials.user.uid, userCredentials.user.email, null, null, userCredentials.user.displayName, null, userCredentials.user.photoURL);
-
+        });
+    });
 }
 
 /**
@@ -61,8 +60,31 @@ async function registerWithEmail(event) {
     const username = event.target.elements[4].value;
     const pass = event.target.elements[5].value;
     const dob = event.target.elements[6].value;
+    const legalDate = new Date();
+    legalDate.setFullYear(legalDate.getFullYear() - 18);
 
     try {
+        // validate input first
+        if(!validator.isEmail(email) || validator.isEmpty(email) || validator.isEmpty(confirmEmail))
+            throw Error("Please enter a valid email address.");
+        if(!(email === confirmEmail))
+            throw Error("Emails do not match.");
+        if(validator.isEmpty(firstName) || validator.isEmpty(lastName))
+            throw Error("Please enter your full name.");
+        if(validator.isEmpty(username))
+            throw Error("Please enter a username.");
+        if(username.length < 5 || username.length > 32)
+            throw Error("Username must be between 5 and 32 characters in length.");
+        if(validator.isEmpty(pass))
+            throw Error("Please enter a password.");
+        if(pass.length < 6)
+            throw Error("Password must be at least 6 characters long.");
+        if(!validator.isDate(new Date(dob)))
+            throw Error("Please select a date of birth.");
+        if(validator.isAfter(dob, legalDate.toString()))
+            throw Error("You must be at least 18 years of age to create an account.");
+        
+        // if error has not been thrown, then create the account
         const userCredentials = await auth.createUserWithEmailAndPassword(email, pass);
         await storeNewUserData(userCredentials.user.uid, email, firstName, lastName, username, dob);
         auth.currentUser.sendEmailVerification();
@@ -73,9 +95,16 @@ async function registerWithEmail(event) {
     }
 }
 
-
+/**
+ *
+ * Function to store new user data on a new user register. 
+ * 
+ */
 async function storeNewUserData(id, email, firstName, lastName, username, dob, profile_picture) {
     const userData = {
+        "spotifyVerified": false,
+        "spotifyData": {},
+
         "email": email,
         "firstName": firstName,
         "lastName": lastName,
@@ -88,4 +117,14 @@ async function storeNewUserData(id, email, firstName, lastName, username, dob, p
         .doc(id).set(userData);
 }
 
-export default { firebase, auth, db, loginWithEmail, loginWithGoogle, registerWithEmail };
+/**
+ * 
+ * Function to log out the current user.
+ * 
+ */
+async function logout() {
+    await auth.signOut();
+}
+
+
+export default { firebase, auth, db, loginWithEmail, loginWithGoogle, registerWithEmail, logout };

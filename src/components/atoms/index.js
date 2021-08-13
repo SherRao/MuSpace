@@ -17,6 +17,7 @@ import ArtistProfilePic from "./ArtistProfilePic";
 import FriendsMessageButton from "./FriendsMessageButton";
 import ChatBubble from "./ChatBubble";
 import Field from "./Field";
+import FeedObject from "./FeedObject";
 
 export {
   AlbumCover,
@@ -37,5 +38,6 @@ export {
   ArtistProfilePic,
   FriendsMessageButton,
   ChatBubble,
-  Field
+  Field,
+  FeedObject
 };
