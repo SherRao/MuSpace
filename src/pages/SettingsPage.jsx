@@ -104,8 +104,11 @@ function SettingsPage() {
                 <SectionDiv>
                     <StyledSectionTitle>
                         <StyledText>Display Settings</StyledText>
-                        <p>Light mode/Dark Mode</p>
-                        <p>English/French</p>
+                        <SectionButton text="Light Mode" type="text" onClick={notImplemented}/>
+                        <SectionButton text="Dark Mode" type="text" onClick={notImplemented}/>
+                        <StyledText>Language Settings</StyledText>
+                        <SectionButton text="English" type="text" onClick={notImplemented}/>
+                        <SectionButton text="French" type="text" onClick={notImplemented}/>
                     </StyledSectionTitle>
                 </SectionDiv>
                 
