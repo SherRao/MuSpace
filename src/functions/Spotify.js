@@ -43,6 +43,7 @@ async function loadTopSongs(api) {
         data.artist = element.artists[0].name;
         data.image = element.album.images[0].url;
         data.score = element.popularity;
+        data.link = "/";
 
         arr.push(data);
     }
@@ -61,6 +62,7 @@ async function loadTopArtists(api) {
         data.name = element.name;
         data.image = element.images[0].url;
         data.score = element.popularity;
+        data.link = "/";
 
         arr.push(data);
     }

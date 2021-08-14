@@ -330,11 +330,36 @@ async function getUsername() {
     const doc = await docRef.get();
     const username = doc.data().username;
     return username;
+
+}
+
+async function getFullName() {
+    const docRef = db.collection("users").doc(auth.currentUser.uid);
+    const doc = await docRef.get();
+    const fullName = doc.data().firstName + " " + doc.data().lastName;
+    return fullName;
+
+}
+
+async function getFriends() {
+    const docRef = db.collection("users").doc(auth.currentUser.uid);
+    const doc = await docRef.get();
+    const friends = doc.data().friends;
+    return friends;
+
+}
+
+async function getUser(uid) {
+    const docRef = db.collection("users").doc(uid);
+    const doc = await docRef.get();
+    const user = doc.data();
+    return user;
+
 }
 
 export default {
     firebase, auth, db, storage,
     loginWithEmail, loginWithGoogle, registerWithEmail,
     logout, deleteAccount, changePass, updateProfilePicture,
-    addFriend, createNewChatRoom, sendChat, searchUsernames, getProfilePicture, getUsername, resetPass
+    addFriend, createNewChatRoom, sendChat, searchUsernames, getProfilePicture, getUsername, getFullName, resetPass, getFriends, getUser
 };

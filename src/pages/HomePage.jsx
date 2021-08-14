@@ -85,12 +85,12 @@ function HomePage() {
     const topSong = isTopSong ? topSongs[0] : null;
     console.log(topArtists, topSongs);
     
+    //TODO: change "Good Evening" to be dynamic depending on time of day (4 states).
     return (
         <Panels>
             <LeftDiv>
                 <TopDiv>
-                    <TextButton text="test" type="text" onClick={dostuff}/>
-                    <Heading>Good Evening, {name}</Heading>
+                    <Heading>Good Evening, {name}!</Heading>
                     <Subtext>You listened to ### hours of music this week.</Subtext>
                 </TopDiv>
                 <CardContainer>
