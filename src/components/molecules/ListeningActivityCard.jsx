@@ -20,6 +20,10 @@ const StyledText = Styled.p`
     font-size: ${props => props.theme.fontSizes.medium}
 `;
 
+const StyledSmallText = Styled(StyledText)`
+    font-size: ${props => props.theme.fontSizes.mediumSmall};
+`;
+
 const StyledUsername = Styled(StyledText)`
     font-weight: bold;
 `;
@@ -33,7 +37,7 @@ function ListeningActivityCard({ username, title, artist, picture_url, link }) {
             <StyledDiv style={{ width: "max-content", maxWidth: "100%", justifyContent: "center" }}>
                 <StyledUsername>{username}</StyledUsername>
                 {title ? <StyledText>{title}</StyledText> : null}
-                {artist ? <StyledText>{artist}</StyledText> : null}
+                {artist ? <StyledSmallText>{artist}</StyledSmallText> : null}
             </StyledDiv>
             <SpaceFillerDiv />
             <StyledDiv>

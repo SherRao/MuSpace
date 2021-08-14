@@ -22,6 +22,10 @@ const StyledText = Styled.p`
     font-weight: medium;
 `;
 
+const StyledSmallText = Styled(StyledText)`
+    font-size: ${props => props.theme.fontSizes.mediumSmall};
+`;
+
 const StyledUsername = Styled(StyledText)`
     font-weight: bold;
     margin: 0;
@@ -35,7 +39,7 @@ function MiniTopCategory({username, text, artist, album_picture}){
                 <AlbumCover width="5em" album_picture={album_picture} />
             </StyledDiv>
             <StyledText>{text}</StyledText>
-            <StyledText>{artist}</StyledText>
+            {artist ? <StyledSmallText>{artist}</StyledSmallText> : null}
         </StyledDiv>
     );
 }
