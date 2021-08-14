@@ -11,7 +11,7 @@
 | Aylani, Jiten                   | 190469460      | 5     |
 | Hollingworth, Declan            | 190765210      | 5     |
 | Kellner, Kelvin                 | 190668940      | 5     |
-| Maan, Armaan                    | 190623760      | 5     |
+| Maan, Armaan                    | 190623760      | 4.71  |
 | Manimaran, Mathumithan "Matt"   | 190546910      | 5     |
 | Mazza, Robert                   | 190778040      | 5     |
 | Goldman, Jacob                  | 190509690      | 5     |
