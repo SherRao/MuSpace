@@ -42,8 +42,8 @@ const Feed = Styled.div`
     box-shadow: 3px 5px 4px 3px rgba(0,0,0,0.19);
 `;
 
-const StyledText = Styled.h1`
-    font-family: "Roboto";
+const StyledText = Styled.p`
+    font-family: ${props => props.theme.fonts.regular};
     font-size: ${props => props.theme.fontSizes.large};
     color: ${props => props.theme.colors.black};
     font-weight: bold;
@@ -68,7 +68,7 @@ const StyledTitle = Styled.p`
     margin: 0em 0em 0em 1em;
 `;
 
-const titleDiv = Styled.div`
+const TitleDiv = Styled.div`
     display: flex;
     flex-direction: row;
     aling-items = center;
@@ -106,6 +106,7 @@ function ProfilePage() {
         query = data.username;
     const [profilePicture, setProfilePicture] = React.useState(null);
     const [userName, setUserName] = React.useState(null);
+    const [friends, setFriends] = React.useState(null);
 
     React.useEffect(async () => {
         if(!userName)
@@ -115,12 +116,26 @@ function ProfilePage() {
             setProfilePicture(await Firebase.getProfilePicture());
 
     }, []);
+    React.useEffect(async () => {
+        if(!friends) {
+            const friendIds = await Firebase.getFriends();
+            const friendList = [];
+            for(let i=0; i<friendIds.length; i++) {
+                await Firebase.getUser(friendIds[i])
+                    .then(res => friendList.push(res))
+                    .catch(error => console.log("ERROR", error));
+            }
+            setFriends(friendList);
+        }
+    }, [friends]);
+
+    const friendList = friends ? friends : [];
     return (
         <Container>
-            <titleDiv style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+            <TitleDiv style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
                 <StyledImg src={profilePicture} alt="Default Profile image" />
                 <StyledTitle>{userName}</StyledTitle>
-            </titleDiv>
+            </TitleDiv>
             
             <FeedContainer>
                 <Feed>
@@ -131,11 +146,9 @@ function ProfilePage() {
                 </Feed>
 
                 <FriendFeeds>
-                    <TopArtists>
-                    </TopArtists>
-                    <TopSongs>
-                    </TopSongs>
-                    <FriendTopSongs />
+                    <TopArtists />
+                    <TopSongs />
+                    <FriendTopSongs friends={friendList}/>
                 </FriendFeeds>
 
                 

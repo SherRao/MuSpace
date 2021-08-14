@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 import { FriendsMessageButton, ChatBubble, TextButton, Field } from "@atoms";
+import { Firebase } from "@functions";
 
 const Panels = Styled.div`
     width: 100%;
@@ -13,6 +14,7 @@ const Panels = Styled.div`
 const LeftDiv = Styled.div`
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     min-width: 12em;
     max-width: max-content;
     height: 100%;
@@ -21,7 +23,7 @@ const LeftDiv = Styled.div`
 const RightDiv = Styled.div`
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 4;
     height: 100%;
     margin-left: 1.2em;
 `;
@@ -34,7 +36,7 @@ const StyledText = Styled.p`
     text-align: center;
 `;
 
-const Title = Styled.p`
+const Title = Styled(StyledText)`
     font-size: ${props => props.theme.fontSizes.mediumLarge};
 `;
 
@@ -61,21 +63,43 @@ const Chats = Styled.div`
     padding: 0.2em;
 `;
 
+const NoFriends = Styled.p`
+    font-size: ${props => props.theme.fontSizes.medium}
+    font-color: ${props => props.theme.colors.black}
+    text-align: center;
+`;
+
 function MessagesPage() {
+    const [friends, setFriends] = React.useState(null);
+
+    React.useEffect(async () => {
+        if(!friends) {
+            const friendIds = await Firebase.getFriends();
+            const friendList = [];
+            for(let i=0; i<friendIds.length; i++) {
+                await Firebase.getUser(friendIds[i])
+                    .then(res => friendList.push(res))
+                    .catch(error => console.log("ERROR", error));
+            }
+            setFriends(friendList);
+        }
+    }, [friends]);
+
+    const friendList = friends ? friends : [];
     return (
         <Panels>
             <LeftDiv>
-                <Title>
-                    <StyledText>Friends</StyledText>
-                </Title>
+                <Title>Friends</Title>
                 <FriendsListDiv>
-                    <FriendsMessageButton text="Username" type="text" onClick={console.log("test")}/>
+                    {friendList && friendList.length > 0
+                        ? friendList.map(({ username, profile_picture }, i) => 
+                            <FriendsMessageButton username={username} profile_picture={profile_picture} type="text" onClick={console.log("test")} key={i} />)
+                        : <NoFriends>You have not added any friends yet.</NoFriends>
+                    }
                 </FriendsListDiv>
             </LeftDiv>
             <RightDiv>
-                <Title>
-                    <StyledText>Username</StyledText>
-                </Title>
+                <Title>Username</Title>
                 <Chats>
                     <ChatBubble from="friend">Hi</ChatBubble>
                     <ChatBubble from="user">What up?</ChatBubble>

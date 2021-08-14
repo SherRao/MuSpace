@@ -44,7 +44,7 @@ const StyledText = Styled.p`
 const StyledIcon = Styled.div`
      color: ${(props) => props.theme.colors.grey};
      align: right;
-     width: auto;
+     width: 1.8em;
      height: 1.8em;
      margin: 0.2em;
 
@@ -64,7 +64,7 @@ const StyledIcon = Styled.div`
 `;
 
 const UserProfPic = Styled.img`
-    width: auto;
+    width: 2.8em;
     height: 2.8em;
     border-radius: 100%;
     padding: 0.2em;

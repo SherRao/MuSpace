@@ -27,7 +27,7 @@ const StyledText = Styled.p`
     font-family: "Roboto";
     font-size: ${(props) => props.theme.fontSizes.medium};
     font-weight: normal;
-    color: ${(props) => props.theme.colors.mediumGrey};
+    color: ${(props) => props.theme.colors.grey};
     
     text-align: center;
     margin: 0;
@@ -39,17 +39,16 @@ const StyledText = Styled.p`
 `;
 
 const UserProfPic = Styled.img`
-    max-width: 20%; 
-    height: auto;
+    width: 2.2em;
+    height: 2.2em;
     border-radius: 100%;
-    padding: 0.2em;
-    margin-left: 0.8em;
+    margin: 0 0.6em;
 `;
 
-function UserButton({ text, icon, location, profileImage }) {
+function UserButton({ text, icon, location, profile_picture }) {
     return (
         <StyledDiv>
-            <UserProfPic src={profileImage} alt="Default Profile image" />
+            <UserProfPic src={profile_picture} alt="Default Profile image" />
             <StyledLink href="/profile">
                 <StyledText>{text}</StyledText>
             </StyledLink>

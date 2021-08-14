@@ -6,28 +6,13 @@ import Firebase from "firebase/app";
 import "firebase/auth";
 
 
-function FriendsMessageButton(){
-    const [profilePic, setProfilePic] = React.useState(null);
-
-    const user = Firebase.auth().currentUser;
-    const username = user ? user.displayName : "@username";
-
-    React.useEffect(() => {
-        if(!profilePic)
-            getProfilePic();
-    }, []);
-
-    async function getProfilePic() {
-        const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
-        setProfilePic(x);
-    }
-    
+function FriendsMessageButton({ username, profile_picture }){
     return(
         <Card>
             <FriendUserButton
                 text={username}
                 location="/messages"
-                profileImage={profilePic}
+                profile_picture={profile_picture}
             />
         </Card>
     );

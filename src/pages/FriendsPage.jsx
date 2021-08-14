@@ -45,10 +45,8 @@ function FriendsPage() {
                 await Firebase.getUser(friendIds[i])
                     .then(res => friendList.push(res))
                     .catch(error => console.log("ERROR", error));
-                //friendList.push(await Firebase.getUser(friendIds[i]));
             }
             setFriends(friendList);
-            console.log(friendList);
         }
     }, [friends]);
 

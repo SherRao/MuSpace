@@ -91,7 +91,6 @@ function HomePage() {
                 //friendList.push(await Firebase.getUser(friendIds[i]));
             }
             setFriends(friendList);
-            console.log(friendList);
         }
     }, [friends]);
 
