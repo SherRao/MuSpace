@@ -93,6 +93,16 @@ function HomePage() {
             setFriends(friendList);
         }
     }, [friends]);
+    
+    function greeting() {
+        const time = new Date().getHours();
+        if (time < 12)
+            return "Good Morning";
+        else if (time >= 12 && time <= 17)
+            return "Good Afternoon";
+        else
+            return "Good Evening";
+    }
 
     const isTopArtist = topArtists && topArtists.length > 0;
     const isTopSong = topSongs && topSongs.length > 0;
@@ -100,26 +110,11 @@ function HomePage() {
     const topSong = isTopSong ? topSongs[0] : null;
     const friendList = friends ? friends : [];
     
-    var greeting = "";
-    var d = new Date();
-    var time = d.getHours();
-
-    if (time < 12) {
-        greeting = "Good Morning";
-    }
-    else if (time >= 12 && time <= 17) {
-        greeting = "Good Afternoon";
-    }
-    else if (time >= 17 && time <= 24) {
-        greeting = "Good Evening";
-    }
-    
-    //TODO: change "Good Evening" to be dynamic depending on time of day (4 states).
     return (
         <Panels>
             <LeftDiv>
                 <TopDiv>
-                    <Heading>{greeting}, {name}!</Heading>
+                    <Heading>{greeting()}, {name}!</Heading>
                     <Subtext>You listened to ### hours of music this week.</Subtext>
                 </TopDiv>
                 <CardContainer>
