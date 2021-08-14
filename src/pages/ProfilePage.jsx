@@ -6,7 +6,7 @@ import queryString from "query-string";
 import default_profile from "../assets/default_profile.jpg";
 
 import { AlbumCover, FeedObject, ProfileUserName } from "@atoms";
-import { FriendTopAlbums, TopArtists, TopSongs } from "@molecules";
+import { FriendTopSongs, TopArtists, TopSongs } from "@molecules";
 
 const Container = Styled.div`
     width: 100%;
@@ -135,8 +135,7 @@ function ProfilePage() {
                     </TopArtists>
                     <TopSongs>
                     </TopSongs>
-                    <FriendTopAlbums> 
-                    </FriendTopAlbums>
+                    <FriendTopSongs />
                 </FriendFeeds>
 
                 

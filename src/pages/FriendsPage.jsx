@@ -1,8 +1,9 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { FriendTopAlbums, FriendTopArtists } from "@molecules";
+import { FriendTopSongs, FriendTopArtists } from "@molecules";
 import { LeaderBoard, ListeningActivity } from "@organisms";
+import { Firebase } from "@functions";
 
 const Page = Styled.div`
     width: 100%;
@@ -34,21 +35,39 @@ const Col = Styled.div`
 `;
 
 function FriendsPage() {
+    const [friends, setFriends] = React.useState(null);
+
+    React.useEffect(async () => {
+        if(!friends) {
+            const friendIds = await Firebase.getFriends();
+            const friendList = [];
+            for(let i=0; i<friendIds.length; i++) {
+                await Firebase.getUser(friendIds[i])
+                    .then(res => friendList.push(res))
+                    .catch(error => console.log("ERROR", error));
+                //friendList.push(await Firebase.getUser(friendIds[i]));
+            }
+            setFriends(friendList);
+            console.log(friendList);
+        }
+    }, [friends]);
+
+    const friendList = friends ? friends : [];
     return (
         <Page>
             <Col style={{ flexGrow: 4, marginRight: "0.8em" }}>
                 <Row>
                     <Col style={{ flexGrow: 1 }}>
-                        <FriendTopAlbums />
-                        <FriendTopArtists />
+                        <FriendTopSongs friends={friendList} />
+                        <FriendTopArtists friends={friendList} />
                     </Col>
                     <Col style={{ flexGrow: 1, marginLeft: "0.8em" }}>
-                        <LeaderBoard />
+                        <LeaderBoard friends={friendList} />
                     </Col>
                 </Row>
             </Col>
             <Col style={{ flexGrow: 1 }}>
-                <ListeningActivity/>
+                <ListeningActivity friends={friendList} />
             </Col>
         </Page>
     );
