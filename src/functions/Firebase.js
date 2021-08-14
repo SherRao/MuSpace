@@ -323,7 +323,6 @@ async function getProfilePicture() {
     const doc = await docRef.get();
     const profilePicture = doc.data().profile_picture;
     return profilePicture;
-
 }
 
 async function getUsername() {
@@ -331,7 +330,6 @@ async function getUsername() {
     const doc = await docRef.get();
     const username = doc.data().username;
     return username;
-
 }
 
 export default {

@@ -81,13 +81,13 @@ const ResponsivePic = Styled(ArtistProfilePic)`
     }
 `;
 
-function FavCard({card_title, main_text, sub_text, score, pic_url}) {
+function FavCard({card_title, main_text, sub_text, score, pic_url, link}) {
     return (
         <StyledDiv>
             <Banner>
                 <BannerText>{card_title}</BannerText>
             </Banner>
-            <ResponsivePic width="6em" artist_pic_url={pic_url}/>
+            <ResponsivePic width="6em" artist_pic_url={pic_url} location={link}/>
             <TextDiv>
                 <MainText>{main_text}</MainText>
                 <SubText>{sub_text}</SubText>

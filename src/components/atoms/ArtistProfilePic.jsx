@@ -24,7 +24,7 @@ const StyledImage = Styled.img`
 
 function ArtistProfilePic({ width, artist_pic_url, location }) {
     return (
-        <a onClick={notImplemented}>
+        <a href={location}>
             <StyledImage src={artist_pic_url} width={width} height="auto" />
         </a>
     );

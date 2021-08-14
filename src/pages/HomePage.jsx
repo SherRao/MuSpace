@@ -5,6 +5,7 @@ import { Spotify } from "@functions";
 import { TextButton } from "@atoms";
 import { FavCard } from "@molecules";
 import { ListeningActivity } from "@organisms";
+import { Firebase } from "@functions";
 
 const Panels = Styled.div`
     display: flex;
@@ -57,17 +58,22 @@ const Subtext = Styled.p`
 function HomePage() {
     const [topArtists, setTopArtists] = React.useState(null);
     const [topSongs, setTopSongs] = React.useState(null);
+    const [name, setName] = React.useState(null);
 
     React.useEffect(async () => {
+        if(!name)
+            setName(await Firebase.getFullName());
+    }, [name]);
+    React.useEffect(async () => {
         if (!topArtists) {
-            Spotify.getTopArtists()
+            await Spotify.getTopArtists()
                 .then(res => setTopArtists(res))
                 .catch(e => console.log("ERROR", e));
         }
     }, [topArtists]);
     React.useEffect(async () => {
         if (!topSongs) {
-            Spotify.getTopSongs()
+            await Spotify.getTopSongs()
                 .then(res => setTopSongs(res))
                 .catch(e => console.log("ERROR", e));
         }
@@ -84,17 +90,17 @@ function HomePage() {
             <LeftDiv>
                 <TopDiv>
                     <TextButton text="test" type="text" onClick={dostuff}/>
-                    <Heading>Good Evening, Username</Heading>
+                    <Heading>Good Evening, {name}</Heading>
                     <Subtext>You listened to ### hours of music this week.</Subtext>
                 </TopDiv>
                 <CardContainer>
                     {isTopArtist
-                        ? <FavCard card_title="Your favourite artist of the week" main_text={topArtist.name} score={topArtist.score} pic_url={topArtist.image}/>
-                        : <FavCard card_title="Your favourite artist of the week" main_text="Lil Uzi Vert" score="10" pic_url="https://i.scdn.co/image/ab676161000051749cc6d44767dda18ee4e1be9f"/>
+                        ? <FavCard card_title="Your favourite artist of the week" main_text={topArtist.name} score={topArtist.score} pic_url={topArtist.image} link={topArtist.link} />
+                        : <FavCard card_title="Your favourite artist of the week" main_text="Lil Uzi Vert" score="10" pic_url="https://i.scdn.co/image/ab676161000051749cc6d44767dda18ee4e1be9f" link="https://open.spotify.com/artist/4O15NlyKLIASxsJ0PrXPfz?si=6Hfz1DAsQEmQAicoukaIuA&dl_branch=1" />
                     }
                     {isTopSong
-                        ? <FavCard card_title="Your favourite song of the week" main_text={topSong.name} sub_text={topSong.artist} score={topSong.score} pic_url={topSong.image}/>
-                        : <FavCard card_title="Your favourite song of the week" main_text="Hotel California" sub_text="Eagles" score="1" pic_url="https://i.scdn.co/image/ab67616d0000b2734637341b9f507521afa9a778"/>
+                        ? <FavCard card_title="Your favourite song of the week" main_text={topSong.name} sub_text={topSong.artist} score={topSong.score} pic_url={topSong.image} link={topSong.link} />
+                        : <FavCard card_title="Your favourite song of the week" main_text="Hotel California" sub_text="Eagles" score="1" pic_url="https://i.scdn.co/image/ab67616d0000b2734637341b9f507521afa9a778" link="https://open.spotify.com/track/40riOy7x9W7GXjyGp4pjAv?si=18366ac2b8de47d8" />
                     }
                 </CardContainer>
             </LeftDiv>
