@@ -91,10 +91,6 @@ const Clear = Styled(ClearIcon)`
 function SearchBar() {
     const [users, setUsers] = React.useState(null);
     const [query, setQuery] = React.useState("");
-
-    React.useEffect(() => {
-        console.log(users);
-    }, []);
     
     function handleChange(e) {
         setQuery(e.target.value);
@@ -106,7 +102,7 @@ function SearchBar() {
         e.preventDefault();
         if(query !== "") {
             const results = await Firebase.searchUsernames(query);
-            setTimeout(() => setUsers(results), 500); // sus
+            setTimeout(() => setUsers(results), 500); // TODO: sus
         }
     };
 

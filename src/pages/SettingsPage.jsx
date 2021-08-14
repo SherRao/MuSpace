@@ -48,17 +48,17 @@ const StyledText = Styled.p`
     font-weight: bold;
 `;
 
-const StyledTitle = Styled.p`
+const StyledTitle = Styled(StyledText)`
     font-size: ${props => props.theme.fontSizes.extraLarge};
     margin: 0em 0em 0em 1em;  
 `;
 
-const StyledSubTitle = Styled.p`
+const StyledSubTitle = Styled(StyledText)`
     font-size: ${props => props.theme.fontSizes.largeLarge};
     margin: 0.5em 0em 0em 0.2em; 
 `;
 
-const StyledSectionTitle = Styled.p`
+const StyledSectionTitle = Styled(StyledText)`
     font-size: ${props => props.theme.fontSizes.large};
     margin: 0.5em 0em 0.5em 0.2em;
 `;
@@ -105,20 +105,14 @@ function SettingsPage() {
         <Container>
             <TitleDiv>
                 <StyledImg src={profilePicture} alt="Default Profile image" />
-                <StyledTitle>
-                    <StyledText>{userName}</StyledText>
-                </StyledTitle>
+                <StyledTitle>{userName}</StyledTitle>
             </TitleDiv>
             
             <SettingsDiv>
-                <StyledSubTitle>
-                    <StyledText>Settings</StyledText>
-                </StyledSubTitle>
+                <StyledSubTitle>Settings</StyledSubTitle>
 
                 <SectionDiv>
-                    <StyledSectionTitle>
-                        <StyledText>Account Settings</StyledText>
-                    </StyledSectionTitle>
+                    <StyledSectionTitle>Account SettingsDiv</StyledSectionTitle>
                     <SectionButton text="Upload Profile Picture" type="text" onClick={()=>fileInputRef.current.click()}/>
                     <input type="file" id="fileButton" ref={fileInputRef} onChange={fileChangedHandler} hidden/>
                     <SectionButton text="Change Password" type="text" onClick={Firebase.changePass}/>
@@ -127,14 +121,15 @@ function SettingsPage() {
                 </SectionDiv>
 
                 <SectionDiv>
-                    <StyledSectionTitle>
-                        <StyledText>Display Settings</StyledText>
-                        <SectionButton text="Light Mode" type="text" onClick={notImplemented}/>
-                        <SectionButton text="Dark Mode" type="text" onClick={notImplemented}/>
-                        <StyledText>Language Settings</StyledText>
-                        <SectionButton text="English" type="text" onClick={notImplemented}/>
-                        <SectionButton text="French" type="text" onClick={notImplemented}/>
-                    </StyledSectionTitle>
+                    <StyledSectionTitle>Display Settings</StyledSectionTitle>
+                    <SectionButton text="Light Mode" type="text" onClick={notImplemented}/>
+                    <SectionButton text="Dark Mode" type="text" onClick={notImplemented}/>
+                </SectionDiv>
+
+                <SectionDiv>
+                    <StyledSectionTitle>Language Settings</StyledSectionTitle>
+                    <SectionButton text="English" type="text" onClick={notImplemented}/>
+                    <SectionButton text="French" type="text" onClick={notImplemented}/>
                 </SectionDiv>
                 
             </SettingsDiv>
