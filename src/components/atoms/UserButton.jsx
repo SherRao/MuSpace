@@ -74,7 +74,7 @@ const UserProfPic = Styled.img`
 function UserButton({ text, icon, location, profileImage }) {
     return (
         <StyledDiv>
-            <UserProfPic src={profileImage} alt="Default Profile image" />
+            <UserProfPic src={profileImage} alt="Profile image" />
             <StyledLink href="/profile">
                 <StyledText>{text}</StyledText>
             </StyledLink>

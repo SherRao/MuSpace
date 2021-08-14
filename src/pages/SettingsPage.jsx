@@ -96,7 +96,7 @@ function SettingsPage() {
     return (
         <Container>
             <TitleDiv>
-                <StyledImg src={profilePicture} alt="Default Profile image" />
+                <StyledImg src={profilePicture} alt="Profile image" />
                 <StyledTitle>{userName}</StyledTitle>
             </TitleDiv>
             

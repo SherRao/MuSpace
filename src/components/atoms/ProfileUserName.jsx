@@ -42,7 +42,7 @@ const StyledText = Styled.h1`
 function ProfileUserName({ text, profileImage }) {
     return (
         <StyledDiv>
-            <UserProfPic src={profileImage} alt="Default Profile image" />
+            <UserProfPic src={profileImage} alt="Profile image" />
             <StyledText>{text}</StyledText>
         </StyledDiv>
     );
