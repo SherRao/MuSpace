@@ -11,6 +11,7 @@ import MessagesPage from "./MessagesPage";
 import FriendsPage from "./FriendsPage";
 import SettingsPage from "./SettingsPage";
 import SpotifyRedirectPage from "./SpotifyRedirectPage";
+import ResetPage from "./ResetPage";
 
 export {
     TestPage,
@@ -25,5 +26,6 @@ export {
     MessagesPage,
     FriendsPage,
     SettingsPage,
-    SpotifyRedirectPage
+    SpotifyRedirectPage,
+    ResetPage
 };

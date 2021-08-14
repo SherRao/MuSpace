@@ -85,5 +85,6 @@ function LoginPage() {
         </Container >
     );
 }
+//onSubmit={Firebase.resetPass}
 
 export default LoginPage;
