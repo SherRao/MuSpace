@@ -18,6 +18,7 @@ const StyledOuterDiv = Styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: flex-start;
     margin-top: 0.2em;
     min-width: max-content;
 `;
