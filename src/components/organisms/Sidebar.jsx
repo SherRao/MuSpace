@@ -15,7 +15,7 @@ const StyledDiv = Styled.div`
     padding: 0.4rem 0.4rem;
 
     background-color: ${(props) => props.theme.colors.white};
-    border-right: 1px solid ${(props) => props.theme.colors.black};
+    border-right: 1px solid ${(props) => props.theme.colors.lightGrey};
 
     display: flex;
     flex-direction: column;

@@ -57,7 +57,7 @@ const StyledImg = Styled.img`
     height: 13em;
     border-radius: 100%;
     padding: 0.2em;
-    margin-left: 1em;
+    margin-left: 2em;
 `;
 
 const StyledTitle = Styled.p`

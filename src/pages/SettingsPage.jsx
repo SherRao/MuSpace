@@ -74,7 +74,6 @@ const SettingsDiv = Styled.div`
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin: 0m 0em 0em 0em;
 `;
 
 

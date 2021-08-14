@@ -6,6 +6,7 @@ import { FaCog } from "react-icons/fa"; /* cog button fill icon*/
 const StyledDiv = Styled.div`
   color: ${(props) => props.theme.colors.grey};
   align-items: center;
+  justify-content: center;
   transition: all 0.25s ease;
   margin: 0.2rem 0;
   display: flex;
@@ -43,10 +44,9 @@ const StyledText = Styled.p`
 const StyledIcon = Styled.div`
      color: ${(props) => props.theme.colors.grey};
      align: right;
-     max-width: 40%;
-     height: auto;
-     margin: 0px;
-     padding: 3px;
+     width: auto;
+     height: 1.8em;
+     margin: 0.2em;
 
      :hover{
        color: ${props => props.theme.colors.lightPurple};
@@ -62,11 +62,11 @@ const StyledIcon = Styled.div`
 `;
 
 const UserProfPic = Styled.img`
-    max-width: 20%; 
-    height: auto;
+    width: auto;
+    height: 2.8em;
     border-radius: 100%;
     padding: 0.2em;
-    margin-left: 0.8em;
+    margin: 0.6em 1em;
 `;
 
 function UserButton({ text, icon, location, profileImage }) {
@@ -78,7 +78,7 @@ function UserButton({ text, icon, location, profileImage }) {
             </StyledLink>
             <div style={{margin: "0 auto"}} />
             <StyledLink href="/settings">
-                <StyledIcon><FaCog/></StyledIcon>
+                <StyledIcon><FaCog style={{ width: "auto", height: "100%" }}/></StyledIcon>
             </StyledLink>
         </StyledDiv>
     );
