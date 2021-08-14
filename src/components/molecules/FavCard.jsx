@@ -81,7 +81,7 @@ const ResponsivePic = Styled(ArtistProfilePic)`
     }
 `;
 
-function FavCard({card_title, main_text, sub_text, hours_played, pic_url}) {
+function FavCard({card_title, main_text, sub_text, score, pic_url}) {
     return (
         <StyledDiv>
             <Banner>
@@ -91,7 +91,7 @@ function FavCard({card_title, main_text, sub_text, hours_played, pic_url}) {
             <TextDiv>
                 <MainText>{main_text}</MainText>
                 <SubText>{sub_text}</SubText>
-                <HoursPlayed>{hours_played} hours played</HoursPlayed>
+                <HoursPlayed>You listened {score}% of the time</HoursPlayed>
             </TextDiv>
         </StyledDiv>
     );
