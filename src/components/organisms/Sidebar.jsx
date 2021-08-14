@@ -43,12 +43,12 @@ function Sidebar() {
     const [profilePicture, setProfilePicture] = React.useState(null);
     const [userName, setUserName] = React.useState(null);
 
-    React.useEffect(() => {
+    React.useEffect(async () => {
         if(!userName)
-            setUserName(Firebase.getUsername());
+            setUserName(await Firebase.getUsername());
 
         if(!profilePicture)
-            setProfilePicture(Firebase.getProfilePicture());
+            setProfilePicture(await Firebase.getProfilePicture());
 
     }, []);
 

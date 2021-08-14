@@ -79,11 +79,22 @@ const SettingsDiv = Styled.div`
 
 function SettingsPage() {
     const fileInputRef = useRef();
-    
-    const fileChangedHandler = async (event) => {
+    const [profilePicture, setProfilePicture] = React.useState(null);
+    const [userName, setUserName] = React.useState(null);
+
+    React.useEffect(async () => {
+        if(!userName)
+            setUserName(await Firebase.getUsername());
+
+        if(!profilePicture)
+            setProfilePicture(await Firebase.getProfilePicture());
+
+    }, []);
+
+    const fileChangedHandler = (event) => {
         const file = event.target.files[0];
         if (file){
-            await Firebase.updateProfilePicture(file);
+            Firebase.updateProfilePicture(file);
             console.log(file);
             window.location.href = "/settings";
 
@@ -93,9 +104,9 @@ function SettingsPage() {
     return (
         <Container>
             <TitleDiv>
-                <StyledImg src={default_profile} alt="Default Profile image" />
+                <StyledImg src={profilePicture} alt="Default Profile image" />
                 <StyledTitle>
-                    <StyledText>@SherRawrXD</StyledText>
+                    <StyledText>{userName}</StyledText>
                 </StyledTitle>
             </TitleDiv>
             
