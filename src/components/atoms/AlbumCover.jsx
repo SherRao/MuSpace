@@ -37,7 +37,7 @@ function AlbumCover({ width }) {
     );
 }
 function notImplemented(){
-    alert("This featire has not been implemented yet!");
+    alert("This feature has not been implemented yet!");
 }
 
 export default AlbumCover;
