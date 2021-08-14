@@ -104,12 +104,22 @@ function ProfilePage() {
     let query = null;
     if(data) 
         query = data.username;
+    const [profilePicture, setProfilePicture] = React.useState(null);
+    const [userName, setUserName] = React.useState(null);
 
+    React.useEffect(async () => {
+        if(!userName)
+            setUserName(await Firebase.getUsername());
+
+        if(!profilePicture)
+            setProfilePicture(await Firebase.getProfilePicture());
+
+    }, []);
     return (
         <Container>
             <titleDiv style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
-                <StyledImg src={default_profile} alt="Default Profile image" />
-                <StyledTitle>Nishy Naushy Poo</StyledTitle>
+                <StyledImg src={profilePicture} alt="Default Profile image" />
+                <StyledTitle>{userName}</StyledTitle>
             </titleDiv>
             
             <FeedContainer>

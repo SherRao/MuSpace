@@ -1,9 +1,11 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { FiSearch as SearchIcon } from 'react-icons/fi';
-
 import { Card, SearchField, SearchResult } from "@atoms";
+import { Firebase } from "@functions";
+
+import { FiSearch as SearchIcon } from "react-icons/fi";
+import { MdClear as ClearIcon } from "react-icons/md";
 
 const Row = Styled.div`
     display: flex;
@@ -49,8 +51,8 @@ const NoResults = Styled.p`
     background-color: ${props => props.theme.colors.white};
 `;
 
-const Link = Styled.a`
-    width: 6em;
+const SearchButton = Styled.button`
+    width: 12em;
     margin-left: 0.6em;
     display: flex;
     align-items: center;
@@ -58,6 +60,7 @@ const Link = Styled.a`
     text-decoration: none;
     background-color: ${props => props.theme.colors.purple};
     border-radius: 0.45em;
+    border-width: 0;
 
     :hover {
         transition: all 0.25s ease;
@@ -67,24 +70,65 @@ const Link = Styled.a`
     transition: all 0.25s ease;
 `;
 
-const Icon = Styled(SearchIcon)`
+const ClearButton = Styled(SearchButton)`
+    width: 5em;
+    background-color: ${props => props.theme.colors.white};
+    border: 1px solid ${props => props.theme.colors.purple};
+`;
+
+const Search = Styled(SearchIcon)`
     width: auto;
     height: 1.8em;
     color: ${props => props.theme.colors.white};
 `;
 
-function SearchBar() {
+const Clear = Styled(ClearIcon)`
+    width: auto;
+    height: 1.8em;
+    color: ${props => props.theme.colors.purple};
+`;
 
+function SearchBar() {
+    const [users, setUsers] = React.useState(null);
+    const [query, setQuery] = React.useState("");
+    
+    function handleChange(e) {
+        setQuery(e.target.value);
+        if(e.target.value === "")
+            setUsers(null); 
+    };
+
+    async function handleClick(e) {
+        e.preventDefault();
+        if(query !== "") {
+            const results = await Firebase.searchUsernames(query);
+            setTimeout(() => setUsers(results), 500); // TODO: sus
+        }
+    };
+
+    function handleClear(e) {
+        e.preventDefault();
+        setUsers(null);
+        setQuery("");
+    };
+
+    const hidden = users === null;
     return (
         <Form>
             <Row>
-                <SearchField type="text" placeholder="Search..." />
-                <Link href="/"><Icon/></Link>
+                <SearchField onChange={handleChange} type="text" placeholder="Search..." text={query} />
+                <ClearButton onClick={handleClear}><Clear/></ClearButton>
+                <SearchButton onClick={handleClick}><Search/></SearchButton>
             </Row>
-            <SearchResults>
-                <SearchResult username="Username" profile_pic="" user_id="" first={true} />
-                <SearchResult username="Username" profile_pic="" user_id="" />
-                <NoResults>No results found...</NoResults>
+            <SearchResults style={{visibility: hidden ? "hidden" : "visible", display: hidden ? "none" : "flex" }}>
+                { hidden
+                ? null
+                : (users.length === 0
+                    ? <NoResults>No results found...</NoResults>
+                    : users.map(({ username, id, profile_picture }, i) => (
+                        <SearchResult username={username} profile_picture={profile_picture} id={id} first={true} key={i} first={i === 0}/>
+                    ))
+                )}
             </SearchResults>
         </Form>
     );

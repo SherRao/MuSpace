@@ -7,7 +7,7 @@ import { Firebase } from "@functions";
 import { css } from "styled-components";
 
 function App() {
-    resetCache();
+    //resetCache();
     return (
         <Theme>
             {/* <TextButton text="clear cache" type="text" onClick={cs} /> */}

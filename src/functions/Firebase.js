@@ -150,7 +150,6 @@ async function searchUsernames(query) {
             const user = doc.data();
             const profile_picture = user.profile_picture;
             result.push({ username, id, profile_picture });
-
         }
     });
 
