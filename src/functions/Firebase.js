@@ -4,6 +4,7 @@ import validator from "validator";
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
+import "firebase/storage";
 
 firebase.initializeApp(config.firebaseConfig);
 const auth = firebase.auth();
