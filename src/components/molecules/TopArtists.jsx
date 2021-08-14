@@ -7,7 +7,7 @@ const StyledDiv = Styled.div`
     display: flex;
     background-color: ${props => props.theme.colors.white};
     flex-direction: column;
-    width: min-content;
+    min-width: max-content;
     justify-content: space-evenly;
     border-radius: 12px;
     filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
@@ -32,14 +32,21 @@ const StyledOuterDiv = Styled.div`
     justify-content: space-evenly;
 `;
 
-function TopArtists() {
+function TopArtists({ spotifyData }) {
     return (
         <StyledDiv>
             <StyledText>Your Top Artists</StyledText>
             <StyledOuterDiv>
-                <MiniTopCategory username = "" text = "#Artist" artist = ""></MiniTopCategory>
-                <MiniTopCategory username = "" text = "#Artist" artist = ""></MiniTopCategory>
-                <MiniTopCategory username = "" text = "#Artist" artist = ""></MiniTopCategory>
+                {
+                    spotifyData && spotifyData.topArtists && spotifyData.topArtists.length > 0
+                        ? spotifyData.topArtists.slice(0, 3).map((artist, i) => {
+                            <MiniTopCategory
+                                key={i}
+                                text={artist.name}
+                                album_picture={artist.image}
+                            />})
+                        : null
+                }
             </StyledOuterDiv>
         </StyledDiv>
     );

@@ -106,6 +106,7 @@ function ProfilePage() {
         query = data.username;
     const [profilePicture, setProfilePicture] = React.useState(null);
     const [userName, setUserName] = React.useState(null);
+    const [user, setUser] = React.useState(null);
     const [friends, setFriends] = React.useState(null);
 
     React.useEffect(async () => {
@@ -116,6 +117,10 @@ function ProfilePage() {
             setProfilePicture(await Firebase.getProfilePicture());
 
     }, []);
+    React.useEffect(async () => {
+        if(!user)
+            setUser(await Firebase.getUser(Firebase.auth.currentUser.uid));
+    }, [user]);
     React.useEffect(async () => {
         if(!friends) {
             const friendIds = await Firebase.getFriends();
@@ -132,8 +137,9 @@ function ProfilePage() {
     const friendList = friends ? friends : [];
     return (
         <Container>
+            {console.log(user)}
             <TitleDiv style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
-                <StyledImg src={profilePicture} alt="Default Profile image" />
+                <StyledImg src={profilePicture} alt="Profile image" />
                 <StyledTitle>{userName}</StyledTitle>
             </TitleDiv>
             
@@ -146,8 +152,8 @@ function ProfilePage() {
                 </Feed>
 
                 <FriendFeeds>
-                    <TopArtists />
-                    <TopSongs />
+                    <TopArtists spotifyData={user ? user.spotifyData : null} />
+                    <TopSongs spotifyData={user ? user.spotifyData : null} />
                     <FriendTopSongs friends={friendList}/>
                 </FriendFeeds>
 

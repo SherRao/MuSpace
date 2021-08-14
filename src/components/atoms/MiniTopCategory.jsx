@@ -34,7 +34,7 @@ const StyledUsername = Styled(StyledText)`
 function MiniTopCategory({username, text, artist, album_picture}){
     return (
         <StyledDiv>
-            <StyledUsername>{username}</StyledUsername>
+            {username ? <StyledUsername>{username}</StyledUsername> : null}
             <StyledDiv>
                 <AlbumCover width="5em" album_picture={album_picture} />
             </StyledDiv>

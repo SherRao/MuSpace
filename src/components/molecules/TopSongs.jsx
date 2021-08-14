@@ -34,14 +34,22 @@ const StyledOuterDiv = Styled.div`
     justify-content: space-evenly;
 `;
 
-function TopSongs() {
+function TopSongs({ spotifyData }) {
     return (
         <StyledDiv>
             <StyledText>Your Top Songs</StyledText>
             <StyledOuterDiv>
-                <MiniTopCategory username = "" text = "#Song" artist = "#Artist"></MiniTopCategory>
-                <MiniTopCategory username = "" text = "#Song" artist = "#Artist"></MiniTopCategory>
-                <MiniTopCategory username = "" text = "#Song" artist = "#Artist"></MiniTopCategory>
+                {
+                    spotifyData && spotifyData.topSongs && spotifyData.topSongs.length > 0
+                        ? spotifyData.topSongs.slice(0, 3).map((song, i) => {
+                            <MiniTopCategory
+                                key={i}
+                                text={song.title}
+                                artist={song.artist}
+                                album_picture={song.image}
+                            />})
+                        : null
+                }
             </StyledOuterDiv>
         </StyledDiv>
     );
