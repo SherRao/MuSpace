@@ -44,7 +44,7 @@ function TopSongs({ spotifyData }) {
                         ? spotifyData.topSongs.slice(0, 3).map((song, i) => {
                             <MiniTopCategory
                                 key={i}
-                                text={song.title}
+                                text={song.name}
                                 artist={song.artist}
                                 album_picture={song.image}
                             />})
