@@ -55,6 +55,22 @@ const Subtext = Styled.p`
 `;
 
 function HomePage() {
+    const [topArtists, setTopArtists] = React.useState(null);
+    const [topSongs, setTopSongs] = React.useState(null);
+
+    React.useEffect(async () => {
+        if (!topArtists)
+            setTopArtists(Spotify.getTopArtists);
+        if (!topSongs)
+            setTopSongs(Spotify.getTopSongs);
+    }, []);
+
+    const isTopArtist = topArtists && topArtists.length > 0;
+    const isTopSong = topSongs && topSongs.length > 0;
+    const topArtist = isTopArtist ? topArtists[0] : null;
+    const topSong = isTopSong ? topSongs[0] : null;
+    console.log(topArtists, topSongs);
+    
     return (
         <Panels>
             <LeftDiv>
@@ -64,8 +80,14 @@ function HomePage() {
                     <Subtext>You listened to ### hours of music this week.</Subtext>
                 </TopDiv>
                 <CardContainer>
-                    <FavCard card_title="Your favourite artist of the week" main_text="Lil Uzi Vert" hours_played="10" pic_url="https://i.scdn.co/image/ab676161000051749cc6d44767dda18ee4e1be9f"/>
-                    <FavCard card_title="Your favourite song of the week" main_text="Hotel California" sub_text="Eagles" hours_played="1" pic_url="https://i.scdn.co/image/ab67616d0000b2734637341b9f507521afa9a778"/>
+                    {isTopArtist
+                        ? <FavCard card_title="Your favourite artist of the week" main_text={topArtist.name} hours_played="10" pic_url={topArtist.image}/>
+                        : <FavCard card_title="Your favourite artist of the week" main_text="Lil Uzi Vert" hours_played="10" pic_url="https://i.scdn.co/image/ab676161000051749cc6d44767dda18ee4e1be9f"/>
+                    }
+                    {isTopSong
+                        ? <FavCard card_title="Your favourite song of the week" main_text={topSong.name} sub_text={topSong.artist} hours_played="1" pic_url={topSong.image}/>
+                        : <FavCard card_title="Your favourite song of the week" main_text="Hotel California" sub_text="Eagles" hours_played="1" pic_url="https://i.scdn.co/image/ab67616d0000b2734637341b9f507521afa9a778"/>
+                    }
                 </CardContainer>
             </LeftDiv>
             <RightDiv>
