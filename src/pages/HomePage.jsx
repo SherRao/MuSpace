@@ -16,12 +16,13 @@ const Panels = Styled.div`
 const LeftDiv = Styled.div`
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 4;
 `;
 
 const RightDiv = Styled.div`
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 `;
 
 const TopDiv = Styled.div`
