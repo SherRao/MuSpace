@@ -41,13 +41,13 @@ function TopSongs({ spotifyData }) {
             <StyledOuterDiv>
                 {
                     spotifyData && spotifyData.topSongs && spotifyData.topSongs.length > 0
-                        ? spotifyData.topSongs.slice(0, 3).map((song, i) => {
+                        ? spotifyData.topSongs.slice(0, 3).map((song, i) =>
                             <MiniTopCategory
                                 key={i}
                                 text={song.name}
                                 artist={song.artist}
                                 album_picture={song.image}
-                            />})
+                            />)
                         : null
                 }
             </StyledOuterDiv>

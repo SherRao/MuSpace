@@ -37,14 +37,15 @@ function TopArtists({ spotifyData }) {
         <StyledDiv>
             <StyledText>Your Top Artists</StyledText>
             <StyledOuterDiv>
+                {console.log(spotifyData)}
                 {
                     spotifyData && spotifyData.topArtists && spotifyData.topArtists.length > 0
-                        ? spotifyData.topArtists.slice(0, 3).map((artist, i) => {
+                        ? spotifyData.topArtists.slice(0, 3).map((artist, i) => 
                             <MiniTopCategory
                                 key={i}
                                 text={artist.name}
                                 album_picture={artist.image}
-                            />})
+                            />)
                         : null
                 }
             </StyledOuterDiv>
