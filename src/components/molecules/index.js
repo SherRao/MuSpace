@@ -10,4 +10,4 @@ import FavCard from "./FavCard";
 import LoginPopUp from "./LoginPopUp";
 import ResetPasswordPopUp from "./ResetPassword";
 
-export { LoginForm, ListeningActivityCard, RegisterForm, FriendTopAlbums, FriendTopArtists, ResetPassword,TopArtists, TopSongs, SearchBar, FavCard, LoginPopUp };
+export { LoginForm, ListeningActivityCard, RegisterForm, FriendTopAlbums, FriendTopArtists, ResetPassPopUp,TopArtists, TopSongs, SearchBar, FavCard, LoginPopUp };
