@@ -205,7 +205,8 @@ async function deleteAccount() {
  * 
  */
 async function changePass() {
-    await firebase.auth().sendPasswordResetEmail(auth.currentUser.email);
+    await auth.reauthenticateWithCredential(auth.currentUser.userCredentials)
+    await auth.sendPasswordResetEmail(auth.currentUser.email);
 
 }
 

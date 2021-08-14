@@ -4,7 +4,8 @@ import default_profile from "../assets/default_profile.jpg";
 
 import { SectionButton } from "@atoms";
 import { Firebase } from "@functions";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { LoginPopUp } from "@molecules";
 
 const Container = Styled.div`
     width: 100%;
@@ -77,10 +78,12 @@ const SettingsDiv = Styled.div`
 `;
 
 
+
 function SettingsPage() {
     const fileInputRef = useRef();
     const [profilePicture, setProfilePicture] = React.useState(null);
     const [userName, setUserName] = React.useState(null);
+    const [isOpen, setIsOpen] = React.useState(false);
 
     React.useEffect(async () => {
         if(!userName)
@@ -101,6 +104,12 @@ function SettingsPage() {
         }
     }
     
+    const togglePopup = () => {
+        //setIsOpen(!isOpen);
+        !isOpen;
+        console.log(isOpen);
+    }
+
     return (
         <Container>
             <TitleDiv>
@@ -116,7 +125,8 @@ function SettingsPage() {
                     <SectionButton text="Upload Profile Picture" type="text" onClick={()=>fileInputRef.current.click()}/>
                     <input type="file" id="fileButton" ref={fileInputRef} onChange={fileChangedHandler} hidden/>
                     <SectionButton text="Change Password" type="text" onClick={Firebase.changePass}/>
-                    <SectionButton text="Delete Account" type="text" onClick={Firebase.deleteAccount}/>
+                    <SectionButton text="Delete Account" type="text" onClick={() => setIsOpen(!isOpen)}/>
+                    
                     <SectionButton text="Logout" type="text" onClick={Firebase.logout}/>
                 </SectionDiv>
 
@@ -133,7 +143,7 @@ function SettingsPage() {
                 </SectionDiv>
                 
             </SettingsDiv>
-
+            {isOpen ?  <LoginPopUp isOpen={isOpen}/> : null}
         </Container>
     );
 }
