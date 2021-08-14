@@ -120,10 +120,10 @@ function SettingsPage() {
                 <StyledSubTitle>Settings</StyledSubTitle>
 
                 <SectionDiv>
-                    <StyledSectionTitle>Account SettingsDiv</StyledSectionTitle>
+                    <StyledSectionTitle>Account Settings</StyledSectionTitle>
                     <SectionButton text="Upload Profile Picture" type="text" onClick={()=>fileInputRef.current.click()}/>
                     <input type="file" id="fileButton" ref={fileInputRef} onChange={fileChangedHandler} hidden/>
-                    <SectionButton text="Change Password" type="text" onClick={Firebase.changePass}/>
+                    <SectionButton text="Change Password" type="text" onClick={Firebase.changePass} onClick={checkYourEmail}/>
                     <SectionButton text="Delete Account" type="text" onClick={() => setIsOpen(!isOpen)}/>
                     
                     <SectionButton text="Logout" type="text" onClick={Firebase.logout}/>
@@ -149,6 +149,10 @@ function SettingsPage() {
 
 function notImplemented() {
     alert("This feature has not been implemented yet!");
+}
+
+function checkYourEmail() {
+    alert("Change Password Email has been sent, please check it!");
 }
 
 export default SettingsPage;

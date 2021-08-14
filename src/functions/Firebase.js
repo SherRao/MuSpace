@@ -207,7 +207,16 @@ async function deleteAccount() {
 async function changePass() {
     await auth.reauthenticateWithCredential(auth.currentUser.userCredentials)
     await auth.sendPasswordResetEmail(auth.currentUser.email);
+}
 
+/**
+ * 
+ * Allows the user to reset their password.
+ * TODO: try/catch
+ * 
+ */
+async function resetPass() {
+    await auth.sendPasswordResetEmail(auth.currentUser.email);
 }
 
 /**
@@ -329,5 +338,5 @@ export default {
     firebase, auth, db, storage,
     loginWithEmail, loginWithGoogle, registerWithEmail,
     logout, deleteAccount, changePass, updateProfilePicture,
-    addFriend, createNewChatRoom, sendChat, searchUsernames, getProfilePicture, getUsername
+    addFriend, createNewChatRoom, sendChat, searchUsernames, getProfilePicture, getUsername, resetPass
 };
