@@ -70,14 +70,14 @@ function HomePage() {
         if (!topArtists) {
             await Spotify.getTopArtists()
                 .then(res => setTopArtists(res))
-                .catch(e => console.log("ERROR", e));
+                .catch(error => console.log("ERROR", error));
         }
     }, [topArtists]);
     React.useEffect(async () => {
         if (!topSongs) {
             await Spotify.getTopSongs()
                 .then(res => setTopSongs(res))
-                .catch(e => console.log("ERROR", e));
+                .catch(error => console.log("ERROR", error));
         }
     }, [topSongs]);
     React.useEffect(async () => {

@@ -137,7 +137,6 @@ function ProfilePage() {
     const friendList = friends ? friends : [];
     return (
         <Container>
-            {console.log(user)}
             <TitleDiv style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
                 <StyledImg src={profilePicture} alt="Profile image" />
                 <StyledTitle>{userName}</StyledTitle>

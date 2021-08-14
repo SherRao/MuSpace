@@ -122,7 +122,6 @@ function SearchBar() {
                 <SearchButton onClick={handleClick}><Search/></SearchButton>
             </Row>
             <SearchResults style={{visibility: hidden ? "hidden" : "visible", display: hidden ? "none" : "flex" }}>
-                {console.log(users)}
                 { hidden
                 ? null
                 : (users.length === 0
