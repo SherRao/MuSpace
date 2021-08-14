@@ -234,21 +234,53 @@ async function resetPassword(email, password) {
  * Adds a new friend.
  * TODO: try/catch
  *
- * @oaran targetId The ID of the user to add as a friend.
+ * @param targetId The ID of the user to add as a friend.
  *
  */
 async function addFriend(targetId) {
     // Adds current user to target friend.
     const targetDoc = await db.collection("users").doc(targetId).get();
     const targetData = targetDoc.data();
-    targetData.friends.push(auth.currentUser.uid);
-    await db.collection("users").doc(targetId).set(targetData);
+    if(!targetData.friends.includes(auth.currentUser.uid)) {
+        targetData.friends.push(auth.currentUser.uid);
+        await db.collection("users").doc(targetId).set(targetData);
+    }
 
     // Adds target friend to current user.
     const userDoc = await db.collection("users").doc(auth.currentUser.uid).get();
     const userData = userDoc.data();
-    userData.friends.push(targetId);
-    await db.collection("users").doc(auth.currentUser.uid).set(userData);
+    if(!userData.friends.includes(targetId)) {
+        userData.friends.push(targetId);
+        await db.collection("users").doc(auth.currentUser.uid).set(userData);
+    }
+}
+
+/**
+ *
+ * Removes a friend from friends.
+ * TODO: try/catch
+ *
+ * @param targetId The ID of the user to add as a friend.
+ *
+ */
+ async function removeFriend(targetId) {
+    // Remove current user from target friend.
+    const targetDoc = await db.collection("users").doc(targetId).get();
+    const targetData = targetDoc.data();
+    let index = targetData.friends.indexOf(auth.currentUser.uid);
+    if(index > -1) {
+        targetData.friends.splice(index, 1);
+        await db.collection("users").doc(targetId).set(targetData);
+    }
+
+    // Removes target friend from current user.
+    const userDoc = await db.collection("users").doc(auth.currentUser.uid).get();
+    const userData = userDoc.data();
+    index = userData.friends.indexOf(targetId);
+    if(index > -1) {
+        userData.friends.splice(index, 1);
+        await db.collection("users").doc(auth.currentUser.uid).set(userData);
+    }
 }
 
 /**
@@ -256,7 +288,7 @@ async function addFriend(targetId) {
  * Creates a new chat room.
  * TODO: try/catch
  * 
- * @oaran targetId The ID of the user to create a chat room with.
+ * @param targetId The ID of the user to create a chat room with.
  * 
  */
 async function createNewChatRoom(targetId) {
@@ -371,5 +403,6 @@ export default {
     firebase, auth, db, storage,
     loginWithEmail, loginWithGoogle, registerWithEmail,
     logout, deleteAccount, resetPassword, updateProfilePicture,
-    addFriend, createNewChatRoom, sendChat, searchUsernames, getProfilePicture, getUsername, getFullName, getFriends, getUser
+    addFriend, removeFriend, createNewChatRoom, sendChat, searchUsernames,
+    getProfilePicture, getUsername, getFullName, getFriends, getUser
 };

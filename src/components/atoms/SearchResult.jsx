@@ -75,7 +75,7 @@ function SearchResult({ first, username, profile_picture, id, isFriend }) {
     };
     async function handleRemove(event) {
         event.preventDefault();
-        alert("This feature has not been implemented yet");
+        await Firebase.removeFriend(id);
         setFriend(false);
     };
     return (

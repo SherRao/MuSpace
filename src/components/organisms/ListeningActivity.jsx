@@ -32,7 +32,7 @@ function ListeningActivity({ friends }){
             <StyledInnerDiv>
                 {
                     friends && friends.length > 0
-                    ? friends.slice(0, 3).map(({ username, spotifyData }, i) => {
+                    ? friends.slice(0, 4).map(({ username, spotifyData }, i) => {
                         const isRecentSong = spotifyData.recentSongs && spotifyData.recentSongs.length > 0;
                         const recentSong = isRecentSong ? spotifyData.recentSongs[0] : null;
                         return isRecentSong
