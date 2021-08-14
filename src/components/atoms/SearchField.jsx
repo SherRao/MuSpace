@@ -22,9 +22,9 @@ const TextInput = Styled.input`
     }
 `;
 
-function SearchField({ text, type, placeholder, icon }) {
+function SearchField({ text, type, placeholder, icon, onChange }) {
     return (
-        <TextInput text={text} type={type} placeholder={placeholder} />
+        <TextInput value={text} type={type} placeholder={placeholder} onChange={onChange} />
     );
 }
 
