@@ -44,10 +44,9 @@ const StyledText = Styled.p`
 const StyledIcon = Styled.div`
      color: ${(props) => props.theme.colors.grey};
      align: right;
-     max-width: 40%;
-     height: auto;
-     margin: 0px;
-     padding: 3px;
+     width: auto;
+     height: 1.8em;
+     margin: 0.2em;
 
      :hover{
        color: ${props => props.theme.colors.lightPurple};
@@ -79,7 +78,7 @@ function UserButton({ text, icon, location, profileImage }) {
             </StyledLink>
             <div style={{margin: "0 auto"}} />
             <StyledLink href="/settings">
-                <StyledIcon><FaCog/></StyledIcon>
+                <StyledIcon><FaCog style={{ width: "auto", height: "100%" }}/></StyledIcon>
             </StyledLink>
         </StyledDiv>
     );
