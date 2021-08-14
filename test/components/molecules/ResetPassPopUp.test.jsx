@@ -20,15 +20,15 @@ const StyledForm = Styled.form`
     border: 2px solid black;
 `;
 
-function LoginPopUp({isOpen, setIsOpen, onSubmit}) {
+function ResetPassPopUp({onSubmit, isOpen}) {
     return (
         <StyledForm onSubmit={onSubmit}>
             <LoginField name="email" type="text" text="Username" placeholder="Email Address" autofocus/>
             <LoginField name="password" type="password" text="Password" placeholder="Password" />
             <TextButton text="Log in" type="submit"/>
-            <TextButton text="Close" onClick={() => setIsOpen(!isOpen)}/>
+            <TextButton text="Close"/>
         </StyledForm>
     );
 }
 
-export default LoginPopUp;
+export default ResetPassPopUp;
