@@ -11,7 +11,7 @@ const StyledButton = Styled.button`
     font-size: ${props => props.theme.fontSizes.mediumSmall};
     transition: all 0.25s ease;
     margin: 0em 0em 0.8em 0.4em;
-    padding: 0.5em;
+    padding: 0.6em 1em;
 
     :hover {
         background-color: ${props => props.theme.colors.mediumGrey};
