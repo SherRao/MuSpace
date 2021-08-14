@@ -10,7 +10,6 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 const storage = firebase.storage();
 
-
 /**
  * 
  * Takes in the input from the form to login with
@@ -164,8 +163,13 @@ async function searchUsernames(query) {
  * 
  */
 async function logout() {
-    await auth.signOut();
+    try {
+        await auth.signOut();
 
+    } catch (err) {
+        alert("Could not logout! Please try again later!");
+
+    }
 }
 
 /**
@@ -304,9 +308,25 @@ async function updateProfilePicture(file) {
     await db.collection("users").doc(auth.currentUser.uid).set(userData);
 }
 
+async function getProfilePicture() {
+    const docRef = db.collection("users").doc(auth.currentUser.uid);
+    const doc = await docRef.get();
+    const profilePicture = doc.data().profile_picture;
+    return profilePicture;
+
+}
+
+async function getUsername() {
+    const docRef = db.collection("users").doc(auth.currentUser.uid);
+    const doc = await docRef.get();
+    const username = doc.data().username;
+    return username;
+
+}
+
 export default {
     firebase, auth, db, storage,
     loginWithEmail, loginWithGoogle, registerWithEmail,
     logout, deleteAccount, changePass, updateProfilePicture,
-    addFriend, createNewChatRoom, sendChat, searchUsernames
+    addFriend, createNewChatRoom, sendChat, searchUsernames, getProfilePicture, getUsername
 };

@@ -40,21 +40,17 @@ const StatNumber = Styled.h4`
 `;
 
 function Sidebar() {
-    const [profilePic, setProfilePic] = React.useState(null);
-    const user = Firebase.auth.currentUser;
-    const username = user ? user.displayName : "@username";
+    const [profilePicture, setProfilePicture] = React.useState(null);
+    const [userName, setUserName] = React.useState(null);
 
     React.useEffect(() => {
-        if(!profilePic)
-            getProfilePic();
-    }, []);
+        if(!userName)
+            setUserName(Firebase.getUsername());
 
-    async function getProfilePic() {
-        const docRef = Firebase.db.collection("users").doc(user.uid);
-        const doc = await docRef.get();
-        const profilePicture = doc.data().profile_picture;
-        setProfilePic(profilePicture);
-    }
+        if(!profilePicture)
+            setProfilePicture(Firebase.getProfilePicture());
+
+    }, []);
 
     return (
         <StyledDiv>
@@ -86,9 +82,9 @@ function Sidebar() {
             <SpaceFillerDiv />
 
             <UserButton
-                text={username}
+                text={userName}
                 location="/settings"
-                profileImage={profilePic}
+                profileImage={profilePicture}
             />
         </StyledDiv>
     );
