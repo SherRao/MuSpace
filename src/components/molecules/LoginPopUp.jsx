@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 
+
 import { LoginField, TextButton } from "@atoms";
 
 const StyledForm = Styled.form`
@@ -17,7 +18,21 @@ const StyledForm = Styled.form`
     transition: all 0.25s ease;
     background: white;
     border-radius: 10px;
-    border: 2px solid black;
+    border: 1px solid black;
+
+    animation-duration: 0.5s;
+    animation-name: slidein;
+
+    @keyframes slidein {
+        from {
+          margin-left: 100%;
+          
+        }
+        to {
+          margin-left: 40%;
+          
+        }
+      }
 `;
 
 const Field = Styled(LoginField)`
@@ -27,9 +42,10 @@ const Field = Styled(LoginField)`
 function LoginPopUp({isOpen, setIsOpen, onSubmit}) {
     return (
         <StyledForm onSubmit={onSubmit}>
+            <h3>Confirm Account Deletion</h3>
             <Field name="email" type="text" text="Username" placeholder="Email Address" autofocus/>
             <Field name="password" type="password" text="Password" placeholder="Password" />
-            <TextButton text="Log in" type="submit"/>
+            <TextButton text="Log Confirm" type="submit"/>
             <TextButton text="Close" onClick={() => setIsOpen(!isOpen)}/>
         </StyledForm>
     );
