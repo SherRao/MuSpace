@@ -49,7 +49,7 @@ const StyledIcon = Styled.div`
      margin: 0.2em;
 
      :hover{
-       color: ${props => props.theme.colors.lightPurple};
+       color: ${props => props.theme.colors.purple};
        transition: all 0.25s ease-in-out;
      }
 
@@ -59,6 +59,8 @@ const StyledIcon = Styled.div`
         width: 2em;
         height: 2em;
      }
+     
+     transition: all 0.25s ease-in-out;
 `;
 
 const UserProfPic = Styled.img`
