@@ -59,11 +59,19 @@ function HomePage() {
     const [topSongs, setTopSongs] = React.useState(null);
 
     React.useEffect(async () => {
-        if (!topArtists)
-            setTopArtists(Spotify.getTopArtists);
-        if (!topSongs)
-            setTopSongs(Spotify.getTopSongs);
-    }, []);
+        if (!topArtists) {
+            Spotify.getTopArtists()
+                .then(res => setTopArtists(res))
+                .catch(e => console.log("ERROR", e));
+        }
+    }, [topArtists]);
+    React.useEffect(async () => {
+        if (!topSongs) {
+            Spotify.getTopSongs()
+                .then(res => setTopSongs(res))
+                .catch(e => console.log("ERROR", e));
+        }
+    }, [topSongs]);
 
     const isTopArtist = topArtists && topArtists.length > 0;
     const isTopSong = topSongs && topSongs.length > 0;
@@ -81,12 +89,12 @@ function HomePage() {
                 </TopDiv>
                 <CardContainer>
                     {isTopArtist
-                        ? <FavCard card_title="Your favourite artist of the week" main_text={topArtist.name} hours_played="10" pic_url={topArtist.image}/>
-                        : <FavCard card_title="Your favourite artist of the week" main_text="Lil Uzi Vert" hours_played="10" pic_url="https://i.scdn.co/image/ab676161000051749cc6d44767dda18ee4e1be9f"/>
+                        ? <FavCard card_title="Your favourite artist of the week" main_text={topArtist.name} score={topArtist.score} pic_url={topArtist.image}/>
+                        : <FavCard card_title="Your favourite artist of the week" main_text="Lil Uzi Vert" score="10" pic_url="https://i.scdn.co/image/ab676161000051749cc6d44767dda18ee4e1be9f"/>
                     }
                     {isTopSong
-                        ? <FavCard card_title="Your favourite song of the week" main_text={topSong.name} sub_text={topSong.artist} hours_played="1" pic_url={topSong.image}/>
-                        : <FavCard card_title="Your favourite song of the week" main_text="Hotel California" sub_text="Eagles" hours_played="1" pic_url="https://i.scdn.co/image/ab67616d0000b2734637341b9f507521afa9a778"/>
+                        ? <FavCard card_title="Your favourite song of the week" main_text={topSong.name} sub_text={topSong.artist} score={topSong.score} pic_url={topSong.image}/>
+                        : <FavCard card_title="Your favourite song of the week" main_text="Hotel California" sub_text="Eagles" score="1" pic_url="https://i.scdn.co/image/ab67616d0000b2734637341b9f507521afa9a778"/>
                     }
                 </CardContainer>
             </LeftDiv>
