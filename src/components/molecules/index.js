@@ -8,6 +8,6 @@ import TopSongs from "./TopSongs";
 import SearchBar from "./SearchBar";
 import FavCard from "./FavCard";
 import LoginPopUp from "./LoginPopUp";
-import ResetPassPopUp from "./ResetPass";
+import ResetPassPopUp from "./ResetPassPopUp";
 
 export { LoginForm, ListeningActivityCard, RegisterForm, FriendTopAlbums, FriendTopArtists, ResetPassPopUp,TopArtists, TopSongs, SearchBar, FavCard, LoginPopUp };
