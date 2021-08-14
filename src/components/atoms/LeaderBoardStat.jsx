@@ -6,7 +6,6 @@ const StyledDiv = Styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    border-bottom: 1px solid ${props => props.theme.colors.grey};
     margin: 0 16px;
 `;
 
@@ -25,7 +24,7 @@ const StyledProfilePic = Styled.img`
 const StyledText = Styled.p`
     color: ${props => props.theme.colors.grey};
     font-size: ${props => props.theme.fontSizes.mediumSmall};
-    text-align: right;
+    text-align: left;
     width: 80px;
 `;
 
@@ -35,7 +34,7 @@ const StyledLink = Styled.a`
 
 function LeaderBoardStat({ number, src, username, hours, href }) {
     return (
-        <StyledDiv style={{borderBottom: number === 3 ? "0px" : "1px solid grey"}}>
+        <StyledDiv style={{borderTop: number === 1 ? "0px" : "1px solid grey"}}>
             <StyledNumber>{number}.</StyledNumber>
             <StyledProfilePic src={src} alt={username} />
             <StyledLink onClick={notImplemented}><StyledText>@{username}</StyledText></StyledLink>

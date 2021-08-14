@@ -20,11 +20,15 @@ const StyledForm = Styled.form`
     border: 2px solid black;
 `;
 
+const Field = Styled(LoginField)`
+    color: ${props => props.theme.colors.black};
+`;
+
 function LoginPopUp({isOpen, setIsOpen, onSubmit}) {
     return (
         <StyledForm onSubmit={onSubmit}>
-            <LoginField name="email" type="text" text="Username" placeholder="Email Address" autofocus/>
-            <LoginField name="password" type="password" text="Password" placeholder="Password" />
+            <Field name="email" type="text" text="Username" placeholder="Email Address" autofocus/>
+            <Field name="password" type="password" text="Password" placeholder="Password" />
             <TextButton text="Log in" type="submit"/>
             <TextButton text="Close" onClick={() => setIsOpen(!isOpen)}/>
         </StyledForm>

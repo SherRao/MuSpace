@@ -24,7 +24,14 @@ const StyledTitle = Styled.p`
     font-weight: bold;
 `;
 
-function LeaderBoard({ text }){
+const NoFriends = Styled.p`
+    font-size: ${props => props.theme.fontSizes.medium}
+    font-color: ${props => props.theme.colors.black}
+    text-align: center;
+    margin-left: 0.6em;
+`;
+
+function LeaderBoard({ friends }){
     // const [profilePic, setProfilePic ] = React.useState(null);
     // const user = Firebase.auth.currentUser;
     
@@ -47,15 +54,41 @@ function LeaderBoard({ text }){
             <StyledInnerDiv>
                 <LeaderBoardLabel text="Top Listening Hours:"/>
                 <StyledInnerDiv>
-                    <LeaderBoardStat number={1} username="username" hours={1337} href="/" src={profilePic}></LeaderBoardStat>
-                    <LeaderBoardStat number={2} username="username" hours={420} href="/" src={profilePic}></LeaderBoardStat>
-                    <LeaderBoardStat number={3} username="username" hours={69} href="/" src={profilePic}></LeaderBoardStat>
+                    {
+                        friends.length > 0
+                        ? friends.slice(0, 3).map(({ username, spotifyData }, i) => {
+                            const isTopArtist = spotifyData.topArtists && spotifyData.topArtists.length > 0;
+                            const topArtist = isTopArtist ? spotifyData.topArtists[0] : null;
+                            return <LeaderBoardStat
+                                key={i}
+                                number={i+1}
+                                username={username}
+                                hours="..."
+                                href="/"
+                                src={isTopArtist ? topArtist.image : undefined} // change to profile pic
+                            />
+                        })
+                        : <NoFriends>You have not added any friends yet.</NoFriends>
+                    }
                 </StyledInnerDiv>
                 <LeaderBoardLabel text="Number of Unique Artists:"/>
                 <StyledInnerDiv>
-                    <LeaderBoardStat number={1} username="username" hours={96} href="/" src={profilePic}></LeaderBoardStat>
-                    <LeaderBoardStat number={2} username="username" hours={69} href="/" src={profilePic}></LeaderBoardStat>
-                    <LeaderBoardStat number={3} username="username" hours={69} href="/" src={profilePic}></LeaderBoardStat>
+                    {
+                        friends.length > 0
+                        ? friends.slice(0, 3).map(({ username, spotifyData }, i) => {
+                            const isTopArtist = spotifyData.topArtists && spotifyData.topArtists.length > 0;
+                            const topArtist = isTopArtist ? spotifyData.topArtists[0] : null;
+                            return <LeaderBoardStat
+                                key={i}
+                                number={i+1}
+                                username={username}
+                                hours="..."
+                                href="/"
+                                src={isTopArtist ? topArtist.image : undefined} // change to profile pic
+                            />
+                        })
+                        : <NoFriends>You have not added any friends yet.</NoFriends>
+                    }
                 </StyledInnerDiv>
             </StyledInnerDiv>
         </Card>

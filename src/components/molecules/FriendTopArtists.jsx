@@ -21,14 +21,32 @@ const StyledOuterDiv = Styled.div`
     min-width: max-content;
 `;
 
-function FriendTopArtists() {
+const NoFriends = Styled.p`
+    font-size: ${props => props.theme.fontSizes.medium}
+    font-color: ${props => props.theme.colors.black}
+    text-align: center;
+`;
+
+function FriendTopArtists({ friends }) {
     return (
         <Card>
             <StyledTitle>Your Friends Top Artists</StyledTitle>
             <StyledOuterDiv>
-                <MiniTopCategory username="#Username" text="#Album Title" artist="#Artist" />
-                <MiniTopCategory username="#Username" text="#Album Title" artist="#Artist" />
-                <MiniTopCategory username="#Username" text="#Album Title" artist="#Artist" />
+                {
+                    friends.length > 0
+                    ? friends.slice(0, 3).map(({ username, spotifyData }, i) => {
+                        const isTopArtist = spotifyData.topArtists && spotifyData.topArtists.length > 0;
+                        const topArtist = isTopArtist ? spotifyData.topArtists[0] : null;
+                        return <MiniTopCategory
+                            key={i}
+                            username={username}
+                            text={isTopArtist ? topArtist.name : "#Title"}
+                            artist={isTopArtist ? topArtist.artist : "#Artist" }
+                            album_picture={isTopArtist ? topArtist.image : undefined}
+                        />
+                    })
+                    : <NoFriends>You have not added any friends yet.</NoFriends>
+                }
             </StyledOuterDiv>
         </Card>
     );

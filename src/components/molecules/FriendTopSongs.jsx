@@ -22,20 +22,32 @@ const StyledOuterDiv = Styled.div`
     min-width: max-content;
 `;
 
+const NoFriends = Styled.p`
+    font-size: ${props => props.theme.fontSizes.medium}
+    font-color: ${props => props.theme.colors.black}
+    text-align: center;
+`;
+
 function FriendTopSongs({ friends }) {
     return (
         <Card>
             <StyledTitle>Your Friends Top Songs</StyledTitle>
             <StyledOuterDiv>
-                {friends.slice(0, 3).map(({ username, spotifyData }, i) =>
-                    <MiniTopCategory
-                        key={i}
-                        username={username}
-                        text={spotifyData.topSongs && spotifyData.topSongs.length > 0 ? spotifyData.topSongs[0].name : "#Title"}
-                        artist={spotifyData.topSongs && spotifyData.topSongs.length > 0 ? spotifyData.topSongs[0].artist : "#Artist" }
-                        album_picture={spotifyData.topSongs && spotifyData.topSongs.length > 0 ? spotifyData.topSongs[0].image : "null"}
-                    />
-                )}
+                {
+                    friends.length > 0
+                    ? friends.slice(0, 3).map(({ username, spotifyData }, i) => {
+                        const isTopSong = spotifyData.topSongs && spotifyData.topSongs.length > 0;
+                        const topSong = isTopSong ? spotifyData.topSongs[0] : null;
+                        return <MiniTopCategory
+                            key={i}
+                            username={username}
+                            text={isTopSong ? topSong.name : "#Title"}
+                            artist={isTopSong ? topSong.artist : "#Artist" }
+                            album_picture={isTopSong ? topSong.image : undefined}
+                        />
+                    })
+                    : <NoFriends>You have not added any friends yet.</NoFriends>
+                }
             </StyledOuterDiv>
         </Card>
     );
