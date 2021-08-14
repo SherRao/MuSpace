@@ -29,10 +29,10 @@ const StyledImage = Styled.img`
 const StyledLink = Styled.a`
 `;
 
-function AlbumCover({ width }) {
+function AlbumCover({ width, album_picture, link }) {
     return (
         <StyledLink onClick={notImplemented}>
-            <StyledImage src={DefaultCover} width={width} height="auto"></StyledImage>
+            <StyledImage src={album_picture ? album_picture : DefaultCover} width={width} height="auto"></StyledImage>
         </StyledLink>
     );
 }

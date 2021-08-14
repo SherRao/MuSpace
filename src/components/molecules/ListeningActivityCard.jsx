@@ -25,15 +25,15 @@ const StyledUsername = Styled(StyledText)`
     font-weight: bold;
 `;
 
-function ListeningActivityCard() {
+function ListeningActivityCard({ username, title, artist, picture_url, link }) {
     return (
         <Card style={{flexDirection: "row", padding: 0}} bgColor="grey">
             <StyledDiv>
                 <AlbumCover width="5em" onClick={notImplemented}/>
             </StyledDiv>
             <StyledDiv style={{ width: "max-content", maxWidth: "100%", justifyContent: "center" }}>
-                <StyledUsername>Username</StyledUsername>
-                <StyledText>Song Title - Artist Name</StyledText>
+                <StyledUsername>{username}</StyledUsername>
+                <StyledText>{title} - {artist}</StyledText>
             </StyledDiv>
             <SpaceFillerDiv />
             <StyledDiv>

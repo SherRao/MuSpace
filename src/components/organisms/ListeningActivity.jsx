@@ -19,15 +19,16 @@ const StyledTitle = Styled.p`
     font-weight: bold;
 `;
 
-function ListeningActivity(){
+function ListeningActivity({ friends }){
     return (
         <Card style={{ minWidth: "max-content", maxWidth: "100%" }}>
             <StyledTitle>Friend Listening Activity</StyledTitle>
             <StyledInnerDiv>
-                <ListeningActivityCard />
-                <ListeningActivityCard />
-                <ListeningActivityCard />
-                <ListeningActivityCard />
+                {/* {
+                    friends.map(({ username, title, artist }, i) => {
+                        return <ListeningActivityCard key={i} username={username} title={title} artist={artist} />
+                    })
+                } */}
                 <TextButton text="See More" style={{ width: "100%", marginTop: "0.4rem" }} onClick={notImplemented}/>
             </StyledInnerDiv>
         </Card>

@@ -27,12 +27,12 @@ const StyledUsername = Styled(StyledText)`
     margin: 0;
 `;
 
-function MiniTopCategory({username, text, artist}){
+function MiniTopCategory({username, text, artist, album_picture}){
     return (
         <StyledDiv>
             <StyledUsername>{username}</StyledUsername>
             <StyledDiv>
-                <AlbumCover width="5em" />
+                <AlbumCover width="5em" album_picture={album_picture} />
             </StyledDiv>
             <StyledText>{text}</StyledText>
             <StyledText>{artist}</StyledText>

@@ -83,7 +83,6 @@ function HomePage() {
     const isTopSong = topSongs && topSongs.length > 0;
     const topArtist = isTopArtist ? topArtists[0] : null;
     const topSong = isTopSong ? topSongs[0] : null;
-    console.log(topArtists, topSongs);
     
     //TODO: change "Good Evening" to be dynamic depending on time of day (4 states).
     return (

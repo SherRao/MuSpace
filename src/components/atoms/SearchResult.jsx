@@ -62,12 +62,16 @@ const AddText = Styled.p`
 `;
 
 function SearchResult({ first, username, profile_picture, id }) {
+    async function handleClick(event) {
+        event.preventDefault();
+        await Firebase.addFriend(id);
+    };
     return (
         <Result href="/" style={{ border: (first ? "0px" : "") }}>
             <Pic src={profile_picture} alt={username + " profile picture"} />
             {username}
             <div style={{ display: "flex", flexGrow: "1" }} />
-            <AddButton onClick={() => Firebase.addFriend(id)}><AddText>Add As Friend</AddText></AddButton>
+            <AddButton onClick={handleClick}><AddText>Add As Friend</AddText></AddButton>
         </Result>
     );
 }

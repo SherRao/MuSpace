@@ -92,22 +92,23 @@ function SearchBar() {
     const [users, setUsers] = React.useState(null);
     const [query, setQuery] = React.useState("");
     
-    function handleChange(e) {
-        setQuery(e.target.value);
-        if(e.target.value === "")
-            setUsers(null); 
+    function handleChange(event) {
+        setQuery(event.target.value);
+        if(event.target.value === "") {
+            setUsers(null);
+        }
     };
 
-    async function handleClick(e) {
-        e.preventDefault();
-        if(query !== "") {
+    async function handleClick(event) {
+        event.preventDefault();
+        if(query) {
             const results = await Firebase.searchUsernames(query);
             setTimeout(() => setUsers(results), 500); // TODO: sus
         }
     };
 
-    function handleClear(e) {
-        e.preventDefault();
+    function handleClear(event) {
+        event.preventDefault();
         setUsers(null);
         setQuery("");
     };
@@ -126,7 +127,7 @@ function SearchBar() {
                 : (users.length === 0
                     ? <NoResults>No results found...</NoResults>
                     : users.map(({ username, id, profile_picture }, i) => (
-                        <SearchResult username={username} profile_picture={profile_picture} id={id} first={true} key={i} first={i === 0}/>
+                        <SearchResult username={username} profile_picture={profile_picture} id={id} key={i} first={i === 0}/>
                     ))
                 )}
             </SearchResults>
