@@ -38,13 +38,15 @@ function FriendTopSongs({ friends }) {
                     ? friends.slice(0, 3).map(({ username, spotifyData }, i) => {
                         const isTopSong = spotifyData.topSongs && spotifyData.topSongs.length > 0;
                         const topSong = isTopSong ? spotifyData.topSongs[0] : null;
-                        return <MiniTopCategory
-                            key={i}
-                            username={username}
-                            text={isTopSong ? topSong.name : "#Title"}
-                            artist={isTopSong ? topSong.artist : "#Artist" }
-                            album_picture={isTopSong ? topSong.image : undefined}
-                        />
+                        return isTopSong
+                            ? <MiniTopCategory
+                                key={i}
+                                username={username}
+                                text={isTopSong ? topSong.name : "#Title"}
+                                artist={isTopSong ? topSong.artist : "#Artist" }
+                                album_picture={isTopSong ? topSong.image : undefined}
+                            />
+                            : null;
                     })
                     : <NoFriends>You have not added any friends yet.</NoFriends>
                 }

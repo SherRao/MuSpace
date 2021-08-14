@@ -56,16 +56,14 @@ function LeaderBoard({ friends }){
                 <StyledInnerDiv>
                     {
                         friends.length > 0
-                        ? friends.slice(0, 3).map(({ username, spotifyData }, i) => {
-                            const isTopArtist = spotifyData.topArtists && spotifyData.topArtists.length > 0;
-                            const topArtist = isTopArtist ? spotifyData.topArtists[0] : null;
+                        ? friends.slice(0, 3).map(({ username, profile_picture, spotifyData }, i) => {
                             return <LeaderBoardStat
                                 key={i}
                                 number={i+1}
                                 username={username}
-                                hours="..."
-                                href="/"
-                                src={isTopArtist ? topArtist.image : undefined} // change to profile pic
+                                score="..."
+                                link="/"
+                                profile_picture={profile_picture}
                             />
                         })
                         : <NoFriends>You have not added any friends yet.</NoFriends>
@@ -75,16 +73,14 @@ function LeaderBoard({ friends }){
                 <StyledInnerDiv>
                     {
                         friends.length > 0
-                        ? friends.slice(0, 3).map(({ username, spotifyData }, i) => {
-                            const isTopArtist = spotifyData.topArtists && spotifyData.topArtists.length > 0;
-                            const topArtist = isTopArtist ? spotifyData.topArtists[0] : null;
+                        ? friends.slice(0, 3).map(({ username, profile_picture, spotifyData }, i) => {
                             return <LeaderBoardStat
                                 key={i}
                                 number={i+1}
                                 username={username}
-                                hours="..."
-                                href="/"
-                                src={isTopArtist ? topArtist.image : undefined} // change to profile pic
+                                score="..."
+                                link="/"
+                                profile_picture={profile_picture}
                             />
                         })
                         : <NoFriends>You have not added any friends yet.</NoFriends>

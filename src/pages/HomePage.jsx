@@ -59,6 +59,7 @@ function HomePage() {
     const [topArtists, setTopArtists] = React.useState(null);
     const [topSongs, setTopSongs] = React.useState(null);
     const [name, setName] = React.useState(null);
+    const [friends, setFriends] = React.useState(null);
 
     React.useEffect(async () => {
         if(!name)
@@ -78,11 +79,26 @@ function HomePage() {
                 .catch(e => console.log("ERROR", e));
         }
     }, [topSongs]);
+    React.useEffect(async () => {
+        if(!friends) {
+            const friendIds = await Firebase.getFriends();
+            const friendList = [];
+            for(let i=0; i<friendIds.length; i++) {
+                await Firebase.getUser(friendIds[i])
+                    .then(res => friendList.push(res))
+                    .catch(error => console.log("ERROR", error));
+                //friendList.push(await Firebase.getUser(friendIds[i]));
+            }
+            setFriends(friendList);
+            console.log(friendList);
+        }
+    }, [friends]);
 
     const isTopArtist = topArtists && topArtists.length > 0;
     const isTopSong = topSongs && topSongs.length > 0;
     const topArtist = isTopArtist ? topArtists[0] : null;
     const topSong = isTopSong ? topSongs[0] : null;
+    const friendList = friends ? friends : [];
     
     //TODO: change "Good Evening" to be dynamic depending on time of day (4 states).
     return (
@@ -104,7 +120,7 @@ function HomePage() {
                 </CardContainer>
             </LeftDiv>
             <RightDiv>
-                <ListeningActivity />
+                <ListeningActivity friends={friendList} />
             </RightDiv>
         </Panels>
     );

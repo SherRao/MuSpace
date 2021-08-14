@@ -32,13 +32,13 @@ const StyledLink = Styled.a`
     text-decoration: none;
 `;
 
-function LeaderBoardStat({ number, src, username, hours, href }) {
+function LeaderBoardStat({ number, username, profile_picture, score, link }) {
     return (
         <StyledDiv style={{borderTop: number === 1 ? "0px" : "1px solid grey"}}>
             <StyledNumber>{number}.</StyledNumber>
-            <StyledProfilePic src={src} alt={username} />
-            <StyledLink onClick={notImplemented}><StyledText>@{username}</StyledText></StyledLink>
-            <StyledText width="120px">{hours} hours</StyledText>
+            <StyledProfilePic src={profile_picture} alt={username + " profile picture"} />
+            <StyledLink onClick={notImplemented}><StyledText>{username}</StyledText></StyledLink>
+            <StyledText width="120px">{score} hours</StyledText>
         </StyledDiv>
     );
 }

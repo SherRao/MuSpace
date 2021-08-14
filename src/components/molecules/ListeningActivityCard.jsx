@@ -16,12 +16,11 @@ const StyledIcon = Styled.div`
 `;
 
 const StyledText = Styled.p`
-    margin: 0.2em;  
+    margin: 0.1em;  
     font-size: ${props => props.theme.fontSizes.medium}
 `;
 
 const StyledUsername = Styled(StyledText)`
-    margin: 0;
     font-weight: bold;
 `;
 
@@ -29,11 +28,12 @@ function ListeningActivityCard({ username, title, artist, picture_url, link }) {
     return (
         <Card style={{flexDirection: "row", padding: 0}} bgColor="grey">
             <StyledDiv>
-                <AlbumCover width="5em" onClick={notImplemented}/>
+                <AlbumCover width="5em" onClick={notImplemented} album_picture={picture_url} />
             </StyledDiv>
             <StyledDiv style={{ width: "max-content", maxWidth: "100%", justifyContent: "center" }}>
                 <StyledUsername>{username}</StyledUsername>
-                <StyledText>{title} - {artist}</StyledText>
+                {title ? <StyledText>{title}</StyledText> : null}
+                {artist ? <StyledText>{artist}</StyledText> : null}
             </StyledDiv>
             <SpaceFillerDiv />
             <StyledDiv>
