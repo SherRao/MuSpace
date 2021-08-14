@@ -122,12 +122,13 @@ function SearchBar() {
                 <SearchButton onClick={handleClick}><Search/></SearchButton>
             </Row>
             <SearchResults style={{visibility: hidden ? "hidden" : "visible", display: hidden ? "none" : "flex" }}>
+                {console.log(users)}
                 { hidden
                 ? null
                 : (users.length === 0
                     ? <NoResults>No results found...</NoResults>
-                    : users.map(({ username, id, profile_picture }, i) => (
-                        <SearchResult username={username} profile_picture={profile_picture} id={id} key={i} first={i === 0}/>
+                    : users.map(({ username, id, profile_picture, isFriend }, i) => (
+                        <SearchResult username={username} profile_picture={profile_picture} id={id} key={i} first={i === 0} isFriend={isFriend} />
                     ))
                 )}
             </SearchResults>

@@ -37,13 +37,17 @@ const AddButton = Styled.button`
     width: 12em;
     height: 100%;
     margin-left: 0.6em;
+    padding: 0.6em;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     background-color: ${props => props.theme.colors.purple};
+    color: ${props => props.theme.colors.white};
+    font-size: ${props => props.theme.fontSizes.medium};
     border-radius: 0.45em;
     border-width: 0;
+    border-style: solid;
     cursor: pointer;
 
     :hover {
@@ -54,24 +58,35 @@ const AddButton = Styled.button`
     transition: all 0.25s ease;
 `;
 
-const AddText = Styled.p`
-    color: ${props => props.theme.colors.white};
-    font-size: ${props => props.theme.fontSizes.medium};
-    padding: 0.6em;
-    margin: 0;
+const RemoveButton = Styled(AddButton)`
+    background-color: ${props => props.theme.colors.white};
+    border-width: 2px;
+    border-color: ${props => props.theme.colors.purple};
+    color: ${props => props.theme.colors.purple};
 `;
 
-function SearchResult({ first, username, profile_picture, id }) {
-    async function handleClick(event) {
+function SearchResult({ first, username, profile_picture, id, isFriend }) {
+    const [friend, setFriend] = React.useState(isFriend);
+
+    async function handleAdd(event) {
         event.preventDefault();
         await Firebase.addFriend(id);
+        setFriend(true);
+    };
+    async function handleRemove(event) {
+        event.preventDefault();
+        alert("This feature has not been implemented yet");
+        setFriend(false);
     };
     return (
         <Result href="/" style={{ border: (first ? "0px" : "") }}>
             <Pic src={profile_picture} alt={username + " profile picture"} />
             {username}
             <div style={{ display: "flex", flexGrow: "1" }} />
-            <AddButton onClick={handleClick}><AddText>Add As Friend</AddText></AddButton>
+            {friend
+                ? <RemoveButton onClick={handleRemove}>Remove Friend</RemoveButton>
+                : <AddButton onClick={handleAdd}>Add Friend</AddButton>
+            }
         </Result>
     );
 }

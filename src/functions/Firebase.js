@@ -149,7 +149,8 @@ async function searchUsernames(query) {
             const doc = await db.collection("users").doc(id).get();
             const user = doc.data();
             const profile_picture = user.profile_picture;
-            result.push({ username, id, profile_picture });
+            const isFriend = user.friends.includes(auth.currentUser.uid);
+            result.push({ username, id, profile_picture, isFriend });
         }
     });
 
