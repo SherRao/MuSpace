@@ -3,7 +3,7 @@
 </h1>
 <h1 align="center">MuSpace Member Overall Evaluations Averages</h1>
 <!-- Remeber to give evalutations alphabetically -->
-
+<h3 align="center">
 |              Name               | Student Number | Score |
 | ------------------------------- | -------------- | ------|
 | Ali, Farzan                     | 191651560      | 5     |         
@@ -21,7 +21,7 @@
 | Tewari, Nishant                 | 190684430      | 5     |
 | Yasin, Daner                    | 190773490      | 5     |
 
-
+</h3>
 
 <h1 align="center">Form Responses (Anonymous)</h1>
 
