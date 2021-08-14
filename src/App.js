@@ -10,7 +10,7 @@ function App() {
     resetCache();
     return (
         <Theme>
-            <TextButton text="clear cache" type="text" onClick={cs} />
+            {/* <TextButton text="clear cache" type="text" onClick={cs} /> */}
             <PageRouter />
         </Theme >
     );
