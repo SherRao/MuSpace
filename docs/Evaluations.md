@@ -15,7 +15,7 @@
 | Manimaran, Mathumithan "Matt"   | 190546910      | 5     |
 | Mazza, Robert                   | 190778040      | 5     |
 | Goldman, Jacob                  | 190509690      | 5     |
-| Olowonefa,Adepeju               | 193049300      | 5     |
+| Olowonefa, Adepeju              | 193049300      | 5     |
 | Rao, Nausher                    | 190906250      | 5     |
 | Sangha, Jagveer                 | 190612960      | 5     |
 | Tewari, Nishant                 | 190684430      | 5     |
