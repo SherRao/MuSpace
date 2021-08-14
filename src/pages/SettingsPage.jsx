@@ -4,6 +4,7 @@ import default_profile from "../assets/default_profile.jpg";
 
 import { SectionButton } from "@atoms";
 import { Firebase } from "@functions";
+import { useRef } from "react";
 
 const Container = Styled.div`
     width: 100%;
@@ -77,12 +78,35 @@ const SettingsDiv = Styled.div`
 
 
 function SettingsPage() {
+    const fileInputRef = useRef();
+    const [profilePicture, setProfilePicture] = React.useState(null);
+    const [userName, setUserName] = React.useState(null);
+
+    React.useEffect(async () => {
+        if(!userName)
+            setUserName(await Firebase.getUsername());
+
+        if(!profilePicture)
+            setProfilePicture(await Firebase.getProfilePicture());
+
+    }, []);
+
+    const fileChangedHandler = (event) => {
+        const file = event.target.files[0];
+        if (file){
+            Firebase.updateProfilePicture(file);
+            console.log(file);
+            window.location.href = "/settings";
+
+        }
+    }
+    
     return (
         <Container>
             <TitleDiv>
-                <StyledImg src={default_profile} alt="Default Profile image" />
+                <StyledImg src={profilePicture} alt="Default Profile image" />
                 <StyledTitle>
-                    <StyledText>@SherRawrXD</StyledText>
+                    <StyledText>{userName}</StyledText>
                 </StyledTitle>
             </TitleDiv>
             
@@ -95,7 +119,8 @@ function SettingsPage() {
                     <StyledSectionTitle>
                         <StyledText>Account Settings</StyledText>
                     </StyledSectionTitle>
-                    <SectionButton text="Upload Profile Picture" type="text" onClick={notImplemented}/>
+                    <SectionButton text="Upload Profile Picture" type="text" onClick={()=>fileInputRef.current.click()}/>
+                    <input type="file" id="fileButton" ref={fileInputRef} onChange={fileChangedHandler} hidden/>
                     <SectionButton text="Change Password" type="text" onClick={Firebase.changePass}/>
                     <SectionButton text="Delete Account" type="text" onClick={Firebase.deleteAccount}/>
                     <SectionButton text="Logout" type="text" onClick={Firebase.logout}/>
