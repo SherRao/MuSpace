@@ -93,7 +93,7 @@ function MessagesPage() {
                 <FriendsListDiv>
                     {friendList && friendList.length > 0
                         ? friendList.map(({ username, profile_picture }, i) => 
-                            <FriendsMessageButton username={username} profile_picture={profile_picture} type="text" onClick={console.log("test")} key={i} />)
+                            <FriendsMessageButton username={username} profile_picture={profile_picture} type="text" onClick={() => console.log("test")} key={i} />)
                         : <NoFriends>You have not added any friends yet.</NoFriends>
                     }
                 </FriendsListDiv>

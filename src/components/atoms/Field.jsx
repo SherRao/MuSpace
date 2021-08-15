@@ -19,7 +19,7 @@ const StyledTextInput = Styled.input`
         outline: none;
 
         transition: all 0.25s ease;
-    
+
     }
 `;
 

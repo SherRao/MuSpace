@@ -30,7 +30,6 @@ const TextContainer = Styled.div`
     transition: all 0.25s ease;
 `;
 
-
 const StyledLink = Styled.a`
     border: none;
     padding: 0;

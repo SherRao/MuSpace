@@ -4,7 +4,6 @@ import { Theme, PageRouter } from "@misc";
 
 import { TextButton } from "@atoms";
 import { Firebase } from "@functions";
-import { css } from "styled-components";
 
 function App() {
     //resetCache();

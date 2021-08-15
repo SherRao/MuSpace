@@ -65,14 +65,18 @@ function HomePage() {
     React.useEffect(async () => {
         if(!name)
             setName(await Firebase.getFullName());
+    
     }, [name]);
+
     React.useEffect(async () => {
         if (!topArtists) {
             await Spotify.getTopArtists()
                 .then(res => setTopArtists(res))
                 .catch(error => console.log("ERROR", error));
+        
         }
     }, [topArtists]);
+
     React.useEffect(async () => {
         if (!topSongs) {
             await Spotify.getTopSongs()
@@ -80,6 +84,7 @@ function HomePage() {
                 .catch(error => console.log("ERROR", error));
         }
     }, [topSongs]);
+
     React.useEffect(async () => {
         if(!friends) {
             const friendIds = await Firebase.getFriends();
@@ -90,8 +95,10 @@ function HomePage() {
                     .catch(error => console.log("ERROR", error));
                 //friendList.push(await Firebase.getUser(friendIds[i]));
             }
+        
             setFriends(friendList);
         }
+
     }, [friends]);
     
     function greeting() {

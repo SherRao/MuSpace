@@ -7,8 +7,6 @@ import { Spotify, Firebase } from "@functions";
 
 function SpotifyRedirectPage() {
     const data = queryString.parse(window.location.hash);
-    localStorage.setItem("spotifyUpdated", false);
-    
     React.useEffect(() => {
         storeSpotifyData();
 
@@ -30,13 +28,13 @@ function SpotifyRedirectPage() {
         userData.spotifyData = {access_token, expiry, state, type};
 
         await usersRef.doc(uid).set(userData);
-        localStorage.setItem("spotifyUpdated", true);
+        localStorage.setItem(Firebase.auth.currentUser.uid, true);
 
         await Spotify.startCompile();
         console.log("ok");
     }
 
-    if(localStorage.getItem("spotifyUpdated"))
+    if(localStorage.getItem(Firebase.auth.currentUser.uid))
         return <Redirect to="/"/>;
 
     else 

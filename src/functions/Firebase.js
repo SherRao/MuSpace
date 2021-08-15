@@ -69,20 +69,28 @@ async function registerWithEmail(event) {
         // validate input first
         if (!validator.isEmail(email) || validator.isEmpty(email) || validator.isEmpty(confirmEmail))
             throw Error("Please enter a valid email address.");
+
         if (!(email === confirmEmail))
             throw Error("Emails do not match.");
+
         if (validator.isEmpty(firstName) || validator.isEmpty(lastName))
             throw Error("Please enter your full name.");
+
         if (validator.isEmpty(username))
             throw Error("Please enter a username.");
+
         if (username.length < 5 || username.length > 32)
             throw Error("Username must be between 5 and 32 characters in length.");
+
         if (validator.isEmpty(pass))
             throw Error("Please enter a password.");
+
         if (pass.length < 6)
             throw Error("Password must be at least 6 characters long.");
+
         if (!validator.isDate(new Date(dob)))
             throw Error("Please select a date of birth.");
+
         if (validator.isAfter(dob, legalDate.toString()))
             throw Error("You must be at least 18 years of age to create an account.");
 
@@ -145,7 +153,7 @@ async function searchUsernames(query) {
     const result = [];
 
     users.forEach(async ([username, id]) => {
-        if (regex.test(username)) {
+        if (regex.test(username) && id != auth.currentUser.uid) {
             const doc = await db.collection("users").doc(id).get();
             const user = doc.data();
             const profile_picture = user.profile_picture;
@@ -241,7 +249,7 @@ async function addFriend(targetId) {
     // Adds current user to target friend.
     const targetDoc = await db.collection("users").doc(targetId).get();
     const targetData = targetDoc.data();
-    if(!targetData.friends.includes(auth.currentUser.uid)) {
+    if (!targetData.friends.includes(auth.currentUser.uid)) {
         targetData.friends.push(auth.currentUser.uid);
         await db.collection("users").doc(targetId).set(targetData);
     }
@@ -249,7 +257,7 @@ async function addFriend(targetId) {
     // Adds target friend to current user.
     const userDoc = await db.collection("users").doc(auth.currentUser.uid).get();
     const userData = userDoc.data();
-    if(!userData.friends.includes(targetId)) {
+    if (!userData.friends.includes(targetId)) {
         userData.friends.push(targetId);
         await db.collection("users").doc(auth.currentUser.uid).set(userData);
     }
@@ -263,12 +271,12 @@ async function addFriend(targetId) {
  * @param targetId The ID of the user to add as a friend.
  *
  */
- async function removeFriend(targetId) {
+async function removeFriend(targetId) {
     // Remove current user from target friend.
     const targetDoc = await db.collection("users").doc(targetId).get();
     const targetData = targetDoc.data();
     let index = targetData.friends.indexOf(auth.currentUser.uid);
-    if(index > -1) {
+    if (index > -1) {
         targetData.friends.splice(index, 1);
         await db.collection("users").doc(targetId).set(targetData);
     }
@@ -277,7 +285,7 @@ async function addFriend(targetId) {
     const userDoc = await db.collection("users").doc(auth.currentUser.uid).get();
     const userData = userDoc.data();
     index = userData.friends.indexOf(targetId);
-    if(index > -1) {
+    if (index > -1) {
         userData.friends.splice(index, 1);
         await db.collection("users").doc(auth.currentUser.uid).set(userData);
     }
@@ -324,6 +332,10 @@ async function createNewChatRoom(targetId) {
 /**
  * 
  * Adds a chat message to a chat room.
+ *
+ * @param message The message to add to the chat room. 
+ * @param chatId The ID of the chat room to add the message to.
+ * 
  * TODO: try/catch
  * 
  */
@@ -339,13 +351,13 @@ async function sendChat(message, chatId) {
     data.messages.push(chatData);
 
     await db.collection("chats").doc(chatId).set(data);
-
 }
 
 /**
  * 
  * Changes the current users profile picture to whatever was uploaded.
  * 
+ * @param file The file to upload.
  * TODO: try/catch
  * 
  */
@@ -360,6 +372,13 @@ async function updateProfilePicture(file) {
     await db.collection("users").doc(auth.currentUser.uid).set(userData);
 }
 
+/**
+ *
+ * Retrieves the current user's profile picture.
+ *
+ * TODO: try/catch
+ *
+ */
 async function getProfilePicture() {
     const docRef = db.collection("users").doc(auth.currentUser.uid);
     const doc = await docRef.get();
@@ -367,6 +386,13 @@ async function getProfilePicture() {
     return profilePicture;
 }
 
+/**
+ *
+ * Retrieves the current user's username.
+ *
+ * TODO: try/catch
+ *
+ */
 async function getUsername() {
     const docRef = db.collection("users").doc(auth.currentUser.uid);
     const doc = await docRef.get();
@@ -375,14 +401,28 @@ async function getUsername() {
 
 }
 
+/**
+ * 
+ * Retrieves the current user's full name.
+ * 
+ * TODO: try/catch
+ * 
+ */
 async function getFullName() {
     const docRef = db.collection("users").doc(auth.currentUser.uid);
     const doc = await docRef.get();
     const fullName = doc.data().firstName + " " + doc.data().lastName;
     return fullName;
-
 }
 
+/**
+ * 
+ * Retrieves a list of friends of the current logged in user.
+ * 
+ * 
+ * TODO: try/catch
+ *
+ */
 async function getFriends() {
     const docRef = db.collection("users").doc(auth.currentUser.uid);
     const doc = await docRef.get();
@@ -391,12 +431,17 @@ async function getFriends() {
 
 }
 
+/**
+ * Retrives the user object of the user with the given ID. 
+ * 
+ * TODO: try/catch
+ * 
+ */
 async function getUser(uid) {
     const docRef = db.collection("users").doc(uid);
     const doc = await docRef.get();
     const user = doc.data();
     return user;
-
 }
 
 export default {

@@ -2,17 +2,17 @@ import React from "react";
 import Styled from "styled-components";
 
 const StyledDiv = Styled.div`
-  color: ${(props) => props.theme.colors.grey};
-  align-items: center;
-  transition: all 0.25s ease;
-  margin: 0.2rem 0;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+    color: ${(props) => props.theme.colors.grey};
+    align-items: center;
+    transition: all 0.25s ease;
+    margin: 0.2rem 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 
-  @media (max-width: 900){
-    flex-direction: column;
-  }
+    @media (max-width: 900){
+        flex-direction: column;
+    }
 `;
 
 const StyledLink = Styled.a`
