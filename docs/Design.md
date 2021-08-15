@@ -119,7 +119,7 @@
 <h3>4.4 Module Interface</h3>
 
 <h4>4.4.1 Sidebar (Constant in all Views aside from 4.4.3 and 4.4.4)</h4>
-<img src="./design/sidebar.svg" width=200/>
+<img src="./design/sidebar.png" width=200/>
 <p>On every view, the sidebar allows for quick and easy navigation to any of the other views. Along with this, it has some quick stats.</p>
 <table>
     <tr>
@@ -160,7 +160,7 @@
 </table>
 
 <h4>4.4.2 Searchbar (Constant in all Views aside from 4.4.3 and 4.4.4)</h4>
-<img src="./design/search_bar.svg" width=500/>
+<img src="./design/searchbar.png" width=500/>
 <p>Search bar allows the user to find songs / albums / playlists etc, along with friends.</p>
 <table>
     <tr>
@@ -186,7 +186,7 @@
 </table>
 
 <h4>4.4.3 Login View</h4>
-<img src="./design/login.svg" width=500/>
+<img src="./design/login.png" width=800/>
 <p>Login View allows users to enter their account credentials and login to their account.</p>
 <table>
     <tr>
@@ -232,8 +232,8 @@
 </table>
 
 <h4>4.4.4 RegisterView</h4>
-<img src="./design/register1.svg" width=500/>
-<img src="./design/register2.svg" width=500/>
+<img src="./design/register.png" width=600/>
+<img src="./design/verifyPage.png" width=600/>
 <p>Register Page allows new users to register with MuSpace asking them for their credentials like Name, Email, Date of Birth, etc. creating an account for them with their desired available username and unique password.</p>
 <table>
     <tr>
@@ -294,7 +294,7 @@
 </table>
 
 <h4>4.4.5 Home View</h4>
-<img src="./design/home.svg" width=500/>
+<img src="./design/homePage.png" width=500/>
 <table>
     <tr>
         <th style="text-align:center">Field</th>
@@ -374,7 +374,7 @@
 </table>
 
 <h4>4.4.6 Message View</h4>
-<img src="./design/messages.svg" width=500/>
+<img src="./design/messages.png" width=500/>
 <p>The Messages page is to allows users to communicate with their friends on the app.</p>
 <table>
     <tr>
@@ -410,7 +410,7 @@
 </table>
 
 <h4>4.4.7 Settings View</h4>
-<img src="./design/settings.svg" width=500/>
+<img src="./design/settings.png" width=500/>
 <p>The View where a user can toggle between different settings options.</p>
 <table>
     <tr>
