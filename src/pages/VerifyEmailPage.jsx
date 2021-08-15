@@ -8,6 +8,8 @@ import { GoogleSigninButton } from "@atoms";
 import { LoginForm } from "@molecules"; 
 
 import { Firebase } from "@functions";
+import { SectionButton } from "@atoms";
+
 
 const Container = Styled.div`
     width: 100vw;
@@ -48,6 +50,8 @@ function VerifyEmailPage() {
             <MuspaceLogo></MuspaceLogo>
             <Header>Verify your email!</Header>
             <SubHeader>Click the link in the verification email and then click <a href="/">here</a>!</SubHeader>
+            <SectionButton text="Quit" type="text" onClick={Firebase.logout}/>
+
         </Container>
     );
 }
