@@ -8,10 +8,17 @@ import { Spotify, Firebase } from "@functions";
 function SpotifyRedirectPage() {
     const data = queryString.parse(window.location.hash);
     React.useEffect(() => {
-        storeSpotifyData();
+        if(Object.keys(data).length > 0 && Firebase.auth.currentUser) 
+            storeSpotifyData();
 
     }, []);
 
+    if(Object.keys(data).length == 0 || Firebase.auth.currentUser == null) {
+        alert("Could not authorise with the Spotify endpoint! Please try again later!");
+        Firebase.logout();
+        return <Redirect to="/"/>;
+    }
+    
     async function storeSpotifyData() {
         const access_token = data.access_token;
         const expiry = data.expires_in;

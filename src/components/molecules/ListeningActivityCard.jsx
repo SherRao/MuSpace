@@ -32,7 +32,7 @@ function ListeningActivityCard({ username, title, artist, picture_url, link }) {
     return (
         <Card style={{flexDirection: "row", padding: 0}} bgColor="grey">
             <StyledDiv>
-                <AlbumCover width="5em" onClick={notImplemented} album_picture={picture_url} />
+                <AlbumCover width="5em" album_picture={picture_url} link={link} target="_blank"/>
             </StyledDiv>
             <StyledDiv style={{ width: "max-content", maxWidth: "100%", justifyContent: "center" }}>
                 <StyledUsername>{username}</StyledUsername>

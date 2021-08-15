@@ -3,7 +3,7 @@ import Styled from "styled-components";
 import { Firebase } from "@functions";
 import queryString from "query-string";
 
-import { FeedObject } from "@atoms";
+import { AlbumCover, FeedObject, ProfileUserName } from "@atoms";
 import { FriendTopSongs, TopArtists, TopSongs } from "@molecules";
 
 const Container = Styled.div`
@@ -102,6 +102,7 @@ function ProfilePage() {
     let query = null;
     if(data) 
         query = data.username;
+
     const [profilePicture, setProfilePicture] = React.useState(null);
     const [userName, setUserName] = React.useState(null);
     const [user, setUser] = React.useState(null);
@@ -115,10 +116,12 @@ function ProfilePage() {
             setProfilePicture(await Firebase.getProfilePicture());
 
     }, []);
+
     React.useEffect(async () => {
         if(!user)
             setUser(await Firebase.getUser(Firebase.auth.currentUser.uid));
     }, [user]);
+
     React.useEffect(async () => {
         if(!friends) {
             const friendIds = await Firebase.getFriends();

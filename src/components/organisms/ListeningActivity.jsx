@@ -32,23 +32,24 @@ function ListeningActivity({ friends }){
             <StyledInnerDiv>
                 {
                     friends && friends.length > 0
-                    ? friends.slice(0, 4).map(({ username, spotifyData }, i) => {
-                        const isRecentSong = spotifyData.recentSongs && spotifyData.recentSongs.length > 0;
-                        const recentSong = isRecentSong ? spotifyData.recentSongs[0] : null;
-                        return isRecentSong
-                            ? <ListeningActivityCard
-                                key={i}
-                                username={username}
-                                title={recentSong.title}
-                                artist={recentSong.artist}
-                                picture_url={recentSong.image}
-                            />
-                            : <ListeningActivityCard
-                                key={i}
-                                username={username}
-                            />;
-                    })
-                    : <NoFriends>You have not added any friends yet.</NoFriends>
+                        ? friends.slice(0, 4).map(({ username, spotifyData }, i) => {
+                            const isRecentSong = spotifyData.recentSongs && spotifyData.recentSongs.length > 0;
+                            const recentSong = isRecentSong ? spotifyData.recentSongs[0] : null;
+                            return isRecentSong
+                                ? <ListeningActivityCard
+                                    key={i}
+                                    username={username}
+                                    title={recentSong.title}
+                                    artist={recentSong.artist}
+                                    picture_url={recentSong.image}
+                                    url={recentSong.link}
+                                />
+                                : <ListeningActivityCard
+                                    key={i}
+                                    username={username}
+                                />;
+                        })
+                        : <NoFriends>You have not added any friends yet.</NoFriends>
                 }
                 <TextButton text="See More" style={{ width: "100%", marginTop: "0.4rem" }} onClick={notImplemented}/>
             </StyledInnerDiv>

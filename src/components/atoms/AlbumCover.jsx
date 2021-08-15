@@ -29,9 +29,9 @@ const StyledImage = Styled.img`
 const StyledLink = Styled.a`
 `;
 
-function AlbumCover({ width, album_picture, link }) {
+function AlbumCover({ width, album_picture, link, target="" }) {
     return (
-        <StyledLink onClick={notImplemented}>
+        <StyledLink href={link} target={target}>
             <StyledImage src={album_picture ? album_picture : DefaultCover} width={width} height="auto"></StyledImage>
         </StyledLink>
     );

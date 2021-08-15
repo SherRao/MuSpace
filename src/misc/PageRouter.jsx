@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route, BrowserRouter as Router, Redirect} from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-import { TestPage, HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, VerifySpotifyPage, ResetPage ,SpotifyRedirectPage, MessagesPage, FriendsPage, SettingsPage, ErrorPage } from "@pages";
+import { HomePage, LoginPage, RegisterPage, RedirectPage, ProfilePage, VerifyEmailPage, VerifySpotifyPage, ResetPage ,SpotifyRedirectPage, MessagesPage, FriendsPage, SettingsPage, ErrorPage } from "@pages";
 import { Firebase } from "@functions";
 import { ProtectedRoute, UnprotectedRoute } from "@misc";
 
@@ -121,14 +121,6 @@ function PageRouter() {
                 <Route
                     path="/redirect"
                     component={RedirectPage}
-                    isLoggedIn={isLoggedIn}
-                    isVerified={isVerified}
-                    isSpotifyVerified={isSpotifyVerified}
-                />
-
-                <Route
-                    path="/test"
-                    component={TestPage}
                     isLoggedIn={isLoggedIn}
                     isVerified={isVerified}
                     isSpotifyVerified={isSpotifyVerified}

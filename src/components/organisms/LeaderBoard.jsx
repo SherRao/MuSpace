@@ -31,6 +31,22 @@ const NoFriends = Styled.p`
 `;
 
 function LeaderBoard({ friends }){
+    // const [profilePic, setProfilePic ] = React.useState(null);
+    // const user = Firebase.auth.currentUser;
+    
+    // React.useEffect(() => {
+    //     if(!profilePic)
+    //         getProfilePic();
+
+    // }, []);
+
+    // async function getProfilePic() {
+    //     const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
+    //     setProfilePic(x);
+
+    // }
+    let profile_picture = "https://firebasestorage.googleapis.com/v0/b/cp-317.appspot.com/o/default_profile.jpg?alt=media&token=4ed26d80-388b-4814-95b3-01740138285a";
+
     return (
         <Card>
             <StyledTitle>Leaderboard</StyledTitle>
@@ -39,34 +55,34 @@ function LeaderBoard({ friends }){
                 <StyledInnerDiv>
                     {
                         friends.length > 0
-                        ? friends.slice(0, 3).map(({ username, profile_picture, spotifyData }, i) => {
-                            return <LeaderBoardStat
-                                key={i}
-                                number={i+1}
-                                username={username}
-                                score="..."
-                                link="/"
-                                profile_picture={profile_picture}
-                            />
-                        })
-                        : <NoFriends>You have not added any friends yet.</NoFriends>
+                            ? friends.slice(0, 3).map(({ username, profile_picture, spotifyData }, i) => {
+                                return <LeaderBoardStat
+                                    key={i}
+                                    number={i+1}
+                                    username={username}
+                                    score="..."
+                                    link="/"
+                                    profile_picture={profile_picture}
+                                />;
+                            })
+                            : <NoFriends>You have not added any friends yet.</NoFriends>
                     }
                 </StyledInnerDiv>
                 <LeaderBoardLabel text="Number of Unique Artists:"/>
                 <StyledInnerDiv>
                     {
                         friends.length > 0
-                        ? friends.slice(0, 3).map(({ username, profile_picture, spotifyData }, i) => {
-                            return <LeaderBoardStat
-                                key={i}
-                                number={i+1}
-                                username={username}
-                                score="..."
-                                link="/"
-                                profile_picture={profile_picture}
-                            />
-                        })
-                        : <NoFriends>You have not added any friends yet.</NoFriends>
+                            ? friends.slice(0, 3).map(({ username, profile_picture, spotifyData }, i) => {
+                                return <LeaderBoardStat
+                                    key={i}
+                                    number={i+1}
+                                    username={username}
+                                    score="..."
+                                    link="/"
+                                    profile_picture={profile_picture}
+                                />;
+                            })
+                            : <NoFriends>You have not added any friends yet.</NoFriends>
                     }
                 </StyledInnerDiv>
             </StyledInnerDiv>

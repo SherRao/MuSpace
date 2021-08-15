@@ -87,7 +87,7 @@ function FavCard({card_title, main_text, sub_text, score, pic_url, link}) {
             <Banner>
                 <BannerText>{card_title}</BannerText>
             </Banner>
-            <ResponsivePic width="6em" artist_pic_url={pic_url} location={link}/>
+            <ResponsivePic width="6em" artist_pic_url={pic_url} location={link} target="_blank"/>
             <TextDiv>
                 <MainText>{main_text}</MainText>
                 <SubText>{sub_text}</SubText>

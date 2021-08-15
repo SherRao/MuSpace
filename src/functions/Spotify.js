@@ -47,7 +47,7 @@ async function loadTopSongs(api) {
         data.artist = element.artists[0].name;
         data.image = element.album.images[0].url;
         data.score = element.popularity;
-        data.link = "/";
+        data.link = element.external_urls.spotify;
 
         arr.push(data);
     }
@@ -66,7 +66,7 @@ async function loadTopArtists(api) {
         data.name = element.name;
         data.image = element.images[0].url;
         data.score = element.popularity;
-        data.link = "/";
+        data.link = element.external_urls.spotify;
 
         arr.push(data);
     }
@@ -87,7 +87,7 @@ async function loadRecentSongs(api) {
         data.artist = element.artists[0].name;
         data.image = element.album.images[0].url;
         data.score = element.popularity;
-        data.link = "/";
+        data.link = element.external_urls.spotify;
 
         arr.push(data);
     }
@@ -115,6 +115,11 @@ async function getTopArtists() {
 async function getRecentSongs() {
     const doc = await Firebase.db.collection("users").doc(Firebase.auth.currentUser.uid).get();
     return doc.data().spotifyData.recentSongs;
+
+}
+
+async function getCurrentSong() {
+
 
 }
 
