@@ -35,7 +35,7 @@ function ResetPage() {
     return (
         <Container>
             <MuspaceLogo width="25rem"/>
-            <Header>Please check your email for the reset password link!</Header>
+            <Header>Sorry, this hasn't been implmented yet!</Header>
         </Container >
     );
 }
