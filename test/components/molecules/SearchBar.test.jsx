@@ -92,22 +92,22 @@ function SearchBar() {
     const [users, setUsers] = React.useState(null);
     const [query, setQuery] = React.useState("");
     
-    function handleChange(e) {
-        setQuery(e.target.value);
-        if(e.target.value === "")
+    function handleChange(event) {
+        setQuery(event.target.value);
+        if(event.target.value === "")
             setUsers(null); 
     };
 
-    async function handleClick(e) {
-        e.preventDefault();
+    async function handleClick(event) {
+        event.preventDefault();
         if(query !== "") {
             const results = await Firebase.searchUsernames(query);
             setTimeout(() => setUsers(results), 500); // TODO: sus
         }
     };
 
-    function handleClear(e) {
-        e.preventDefault();
+    function handleClear(event) {
+        event.preventDefault();
         setUsers(null);
         setQuery("");
     };
