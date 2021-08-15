@@ -35,7 +35,7 @@ function ResetPage() {
     return (
         <Container>
             <MuspaceLogo width="25rem"/>
-            <Header>Sorry, this hasn't been implmented yet!</Header>
+            <Header>Sorry, this hasn't been implemented yet!</Header>
         </Container >
     );
 }
