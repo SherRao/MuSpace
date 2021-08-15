@@ -8,7 +8,7 @@ import { GoogleSigninButton } from "@atoms";
 import { LoginForm } from "@molecules"; 
 
 import { Firebase } from "@functions";
-import { SectionButton } from "@atoms";
+import { TextButton } from "@atoms";
 
 
 const Container = Styled.div`
@@ -50,7 +50,7 @@ function VerifyEmailPage() {
             <MuspaceLogo></MuspaceLogo>
             <Header>Verify your email!</Header>
             <SubHeader>Click the link in the verification email and then click <a href="/">here</a>!</SubHeader>
-            <SectionButton text="Quit" type="text" onClick={Firebase.logout}/>
+            <TextButton text="Quit" type="text" onClick={Firebase.logout}/>
 
         </Container>
     );
