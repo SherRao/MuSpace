@@ -3,9 +3,7 @@ import Styled from "styled-components";
 import { Firebase } from "@functions";
 import queryString from "query-string";
 
-import default_profile from "../assets/default_profile.jpg";
-
-import { AlbumCover, FeedObject, ProfileUserName } from "@atoms";
+import { FeedObject } from "@atoms";
 import { FriendTopSongs, TopArtists, TopSongs } from "@molecules";
 
 const Container = Styled.div`
@@ -126,9 +124,11 @@ function ProfilePage() {
             const friendIds = await Firebase.getFriends();
             const friendList = [];
             for(let i=0; i<friendIds.length; i++) {
-                await Firebase.getUser(friendIds[i])
-                    .then(res => friendList.push(res))
-                    .catch(error => console.log("ERROR", error));
+                try {
+                    friendList.push(await Firebase.getUser(friendIds[i]));
+                } catch (err) {
+                    console.log(err);
+                }
             }
             setFriends(friendList);
         }

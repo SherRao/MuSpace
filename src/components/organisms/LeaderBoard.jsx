@@ -3,7 +3,6 @@ import Styled from "styled-components";
 
 import { Card, LeaderBoardLabel, LeaderBoardStat } from "@atoms"; 
 import { Firebase } from "@functions";
-import { DefaultProfilePic } from "@assets";
 
 const StyledInnerDiv = Styled.div`
     display: flex;
@@ -32,22 +31,6 @@ const NoFriends = Styled.p`
 `;
 
 function LeaderBoard({ friends }){
-    // const [profilePic, setProfilePic ] = React.useState(null);
-    // const user = Firebase.auth.currentUser;
-    
-    // React.useEffect(() => {
-    //     if(!profilePic)
-    //         getProfilePic();
-
-    // }, []);
-
-    // async function getProfilePic() {
-    //     const x = await Firebase.db.collection("users").doc(user.uid).get("profile_picture");
-    //     setProfilePic(x);
-
-    // }
-    let profilePic = DefaultProfilePic;
-
     return (
         <Card>
             <StyledTitle>Leaderboard</StyledTitle>

@@ -42,9 +42,11 @@ function FriendsPage() {
             const friendIds = await Firebase.getFriends();
             const friendList = [];
             for(let i=0; i<friendIds.length; i++) {
-                await Firebase.getUser(friendIds[i])
-                    .then(res => friendList.push(res))
-                    .catch(error => console.log("ERROR", error));
+                try {
+                    friendList.push(await Firebase.getUser(friendIds[i]));
+                } catch (err) {
+                    console.log(err);
+                }
             }
             setFriends(friendList);
         }
