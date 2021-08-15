@@ -19,6 +19,7 @@ import ChatBubble from "./ChatBubble";
 import Field from "./Field";
 import FeedObject from "./FeedObject";
 import SearchResult from "./SearchResult";
+import Loading from "./Loading";
 
 export {
     AlbumCover,
@@ -41,5 +42,6 @@ export {
     ChatBubble,
     Field,
     FeedObject,
-    SearchResult
+    SearchResult,
+    Loading
 };
