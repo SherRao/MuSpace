@@ -30,8 +30,4 @@ function ArtistProfilePic({ width, artist_pic_url, location, target="" }) {
     );
 }
 
-function notImplemented(){
-    alert("This feature has not been implemented yet!");
-}
-
 export default ArtistProfilePic;

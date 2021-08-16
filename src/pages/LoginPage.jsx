@@ -2,7 +2,7 @@ import React from "react";
 import Styled from "styled-components";
 
 import { Firebase } from "@functions";
-import { MuspaceLogo, GoogleSigninButton } from "@atoms";
+import { MuspaceLogo } from "@atoms";
 import { LoginForm } from "@molecules"; 
 
 

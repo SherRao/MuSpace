@@ -72,16 +72,6 @@ const TitleDiv = Styled.div`
     aling-items = center;
 `;
 
-const StyledTexts = Styled.h1`
-    font-family: "Roboto";
-    font-size: ${props => props.theme.fontSizes.medium};
-    color: ${props => props.theme.colors.muSpacePurple};
-    font-weight: bold;
-    align: right;
-    margin: 15px;
-
-`;
-
 const FeedContainer = Styled.div`
     display: flex;
     flex-direction: row;
@@ -99,6 +89,7 @@ const FriendFeeds = Styled.div`
 
 function ProfilePage() {
     let data = queryString.parse(window.location.search);
+    // eslint-disable-next-line
     let query = null;
     if(data) 
         query = data.username;

@@ -125,8 +125,8 @@ function SettingsPage() {
                 </SectionDiv>
                 
             </SettingsDiv>
-            {isPasswordResetOpen ?  <LoginPopUp isOpen={isPasswordResetOpen} setIsOpen={setPasswordResetOpen} onSubmit={resetPassword}/> : null}
-            {isDeleteOpen ?  <LoginPopUp isOpen={isDeleteOpen} setIsOpen={setDeleteOpen} onSubmit={deleteAccount}/> : null}
+            {isPasswordResetOpen ?  <LoginPopUp isOpen={isPasswordResetOpen} setIsOpen={setPasswordResetOpen} onSubmit={resetPassword} title="Change Password" action="Save" /> : null}
+            {isDeleteOpen ?  <LoginPopUp isOpen={isDeleteOpen} setIsOpen={setDeleteOpen} onSubmit={deleteAccount} title="Confirm Account Deletion" action="Confirm Deletion" /> : null}
 
         </Container>
     );
@@ -151,24 +151,27 @@ async function fileChangedHandler(event) {
 
 function resetPassword(event) {
     event.preventDefault();
-    const email = event.target.elements[0].value;
-    const pass = event.target.elements[1].value;
+    // const email = event.target.elements[0].value;
+    // const pass = event.target.elements[1].value;
 
-    Firebase.resetPassword(email, pass);
+    // Firebase.resetPassword(email, pass);
+    notImplemented();
 }
 
 function deleteAccount(event) {
     event.preventDefault();
-    const email = event.target.elements[0].value;
-    const pass = event.target.elements[1].value;
+    // const email = event.target.elements[0].value;
+    // const pass = event.target.elements[1].value;
 
     //Firebase.deleteAccount(email, pass);
+    notImplemented();
 }
 
 function notImplemented() {
     alert("This feature has not been implemented yet!");
 }
 
+// eslint-disable-next-line
 function checkYourEmail() {
     alert("Change Password Email has been sent, please check it!");
 }

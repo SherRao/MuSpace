@@ -1,8 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { Card, LeaderBoardLabel, LeaderBoardStat } from "@atoms"; 
-import { Firebase } from "@functions";
+import { Card, LeaderBoardLabel, LeaderBoardStat } from "@atoms";
 
 const StyledInnerDiv = Styled.div`
     display: flex;
@@ -45,7 +44,7 @@ function LeaderBoard({ friends }){
     //     setProfilePic(x);
 
     // }
-    let profile_picture = "https://firebasestorage.googleapis.com/v0/b/muspace.appspot.com/o/default_profile.jpg?alt=media&token=03e7bd33-eb4c-4299-b07c-5ec5102bdb3b";
+    // let profile_picture = "https://firebasestorage.googleapis.com/v0/b/muspace.appspot.com/o/default_profile.jpg?alt=media&token=03e7bd33-eb4c-4299-b07c-5ec5102bdb3b";
 
     return (
         <Card>

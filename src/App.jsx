@@ -5,7 +5,7 @@ import { Theme, PageRouter } from "@misc";
 import { Firebase } from "@functions";
 
 function App() {
-    //resetCache();
+    // resetCache();
     return (
         <Theme>
             {/* <TextButton text="clear cache" type="text" onClick={cs} /> */}
@@ -14,13 +14,14 @@ function App() {
     );
 }
 
-
+// eslint-disable-next-line
 function cs() {
     localStorage.clear();
     alert("Done: ", localStorage.getItem("spotifyUpdated"));
 
 }
 
+// eslint-disable-next-line
 function resetCache() {
     window.addEventListener("beforeunload", (event) => {
         event.preventDefault();

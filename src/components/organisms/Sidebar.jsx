@@ -23,6 +23,7 @@ const StyledDiv = Styled.div`
     transition: all 0.25s ease;
 `;
 
+// eslint-disable-next-line
 const StyledText = Styled.h3`
     font-family: "Roboto";
     font-size: ${props => props.theme.fontSizes.medium};
@@ -33,6 +34,7 @@ const StyledText = Styled.h3`
     text-align: center;
 `;
 
+// eslint-disable-next-line
 const StatNumber = Styled.h4`
     font-size: ${props => props.theme.fontSizes.medium};
     margin: 0.2rem 0.2rem 0.8rem 0.2rem;

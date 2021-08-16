@@ -1,7 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
 
-
 import { LoginField, TextButton } from "@atoms";
 
 const StyledForm = Styled.form`
@@ -39,14 +38,18 @@ const Field = Styled(LoginField)`
     color: ${props => props.theme.colors.black};
 `;
 
-function LoginPopUp({isOpen, setIsOpen, onSubmit}) {
+const Title = Styled.h3`
+    margin: 0.2em 0 1.2em 0;
+`;
+
+function LoginPopUp({ isOpen, setIsOpen, onSubmit, title, action }) {
     return (
         <StyledForm onSubmit={onSubmit}>
-            <h3>Confirm Account Deletion</h3>
+            <Title>{title}</Title>
             <Field name="email" type="text" text="Username" placeholder="Email Address" autofocus/>
             <Field name="password" type="password" text="Password" placeholder="Password" />
-            <TextButton text="Log Confirm" type="submit"/>
-            <TextButton text="Close" onClick={() => setIsOpen(!isOpen)}/>
+            <TextButton text={action ? action : "Confirm"} type="submit"/>
+            <TextButton text="Cancel" onClick={() => setIsOpen(!isOpen)} style={{ marginTop: "1em" }} />
         </StyledForm>
     );
 }

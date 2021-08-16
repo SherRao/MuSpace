@@ -157,7 +157,7 @@ async function searchUsernames(query) {
     const result = [];
 
     users.forEach(async ([username, id]) => {
-        if (regex.test(username) && id != auth.currentUser.uid) {
+        if (regex.test(username) && id !== auth.currentUser.uid) {
             const doc = await db.collection("users").doc(id).get();
             const user = doc.data();
             const profile_picture = user.profile_picture;
@@ -197,6 +197,7 @@ async function deleteAccount(email, password) {
         password
     );
 
+    // eslint-disable-next-line
     const authResponse = await auth.currentUser.reauthenticateWithCredential({ credential });
 
     const doc = await db.collection("users").doc(auth.currentUser.uid).get();
@@ -230,9 +231,10 @@ async function resetPassword(email, password) {
     );
 
     // Now you can use that to reauthenticate
+    // eslint-disable-next-line
     const response = await auth.currentUser.reauthenticateWithCredential({ credential });
+    // eslint-disable-next-line
     const response2 = await auth.sendPasswordResetEmail(auth.currentUser.email);
-
 }
 
 
@@ -472,7 +474,7 @@ async function getChatForFriend(uid) {
 
     const chatUserIds = Object.keys(chats);
     for (const id of chatUserIds) {
-        if (id == uid)
+        if (id === uid)
             return chats[id];
     }
 
@@ -488,7 +490,7 @@ async function isSpotifyVerified() {
 }
 
 function isLoggedIn() {
-    return auth.currentUser != null;
+    return auth.currentUser !== null;
 
 }
 

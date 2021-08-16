@@ -145,9 +145,4 @@ function HomePage() {
     );
 }
 
-async function dostuff() {
-    Spotify.startCompile();
-
-}
-
 export default HomePage;

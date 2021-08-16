@@ -26,8 +26,7 @@ const StyledImage = Styled.img`
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 */
 
-const StyledLink = Styled.a`
-`;
+const StyledLink = Styled.a``;
 
 function AlbumCover({ width, album_picture, link, target="" }) {
     return (
@@ -35,9 +34,6 @@ function AlbumCover({ width, album_picture, link, target="" }) {
             <StyledImage src={album_picture ? album_picture : DefaultCover} width={width} height="auto"></StyledImage>
         </StyledLink>
     );
-}
-function notImplemented(){
-    alert("This feature has not been implemented yet!");
 }
 
 export default AlbumCover;

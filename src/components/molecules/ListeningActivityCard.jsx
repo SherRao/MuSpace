@@ -49,8 +49,4 @@ function ListeningActivityCard({ username, title, artist, picture_url, link }) {
     );
 }
 
-function notImplemented(){
-    alert("This feature has not been implemented yet!");
-}
-
 export default ListeningActivityCard;

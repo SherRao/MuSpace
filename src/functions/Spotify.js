@@ -75,6 +75,7 @@ async function loadTopArtists() {
     return arr;
 }
 
+// eslint-disable-next-line
 async function loadRecentSongs() {
     const data = await api.getMyRecentlyPlayedTracks({ limit: 10 });
     const songs = Object.values(data.body.items);
@@ -119,6 +120,7 @@ async function getRecentSongs() {
 
 }
 
+// eslint-disable-next-line
 async function getCurrentSong() {
 
 }
@@ -140,6 +142,7 @@ async function getLikedArtists() {
     return arr;
 }
 
+// eslint-disable-next-line
 async function getLikedTracks() {
 
 
