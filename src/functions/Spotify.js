@@ -5,7 +5,7 @@ import { Firebase } from "@functions";
 let api = null;
 
 async function startCompile() {
-    console.log("s");
+    console.log("Starting to compile...");
     api = new SpotifyWebApi(
         {
             clientId: config.spotify.id,
@@ -34,6 +34,7 @@ async function startCompile() {
     data.spotifyData.recentSongs = recentSongs;
 
     await Firebase.db.collection("users").doc(uid).set(data);
+    console.log("Finished compiling.");
 }
 
 async function loadTopSongs() {
