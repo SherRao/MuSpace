@@ -17,7 +17,7 @@ const Center = Styled.div`
 
 function UnprotectedRoute({ component, isLoggedIn, isVerified, isSpotifyVerified, ...rest }) {
     const Component = component;
-    if (isLoggedIn && isVerified && isSpotifyVerified) {
+    if (isLoggedIn) {// && isVerified && isSpotifyVerified) {
         return (
             <Route {...rest}>
                 <Redirect to="/home"/>
@@ -31,12 +31,12 @@ function UnprotectedRoute({ component, isLoggedIn, isVerified, isSpotifyVerified
             </Route>
         );
         
-    } else if(isLoggedIn && isVerified && !isSpotifyVerified) {
-        return (
-            <Route {...rest}>
-                <Redirect to="/spotify-verify"/>
-            </Route>
-        );
+        // } else if(isLoggedIn && isVerified && !isSpotifyVerified) {
+        //     return (
+        //         <Route {...rest}>
+        //             <Redirect to="/spotify-verify"/>
+        //         </Route>
+        //     );
 
     } else {
         return (

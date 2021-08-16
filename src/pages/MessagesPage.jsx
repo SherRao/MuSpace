@@ -1,7 +1,8 @@
 import React from "react";
 import Styled from "styled-components";
-import { FriendsMessageButton, ChatBubble, TextButton, Field } from "@atoms";
+
 import { Firebase } from "@functions";
+import { FriendsMessageButton, ChatBubble, TextButton, Field } from "@atoms";
 
 const Panels = Styled.div`
     width: 100%;

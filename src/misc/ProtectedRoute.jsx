@@ -1,7 +1,9 @@
 import React from "react";
 import Styled from "styled-components";
-import { Route, Redirect } from "react-router-dom";
+import { useAsync } from "react-async";
 
+import { Firebase } from "@functions";
+import { Route, Redirect } from "react-router-dom";
 import { SearchBar } from "@molecules";
 import { Sidebar } from "@organisms";
 
@@ -30,9 +32,27 @@ const PageContainer = Styled.div`
     transition: all 0.25s ease;
 `;
 
-function ProtectedRoute({ component, isLoggedIn, isVerified, isSpotifyVerified, ...rest }) {
+function ProtectedRoute({ component, isLoggedIn, isVerified, ...rest }) {
+    const {data, error, isLoading} = useAsync({promiseFn: Firebase.isSpotifyVerified});
+    if (isLoading) {
+        return (
+            <div>
+                <p>Loading user data from Firebase...</p>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div>
+                <p>Error while loading Firebase stuff: {error}</p>
+            </div>
+        );
+    }
+    
+    console.log(isLoading, error, data);
     const Component = component; // react sucks....
-    if (isLoggedIn && isVerified && isSpotifyVerified) {
+    if (isLoggedIn && isVerified && data) {
         return (<Route {...rest}>
             <LeftDiv>
                 <Sidebar />
@@ -52,7 +72,7 @@ function ProtectedRoute({ component, isLoggedIn, isVerified, isSpotifyVerified, 
             </Route>
         );
         
-    } else if(isLoggedIn && isVerified && !isSpotifyVerified) {
+    } else if(isLoggedIn && isVerified && !data) {
         return (
             <Route {...rest}>
                 <Redirect to="/spotify-verify"/>

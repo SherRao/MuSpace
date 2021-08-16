@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "cp-317"
+    "muspace": "muspace",
+    "default": "muspace"
   }
 }

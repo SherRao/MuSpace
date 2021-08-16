@@ -2,7 +2,7 @@ import React from "react";
 import Styled from "styled-components";
 import { SidebarButton, MuspaceLogo } from "@atoms";
 import { UserButton } from "@atoms";
-import { Firebase } from "@functions";
+import { Spotify, Firebase } from "@functions";
 import { SpaceFillerDiv } from "@misc";
 
 import { AiFillHome, AiFillHeart } from "react-icons/ai"; // home and friend button icon outline and fill
@@ -43,12 +43,16 @@ function Sidebar() {
     const [profilePicture, setProfilePicture] = React.useState(null);
     const [userName, setUserName] = React.useState(null);
 
+    const [likedArtists, setLikedAritsts] = React.useState(null);
     React.useEffect(async () => {
         if(!userName)
             setUserName(await Firebase.getUsername());
 
         if(!profilePicture)
             setProfilePicture(await Firebase.getProfilePicture());
+
+        if(!likedArtists)
+            setLikedAritsts(await Spotify.getLikedArtists());
 
     }, []);
 
@@ -73,19 +77,14 @@ function Sidebar() {
             <SpaceFillerDiv />
 
             <StyledText>Total Listening Time</StyledText>
-            <StatNumber>120,560</StatNumber>
+            <StatNumber>69</StatNumber>
             <StyledText>Artists Liked</StyledText>
-            <StatNumber>69,420</StatNumber>
-            <StyledText>Albums Liked</StyledText>
-            <StatNumber>1,560</StatNumber>
+            <StatNumber>69</StatNumber>
+            <StyledText>Artists Liked</StyledText>
+            <StatNumber>{likedArtists}</StatNumber>
 
             <SpaceFillerDiv />
-
-            <UserButton
-                text={userName}
-                location="/settings"
-                profileImage={profilePicture}
-            />
+            <UserButton text={userName} location="/settings" profileImage={profilePicture}/>
         </StyledDiv>
     );
 }

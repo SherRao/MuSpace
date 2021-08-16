@@ -1,9 +1,9 @@
 import React from "react";
 import Styled from "styled-components";
-import { Firebase } from "@functions";
 import queryString from "query-string";
 
-import { AlbumCover, FeedObject, ProfileUserName } from "@atoms";
+import { Firebase } from "@functions";
+import { FeedObject } from "@atoms";
 import { FriendTopSongs, TopArtists, TopSongs } from "@molecules";
 
 const Container = Styled.div`

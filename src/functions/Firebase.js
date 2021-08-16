@@ -11,6 +11,10 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 const storage = firebase.storage();
 
+// auth.useEmulator("http://localhost:9099");
+// db.useEmulator("http://localhost:8088");
+// storage.useEmulator("http://localhost:9199");
+
 /**
  * 
  * Takes in the input from the form to login with
@@ -97,7 +101,7 @@ async function registerWithEmail(event) {
         // if error has not been thrown, then create the account
         const userCredentials = await auth.createUserWithEmailAndPassword(email, pass);
         await storeNewUserData(userCredentials.user.uid, email, firstName, lastName, username, dob);
-        auth.currentUser.sendEmailVerification();
+        await auth.currentUser.sendEmailVerification();
 
     } catch (err) {
         alert(err.message);
@@ -122,7 +126,7 @@ async function storeNewUserData(id, email, firstName, lastName, username, dob, p
         lastName: lastName,
         username: username,
         dob: dob,
-        profile_picture: profile_picture ? profile_picture : "https://firebasestorage.googleapis.com/v0/b/cp-317.appspot.com/o/default_profile.jpg?alt=media&token=4ed26d80-388b-4814-95b3-01740138285a"
+        profile_picture: profile_picture ? profile_picture : "https://firebasestorage.googleapis.com/v0/b/muspace.appspot.com/o/default_profile.jpg?alt=media&token=03e7bd33-eb4c-4299-b07c-5ec5102bdb3b"
     };
 
     // Create a new user entry in the users collection.
@@ -194,7 +198,6 @@ async function deleteAccount(email, password) {
     );
 
     const authResponse = await auth.currentUser.reauthenticateWithCredential({ credential });
-    console.log(authResponse);
 
     const doc = await db.collection("users").doc(auth.currentUser.uid).get();
     const user = doc.data();
@@ -226,13 +229,9 @@ async function resetPassword(email, password) {
         password
     );
 
-    console.log(credential);
     // Now you can use that to reauthenticate
     const response = await auth.currentUser.reauthenticateWithCredential({ credential });
-    console.log(response);
-
     const response2 = await auth.sendPasswordResetEmail(auth.currentUser.email);
-    console.log(response2);
 
 }
 
@@ -444,10 +443,23 @@ async function getUser(uid) {
     return user;
 }
 
+async function isSpotifyVerified() {
+    if (!auth.currentUser)
+        return false;
+
+    const doc = await db.collection("users").doc(auth.currentUser.uid).get();
+    return doc.data().spotifyVerified;
+}
+
+function isLoggedIn() {
+    return auth.currentUser != null;
+
+}
+
 export default {
     firebase, auth, db, storage,
     loginWithEmail, loginWithGoogle, registerWithEmail,
     logout, deleteAccount, resetPassword, updateProfilePicture,
     addFriend, removeFriend, createNewChatRoom, sendChat, searchUsernames,
-    getProfilePicture, getUsername, getFullName, getFriends, getUser
+    getProfilePicture, getUsername, getFullName, getFriends, getUser, isSpotifyVerified, isLoggedIn
 };

@@ -1,12 +1,9 @@
 import React from "react";
 import Styled from "styled-components";
-import { Redirect } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-
-import { MuspaceLogo } from "@atoms";
-import { RegisterForm } from "@molecules";
 
 import { Firebase } from "@functions";
+import { MuspaceLogo } from "@atoms";
+import { RegisterForm } from "@molecules";
 
 const Container = Styled.div`
     padding: 5em;

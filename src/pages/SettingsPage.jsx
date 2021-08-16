@@ -1,9 +1,8 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { SectionButton } from "@atoms";
 import { Firebase } from "@functions";
-import { useRef, useState } from "react";
+import { SectionButton } from "@atoms";
 import { LoginPopUp } from "@molecules";
 
 const Container = Styled.div`
@@ -78,7 +77,7 @@ const SettingsDiv = Styled.div`
 
 
 function SettingsPage() {
-    const fileInputRef = useRef();
+    const fileInputRef = React.useRef();
     const [profilePicture, setProfilePicture] = React.useState(null);
     const [userName, setUserName] = React.useState(null);
     const [isPasswordResetOpen, setPasswordResetOpen] = React.useState(false);

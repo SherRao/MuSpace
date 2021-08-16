@@ -1,9 +1,9 @@
 import React from "react";
 import Styled from "styled-components";
 
+import { Firebase } from "@functions";
 import { FriendTopSongs, FriendTopArtists } from "@molecules";
 import { LeaderBoard, ListeningActivity } from "@organisms";
-import { Firebase } from "@functions";
 
 const Page = Styled.div`
     width: 100%;

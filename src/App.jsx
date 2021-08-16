@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
 import { Theme, PageRouter } from "@misc";
 
-import { TextButton } from "@atoms";
+//import { TextButton } from "@atoms";
 import { Firebase } from "@functions";
 
 function App() {

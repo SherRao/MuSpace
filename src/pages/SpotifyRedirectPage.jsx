@@ -1,51 +1,38 @@
 import React from "react";
 import Styled from "styled-components";
-import { Redirect } from "react-router-dom";
-
 import queryString from "query-string";
+
 import { Spotify, Firebase } from "@functions";
+import { Redirect } from "react-router-dom";
+import { useAsync } from "react-async";
 
 function SpotifyRedirectPage() {
     const data = queryString.parse(window.location.hash);
-    React.useEffect(() => {
-        if(Object.keys(data).length > 0 && Firebase.auth.currentUser) 
-            storeSpotifyData();
+    React.useEffect(async () => {
+        await storeSpotifyData(data);
 
     }, []);
-
-    if(Object.keys(data).length == 0 || Firebase.auth.currentUser == null) {
-        alert("Could not authorise with the Spotify endpoint! Please try again later!");
-        Firebase.logout();
-        return <Redirect to="/"/>;
-    }
     
-    async function storeSpotifyData() {
-        const access_token = data.access_token;
-        const expiry = data.expires_in;
-        const state = data.state;
-        const type = data.token_type;
+    return null;
+}
 
-        const user = Firebase.auth.currentUser;
-        const uid = user.uid;
+async function storeSpotifyData(data) {
+    const access_token = data.access_token;
+    const expiry = data.expires_in;
+    const state = data.state;
+    const type = data.token_type;
 
-        const usersRef = Firebase.db.collection("users");
-        const userDoc = await usersRef.doc(uid).get();
-        const userData = userDoc.data();
-        userData.spotifyVerified = true;
-        userData.spotifyData = {access_token, expiry, state, type};
+    const user = Firebase.auth.currentUser;
+    const uid = user.uid;
 
-        await usersRef.doc(uid).set(userData);
-        localStorage.setItem(Firebase.auth.currentUser.uid, true);
+    const usersRef = Firebase.db.collection("users");
+    const userDoc = await usersRef.doc(uid).get();
+    const userData = userDoc.data();
+    userData.spotifyVerified = true;
+    userData.spotifyData = {access_token, expiry, state, type};
 
-        await Spotify.startCompile();
-        console.log("ok");
-    }
-
-    if(localStorage.getItem(Firebase.auth.currentUser.uid))
-        return <Redirect to="/"/>;
-
-    else 
-        return (<div>Loading Spotify Data...</div>);
+    await usersRef.doc(uid).set(userData);
+    await Spotify.startCompile();
 }
 
 export default SpotifyRedirectPage;

@@ -45,7 +45,7 @@ function LeaderBoard({ friends }){
     //     setProfilePic(x);
 
     // }
-    let profile_picture = "https://firebasestorage.googleapis.com/v0/b/cp-317.appspot.com/o/default_profile.jpg?alt=media&token=4ed26d80-388b-4814-95b3-01740138285a";
+    let profile_picture = "https://firebasestorage.googleapis.com/v0/b/muspace.appspot.com/o/default_profile.jpg?alt=media&token=03e7bd33-eb4c-4299-b07c-5ec5102bdb3b";
 
     return (
         <Card>

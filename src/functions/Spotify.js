@@ -1,13 +1,13 @@
+import config from "@src/config.json";
 import SpotifyWebApi from "spotify-web-api-node";
 import { Firebase } from "@functions";
 
 let api = null;
-
 async function startCompile() {
     api = new SpotifyWebApi(
         {
-            clientId: "1e4ee4e30b23405d8643d058642dffaf",
-            clientSecret: "8ab0151237234a22877c4e644fa1b433",
+            clientId: config.spotify.id,
+            clientSecret: config.spotify.secret,
             redirectUri: "https://muspace.me/spotify-redirect"
         }
     );
@@ -58,7 +58,6 @@ async function loadTopSongs(api) {
 async function loadTopArtists(api) {
     const data = await api.getMyTopArtists();
     const artists = Object.values(data.body.items);
-
     const arr = [];
     for (let i = 0; i < Math.min(10, artists.length); i++) {
         const element = artists[i];
@@ -120,7 +119,28 @@ async function getRecentSongs() {
 
 async function getCurrentSong() {
 
+}
+
+async function getLikedArtists() {
+    // const data = await api.getFollowedArtists();
+    // const artists = Object.values(data.body.items);
+
+    const arr = [];
+    // for (const artist of artists) {
+    //     const data = {};
+    //     data.name = artist.name;
+    //     data.image = artist.images[0].url;
+    //     data.score = artist.popularity;
+    //     data.link = artist.external_urls.spotify;
+    //     arr.push(data);
+    // }
+
+    return arr;
+}
+
+async function getLikedTracks() {
+
 
 }
 
-export default { startCompile, getUser, getTopSongs, getTopArtists, getRecentSongs };
+export default { startCompile, getUser, getTopSongs, getTopArtists, getRecentSongs, getLikedArtists };

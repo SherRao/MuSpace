@@ -1,11 +1,9 @@
 import React from "react";
 import Styled from "styled-components";
-import { Spotify } from "@functions";
 
-import { TextButton } from "@atoms";
+import { Spotify, Firebase } from "@functions";
 import { FavCard } from "@molecules";
 import { ListeningActivity } from "@organisms";
-import { Firebase } from "@functions";
 
 const Panels = Styled.div`
     display: flex;
