@@ -35,11 +35,13 @@
 <!--                 <a href="./UserManual.html">User Manual</a> -->
                 <a href="https://github.com/SherRao/MuSpace/wiki">User Manual</a>
             </li>
-
-            <h2>Misc Documents</h2>
+            
+            <h2>The Final Product</h2>
             <li>
-                <a href="./FinalProduct.html">The Final Product</a>
+                <a href="./FinalProduct.html">Muspace.me</a>
             </li>
+           
+            <h2>Misc Documents</h2>
             <li>
                 <a href="./FeaturesMissing.html">Implementation details we couldn't complete</a>
             </li>
