@@ -35,12 +35,25 @@
 
 This project was made in JavaScript and TypeScript
 
+
+- Craco
+- FontAwesome
+- Jest (Testing)
+- React Testing Library (Testing)
+- Google Firebase
+- Firebase Admin
+- Query String
 - React
-- Node.js
-- Google Firestore
+- React DOM
+- React Firebase Hooks
+- React Icons
+- React Rounded Image
+- React Router DOM
+- React Scripts
+- Node Spotify Web API
 - StyledComponents
-- discord.js
-- js-logger
+- Validator
+- Web Vitals
 
 ## Design
 This project used Figma, the document of which can be found [here](https://www.figma.com/file/Jh6rAs4sNIZPaELM6qcGEt/Website?node-id=0%3A1)!
