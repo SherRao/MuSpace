@@ -48,6 +48,7 @@ function TopSongs({ spotifyData }) {
                                 text={song.name}
                                 artist={song.artist}
                                 album_picture={song.image}
+                                link={song.link}
                             />)
                         : null
                 }
