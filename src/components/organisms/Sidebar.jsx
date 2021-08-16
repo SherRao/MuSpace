@@ -76,12 +76,12 @@ function Sidebar() {
 
             <SpaceFillerDiv />
 
-            <StyledText>Total Listening Time</StyledText>
+            {/* <StyledText>Total Listening Time</StyledText>
             <StatNumber>69</StatNumber>
             <StyledText>Artists Liked</StyledText>
             <StatNumber>69</StatNumber>
             <StyledText>Artists Liked</StyledText>
-            <StatNumber>{likedArtists}</StatNumber>
+            <StatNumber>{likedArtists}</StatNumber> */}
 
             <SpaceFillerDiv />
             <UserButton text={userName} location="/settings" profileImage={profilePicture}/>
