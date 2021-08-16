@@ -508,7 +508,7 @@
         <th style="text-align:center">Description</th>
     </tr>
     <tr>
-        <td style="text-align:center">Your Friends Top Albums</td>
+        <td style="text-align:center">Your Friends Top Songs</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Displays your friend’s top album they are listening to</td>
     </tr>
