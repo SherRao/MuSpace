@@ -342,7 +342,7 @@
         <td style="text-align:center">Displays the most played song of the week</td>
     </tr>
     <tr>
-        <td style="text-align:ceButton</td>
+        <td style="text-align:center">SettingsButton</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links user to the settings page</td>
     </tr>
