@@ -38,14 +38,15 @@ function FriendTopSongs({ friends }) {
                     friends.length > 0
                     ? friends.slice(0, 3).map(({ username, spotifyData }, i) => {
                         const isTopSong = spotifyData.topSongs && spotifyData.topSongs.length > 0;
-                        const topSong = isTopSong ? spotifyData.topSongs[0] : null;
+                        const song = isTopSong ? spotifyData.topSongs[0] : null;
                         return isTopSong
                             ? <MiniTopCategory
                                 key={i}
                                 username={username}
-                                text={isTopSong ? topSong.name : "#Title"}
-                                artist={isTopSong ? topSong.artist : "#Artist" }
-                                album_picture={isTopSong ? topSong.image : undefined}
+                                text={song.name}
+                                artist={song.artist}
+                                album_picture={song.image}
+                                link={song.link}
                             />
                             : null;
                     })

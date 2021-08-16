@@ -28,7 +28,7 @@ const StyledImage = Styled.img`
 
 const StyledLink = Styled.a``;
 
-function AlbumCover({ width, album_picture, link, target="" }) {
+function AlbumCover({ width, album_picture, link, target="_blank" }) {
     return (
         <StyledLink href={link} target={target}>
             <StyledImage src={album_picture ? album_picture : DefaultCover} width={width} height="auto"></StyledImage>

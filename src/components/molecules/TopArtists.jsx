@@ -45,6 +45,7 @@ function TopArtists({ spotifyData }) {
                                 key={i}
                                 text={artist.name}
                                 album_picture={artist.image}
+                                link={artist.link}
                             />)
                         : null
                 }
