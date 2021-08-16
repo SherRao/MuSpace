@@ -414,16 +414,6 @@
         <td style="text-align:center">Logs the user out of MuSpace</td>
     </tr>
     <tr>
-        <td style="text-align:center">LanguageEnglish</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Changes the language to English</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">LanguageFrench</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">Changes the language to French</td>
-    </tr>
-    <tr>
         <td style="text-align:center">LightMode</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Changes the UI to Light Mode</td>
@@ -433,6 +423,17 @@
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Changes the UI to Dark Mode</td>
     </tr>
+    <tr>
+        <td style="text-align:center">LanguageEnglish</td>
+        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Changes the language to English</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">LanguageFrench</td>
+        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Changes the language to French</td>
+    </tr>
+    
 </table>
 
 <h4>4.4.8 Notification View</h4>
