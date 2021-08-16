@@ -29,6 +29,8 @@
     <li>Forgot Password Function</li>
 </ul>
 
-  
+    <h2>Reason</h2>
+    <p>For all of these features the reason we weren't able to implement them is because we didn't have enough time. The team at Muspace had an ambitious idea and did as much as possible in the time allocated to us. When midterms and finals came around our group had to find time to work on Muspace with the hectic schedule.</p>
+    <p>Although these features are missing we hope you still enjoy going through the final product!</p>
 
 </body>
