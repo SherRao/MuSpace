@@ -220,7 +220,7 @@
         <td style="text-align:center">Links to password recovery page.</td>
     </tr>
     <tr>
-        <td style="text-align:center">Register up-button</td>
+        <td style="text-align:center">Register button</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links to the RegisterView page in case the user does not have an account created.</td>
     </tr>
