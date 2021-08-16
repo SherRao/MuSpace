@@ -312,7 +312,7 @@
         <td style="text-align:center">This button takes you to the friend’s page where you can view friends’ profiles and music statistics.</td>
     </tr>
     <tr>
-        <td style="text-align:center">FmessagesButton</td>
+        <td style="text-align:center">MessagesButton</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">This button takes you to the messaging page where you can message and talk to other users of the app.</td>
     </tr>
@@ -322,19 +322,9 @@
         <td style="text-align:center">Displays total time spent listening to music since account creation</td>
     </tr>
     <tr>
-        <td style="text-align:center">Artists Liked</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Displays the number of artists liked by a user</td>
-    </tr>
-    <tr>
         <td style="text-align:center">Album Cover</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">This is located in your friend’s section, every time you click on it it takes you to the album cover your friend was listening to.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">FriendsListeningActivity</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">The Labels says Friends listening activity</td>
     </tr>
     <tr>
         <td style="text-align:center">Username</td>
