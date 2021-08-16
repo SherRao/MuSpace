@@ -34,6 +34,9 @@
                 <a href="https://github.com/SherRao/MuSpace/wiki">User Manual</a>
             </li>
             <li>
+                <a href="./FinalProduct.html">The Final Product</a>
+            </li>
+            <li>
                 <a href="./FeaturesMissing.html">Implementation details we couldn't complete</a>
             </li>
             <li>
