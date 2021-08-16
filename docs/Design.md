@@ -120,7 +120,7 @@
 
 <h4>4.4.1 Sidebar (Constant in all Views aside from 4.4.3 and 4.4.4)</h4>
 <img src="./design/sidebar.png" width=200/>
-<p>On every view, the sidebar allows for quick and easy navigation to any of the other views. Along with this, it has some quick stats.</p>
+<p>On every view, the sidebar allows for quick and easy navigation to any of the other views.</p>
 <table>
     <tr>
         <th style="text-align:center">Field</th>
@@ -151,11 +151,6 @@
         <td style="text-align:center">SettingsView</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links to SettingsPage</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">Stats</td>
-        <td style="text-align:center">Label</td>
-        <td style="text-align:center">Shows some basic stats about the user’s listening activity</td>
     </tr>
 </table>
 
