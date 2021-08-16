@@ -17,8 +17,8 @@
         </h1>
         <h1 align="center">MuSpace Project Page</h1>
 
-        <h2>Important Documents</h2>
         <ul>
+            <h2>Important Documents</h2>
             <li>
                 <a href="./Requirements.html">Software Requirements Specifications (SRS)</a>
             </li>
