@@ -22,7 +22,11 @@
     
 <ul>
     <li>Expanded Friend Listening Activity Data</li>
-    <li>Setting Features (Dark Mode, French Version)</li>
+    <li>Setting Features (Dark Mode, French Version, Change Password, Delete Account)</li>
+    <li>Feed</li>
+    <li>Number of hours data</li>
+    <li>Notifications</li>
+    <li>Forgot Password Function</li>
 </ul>
 
   
