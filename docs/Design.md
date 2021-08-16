@@ -294,7 +294,7 @@
 </table>
 
 <h4>4.4.5 Home View</h4>
-<img src="./design/home.png" width=800/>
+<img src="./design/home.PNG" width=800/>
 <table>
     <tr>
         <th style="text-align:center">Field</th>
