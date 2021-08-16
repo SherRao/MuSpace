@@ -220,7 +220,7 @@
         <td style="text-align:center">Links to password recovery page.</td>
     </tr>
     <tr>
-        <td style="text-align:center">Sign up-button</td>
+        <td style="text-align:center">Register button</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links to the RegisterView page in case the user does not have an account created.</td>
     </tr>
@@ -297,24 +297,9 @@
         <th style="text-align:center">Description</th>
     </tr>
     <tr>
-        <td style="text-align:center">HomeButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">This button takes you to home page</td>
-    </tr>
-    <tr>
         <td style="text-align:center">GreetingLBL</td>
         <td style="text-align:center">Label</td>
         <td style="text-align:center">This is just a greeting that shows up when the user logs in and goes to the home page.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">FriendsButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">This button takes you to the friend’s page where you can view friends’ profiles and music statistics.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">MessagesButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">This button takes you to the messaging page where you can message and talk to other users of the app.</td>
     </tr>
     <tr>
         <td style="text-align:center">Total Listening Time</td>
@@ -414,15 +399,41 @@
         <td style="text-align:center">User uploads new profile picture</td>
     </tr>
     <tr>
-        <td style="text-align:center">LanguageChange</td>
+        <td style="text-align:center">ChangePassword</td>
         <td style="text-align:center">Button</td>
-        <td style="text-align:center">Changes the language of the site</td>
+        <td style="text-align:center">User changes password</td>
     </tr>
     <tr>
-        <td style="text-align:center">DeleteProfile</td>
+        <td style="text-align:center">DeleteAccount</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Deletes the user’s profile</td>
     </tr>
+    <tr>
+        <td style="text-align:center">Logout</td>
+        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Logs the user out of MuSpace</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">LightMode</td>
+        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Changes the UI to Light Mode</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">DarkMode</td>
+        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Changes the UI to Dark Mode</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">LanguageEnglish</td>
+        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Changes the language to English</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">LanguageFrench</td>
+        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Changes the language to French</td>
+    </tr>
+    
 </table>
 
 <h4>4.4.8 Notification View</h4>
@@ -497,7 +508,7 @@
         <th style="text-align:center">Description</th>
     </tr>
     <tr>
-        <td style="text-align:center">Your Friends Top Albums</td>
+        <td style="text-align:center">Your Friends Top Songs</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Displays your friend’s top album they are listening to</td>
     </tr>
@@ -508,7 +519,7 @@
     </tr>
     <tr>
         <td style="text-align:center">Leaderboards</td>
-        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Label</td>
         <td style="text-align:center">A ranked chart that shows who out of your friends has the most listening hours and the number of unique artists they listen to</td>
     </tr>
     <tr>
