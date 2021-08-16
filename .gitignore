@@ -25,3 +25,6 @@ yarn-error.log*
 config.json
 src/.index.js.swp
 test.js
+
+# firebase caches
+.firebase/
