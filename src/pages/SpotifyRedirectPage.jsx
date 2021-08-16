@@ -1,15 +1,17 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import queryString from "query-string";
 import { Spotify, Firebase } from "@functions";
 
 function SpotifyRedirectPage() {
     const data = queryString.parse(window.location.hash);
-    React.useEffect(async () => {
-        await storeSpotifyData(data);
+    const [page, setPage] = React.useState(null);
 
+    React.useEffect(async () => {
+        setPage(await storeSpotifyData(data));
     }, []);
     
-    return null;
+    return page;
 }
 
 async function storeSpotifyData(data) {
@@ -29,6 +31,8 @@ async function storeSpotifyData(data) {
 
     await usersRef.doc(uid).set(userData);
     await Spotify.startCompile();
+
+    return <Redirect to="/" />
 }
 
 export default SpotifyRedirectPage;
