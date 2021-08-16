@@ -23,9 +23,9 @@ const StyledTextInput = Styled.input`
     }
 `;
 
-function RegisterField({text, type, placeholder}) {
+function RegisterField({ text, type, placeholder, onChange }) {
     return (
-        <StyledTextInput text={text} type={type} placeholder={placeholder}/>
+        <StyledTextInput value={text} type={type} placeholder={placeholder} onChange={onChange} />
     );
 }
 

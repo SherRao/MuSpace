@@ -25,7 +25,7 @@ async function startCompile() {
 
     const topSongs = await loadTopSongs(api);
     const topArtists = await loadTopArtists(api);
-    const recentSongs = [];//await loadRecentSongs(api);
+    const recentSongs = []; //await loadRecentSongs(api);
 
     const doc = await Firebase.db.collection("users").doc(uid).get();
     const data = doc.data();

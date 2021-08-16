@@ -1,23 +1,39 @@
 import React from "react";
 import Styled from "styled-components";
 
-const StyledDiv = Styled.div`
-    color: ${(props) => props.theme.colors.grey};
-    align-items: center;
-    transition: all 0.25s ease;
-    margin: 0.2rem 0;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+const Button = Styled.button`
+  color: ${props => props.theme.colors.grey};
+  background-color: ${props => props.theme.colors.white};
+  align-items: center;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: row;
+  border-style: none;
+  border-radius: 12px;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
+  padding: 1em 0.6em;
+  margin: 0.6em 0.4em;
+  cursor: pointer;
 
-    @media (max-width: 900){
-        flex-direction: column;
-    }
+  @media (max-width: 900){
+    flex-direction: column;
+  }
+  
+  :hover{
+    color: ${(props) => props.theme.colors.muSpacePurple};
+    transition: all 0.1s ease-in-out;
+  }
 `;
 
-const StyledLink = Styled.a`
+const ActiveButton = Styled(Button)`
+    color: ${props => props.theme.colors.black};
+    background-color: ${props => props.theme.colors.lightPurple};
+`;
+
+const StyledLink = Styled.p`
     border: none;
     padding: 0;
+    margin: 0;
     size: 0;
     display: block;
     text-decoration: none;
@@ -27,15 +43,9 @@ const StyledText = Styled.p`
     font-family: "Roboto";
     font-size: ${(props) => props.theme.fontSizes.medium};
     font-weight: normal;
-    color: ${(props) => props.theme.colors.grey};
     
     text-align: center;
     margin: 0;
-
-    :hover{
-      color: ${(props) => props.theme.colors.muSpacePurple};
-      transition: all 0.1s ease-in-out;
-    }
 `;
 
 const UserProfPic = Styled.img`
@@ -45,15 +55,23 @@ const UserProfPic = Styled.img`
     margin: 0 0.6em;
 `;
 
-function UserButton({ text, icon, location, profile_picture }) {
-    return (
-        <StyledDiv>
-            <UserProfPic src={profile_picture} alt="Default Profile image" />
+function UserButton({ theme, text, icon, location, profile_picture, active, onClick }) {
+    if(active) return (
+        <ActiveButton onClick={onClick}>
+            <UserProfPic src={profile_picture} alt="Profile image" />
             <StyledLink href="/profile">
                 <StyledText>{text}</StyledText>
             </StyledLink>
-            <div style={{margin: "0 auto"}} />
-        </StyledDiv>
+            <div style={{ margin: "0 auto" }} />
+        </ActiveButton>
+    ); else return (
+        <Button onClick={onClick}>
+            <UserProfPic src={profile_picture} alt="Profile image" />
+            <StyledLink href="/profile">
+                <StyledText>{text}</StyledText>
+            </StyledLink>
+            <div style={{ margin: "0 auto" }} />
+        </Button>
     );
 }
 

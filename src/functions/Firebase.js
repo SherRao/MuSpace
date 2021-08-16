@@ -119,7 +119,7 @@ async function storeNewUserData(id, email, firstName, lastName, username, dob, p
         spotifyData: {},
 
         friends: [],
-        chats: [],
+        chats: {},
 
         email: email,
         firstName: firstName,
@@ -301,12 +301,7 @@ async function removeFriend(targetId) {
 async function createNewChatRoom(targetId) {
     const docRef = await db.collection("chats").add(
         {
-            messages: [
-                { "sender": "id", "timestamp": new Date(), "content": "content" },
-                { "sender": "id", "timestamp": new Date(), "content": "content" },
-                { "sender": "id", "timestamp": new Date(), "content": "content" },
-            ],
-
+            messages: [],
             source: auth.currentUser.uid,
             target: targetId
         }
@@ -348,6 +343,7 @@ async function sendChat(message, chatId) {
     data.messages.push(chatData);
 
     await db.collection("chats").doc(chatId).set(data);
+    return chatData;
 }
 
 /**
@@ -444,6 +440,7 @@ async function getUser(uid) {
     const docRef = db.collection("users").doc(uid);
     const doc = await docRef.get();
     const user = doc.data();
+    user.id = uid;
     return user;
 }
 
@@ -469,7 +466,7 @@ async function getChat(chatId) {
  *
  */
 async function getChatForFriend(uid) {
-    const docRef = db.collection("users").doc(auth.currentUser);
+    const docRef = db.collection("users").doc(auth.currentUser.uid);
     const doc = await docRef.get();
     const chats = doc.data().chats;
 

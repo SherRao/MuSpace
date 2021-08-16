@@ -1,16 +1,15 @@
 import React from "react";
-import { Card } from "@atoms";
 import { FriendUserButton } from "@atoms";
 
-function FriendsMessageButton({ username, profile_picture }){
+function FriendsMessageButton({ username, profile_picture, active, onClick }){
     return(
-        <Card>
-            <FriendUserButton
-                text={username}
-                location="/messages"
-                profile_picture={profile_picture}
-            />
-        </Card>
+        <FriendUserButton
+            text={username}
+            location="/messages"
+            profile_picture={profile_picture}
+            active={active}
+            onClick={onClick}
+        />
     );
 }
 
