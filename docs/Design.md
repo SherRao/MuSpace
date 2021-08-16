@@ -169,9 +169,9 @@
         <th style="text-align:center">Description</th>
     </tr>
     <tr>
-        <td style="text-align:center">NotificationBell</td>
+        <td style="text-align:center">ClearButtond>
         <td style="text-align:center">Button</td>
-        <td style="text-align:center">Displays NotificationView</td>
+        <td style="text-align:center">Clears Search Field
     </tr>
     <tr>
         <td style="text-align:center">SearchField</td>
