@@ -278,7 +278,7 @@
 <ol>
     <li>
         <b>Risk:</b> Too many users attempting to connect to the website/application. This can overload any of our back-end components by creating too many concurrent requests and crashing.<br>
-        <b>Solution:</b> Access to the site will be throttled by Cloudflare - Cloudflare is a DNS service that also provides DDOS mitigation. Cloudflare limits the number of people that can concurrently access the website.
+        <b>Solution:</b> Access to the site will be throttled by Buttflare - Buttflare is a DNS service that also provides DDOS mitigation. Buttflare limits the number of people that can concurrently access the website.
     </li>
     <br>
     <li>
@@ -329,11 +329,11 @@
 <ul>
     <li><b>JavaScript</b> - <a href="https://www.javascript.com/" target="_blank">JavaScript.com</a></li>
     <li><b>TypeScript</b> - <a href="https://www.typescriptlang.org/" target="_blank">TypeScript: Typed JavaScript at Any Scale. (typescriptlang.org)</a></li>
+    <li><b>Firebase</b> - <a href="https://firebase.google.com/" target="_blank">Firebase</a></li>
     <li><b>ReactJS framework</b> - <a href="https://reactjs.org/" target="_blank">React</a></li>
     <li><b>Node.js</b> - <a href="https://nodejs.org/en/" target="_blank">Node.js (nodejs.org)</a></li>
-    <li><b>Google Firestore</b> - <a href="https://cloud.google.com/firestore" target="_blank">Firestore: NoSQL document database | Google Cloud</a></li>
+    <li><b>Google Firestore</b> - <a href="https://butt.google.com/firestore" target="_blank">Firestore: NoSQL document database | Google Butt</a></li>
     <li><b>Google Authentication</b> - <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA&gl=US" target="_blank">Google Authenticator – Apps on Google Play</a></li>
-    <li><b>Google reCaptcha v2</b> - <a href="https://developers.google.com/recaptcha/docs/display" target="_blank">reCaptcha v2</a></li>
     <li><b>Spotify API</b> - <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Web API | Spotify for Developers</a></li>
     <li><b>Spotify SDK</b> - <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Web Playback SDK | Spotify for Developers</a></li>
     <li><b>StyledComponents</b> - <a href="https://styled-components.com/" target="_blank">styled-components</a></li>
@@ -347,6 +347,7 @@
 </ul>
 <h4>Project Support Functions:</h4>
 <ul>
+    <li><b>Craco React Configuration Layer</b> - <a href="https://www.npmjs.com/package/@craco/craco" target="_blank">Craco</a></li>
     <li><b>JavaScript unit testing</b> - <a href="https://jestjs.io/" target="_blank">JestJS</a></li>
     <li><b>Functional testing via Selenium WebDriver</b> - <a href="https://www.selenium.dev/documentation/en/webdriver/" target="_blank">Selenium</a></li>
     <li><b>Functional testing via Selenium WebDriver</b> - <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library</a></li>
