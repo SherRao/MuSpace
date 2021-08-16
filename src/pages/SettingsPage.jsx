@@ -162,7 +162,7 @@ function deleteAccount(event) {
     const email = event.target.elements[0].value;
     const pass = event.target.elements[1].value;
 
-    Firebase.deleteAccount(email, pass);
+    //Firebase.deleteAccount(email, pass);
 }
 
 function notImplemented() {

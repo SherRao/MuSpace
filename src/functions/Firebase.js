@@ -299,33 +299,31 @@ async function removeFriend(targetId) {
  * 
  */
 async function createNewChatRoom(targetId) {
-
-    // Create new chat room in "chats" collection
-    const counter = await db.collection("chats").doc("counter").get();
-    const newChatId = counter.counterField + 1;
-    await db.collection("chats").doc(newChatId).set(
+    const docRef = await db.collection("chats").add(
         {
-            messages: [],
+            messages: [
+                { "sender": "id", "timestamp": new Date(), "content": "content" },
+                { "sender": "id", "timestamp": new Date(), "content": "content" },
+                { "sender": "id", "timestamp": new Date(), "content": "content" },
+            ],
+
             source: auth.currentUser.uid,
             target: targetId
         }
     );
 
-    // Update counter for the next new chat room.
-    counter.counterField = newChatId;
-    await db.collection("chats").doc("counter").set(counter);
-
     // add chat to current users chat array
     const userDoc = await db.collection("users").doc(auth.currentUser.uid).get();
     const userData = userDoc.data();
-    userData.chats.push(newChatId);
+    userData.chats[targetId] = docRef.id;
     await db.collection("users").doc(auth.currentUser.uid).set(userData);
 
     // add chat to current user's chat array
     const targetDoc = await db.collection("users").doc(targetId).get();
     const targetData = targetDoc.data();
-    targetData.chats.push(newChatId);
+    targetData.chats[auth.currentUser.uid] = docRef.id;
     await db.collection("users").doc(targetId).set(targetData);
+    return docRef.id;
 }
 
 /**
@@ -397,7 +395,14 @@ async function getUsername() {
     const doc = await docRef.get();
     const username = doc.data().username;
     return username;
+}
 
+
+async function getFriendUsername(targetUid) {
+    const docRef = db.collection("users").doc(targetUid);
+    const doc = await docRef.get();
+    const username = doc.data().username;
+    return username;
 }
 
 /**
@@ -427,7 +432,6 @@ async function getFriends() {
     const doc = await docRef.get();
     const friends = doc.data().friends;
     return friends;
-
 }
 
 /**
@@ -441,6 +445,41 @@ async function getUser(uid) {
     const doc = await docRef.get();
     const user = doc.data();
     return user;
+}
+
+/**
+ * 
+ * Retrieves the chat object for the given chat ID.
+ * 
+ * TODO: try/catch
+ * 
+ */
+async function getChat(chatId) {
+    const docRef = db.collection("chats").doc(chatId);
+    const doc = await docRef.get();
+    const chat = doc.data();
+    return chat;
+
+}
+
+/**
+ *
+ * Tries to retrieve a chat for a given friend. If no chat exists, create
+ * a new one and return the ID of it.
+ *
+ */
+async function getChatForFriend(uid) {
+    const docRef = db.collection("users").doc(auth.currentUser);
+    const doc = await docRef.get();
+    const chats = doc.data().chats;
+
+    const chatUserIds = Object.keys(chats);
+    for (const id of chatUserIds) {
+        if (id == uid)
+            return chats[id];
+    }
+
+    return await createNewChatRoom(uid);
 }
 
 async function isSpotifyVerified() {
@@ -461,5 +500,5 @@ export default {
     loginWithEmail, loginWithGoogle, registerWithEmail,
     logout, deleteAccount, resetPassword, updateProfilePicture,
     addFriend, removeFriend, createNewChatRoom, sendChat, searchUsernames,
-    getProfilePicture, getUsername, getFullName, getFriends, getUser, isSpotifyVerified, isLoggedIn
+    getProfilePicture, getUsername, getFullName, getFriends, getUser, isSpotifyVerified, isLoggedIn, getChatForFriend, getFriendUsername, getChat
 };
