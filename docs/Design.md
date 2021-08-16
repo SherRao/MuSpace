@@ -342,7 +342,7 @@
         <td style="text-align:center">Displays the most played song of the week</td>
     </tr>
     <tr>
-        <td style="text-align:center">SettingsButton</td>
+        <td style="text-align:ceButton</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Links user to the settings page</td>
     </tr>
@@ -414,14 +414,39 @@
         <td style="text-align:center">User uploads new profile picture</td>
     </tr>
     <tr>
-        <td style="text-align:center">LanguageChange</td>
+        <td style="text-align:center">ChangePassword</td>
         <td style="text-align:center">Button</td>
-        <td style="text-align:center">Changes the language of the site</td>
+        <td style="text-align:center">User changes password</td>
     </tr>
     <tr>
-        <td style="text-align:center">DeleteProfile</td>
+        <td style="text-align:center">DeleteAccount</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Deletes the user’s profile</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">Logout</td>
+        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Logs the user out of MuSpace</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">LanguageEnglish</td>
+        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Changes the language to English</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">LanguageFrench</td>
+        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Changes the language to French</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">LightMode</td>
+        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Changes the UI to Light Mode</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">DarkMode</td>
+        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Changes the UI to Dark Mode</td>
     </tr>
 </table>
 
