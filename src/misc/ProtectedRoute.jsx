@@ -50,7 +50,6 @@ function ProtectedRoute({ component, isLoggedIn, isVerified, ...rest }) {
         );
     }
     
-    console.log(isLoading, error, data);
     const Component = component; // react sucks....
     if (isLoggedIn && isVerified && data) {
         return (<Route {...rest}>
