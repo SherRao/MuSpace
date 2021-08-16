@@ -374,7 +374,7 @@
 </table>
 
 <h4>4.4.6 Message View</h4>
-<img src="./design/messageView.png" width=800/>
+<img src="./design/messageView.PNG" width=800/>
 <p>The Messages page is to allows users to communicate with their friends on the app.</p>
 <table>
     <tr>
@@ -410,7 +410,7 @@
 </table>
 
 <h4>4.4.7 Settings View</h4>
-<img src="./design/settingsView.png" width=800/>
+<img src="./design/settingsView.PNG" width=800/>
 <p>The View where a user can toggle between different settings options.</p>
 <table>
     <tr>
@@ -457,7 +457,7 @@
 </table>
 
 <h4>4.4.9 Profile View</h4>
-<img src="./design/profileView.png" width=800/>
+<img src="./design/profileView.PNG" width=800/>
 <p></p>
 <table>
     <tr>
@@ -503,7 +503,7 @@
 </table>
 
 <h4>4.4.10 FriendsView</h4>
-<img src="./design/friendsView.png" width=800/>
+<img src="./design/friendsView.PNG" width=800/>
 <p></p>
 <table>
     <tr>
