@@ -461,12 +461,12 @@
         <th style="text-align:center">Description</th>
     </tr>
     <tr>
-        <td style="text-align:center">Feed</td>
+        <td style="text-align:center">Feed (not yet implemented)</td>
         <td style="text-align:center">Label</td>
         <td style="text-align:center">Feed section title, section dynamically displays latest feed items</td>
     </tr>
     <tr>
-        <td style="text-align:center">FeedItem</td>
+        <td style="text-align:center">FeedItem (not yet implemented)</td>
         <td style="text-align:center">Button</td>
         <td style="text-align:center">Individual feed item displays post information</td>
     </tr>
