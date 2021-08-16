@@ -7,7 +7,7 @@
 <h2>Table of Contents</h2>
 <h2>1. Introduction</h2>
 <h3>1.1 Project Overview</h3>
-<p>MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. Users will be able to add friends on MuSpace who they can chat with, and look at their detailed Spotify listening history. Users will also be able to view detailed statistics about their own listening habits, such as listening time, favourite genres, favourite artists, and more.</p>
+<p>MuSpace is a music-based social media platform focused on connecting music fans with one another and allowing them to share their tastes with the world. Each MuSpace user will be provided with a personal feed to post about songs, albums, artists, and playlists that they are interested in. Users will be able to add friends on MuSpace who they can chat with, and look at their detailed Spotify listening history. Users will also be able to view detailed statistics about their own listening habits, such as listening time, favourite artists, and more.</p>
 
 <!-- Object Classification -->
 <h2>2. Object Classification</h2>
