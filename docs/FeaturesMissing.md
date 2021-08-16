@@ -18,7 +18,12 @@
         </h1>
 <body>
     
-<h2 align="center">Features Missing</h2>
+<h2 align="center">The Following Features Have Not Been Implemented Yet</h2>
+    
+<ul>
+    <li>Expanded Friend Listening Activity Data</li>
+    <li>Setting Features (Dark Mode, French Version)</li>
+</ul>
 
   
 
