@@ -3,7 +3,9 @@ import SpotifyWebApi from "spotify-web-api-node";
 import { Firebase } from "@functions";
 
 let api = null;
+
 async function startCompile() {
+    console.log("s");
     api = new SpotifyWebApi(
         {
             clientId: config.spotify.id,
@@ -23,7 +25,7 @@ async function startCompile() {
 
     const topSongs = await loadTopSongs(api);
     const topArtists = await loadTopArtists(api);
-    const recentSongs = await loadRecentSongs(api);
+    const recentSongs = [];//await loadRecentSongs(api);
 
     const doc = await Firebase.db.collection("users").doc(uid).get();
     const data = doc.data();
@@ -34,7 +36,7 @@ async function startCompile() {
     await Firebase.db.collection("users").doc(uid).set(data);
 }
 
-async function loadTopSongs(api) {
+async function loadTopSongs() {
     const data = await api.getMyTopTracks();
     const songs = Object.values(data.body.items);
 
@@ -55,7 +57,7 @@ async function loadTopSongs(api) {
     return arr;
 }
 
-async function loadTopArtists(api) {
+async function loadTopArtists() {
     const data = await api.getMyTopArtists();
     const artists = Object.values(data.body.items);
     const arr = [];
@@ -73,7 +75,7 @@ async function loadTopArtists(api) {
     return arr;
 }
 
-async function loadRecentSongs(api) {
+async function loadRecentSongs() {
     const data = await api.getMyRecentlyPlayedTracks({ limit: 10 });
     const songs = Object.values(data.body.items);
 

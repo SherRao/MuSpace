@@ -16,6 +16,8 @@
                 /></a>
         </h1>
         <h1 align="center">MuSpace Project Page</h1>
+
+        <h2>Important Documents</h2>
         <ul>
             <li>
                 <a href="./Requirements.html">Software Requirements Specifications (SRS)</a>
@@ -33,6 +35,8 @@
 <!--                 <a href="./UserManual.html">User Manual</a> -->
                 <a href="https://github.com/SherRao/MuSpace/wiki">User Manual</a>
             </li>
+
+            <h2>Misc Documents</h2>
             <li>
                 <a href="./FinalProduct.html">The Final Product</a>
             </li>
@@ -48,6 +52,8 @@
              <li>
                 <a href="./Evaluations.html">Group Member Evaluations</a>
             </li>
+
+            <h2>Team Informational Documents</h2>
             <li>
                 <a href="./Testing.html">Testing Guidelines Document</a>
             </li>

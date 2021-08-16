@@ -1,10 +1,6 @@
 import React from "react";
-import Styled from "styled-components";
 import queryString from "query-string";
-
 import { Spotify, Firebase } from "@functions";
-import { Redirect } from "react-router-dom";
-import { useAsync } from "react-async";
 
 function SpotifyRedirectPage() {
     const data = queryString.parse(window.location.hash);
