@@ -297,24 +297,9 @@
         <th style="text-align:center">Description</th>
     </tr>
     <tr>
-        <td style="text-align:center">HomeButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">This button takes you to home page</td>
-    </tr>
-    <tr>
         <td style="text-align:center">GreetingLBL</td>
         <td style="text-align:center">Label</td>
         <td style="text-align:center">This is just a greeting that shows up when the user logs in and goes to the home page.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">FriendsButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">This button takes you to the friend’s page where you can view friends’ profiles and music statistics.</td>
-    </tr>
-    <tr>
-        <td style="text-align:center">MessagesButton</td>
-        <td style="text-align:center">Button</td>
-        <td style="text-align:center">This button takes you to the messaging page where you can message and talk to other users of the app.</td>
     </tr>
     <tr>
         <td style="text-align:center">Total Listening Time</td>
