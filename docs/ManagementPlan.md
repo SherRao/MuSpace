@@ -534,6 +534,11 @@
         <li>July 30th</li>
         <li>Members - Jagveer, Jiten</li>
     </ul>
+    <li>Version 1.0.2 [Section 4.1, Update to Include all Technologies used]</li>
+    <ul>
+        <li>August 15th</li>
+        <li>Members - Jacob</li>
+    </ul>
 </ul>
 
 <h3>Authored by:</h3>
