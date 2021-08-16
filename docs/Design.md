@@ -519,7 +519,7 @@
     </tr>
     <tr>
         <td style="text-align:center">Leaderboards</td>
-        <td style="text-align:center">Button</td>
+        <td style="text-align:center">Label</td>
         <td style="text-align:center">A ranked chart that shows who out of your friends has the most listening hours and the number of unique artists they listen to</td>
     </tr>
     <tr>
