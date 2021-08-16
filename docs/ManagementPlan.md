@@ -331,12 +331,21 @@
     <li><b>TypeScript</b> - <a href="https://www.typescriptlang.org/" target="_blank">TypeScript: Typed JavaScript at Any Scale. (typescriptlang.org)</a></li>
     <li><b>Firebase</b> - <a href="https://firebase.google.com/" target="_blank">Firebase</a></li>
     <li><b>ReactJS framework</b> - <a href="https://reactjs.org/" target="_blank">React</a></li>
+    <li><b>React router DOM</b> - <a href="https://reactrouter.com/web/guides/quick-start" target="_blank">Declarative Routing for React.js</a></li>
+    <li><b>React firebase hooks</b> - <a href="https://www.npmjs.com/package/react-firebase-hooks" target="_blank">react-firebase-hooks - npm</a></li>
+    <li><b>React scripts</b> - <a href="https://www.npmjs.com/package/react-scripts" target="_blank">react-scripts - npm</a></li>
+    <li><b>React icons</b> - <a href="https://react-icons.github.io/react-icons/" target="_blank">React Icons</a></li>
+    <li><b>React rounded images</b> - <a href="https://preview.npmjs.com/package/react-rounded-image" target="_blank">react-rounded-images - npm</a></li>
+    <li><b>Firebase-admin</b> - <a href="https://www.npmjs.com/package/firebase-admin" target="_blank">firebase-admin - npm</a></li>
     <li><b>Node.js</b> - <a href="https://nodejs.org/en/" target="_blank">Node.js (nodejs.org)</a></li>
     <li><b>Google Firestore</b> - <a href="https://butt.google.com/firestore" target="_blank">Firestore: NoSQL document database | Google Butt</a></li>
     <li><b>Google Authentication</b> - <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_CA&gl=US" target="_blank">Google Authenticator – Apps on Google Play</a></li>
     <li><b>Spotify API</b> - <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Web API | Spotify for Developers</a></li>
     <li><b>Spotify SDK</b> - <a href="https://developer.spotify.com/documentation/web-playback-sdk/#about-the-sdk" target="_blank">Web Playback SDK | Spotify for Developers</a></li>
     <li><b>StyledComponents</b> - <a href="https://styled-components.com/" target="_blank">styled-components</a></li>
+    <li><b>QueryString</b> - <a href="https://nodejs.org/api/querystring.html" target="_blank">NodeJS: Query String</a></li>
+    <li><b>Validator</b> - <a href="https://www.npmjs.com/package/validator" target="_blank">validator - npm</a></li>
+    <li><b>Web Vitals</b> - <a href="https://www.npmjs.com/package/web-vitals" target="_blank">web-vitals - npm</a></li>
 </ul>
 <h4>Project Management Tools:</h4>
 <ul>
