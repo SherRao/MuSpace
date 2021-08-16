@@ -359,7 +359,7 @@
 </table>
 
 <h4>4.4.6 Message View</h4>
-<img src="./design/messageView.PNG" width=800/>
+<img src="./design/messageView.png" width=800/>
 <p>The Messages page is to allows users to communicate with their friends on the app.</p>
 <table>
     <tr>
