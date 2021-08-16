@@ -160,7 +160,7 @@
 </table>
 
 <h4>4.4.2 Searchbar (Constant in all Views aside from 4.4.3 and 4.4.4)</h4>
-<img src="./design/searchbar.png" width=500/>
+<img src="./design/searchbar.png" width=600/>
 <p>Search bar allows the user to find songs / albums / playlists etc, along with friends.</p>
 <table>
     <tr>
@@ -294,7 +294,7 @@
 </table>
 
 <h4>4.4.5 Home View</h4>
-<img src="./design/homePage.png" width=500/>
+<img src="./design/home.png" width=800/>
 <table>
     <tr>
         <th style="text-align:center">Field</th>
@@ -374,7 +374,7 @@
 </table>
 
 <h4>4.4.6 Message View</h4>
-<img src="./design/messages.png" width=500/>
+<img src="./design/messageView.png" width=800/>
 <p>The Messages page is to allows users to communicate with their friends on the app.</p>
 <table>
     <tr>
@@ -410,7 +410,7 @@
 </table>
 
 <h4>4.4.7 Settings View</h4>
-<img src="./design/settings.png" width=500/>
+<img src="./design/settingsView.png" width=800/>
 <p>The View where a user can toggle between different settings options.</p>
 <table>
     <tr>
@@ -457,7 +457,7 @@
 </table>
 
 <h4>4.4.9 Profile View</h4>
-<img src="./design/profile.svg" width=500/>
+<img src="./design/profileView.png" width=800/>
 <p></p>
 <table>
     <tr>
@@ -503,7 +503,7 @@
 </table>
 
 <h4>4.4.10 FriendsView</h4>
-<img src="./design/friends.svg" width=500/>
+<img src="./design/friendsView.png" width=800/>
 <p></p>
 <table>
     <tr>
