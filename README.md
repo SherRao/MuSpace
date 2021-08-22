@@ -25,7 +25,7 @@
 - [Jagveer Sangha](https://github.com/Jagveer-Sangha)<br/>
 - [Jiten Aylani](https://github.com/aylanij)<br/>
 - [Kelvin Kellner](https://github.com/kelvinkellner)<br/>
-- [Mathumithan Manimaran](https://www.github.com/MattDank)<br/>
+- [Mathumithan Manimaran](https://www.github.com/MatMaran)<br/>
 - [Muhammad Ali](https://github.com/zancrash)<br/>
 - [Nausher Rao](https://www.github.com/sherrao)<br/>
 - [Nish Tewari](https://github.com/XSilviaX)<br/>
