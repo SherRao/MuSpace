@@ -10,4 +10,3 @@
    <a href = "https://github.com/SherRao/MuSpace/issues?q=is%3Aissue+is%3Aclosed">Closed Issues</a>
         </li>
     </ul>
-</body>
